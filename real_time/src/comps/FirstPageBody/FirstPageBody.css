@@ -1,5 +1,4 @@
-#FirstPageBode{
-    margin-top: 15vh;
-    height: 70vh;
-    background-color: turquoise;
+#FirstPageBode {
+  min-height: 650px;
+  background-color: turquoise;
 }

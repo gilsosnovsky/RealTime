@@ -1,31 +1,39 @@
-#NavBar{
-    position: fixed;
-    border-bottom: 1px solid black;
-    background-color: white;
-    top: 0;
-    width: 100%;
-    height: 15%;
+#NavBar {
+  position: fixed;
+  border-bottom: 0px solid black;
+  background-color: white;
+  top: 0;
+  width: 100%;
+  height: 90px;
 }
-#NavBarButton{
-    /* background-color: violet; */
-    width: 67%;
-    margin-top: 3%;
-    padding-right: 10%;
-    text-align: right;
-    float: left;
-}
-
-.NavBarButton{
-    padding: 2%;
-    font-size: 135%;
-    cursor: pointer;
+#NavBarButtons {
+  /* background-color: violet; */
+  margin: 0 auto;
+  width: 900px;
+  height: 80px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: 0px solid black;
 }
 
-.NavBarButton:hover{
-    color: purple;
+.NavBarButton {
+  padding-right: 10px;
+  padding-left: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  float: left;
+  line-height: 70px;
 }
 
-#logo{
-    height: 98%;
-    float: left;
+.NavBarButton:hover {
+  color: #7925c0;
+  border-top: 4px solid #7925c0;
+}
+
+#logo {
+  height: 60px;
+  float: right;
+  padding-top: 10px;
+  padding-right: 10px;
 }
