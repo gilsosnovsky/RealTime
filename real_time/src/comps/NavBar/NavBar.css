@@ -1,0 +1,31 @@
+#NavBar{
+    position: fixed;
+    border-bottom: 1px solid black;
+    background-color: white;
+    top: 0;
+    width: 100%;
+    height: 15%;
+}
+#NavBarButton{
+    /* background-color: violet; */
+    width: 67%;
+    margin-top: 3%;
+    padding-right: 10%;
+    text-align: right;
+    float: left;
+}
+
+.NavBarButton{
+    padding: 2%;
+    font-size: 135%;
+    cursor: pointer;
+}
+
+.NavBarButton:hover{
+    color: purple;
+}
+
+#logo{
+    height: 98%;
+    float: left;
+}
