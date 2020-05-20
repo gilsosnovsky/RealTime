@@ -1,14 +1,27 @@
 import React, {Component} from 'react';
 import NavBar from './NavBar/NavBar';
-import FirstPageBody from './FirstPageBody/FirstPageBody';
+import PageBody from './PageBody/PageBody';
 import Footer from './Footer/Footer';
 
 class MyPage extends Component{
+    state={
+        NavBarState: 'welcomePage',
+        PageBodyState: 'welcomePage',
+        FooterState: 'welcomePage'
+    }
+
+    onClickToEmployees= ()=> {
+        this.setState ( {
+            NavBarState: 'welcomePage',
+            PageBodyState: 'toEmployees',
+            FooterState: 'welcomePage'
+        } )
+    }
     render(){
         return(
             <div id = "MyPage">
-                <NavBar/>
-                <FirstPageBody/>
+                <NavBar click={this.onClickToEmployees}  />
+                <PageBody pageBodystate={this.state.PageBodyState}/>
                 <Footer/>
             </div>
         )

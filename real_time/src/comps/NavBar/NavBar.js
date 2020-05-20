@@ -1,35 +1,31 @@
-import React, { Component } from "react";
+import React from "react";
 import logo from "./logo.gif";
 import "./NavBar.css";
 
-class NavBar extends Component {
-  onClickToEmployees() {
-    alert("שלום");
-  }
-  render() {
+const NavBar =(props) => {
+
     return (
       <div id="NavBar">
         <div id="NavBarButtons">
-          <text id="contact" class="NavBarButton">
+          <label id="contact" className="NavBarButton">
             צור קשר
-          </text>
-          <text id="about_us" class="NavBarButton">
+          </label>
+          <label id="about_us" className="NavBarButton">
             מי אנחנו
-          </text>
-          <text id="to_business" class="NavBarButton">
+          </label>
+          <label id="to_business" className="NavBarButton">
             לעסקים
-          </text>
-          <text
+          </label>
+          <label
             id="to_employees"
-            class="NavBarButton"
-            onClick={this.onClickToEmployees}
+            className="NavBarButton"
+            onClick={props.click}
           >
             לעובדים
-          </text>
+          </label>
           <img id="logo" src={logo} alt="Logo" />
         </div>
       </div>
-    );
-  }
+    );  
 }
 export default NavBar;

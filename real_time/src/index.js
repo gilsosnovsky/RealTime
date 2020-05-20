@@ -1,10 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import NavBar from './comps/NavBar/NavBar';
-import FirstPageBody from './comps/FirstPageBody/FirstPageBody';
-import Footer from './comps/Footer/Footer';
 import MyPage from './comps/MyPage';
 import * as serviceWorker from './serviceWorker';
 
