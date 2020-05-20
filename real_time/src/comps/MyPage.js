@@ -12,15 +12,23 @@ class MyPage extends Component{
 
     onClickToEmployees= ()=> {
         this.setState ( {
-            NavBarState: 'welcomePage',
-            PageBodyState: 'toEmployees',
-            FooterState: 'welcomePage'
+            PageBodyState: 'toEmployees'
         } )
     }
+
+    onClickLogo= ()=> {
+        this.setState ( {
+            PageBodyState: 'welcomePage'
+        } )
+    }
+
+
     render(){
         return(
             <div id = "MyPage">
-                <NavBar click={this.onClickToEmployees}  />
+                <NavBar 
+                clickToEmployees={this.onClickToEmployees}
+                clickOnLogo={this.onClickLogo} />
                 <PageBody pageBodystate={this.state.PageBodyState}/>
                 <Footer/>
             </div>

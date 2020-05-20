@@ -20,7 +20,7 @@ const pageBody =(props)=>{
     else{
         return(
             <div id = "firstPageBody">
-                <text>default</text>
+                <h1>default</h1>
             </div>
         )
     }

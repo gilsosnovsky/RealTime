@@ -19,11 +19,11 @@ const NavBar =(props) => {
           <label
             id="to_employees"
             className="NavBarButton"
-            onClick={props.click}
+            onClick={props.clickToEmployees}
           >
             לעובדים
           </label>
-          <img id="logo" src={logo} alt="Logo" />
+          <img id="logo" src={logo} alt="Logo" onClick={props.clickOnLogo}/>
         </div>
       </div>
     );  
