@@ -5,14 +5,12 @@ import App from './App';
 import NavBar from './comps/NavBar/NavBar';
 import FirstPageBody from './comps/FirstPageBody/FirstPageBody';
 import Footer from './comps/Footer/Footer';
+import MyPage from './comps/MyPage';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <App /> */}
-    <NavBar/>
-    <FirstPageBody/>
-    <Footer/>
+    <MyPage/>
   </React.StrictMode>,
   document.getElementById('root')
 );

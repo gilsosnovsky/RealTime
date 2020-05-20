@@ -10,21 +10,21 @@ class NavBar extends Component {
     return (
       <div id="NavBar">
         <div id="NavBarButtons">
+          <text id="contact" class="NavBarButton">
+            צור קשר
+          </text>
+          <text id="about_us" class="NavBarButton">
+            מי אנחנו
+          </text>
+          <text id="to_business" class="NavBarButton">
+            לעסקים
+          </text>
           <text
             id="to_employees"
             class="NavBarButton"
             onClick={this.onClickToEmployees}
           >
             לעובדים
-          </text>
-          <text id="to_business" class="NavBarButton">
-            לעסקים
-          </text>
-          <text id="about_us" class="NavBarButton">
-            מי אנחנו
-          </text>
-          <text id="contact" class="NavBarButton">
-            צור קשר
           </text>
           <img id="logo" src={logo} alt="Logo" />
         </div>
