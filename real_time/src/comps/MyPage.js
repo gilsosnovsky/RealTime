@@ -22,13 +22,20 @@ class MyPage extends Component{
         } )
     }
 
+    onClickToBusiness=()=>{
+        this.setState({
+            PageBodyState: 'toBusiness'
+        })
+    }
+
 
     render(){
         return(
             <div id = "MyPage">
                 <NavBar 
                 clickToEmployees={this.onClickToEmployees}
-                clickOnLogo={this.onClickLogo} />
+                clickOnLogo={this.onClickLogo}
+                clickToBusiness={this.onClickToBusiness} />
                 <PageBody pageBodystate={this.state.PageBodyState}/>
                 <Footer/>
             </div>

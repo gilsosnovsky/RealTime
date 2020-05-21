@@ -13,7 +13,9 @@ const NavBar =(props) => {
           <label id="about_us" className="NavBarButton">
             מי אנחנו
           </label>
-          <label id="to_business" className="NavBarButton">
+          <label id="to_business"
+           className="NavBarButton"
+           onClick={props.clickToBusiness} >
             לעסקים
           </label>
           <label

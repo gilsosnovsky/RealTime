@@ -17,6 +17,14 @@ const pageBody =(props)=>{
             <ToEmployees/>
         )
     }
+
+    else if(props.pageBodystate==='toBusiness'){
+        return(
+            <div id = "firstPageBody">
+                <h1>To Emloyers</h1>
+            </div>
+        )
+    }
     else{
         return(
             <div id = "firstPageBody">
