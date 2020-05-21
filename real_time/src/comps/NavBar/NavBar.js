@@ -7,7 +7,9 @@ const NavBar = (props) => {
   return (
     <div id="NavBar">
       <div id="NavBarButtons">
-        <label id="contact" className="NavBarButton">
+        <label id="contact"
+         className="NavBarButton"
+         onClick={props.clickContact}>
           צור קשר
           </label>
         <label id="about_us" className="NavBarButton">
