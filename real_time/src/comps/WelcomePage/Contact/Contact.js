@@ -5,6 +5,9 @@ import 'bootstrap/dist/css/bootstrap.css';
 const Contact = (props) => {
     return (
         <body>
+            <div id="contact_p1">
+                דברו איתנו
+            </div>
             <div id="form">
                     <label for="fname">שם מלא:</label>
                     <input type="text" id="fname" name="fname"/><br></br>
