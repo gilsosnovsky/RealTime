@@ -5,39 +5,32 @@
     background-color: white;
     padding-top: 145px;
     text-align: center;
-    
 }
 
 #paragraph_1{
-
     color: #7925c0;
     font-size: 30px;
-   
 }
 
 #paragraph_2{
-
     font-size: 20px;
-   
 }
 
 #carousel{
-
-    background-color:black;
-    height: 400px;
+    background-color: rgb(56, 56, 56);
+    height: 320px;
     color: white;
 }
 
-.photo_1{
-    width: 40px;
-    height: 400px ;
+.carousel_item{
+    height: 320px ;
     text-align: center;
 }
 
 .job_pic{
     width: 15%;
     height: 50%;
-    margin-top: 10%;
+    margin-top: 5%;
     display: block;
     margin-left: auto;
     margin-right: auto;
