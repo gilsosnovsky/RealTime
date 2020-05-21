@@ -2,6 +2,8 @@ import React from 'react';
 import './PageBody.css';
 import '../WelcomePage/ToEmployees'
 import ToEmployees from '../WelcomePage/ToEmployees';
+import ToBusiness from '../WelcomePage/ToBusiness';
+
 
 const pageBody =(props)=>{
    
@@ -20,9 +22,7 @@ const pageBody =(props)=>{
 
     else if(props.pageBodystate==='toBusiness'){
         return(
-            <div id = "firstPageBody">
-                <h1>To Emloyers</h1>
-            </div>
+            <ToBusiness/>
         )
     }
     else{
