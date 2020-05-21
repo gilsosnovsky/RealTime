@@ -1,0 +1,25 @@
+body {
+    min-height: 650px;
+    background-color: white;
+    padding-top: 145px;
+    text-align: center;
+    direction: rtl;
+}
+
+#Contact {
+    min-height: 650px;
+    background-color: white;
+    padding-top: 145px;
+    text-align: center;
+}
+
+#intrestMe{
+    background-color: #7925c0;
+    height: 200px;
+    width: 100%;
+}
+
+#headLineIntrest{
+    color: white;
+    font-size: 30px;
+}
