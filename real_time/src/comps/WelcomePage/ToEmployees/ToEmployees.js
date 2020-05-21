@@ -1,25 +1,23 @@
 import React from 'react';
-import './ToEmployees.css'
+import './ToEmployees.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import Carousel from 'react-bootstrap/Carousel'
+import Carousel from 'react-bootstrap/Carousel';
 
 const toEmployees = (props) => {
     return (
         <div id="toEmployees">
-            <div id="paragraph_1">
-              ?גם אתכם/ן הקורונה תפסה לא מוכנים
-            <br />
-             !בשביל זה אנחנו כאן
+            <div id="employees_p1">
+            מחפשים עבודה? בשביל זה אנחנו כאן!
             </div>
             <br />
-            <div id="paragraph_2">
-                ביכולתנו לסייע לנוער וצעירים/ות המחפשים הכנסה כספית
+            <div id="employees_p2">
+            בזמן אמת, ביכולתנו לסייע לנוער וצעירים/ות המחפשים הכנסה
              <br />
-             על בסיס יומי דרך הצעות עבודה אטרקטיביות
+             כספית על בסיס יומי דרך הצעות עבודה אטרקטיביות.
              <br />
-              נכנסים לאתר ומקבלים ישירות לנייד הצעות עבודה יומיות וגמישות
+             נכנסנים לאתר ומקבלים הצעות עבודה יומיות וגמישות ללא
               <br />
-              ללא מחויבות לכמות משמרות במגוון מקצועות וענפים ברחבי ירושלים
+              מחויבות לכמות משמרות במגוון מקצועות וענפים ברחבי ירושלים.
             </div>
             <p></p>
             <Carousel id="carousel">
@@ -30,7 +28,7 @@ const toEmployees = (props) => {
                     </div>
                     <Carousel.Caption>
                         <h3>First job</h3>
-                        <p>Details for the first job.</p>
+                        <p>Details for the first job</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item className="carousel_item">
@@ -40,7 +38,7 @@ const toEmployees = (props) => {
                     </div>
                     <Carousel.Caption>
                         <h3>Second job</h3>
-                        <p>Details for the second job.</p>
+                        <p>Details for the second job</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item className="carousel_item">
@@ -50,19 +48,21 @@ const toEmployees = (props) => {
                         </div>
                     <Carousel.Caption>
                         <h3>Third job</h3>
-                        <p>Details for the third job.</p>
+                        <p>Details for the third job</p>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
             <p />
-            <div id="paragraph_3">
-                .אנחנו ב'זמן אמת' בחרנו בשבילכם/ן את העסקים הכי טובים בירושלים
+            <div id="employees_p3">
+            אנחנו ב'זמן אמת' בחרנו בשבילכם/ן את העסקים הכי טובים בירושלים.
                 <br />
-                .אתם רק צריכים להחליט מתי, איפה וכמה בא לכם/ן לעבוד
+                אתם רק צריכים להחליט מתי, איפה וכמה בא לכם/ן לעבוד! 
                 <br />
-                .אנחנו מודעים לקשיים שנוצרו במציאת עבודה בעקבות משבר הקורונה
+                אנחנו מודעים לקשיים שנוצרו במציאת עבודה בעקבות משבר הקורונה. 
                 <br />
-                !לכן, בזמן אמת החלטנו לפתח טכנולוגיה שתעזור לכם למצוא עבודה מכל מקום ובכל זמן בקליק אחד
+                לכן, בזמן אמת החלטנו לפתח טכנולוגיה שתעזור לכם למצוא עבודה 
+                <br />
+                מכל מקום ובכל זמן בקליק אחד!
             </div>
         </div>
     )
