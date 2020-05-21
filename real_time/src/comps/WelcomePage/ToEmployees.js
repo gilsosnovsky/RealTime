@@ -28,36 +28,34 @@ const toEmployees = (props) => {
                 <Carousel.Item className="photo_1">
                     <Carousel.Caption>
                         <h3>First job</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        <p>Details for the first job.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item className="photo_1">
 
                     <Carousel.Caption>
                         <h3>Second job</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p>Details for the second job.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item className="photo_1">
                     <Carousel.Caption>
                         <h3>Third job</h3>
-                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                        <p>Details for the third job.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
             <p />
             <div id="paragraph_3">
-                אנחנו ב'זמן אמת' בחרנו בשבילכם/ן את העסקים הכי טובים בירושלים.
+                .אנחנו ב'זמן אמת' בחרנו בשבילכם/ן את העסקים הכי טובים בירושלים
                 <br />
-                אתם רק צריכים להחליט מתי, איפה וכמה בא לכם/ן לעבוד!
+                .אתם רק צריכים להחליט מתי, איפה וכמה בא לכם/ן לעבוד
                 <br />
-                אנחנו מודעים לקשיים שנוצרו במציאת עבודה בעקבות משבר הקורונה.
+                .אנחנו מודעים לקשיים שנוצרו במציאת עבודה בעקבות משבר הקורונה
                 <br />
                 !לכן, בזמן אמת החלטנו לפתח טכנולוגיה שתעזור לכם למצוא עבודה מכל מקום ובכל זמן בקליק אחד
             </div>
         </div>
-
     )
-
 }
 export default toEmployees;
