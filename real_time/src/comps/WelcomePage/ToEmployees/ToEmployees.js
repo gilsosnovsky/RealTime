@@ -3,8 +3,6 @@ import './ToEmployees.css'
 import 'bootstrap/dist/css/bootstrap.css';
 import Carousel from 'react-bootstrap/Carousel'
 
-
-
 const toEmployees = (props) => {
     return (
         <div id="toEmployees">
@@ -24,8 +22,8 @@ const toEmployees = (props) => {
               ללא מחויבות לכמות משמרות במגוון מקצועות וענפים ברחבי ירושלים
             </div>
             <p></p>
-            <Carousel id="carousel" width='100px'>
-                <Carousel.Item className="photo_1">
+            <Carousel id="carousel">
+                <Carousel.Item className="carousel_item">
                     <div className = "job_pic">
                         <img src = {require('./service.png')}
                         width="80%"/>
@@ -35,7 +33,7 @@ const toEmployees = (props) => {
                         <p>Details for the first job.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
-                <Carousel.Item className="photo_1">
+                <Carousel.Item className="carousel_item">
                     <div className = "job_pic">
                         <img src = {require('./build.png')}
                         width="80%"/>
@@ -45,7 +43,7 @@ const toEmployees = (props) => {
                         <p>Details for the second job.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
-                <Carousel.Item className="photo_1">
+                <Carousel.Item className="carousel_item">
                         <div className = "job_pic">
                             <img src = {require('./service.png')}
                             width="80%"/>
