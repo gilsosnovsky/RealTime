@@ -25,6 +25,15 @@ const pageBody =(props)=>{
             <ToBusiness/>
         )
     }
+
+    else if(props.pageBodystate==='contact'){
+        return(
+            <div id = "firstPageBody">
+                <h1>Contact</h1>
+            </div>
+        )
+    }
+
     else{
         return(
             <div id = "firstPageBody">
