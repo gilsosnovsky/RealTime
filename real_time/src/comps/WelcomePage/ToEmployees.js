@@ -26,19 +26,30 @@ const toEmployees = (props) => {
             <p></p>
             <Carousel id="carousel" width='100px'>
                 <Carousel.Item className="photo_1">
+                    <div className = "job_pic">
+                        <img src = {require('./service.png')}
+                        width="80%"/>
+                    </div>
                     <Carousel.Caption>
                         <h3>First job</h3>
                         <p>Details for the first job.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item className="photo_1">
-
+                    <div className = "job_pic">
+                        <img src = {require('./build.png')}
+                        width="80%"/>
+                    </div>
                     <Carousel.Caption>
                         <h3>Second job</h3>
                         <p>Details for the second job.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item className="photo_1">
+                        <div className = "job_pic">
+                            <img src = {require('./service.png')}
+                            width="80%"/>
+                        </div>
                     <Carousel.Caption>
                         <h3>Third job</h3>
                         <p>Details for the third job.</p>
