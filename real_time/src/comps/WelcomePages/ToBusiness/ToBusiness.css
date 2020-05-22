@@ -1,18 +1,18 @@
 #toBusiness {
   min-height: 650px;
+  padding-top: 100px;
   background-color: white;
-  margin-top: 90px;
   text-align: center;
   direction: rtl;
 }
 
-#info {
+#infoToBusiness {
   padding-top: 30px;
   padding-bottom: 30px;
   background-color: #7925c0;
 }
 
-#headLine {
+#headLineToBusiness {
   color: white;
   font-size: 30px;
 }
@@ -43,7 +43,7 @@
   font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
 }
 
-#contact {
+#contactBusiness {
   background: #f9f9f9;
   padding: 25px;
   margin: 50px 0;

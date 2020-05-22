@@ -1,7 +1,7 @@
 #toEmployees {
     min-height: 650px;
+    padding-top: 100px;
     background-color: white;
-    padding-top: 145px;
     text-align: center;
     direction: rtl;
 }

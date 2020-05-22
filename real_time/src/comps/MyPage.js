@@ -5,9 +5,9 @@ import Footer from './Footer/Footer';
 
 class MyPage extends Component {
     state = {
-        NavBarState: 'welcomePage',
-        PageBodyState: 'welcomePage',
-        FooterState: 'welcomePage'
+        NavBarState: 'homePage',
+        PageBodyState: 'homePage',
+        FooterState: 'homePage'
     }
 
     onClickToEmployees = () => {
@@ -18,7 +18,7 @@ class MyPage extends Component {
 
     onClickLogo = () => {
         this.setState({
-            PageBodyState: 'welcomePage'
+            PageBodyState: 'homePage'
         })
     }
 
@@ -34,7 +34,6 @@ class MyPage extends Component {
         })
     }
 
-
     render(){
         return(
             <div id = "MyPage">
@@ -43,7 +42,7 @@ class MyPage extends Component {
                 clickOnLogo={this.onClickLogo}
                 clickToBusiness={this.onClickToBusiness}
                 clickContact={this.onClickContact} />
-                <PageBody pageBodystate={this.state.PageBodyState}/>
+                <PageBody pageBodyState={this.state.PageBodyState}/>
                 <Footer/>
             </div>
         )

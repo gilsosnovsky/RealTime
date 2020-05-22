@@ -1,0 +1,20 @@
+#contact {
+    min-height: 650px;
+    background-color: #ffffff;
+    padding-top: 100px;
+    text-align: center;
+    direction: rtl;
+}
+
+#contact_p1{
+    color: #7925c0;
+    font-size: 80px;
+    font-weight: bold;
+    width: 50%;
+    margin: auto;
+}
+
+#form{
+    margin: auto;
+    width: 50%;
+}

@@ -4,8 +4,8 @@ import "./ToBusiness.css";
 const ToBusiness = (props) => {
   return (
     <div id="toBusiness">
-      <div id="info">
-        <label id="headLine">
+      <div id="infoToBusiness">
+        <label id="headLineToBusiness">
           זמן אמת הפתרון המושלם לבעיית כוח האדם בעקבות משבר הקורונה!
         </label>
         <label id="paragraph_1">
@@ -27,7 +27,7 @@ const ToBusiness = (props) => {
       </div>
       <div id="intrestMe">
         <div class="container">
-          <form id="contact" action="" method="post">
+          <form id="contactBusiness" action="" method="post">
             <h3>!מעניין אותי</h3>
             <h4>אשמח לשמוע פרטים</h4>
             <fieldset>
@@ -37,8 +37,7 @@ const ToBusiness = (props) => {
                 type="text"
                 tabindex="1"
                 required
-                autofocus
-              />
+                autofocus />
             </fieldset>
 
             <fieldset>
