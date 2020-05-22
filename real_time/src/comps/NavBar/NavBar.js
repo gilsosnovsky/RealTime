@@ -13,8 +13,10 @@ const NavBar = (props) => {
           צור קשר
         </label>
 
-        <label id="about_us"
-          className="NavBarButton">
+        <label
+          id="about_us"
+          className="NavBarButton"
+          onClick={props.clickAboutUs}>
           מי אנחנו
         </label>
 
