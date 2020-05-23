@@ -33,6 +33,11 @@ class MyPage extends Component {
             PageBodyState: 'contact'
         })
     }
+    onClickAboutUs=()=>{
+        this.setState({
+            PageBodyState: 'aboutUs'
+        })
+    }
 
     render(){
         return(
@@ -41,7 +46,10 @@ class MyPage extends Component {
                 clickToEmployees={this.onClickToEmployees}
                 clickOnLogo={this.onClickLogo}
                 clickToBusiness={this.onClickToBusiness}
-                clickContact={this.onClickContact} />
+                clickContact={this.onClickContact}
+                clickAboutUs={this.onClickAboutUs} 
+                />
+
                 <PageBody pageBodyState={this.state.PageBodyState}/>
                 <Footer/>
             </div>

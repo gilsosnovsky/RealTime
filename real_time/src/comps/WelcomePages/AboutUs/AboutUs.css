@@ -1,0 +1,30 @@
+#aboutUs {
+    min-height: 650px;
+    padding-top: 100px;
+    background-color: white;
+    text-align: center;
+    direction: rtl;
+}
+#aboutUs_p1{
+    padding-top: 10px;
+}
+#aboutUs_p2{
+
+    padding-top: 35px;
+}
+#aboutUs_p3{
+    padding-top: 35px;
+}
+#aboutUs_p4{
+    padding-top: 35px;
+}
+#aboutUsPic1
+{
+    width:50 px;
+    height: 80px;
+}
+#aboutUsPic2
+{
+    width:50 px;
+    height: 80px;
+}
