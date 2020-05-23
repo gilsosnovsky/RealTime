@@ -1,57 +1,58 @@
 #toEmployees {
-    min-height: 650px;
-    padding-top: 100px;
-    background-color: white;
-    text-align: center;
-    direction: rtl;
+  min-height: 650px;
+  padding-top: 100px;
+  background-color: white;
+  text-align: center;
+  direction: rtl;
 }
 
 #employees_p1 {
-    color: #7925c0;
-    font-size: 30px;
+  color: #7925c0;
+  font-size: 30px;
 }
 
 #employees_p2 {
-    color: black;
-    font-size: 20px;
+  color: black;
+  font-size: 20px;
 }
 
 #carousel {
-    background-color: rgb(56, 56, 56);
-    height: 320px;
-    color: white;
+  background-color: rgb(56, 56, 56);
+  height: 320px;
+  color: white;
+  z-index: 1;
 }
 
 .carousel_item {
-    height: 320px;
-    text-align: center;
+  height: 320px;
+  text-align: center;
 }
 
 .job_pic {
-    width: 15%;
-    height: 50%;
-    margin-top: 2%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  width: 15%;
+  height: 50%;
+  margin-top: 2%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #employees_p3 {
-    background-color: white;
-    font-size: 20px;
-    padding-top: 20px;
-    padding-bottom: 30px;
-    padding-right: 10px;
-    text-align: center;
+  background-color: white;
+  font-size: 20px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  padding-right: 10px;
+  text-align: center;
 }
 
 #employees_p4 {
-    color: #7925c0;
-    font-size: 30px;
+  color: #7925c0;
+  font-size: 30px;
 }
 
 #employees_p5 {
-    color: black;
-    font-size: 20px;
-    padding-bottom: 30px;
+  color: black;
+  font-size: 20px;
+  padding-bottom: 30px;
 }

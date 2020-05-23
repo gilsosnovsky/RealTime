@@ -9,34 +9,34 @@ const NavBar = (props) => {
         <label
           id="ContactUs"
           className="NavBarButton"
-          onClick={props.clickContact}>
+          onClick={props.clickContact}
+        >
           צור קשר
         </label>
 
-        <label id="about_us"
-          className="NavBarButton">
+        <label id="about_us" className="NavBarButton">
           מי אנחנו
         </label>
 
         <label
           id="to_business"
           className="NavBarButton"
-          onClick={props.clickToBusiness}>
+          onClick={props.clickToBusiness}
+        >
           לעסקים
         </label>
 
         <label
           id="to_employees"
           className="NavBarButton"
-          onClick={props.clickToEmployees}>
+          onClick={props.clickToEmployees}
+        >
           לעובדים
         </label>
+
+        <img id="logo" src={logo} alt="Logo" onClick={props.clickOnLogo} />
       </div>
 
-      <img id="logo"
-        src={logo}
-        alt="Logo"
-        onClick={props.clickOnLogo} />
       {/* </div> */}
     </div>
   );

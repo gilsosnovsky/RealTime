@@ -27,7 +27,7 @@ const ToBusiness = (props) => {
       </div>
       <div id="intrestMe">
         <div class="container">
-          <form id="contactBusiness" action="" method="post">
+          <form id="contact" action="" method="post">
             <h3>!מעניין אותי</h3>
             <h4>אשמח לשמוע פרטים</h4>
             <fieldset>
@@ -37,7 +37,8 @@ const ToBusiness = (props) => {
                 type="text"
                 tabindex="1"
                 required
-                autofocus />
+                autofocus
+              />
             </fieldset>
 
             <fieldset>
