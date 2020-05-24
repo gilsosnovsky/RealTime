@@ -6,7 +6,7 @@ const ToBusiness = (props) => {
     <div id="toBusiness">
       <div id="infoToBusiness">
         <label id="headLineToBusiness">
-          זמן אמת הפתרון המושלם לבעיית כוח האדם בעקבות משבר הקורונה!
+        זמן אמת - הפתרון המושלם לבעיית כוח האדם שלך!
         </label>
         <label id="paragraph_1">
           זמן אמת היא פלטפורמה ירושלמית שמתמחה בגיוס, שיבוץ, וניהול עובדים
