@@ -30,8 +30,8 @@ const Contact = (props) => {
 
             <fieldset>
                 <textarea
-                placeholder="עוד משהו להוסיף?"
-                tabindex="5"
+                placeholder="תוכן ההודעה"
+                tabindex="4"
                 required
                 ></textarea>
                
