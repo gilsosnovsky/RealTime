@@ -4,21 +4,53 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 const Contact = (props) => {
     return (
-        <div id="contact">
-            <div id="contact_p1">
-                דברו איתנו
+        <div class="contactPageContainer">
+          <form id="contactPage" action="" method="post">
+          <div id="contactPage_p1">
+            דברו איתנו
             </div>
-            <div id="form">
-                <label for="fname">שם מלא:</label>
-                <input type="text" id="fname" name="fname" /><br></br>
-                <label for="femail">אימייל:</label>
-                <input type="email" id="femail" name="femail" /><br></br>
-                <label for="fphone">טלפון:</label>
-                <input type="tel" id="phoneNumber" name="fphone" /><br></br>
-                <label for="fhowYouGotUs">תוכן ההודעה:</label>
-                <input type="text" id="fhowYouGotUs" name="fhowYouGotUs" /><br></br>
-            </div>
-        </div>
-    )
-}
+            <fieldset>
+              <input
+                id="fname"
+                placeholder="שם מלא"
+                type="text"
+                tabindex="1"
+                required
+                autofocus
+              />
+            </fieldset>
+
+            <fieldset>
+              <input placeholder="אימייל" type="email" tabindex="2" required />
+            </fieldset>
+
+            <fieldset>
+              <input placeholder="טלפון" type="tel" tabindex="3" required />
+            </fieldset>
+
+            <fieldset>
+              <input
+                id="content"
+                placeholder="תוכן ההודעה"
+                type="text"
+                tabindex="4"
+                required
+                autofocus
+              />
+            </fieldset>
+
+            <fieldset>
+              <button
+                name="submit"
+                type="submit"
+                id="contact-submit"
+                data-submit="...Sending"
+              >
+                Submit
+              </button>
+            </fieldset>
+          </form>
+        </div> 
+    );
+};
 export default Contact;
