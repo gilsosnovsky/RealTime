@@ -4,6 +4,8 @@ import helping_hands from "./helping_hand.png";
 import instegram from "./instagram.png";
 import facebook from "./facebook.png";
 import hug from "./hug.png";
+import medal from "./medal.png";
+
 
 
 const ToBusiness = (props) => {
@@ -113,8 +115,8 @@ const ToBusiness = (props) => {
           <p />
           <label>
             <b>ליווי קבוע</b>
-            <br/>
-              תכנית ליווי מקצועי מצוות 
+            <br />
+              תכנית ליווי מקצועי מצוות
               'זמן אמת' למעסיקים בפלטפורמה,
                 לפני הגיוס לעבודה,
                 במהלכה ולאחריה.
@@ -127,7 +129,7 @@ const ToBusiness = (props) => {
 
           <label>
             <b>	פרסום עירוני</b>
-            <br/>
+            <br />
              פרסום העסק בפלטפורמות
             דיגיטליות עירוניות
           </label>
@@ -144,6 +146,73 @@ const ToBusiness = (props) => {
         </div>
         <p />
 
+      </div>
+      <div id="advantages">
+        <div id="advantages_container">
+          <label id="advantages_title">
+            היתרונות בלעבוד איתנו
+          </label>
+          <div className="advantages_item">
+            <img src={medal} width="35px" />
+            <label className="advantages_item_title">
+              זמן = כסף!
+          </label>
+            <br />
+            <label className="advantages_item_body">
+              אנו מאתרים עבורכם את העובדים, מה שחוסך התרוצצות וזמן יקר בפרסום וגיוס.
+          </label>
+          </div>
+          <div className="advantages_item">
+            <img src={medal} width="35px" />
+            <label className="advantages_item_title">
+              מהירות
+          </label>
+            <br />
+            <label className="advantages_item_body">
+            אפשר למצוא פתרונות מהרגע להרגע.
+          </label>
+          </div>
+          <div className="advantages_item">
+            <img src={medal} width="35px" />
+            <label className="advantages_item_title">
+              זמינות
+          </label>
+            <br />
+            <label className="advantages_item_body">
+            הצוות המקצועי זמין עבורכם בכל עת.
+          </label>
+          </div>
+          <div className="advantages_item">
+            <img src={medal} width="35px" />
+            <label className="advantages_item_title">
+              שירות
+          </label>
+            <br />
+            <label className="advantages_item_body">
+            כל מעסיק זוכה לליווי צמוד, תוך התאמה של הצרכים לעבודות השונות
+          </label>
+          </div>
+          <div className="advantages_item">
+            <img src={medal} width="35px" />
+            <label className="advantages_item_title">
+              איכות
+          </label>
+            <br />
+            <label className="advantages_item_body">
+            אין אצלנו פשרות בכוח האדם. כל המועמדים עוברים ראיון מקדים ושיחות רענון תקופתיות.
+          </label>
+          </div>
+          <div className="advantages_item">
+            <img src={medal} width="35px" />
+            <label className="advantages_item_title">
+              שקט נפשי
+          </label>
+            <br />
+            <label className="advantages_item_body">
+            יחסי אנוש זה המומחיות שלנו. תנו לנו לעשות את העבודה בשבילכם.          </label>
+          </div>
+
+        </div>
       </div>
     </div>
   );
