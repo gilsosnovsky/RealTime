@@ -9,16 +9,21 @@
 #infoToBusiness {
   padding-top: 30px;
   padding-bottom: 30px;
-  background-color: #7925c0;
+  background-color: white;
 }
 
 #headLineToBusiness {
-  color: white;
+  color: #7925c0;
   font-size: 30px;
 }
 
-#paragraph_1 {
-  color: white;
+.paragraph_1_toBusiness {
+  color:black;
+  font-size: 20px;
+}
+
+.paragraph_2_toBusiness {
+  color:black;
   font-size: 20px;
 }
 
@@ -149,4 +154,25 @@ fieldset {
 
 :-ms-input-placeholder {
   color: #888;
+}
+
+#three_qal{
+  text-align: center;
+  font-size: 20px;
+
+}
+
+#helping_hands{
+  width: 250x;
+
+}
+
+#social_media{
+  width: 250px;
+
+}
+
+#hug{
+
+  width: 250px;
 }

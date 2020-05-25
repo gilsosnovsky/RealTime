@@ -1,5 +1,10 @@
 import React from "react";
 import "./ToBusiness.css";
+import helping_hands from "./helping_hand.png";
+import instegram from "./instagram.png";
+import facebook from "./facebook.png";
+import hug from "./hug.png";
+
 
 const ToBusiness = (props) => {
   return (
@@ -8,7 +13,7 @@ const ToBusiness = (props) => {
         <label id="headLineToBusiness">
         זמן אמת - הפתרון המושלם לבעיית כוח האדם שלך!
         </label>
-        <label id="paragraph_1">
+        <label className="paragraph_1_toBusiness">
           זמן אמת היא פלטפורמה ירושלמית שמתמחה בגיוס, שיבוץ, וניהול עובדים
           יומיים.
           <br />
@@ -91,6 +96,58 @@ const ToBusiness = (props) => {
             </fieldset>
           </form>
         </div>
+      </div>
+      <label className="paragraph_2_toBusiness">
+      בעקבות הטכנולוגיה שפיתחנו, בשילוב עם הצוות המקצועי שלנו, ביכולתנו לספק 
+      <br/>
+      עובדים לעבודות זמניות וקבועות, בכל רחבי ירושלים, למגוון רחב של תפקידים ומקצועות. 
+      <br/>
+      זאת באמצעות מודל חדש של העסקה חברתית, שיסייע בהקטנת פערים בין ציבורים שונים
+      <br/>
+       ויספק למעסיקים כוח אדם איכותי. 
+      </label>
+      <p/>
+      <div id="three_qal">
+        <div id="helping_hands">
+            <img src={helping_hands}></img>
+            <p/>
+            <label>
+              <b>ליווי קבוע</b>
+              <br/>
+              תכנית ליווי מקצועי מצוות 'זמן אמת'
+              <br/>
+               למעסיקים בפלטפורמה, לפני הגיוס לעבודה,
+               <br/>
+                במהלכה ולאחריה. 
+                </label>
+        </div>
+        <div id="social_media">
+          <img src={facebook} height='60x'></img>
+          <img src={instegram} height='60px'></img>
+          <p/>
+      
+          <label>
+            <b>	פרסום עירוני</b>
+            <br/>
+             פרסום העסק בפלטפורמות 
+            <br/>
+            דיגיטליות עירוניות
+          </label>
+        </div>
+        <div id="hug">
+          <img src={hug}></img>
+          <p/>
+          <label>
+          <b>מעטפה צמודה</b>
+            <br/>
+          כוח האדם מלווה ע"י הצוות המקצועי של 'זמן אמת',
+          <br/>
+           החל משלב חיפוש העבודה, במהלכה ולאחריה.
+          </label>
+
+        </div>
+        <p/>
+
       </div>
     </div>
   );
