@@ -166,19 +166,21 @@ fieldset {
 }
 
 #helping_hands{
-  width: 33%;
+  width: 29%;
+  padding-right: 6%;
   float: left;
   margin: 0 auto;
 }
 
 #social_media{
-  width: 33%;
+  width: 29%;
   float: left;
   margin: 0 auto;
 }
 
 #hug{
-  width: 33%;
+  width: 29%;
+  padding-left: 6%;
   float: left;
   margin: 0 auto;
 }
