@@ -241,15 +241,18 @@ fieldset {
   font-size: 20px;
 }
 
+.single_employee_item{
+  display: flex;
+  margin-bottom: 12px;
+}
+
 .smiley{
-  width: 30px;
+  height: 30px;
 }
 
 .type_of_employee{
-  padding-right: 30px;
+  margin-right: 20px;
 }
-
-
 
 #radio_button_container{
   color: #888;
