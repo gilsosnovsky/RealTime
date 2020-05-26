@@ -87,23 +87,23 @@ const ToBusiness = (props) => {
             </fieldset>
 
             <fieldset>
-            <label id="radio_button_container">המשרות המוצעות:
-              <br/>
-              <label className="radio_button">
-              <input type="radio" id="short_term" name="radAnswer" checked="checked"/>
+              <label id="radio_button_container">המשרות המוצעות:
+              <br />
+                <label className="radio_button">
+                  <input type="radio" id="short_term" name="radAnswer" checked="checked" />
               טווח קצר
               </label>
 
-              <label className="radio_button">
-              <input type="radio" id="long_term" name="radAnswer"/>
+                <label className="radio_button">
+                  <input type="radio" id="long_term" name="radAnswer" />
               עבודה קבועה
               </label>
 
-              <label className="radio_button">
-              <input type="radio" id="both" name="radAnswer"/>
+                <label className="radio_button">
+                  <input type="radio" id="both" name="radAnswer" />
               גם וגם
               </label>
-            </label>
+              </label>
             </fieldset>
 
 
@@ -190,7 +190,7 @@ const ToBusiness = (props) => {
           </label>
             <br />
             <label className="advantages_item_body">
-            אפשר למצוא פתרונות מהרגע להרגע.
+              אפשר למצוא פתרונות מהרגע להרגע.
           </label>
           </div>
           <div className="advantages_item">
@@ -200,7 +200,7 @@ const ToBusiness = (props) => {
           </label>
             <br />
             <label className="advantages_item_body">
-            הצוות המקצועי זמין עבורכם בכל עת.
+              הצוות המקצועי זמין עבורכם בכל עת.
           </label>
           </div>
           <div className="advantages_item">
@@ -210,7 +210,7 @@ const ToBusiness = (props) => {
           </label>
             <br />
             <label className="advantages_item_body">
-            כל מעסיק זוכה לליווי צמוד, תוך התאמה של הצרכים לעבודות השונות
+              כל מעסיק זוכה לליווי צמוד, תוך התאמה של הצרכים לעבודות השונות
           </label>
           </div>
           <div className="advantages_item">
@@ -220,7 +220,7 @@ const ToBusiness = (props) => {
           </label>
             <br />
             <label className="advantages_item_body">
-            אין אצלנו פשרות בכוח האדם. כל המועמדים עוברים ראיון מקדים ושיחות רענון תקופתיות.
+              אין אצלנו פשרות בכוח האדם. כל המועמדים עוברים ראיון מקדים ושיחות רענון תקופתיות.
           </label>
           </div>
           <div className="advantages_item">
@@ -230,57 +230,65 @@ const ToBusiness = (props) => {
           </label>
             <br />
             <label className="advantages_item_body">
-            יחסי אנוש זה המומחיות שלנו. תנו לנו לעשות את העבודה בשבילכם.          </label>
+              יחסי אנוש זה המומחיות שלנו. תנו לנו לעשות את העבודה בשבילכם.          </label>
           </div>
 
         </div>
       </div>
-      <div id = "our_employees">
+      <div id="our_employees">
         <label id="our_employees_title">
-            העובדים שלנו
+          העובדים שלנו
         </label>
-        <p/>
+        <p />
         <label id="our_employees_sub_title">
-        קהל היעד העיקרי של האפליקציה הם בראש ובראשונה - ירושלמים!
-        <br/>
+          קהל היעד העיקרי של האפליקציה הם בראש ובראשונה - ירושלמים!
+        <br />
          נוער וצעירים/ות מוכשרים/ות, בעלי כוח רצון!  בין היתר, חלק מהעובדים הם –
         </label>
-        <p/>
-        <div className = "our_employees_item">
-            <img src={smiley} className="smiley"></img>
+        <p />
+        <div className="our_employees_item">
+          <div className="single_employee_item">
+            <img className="smiley" src={smiley} />
             <label className="type_of_employee">
-             מלש"בים אשר רוצים לחסוך לפני שירות צבאי/לאומי
+              מלש"בים אשר רוצים לחסוך לפני שירות צבאי/לאומי
             </label>
-            <br/>
-            <img src={smiley} className="smiley"></img>
+          </div>
+          <div className="single_employee_item">
+            <img className="smiley" src={smiley} />
             <label className="type_of_employee">
-             חיילים בסדיר אשר רוצים לעבוד ולא יכולים להתחייב למקום קבוע
+              חיילים בסדיר אשר רוצים לעבוד ולא יכולים להתחייב למקום קבוע
             </label>
-            <br/>
-            <img src={smiley} className="smiley"></img>
+          </div>
+          <div className="single_employee_item">
+            <img className="smiley" src={smiley} />
             <label className="type_of_employee">
-             חיילים משוחררים אשר רוצים לחסוך כסף ומחפשים עבודה עם כסף טוב ומהיר, אשר אינה מצריכה מיומנות מיוחדת.
+              חיילים משוחררים אשר רוצים לחסוך כסף ומחפשים עבודה עם כסף טוב ומהיר, אשר אינה מצריכה מיומנות מיוחדת.
             </label>
-            <br/>
-            <img src={smiley} className="smiley"></img>
+          </div>
+          <div className="single_employee_item">
+            <img className="smiley" src={smiley} />
             <label className="type_of_employee">
-            עובדים בין עבודות.
+              עובדים בין עבודות.
             </label>
-            <br/>
-            <img src={smiley} className="smiley"></img>
+          </div>
+          <div className="single_employee_item">
+            <img className="smiley" src={smiley} />
             <label className="type_of_employee">
-             סטודנטים אשר זמינותם לעבודה משתנה כתוצאה מלימודים / בחינות
+              סטודנטים אשר זמינותם לעבודה משתנה כתוצאה מלימודים / בחינות
             </label>
-            <br/>
-            <img src={smiley} className="smiley"></img>
+          </div>
+          <div className="single_employee_item">
+            <img className="smiley" src={smiley} />
             <label className="type_of_employee">
-             עובדים הזקוקים להכנסה נוספת זמנית / או קבועה בזמנים משתנים.
+              עובדים הזקוקים להכנסה נוספת זמנית / או קבועה בזמנים משתנים.
             </label>
-            <br/>
-            <img src={smiley} className="smiley"></img>
+          </div>
+          <div className="single_employee_item">
+            <img className="smiley" src={smiley} />
             <label className="type_of_employee">
-             עובדים אשר אוהבים לגוון בין עבודות ומעסיקים
+              עובדים אשר אוהבים לגוון בין עבודות ומעסיקים
             </label>
+          </div>
         </div>
       </div>
     </div>
