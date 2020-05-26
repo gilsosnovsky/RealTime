@@ -5,7 +5,7 @@ import instegram from "./instagram.png";
 import facebook from "./facebook.png";
 import hug from "./hug.png";
 import medal from "./medal.png";
-
+import smiley from "./smiley.png";
 
 
 const ToBusiness = (props) => {
@@ -85,6 +85,27 @@ const ToBusiness = (props) => {
                 required
               ></textarea>
             </fieldset>
+
+            <fieldset>
+            <label id="radio_button_container">המשרות המוצעות:
+              <br/>
+              <label className="radio_button">
+              <input type="radio" id="short_term" name="radAnswer" checked="checked"/>
+              טווח קצר
+              </label>
+
+              <label className="radio_button">
+              <input type="radio" id="long_term" name="radAnswer"/>
+              עבודה קבועה
+              </label>
+
+              <label className="radio_button">
+              <input type="radio" id="both" name="radAnswer"/>
+              גם וגם
+              </label>
+            </label>
+            </fieldset>
+
 
             <fieldset>
               <button
@@ -218,27 +239,48 @@ const ToBusiness = (props) => {
         <label id="our_employees_title">
             העובדים שלנו
         </label>
-        <br/>
+        <p/>
         <label id="our_employees_sub_title">
         קהל היעד העיקרי של האפליקציה הם בראש ובראשונה - ירושלמים!
         <br/>
          נוער וצעירים/ות מוכשרים/ות, בעלי כוח רצון!  בין היתר, חלק מהעובדים הם –
         </label>
-        <br/>
+        <p/>
         <div className = "our_employees_item">
-          ☺ מלש"בים אשר רוצים לחסוך לפני שירות צבאי/לאומי
-          <br/>
-          ☺ חיילים בסדיר אשר רוצים לעבוד ולא יכולים להתחייב למקום קבוע
-          <br/>
-          ☺ חיילים משוחררים אשר רוצים לחסוך כסף ומחפשים עבודה עם כסף טוב ומהיר, אשר אינה מצריכה מיומנות מיוחדת
-          <br/>
-          ☺ עובדים בין עבודות
-          <br/>
-          ☺ סטודנטים אשר זמינותם לעבודה משתנה כתוצאה מלימודים / בחינות.
-          <br/>
-          ☺ עובדים הזקוקים להכנסה נוספת זמנית / או קבועה בזמנים משתנים.
-          <br/>
-          ☺ עובדים אשר אוהבים לגוון בין עבודות ומעסיקים
+            <img src={smiley} className="smiley"></img>
+            <label className="type_of_employee">
+             מלש"בים אשר רוצים לחסוך לפני שירות צבאי/לאומי
+            </label>
+            <br/>
+            <img src={smiley} className="smiley"></img>
+            <label className="type_of_employee">
+             חיילים בסדיר אשר רוצים לעבוד ולא יכולים להתחייב למקום קבוע
+            </label>
+            <br/>
+            <img src={smiley} className="smiley"></img>
+            <label className="type_of_employee">
+             חיילים משוחררים אשר רוצים לחסוך כסף ומחפשים עבודה עם כסף טוב ומהיר, אשר אינה מצריכה מיומנות מיוחדת.
+            </label>
+            <br/>
+            <img src={smiley} className="smiley"></img>
+            <label className="type_of_employee">
+            עובדים בין עבודות.
+            </label>
+            <br/>
+            <img src={smiley} className="smiley"></img>
+            <label className="type_of_employee">
+             סטודנטים אשר זמינותם לעבודה משתנה כתוצאה מלימודים / בחינות
+            </label>
+            <br/>
+            <img src={smiley} className="smiley"></img>
+            <label className="type_of_employee">
+             עובדים הזקוקים להכנסה נוספת זמנית / או קבועה בזמנים משתנים.
+            </label>
+            <br/>
+            <img src={smiley} className="smiley"></img>
+            <label className="type_of_employee">
+             עובדים אשר אוהבים לגוון בין עבודות ומעסיקים
+            </label>
         </div>
       </div>
     </div>
