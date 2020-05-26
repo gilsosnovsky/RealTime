@@ -5,7 +5,8 @@ const aboutUs = (props) => {
     return (
         <div id="aboutUs">
             <div id="aboutUs_p1">
-               <h3 class='aboutUsHeader'>מי אנחנו</h3>
+               מי אנחנו
+                <p/>
             </div>
             <div id="aboutUs_p2">
                 זמן אמת היא פלטפורמה ירושלמית שמתמחה בגיוס
