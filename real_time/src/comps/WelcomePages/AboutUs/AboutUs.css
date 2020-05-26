@@ -7,6 +7,7 @@
     background-color: white;
     text-align: center;
     direction: rtl;
+    font-size: 20px;
 }
 #aboutUs_p1{
     padding-top: 10px;
@@ -32,5 +33,5 @@
     height: 120px;
 }
 .aboutUsHeader{
-    color: #7925c0;
+    color: 30px;
 }
