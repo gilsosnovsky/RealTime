@@ -1,6 +1,9 @@
 #aboutUs {
     min-height: 650px;
     padding-top: 100px;
+    width: 55%;
+    margin-right: auto;
+    margin-left: auto;
     background-color: white;
     text-align: center;
     direction: rtl;
@@ -20,11 +23,14 @@
 }
 #aboutUsPic1
 {
-    width:50 px;
-    height: 80px;
+    width:90px;
+    height: 120px;
 }
 #aboutUsPic2
 {
-    width:50 px;
-    height: 80px;
+    width:90px;
+    height: 120px;
+}
+.aboutUsHeader{
+    color: #7925c0;
 }
