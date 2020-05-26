@@ -5,7 +5,7 @@ const aboutUs = (props) => {
     return (
         <div id="aboutUs">
             <div id="aboutUs_p1">
-               מי אנחנו
+               מי אנחנו?
                 <p/>
             </div>
             <div id="aboutUs_p2">
