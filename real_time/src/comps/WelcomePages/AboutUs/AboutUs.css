@@ -1,4 +1,4 @@
-#aboutUs {
+#aboutUs{
     min-height: 650px;
     padding-top: 100px;
     width: 85%;
@@ -9,56 +9,60 @@
     direction: rtl;
     font-size: 20px;
 }
+
 #aboutUs_p1{
     padding-top: 10px;
     font-size: 35px;
-    display: block;
-    
-    
-    
+    text-align: center;
 }
-#aboutUs_p2{
 
+#aboutUs_p2{
     padding-top: 35px;
+    width:90%;
+}
+
+.aboutUs_name_title{
+    font-size: 35px;
+    color: #7925c0;
+}
+
+#amit_div{
+    margin-top: 35px;
+    display: flex;
+}
+#aboutUs_amit_description{
     width:70%;
-    display: block;   
 }
-#aboutUs_p3{
-    padding-top: 35px;
+#aboutUs_amit_pic_div{
+    width:25%;
+}
+
+#yuval_div{
+    margin-top: 35px;
+    margin-bottom: 35px;
+    display: flex;
+}
+
+#aboutUs_yuval_description{
     width:70%;
-    display: block;
-    padding-right: 100px ;
-    
-    
+    margin: 0, auto;
 }
-#aboutUs_p4{
-    padding-top: 35px;
-    width:70%;
-    display: block;
-    padding-right: 100px ;
-    min-height: 200px;
-  
-   
+
+#aboutUs_yuval_pic_div{
+    width:25%;
 }
-#aboutUsPic1
-{
-    width:90px;
-    height: 120px;
+
+.personal_pic{
+    width:80%;
+    margin-right: 15%;
+    border-radius: 50%;
+    border: 3px solid rgb(56, 56, 56);
+    transition: 0.4s;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
-#aboutUsPic2
-{
-    width:90px;
-    height: 120px;
-}
-#aboutUs_pic1Div{
-    margin-top: 40px;
-   width:100px;
-   float:right; 
-  
-}
-#aboutUs_pic2Div{
-    margin-top: 40px;
-    width:100px;
-    float:right;
-    
+
+.personal_pic:hover{
+    border: 5px solid #7925c0;
 }
