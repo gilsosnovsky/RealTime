@@ -2,11 +2,11 @@ import React from "react";
 import "./Home.css";
 
 const Home = (props) => {
-    return (
-      <div id="Home">
-          <h1>דף הבית!</h1>
-      </div>
-    );
-  };
-  export default Home;
-  
+  return (
+    <div id="Home">
+      <div id="empButton">בעל עסק</div>
+      <div id="busButton">מחפש עבודה</div>
+    </div>
+  );
+};
+export default Home;
