@@ -38,7 +38,7 @@ const NavBar = (props) => {
           לעובדים
         </label>
 
-        <img id="logo" src={logo} alt="Logo" onClick={props.clickOnLogo} />
+        <img id="logo" src={logo} alt="Logo" onClick={props.clickLogin} />
       </div>
 
       {/* </div> */}

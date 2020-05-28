@@ -1,59 +1,66 @@
-import React, { Component } from 'react';
-import NavBar from './NavBar/NavBar';
-import PageBody from './PageBody/PageBody';
-import Footer from './Footer/Footer';
+import React, { Component } from "react";
+import NavBar from "./NavBar/NavBar";
+import PageBody from "./PageBody/PageBody";
+import Footer from "./Footer/Footer";
 
 class MyPage extends Component {
-    state = {
-        NavBarState: 'homePage',
-        PageBodyState: 'homePage',
-        FooterState: 'homePage'
-    }
+  state = {
+    NavBarState: "homePage",
+    PageBodyState: "homePage",
+    FooterState: "homePage",
+  };
 
-    onClickToEmployees = () => {
-        this.setState({
-            PageBodyState: 'toEmployees'
-        })
-    }
+  onClickToEmployees = () => {
+    this.setState({
+      PageBodyState: "toEmployees",
+    });
+  };
 
-    onClickLogo = () => {
-        this.setState({
-            PageBodyState: 'homePage'
-        })
-    }
+  onClickLogo = () => {
+    this.setState({
+      PageBodyState: "homePage",
+    });
+  };
 
-    onClickToBusiness=()=>{
-        this.setState({
-            PageBodyState: 'toBusiness'
-        })
-    }
+  onClickLogin = () => {
+    this.setState({
+      PageBodyState: "login",
+    });
+  };
 
-    onClickContact=()=>{
-        this.setState({
-            PageBodyState: 'contact'
-        })
-    }
-    onClickAboutUs=()=>{
-        this.setState({
-            PageBodyState: 'aboutUs'
-        })
-    }
+  onClickToBusiness = () => {
+    this.setState({
+      PageBodyState: "toBusiness",
+    });
+  };
 
-    render(){
-        return(
-            <div id = "MyPage">
-                <NavBar 
-                clickToEmployees={this.onClickToEmployees}
-                clickOnLogo={this.onClickLogo}
-                clickToBusiness={this.onClickToBusiness}
-                clickContact={this.onClickContact}
-                clickAboutUs={this.onClickAboutUs} 
-                />
+  onClickContact = () => {
+    this.setState({
+      PageBodyState: "contact",
+    });
+  };
+  onClickAboutUs = () => {
+    this.setState({
+      PageBodyState: "aboutUs",
+    });
+  };
 
-                <PageBody pageBodyState={this.state.PageBodyState}/>
-                <Footer/>
-            </div>
-        )
-    }
+  render() {
+    return (
+      <div id="MyPage">
+        <NavBar
+          clickToEmployees={this.onClickToEmployees}
+          clickOnLogo={this.onClickLogo}
+          clickToBusiness={this.onClickToBusiness}
+          clickContact={this.onClickContact}
+          clickAboutUs={this.onClickAboutUs}
+          clickLogin={this.onClickLogin}
+        />
+
+        <PageBody pageBodyState={this.state.PageBodyState} />
+        <Footer />
+      </div>
+    );
+  }
 }
 export default MyPage;

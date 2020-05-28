@@ -1,0 +1,62 @@
+#Login {
+  min-height: 620px;
+  padding-top: 100px;
+  margin-top: 90px;
+
+  text-align: center;
+  direction: rtl;
+}
+
+#empButton {
+  position: relative;
+  background: #7925c0;
+  border: 0px solid #ffffff;
+  border-radius: 10px;
+  width: 200px;
+  padding: 20px 40px;
+  cursor: pointer;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  color: white;
+  font-size: large;
+  font-weight: bold;
+  top: 120px;
+  left: -450px;
+  transition-duration: 0.5s;
+}
+
+#empButton:hover {
+  position: relative;
+  cursor: pointer;
+  position: relative;
+  background: white;
+  color: #7925c0;
+  transition-duration: 0.5s;
+}
+
+#busButton {
+  position: relative;
+  background: #7925c0;
+  border: 0px solid #ffffff;
+  border-radius: 10px;
+  width: 200px;
+  padding: 20px 40px;
+  cursor: pointer;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  color: white;
+  font-size: large;
+  font-weight: bold;
+  top: 150px;
+  left: 450px;
+  transition-duration: 0.5s;
+}
+
+#busButton:hover {
+  position: relative;
+  cursor: pointer;
+  position: relative;
+  background: white;
+  color: #7925c0;
+  transition-duration: 0.5s;
+}
