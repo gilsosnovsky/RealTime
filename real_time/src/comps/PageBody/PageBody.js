@@ -8,7 +8,6 @@ import AboutUs from "../WelcomePages/AboutUs/AboutUs";
 import Login from "../WelcomePages/Login/Login";
 
 const pageBody = (props) => {
-<<<<<<< HEAD
   if (props.pageBodyState === "homePage") {
     return <Home />;
   } else if (props.pageBodyState === "toEmployees") {
@@ -31,36 +30,3 @@ const pageBody = (props) => {
   }
 };
 export default pageBody;
-=======
-
-    if (props.pageBodyState === 'homePage') {
-        return (
-            <Home />
-        )
-    }
-    else if (props.pageBodyState === 'toEmployees') {
-        return (
-            <ToEmployees />
-        )
-    }
-
-    else if (props.pageBodyState === 'toBusiness') {
-        return (
-            <ToBusiness />
-        )
-    }
-
-    else if (props.pageBodyState === 'contact') {
-        return (
-            <Contact />
-        )
-    }
-    else if (props.pageBodyState === 'aboutUs') {
-        return (
-            <AboutUs />
-        )
-    }
-    
-}
-export default pageBody;
->>>>>>> f58a5034c3dbe5a526ecbec850bb59ddcc4129ff
