@@ -16,6 +16,15 @@
   font-size: 20px;
 }
 
+#carousel_container{
+  background-color: rgb(56, 56, 56);
+  color: white;
+}
+
+#hot_jobs_carousel{
+  font-size: 30px;
+  font-weight: bold;
+}
 #carousel {
   background-color: rgb(56, 56, 56);
   height: 320px;
@@ -48,7 +57,8 @@
 
 #employees_p4 {
   color: #7925c0;
-  font-size: 30px;
+  font-size: 35px;
+  font-weight: bold;
 }
 
 #employees_p5 {
