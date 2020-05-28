@@ -32,19 +32,10 @@ const pageBody = (props) => {
         )
     }
     else if (props.pageBodyState === 'aboutUs') {
-        console.log("dsad");
         return (
             <AboutUs />
         )
     }
-
-    else {
-        return (
-            <div id="firstPageBody">
-                <h1>default</h1>
-            </div>
-        )
-    }
-
+    
 }
 export default pageBody;

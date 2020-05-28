@@ -5,7 +5,7 @@ import instegram from "./instagram.png";
 import facebook from "./facebook.png";
 import hug from "./hug.png";
 import medal from "./medal.png";
-import smiley from "./smiley.png";
+import sand_clock from "./sand_clock.png";
 
 
 const ToBusiness = (props) => {
@@ -28,14 +28,14 @@ const ToBusiness = (props) => {
           בזכות הטכנולוגיה שפיתחנו, בשילוב עם רשת קשרים מקצועית ברחבי העיר,
           ביכולתנו לספק עובדים ליום או יותר,
           <br />
-          בכל רחבי העיר, בהזמנה מראש או בהתראה קצרה, למגוון רחב של תפקידים
+           בהזמנה מראש או בהתראה קצרה, למגוון רחב של תפקידים
           ומקצועות.
         </label>
       </div>
       <div id="intrestMe">
         <div class="container">
           <form id="contact" action="" method="post">
-            <h3>!מעניין אותי</h3>
+            <h3>מעניין אותי!</h3>
             <h4>אשמח לשמוע פרטים</h4>
             <fieldset>
               <input
@@ -159,7 +159,7 @@ const ToBusiness = (props) => {
           <img src={hug} height='80px'></img>
           <p />
           <label>
-            <b>מעטפה צמודה</b>
+            <b>מעטפת צמודה</b>
             <br />
           כוח האדם מלווה ע"י הצוות המקצועי של 'זמן אמת',
            החל משלב חיפוש העבודה, במהלכה ולאחריה.
@@ -171,7 +171,7 @@ const ToBusiness = (props) => {
       <div id="advantages">
         <div id="advantages_container">
           <label id="advantages_title">
-            היתרונות בלעבוד איתנו
+          היתרונות בלעבוד עם זמן אמת 
           </label>
           <div className="advantages_item">
             <img src={medal} width="35px" />
@@ -248,43 +248,43 @@ const ToBusiness = (props) => {
         <p />
         <div className="our_employees_item">
           <div className="single_employee_item">
-            <img className="smiley" src={smiley} />
+            <img className="sand_clock" src={sand_clock} />
             <label className="type_of_employee">
               מלש"בים אשר רוצים לחסוך לפני שירות צבאי/לאומי
             </label>
           </div>
           <div className="single_employee_item">
-            <img className="smiley" src={smiley} />
+          <img className="sand_clock" src={sand_clock} />
             <label className="type_of_employee">
               חיילים בסדיר אשר רוצים לעבוד ולא יכולים להתחייב למקום קבוע
             </label>
           </div>
           <div className="single_employee_item">
-            <img className="smiley" src={smiley} />
+            <img className="sand_clock" src={sand_clock} />
             <label className="type_of_employee">
               חיילים משוחררים אשר רוצים לחסוך כסף ומחפשים עבודה עם כסף טוב ומהיר, אשר אינה מצריכה מיומנות מיוחדת.
             </label>
           </div>
           <div className="single_employee_item">
-            <img className="smiley" src={smiley} />
+            <img className="sand_clock" src={sand_clock} />
             <label className="type_of_employee">
               עובדים בין עבודות.
             </label>
           </div>
           <div className="single_employee_item">
-            <img className="smiley" src={smiley} />
+            <img className="sand_clock" src={sand_clock} />
             <label className="type_of_employee">
               סטודנטים אשר זמינותם לעבודה משתנה כתוצאה מלימודים / בחינות
             </label>
           </div>
           <div className="single_employee_item">
-            <img className="smiley" src={smiley} />
+            <img className="sand_clock" src={sand_clock} />
             <label className="type_of_employee">
               עובדים הזקוקים להכנסה נוספת זמנית / או קבועה בזמנים משתנים.
             </label>
           </div>
           <div className="single_employee_item">
-            <img className="smiley" src={smiley} />
+            <img className="sand_clock" src={sand_clock} />
             <label className="type_of_employee">
               עובדים אשר אוהבים לגוון בין עבודות ומעסיקים
             </label>

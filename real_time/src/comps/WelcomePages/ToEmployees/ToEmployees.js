@@ -20,7 +20,9 @@ const toEmployees = (props) => {
               מחויבות לכמות משמרות במגוון מקצועות וענפים ברחבי ירושלים.
             </div>
             <p></p>
-            <Carousel id="carousel">
+            <div id="carousel_container">
+            <label id="hot_jobs_carousel">משרות חמות</label>
+            <Carousel id="carousel">    
                 <Carousel.Item className="carousel_item">
                     <div className = "job_pic">
                         <img src = {require('./service.png')}
@@ -52,6 +54,7 @@ const toEmployees = (props) => {
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
+            </div>
             <p />
             <div id="employees_p3">
             אנחנו ב'זמן אמת' בחרנו בשבילכם/ן את העסקים הכי טובים בירושלים.

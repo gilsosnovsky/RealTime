@@ -7,7 +7,7 @@ const Contact = (props) => {
         <div class="contactPageContainer">
           <form id="contactPage" action="" method="post">
           <div id="contactPage_p1">
-            דברו איתנו
+            צור קשר
             </div>
             <fieldset>
               <input
