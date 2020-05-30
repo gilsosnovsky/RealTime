@@ -54,10 +54,13 @@ class MyPage extends Component {
           clickToBusiness={this.onClickToBusiness}
           clickContact={this.onClickContact}
           clickAboutUs={this.onClickAboutUs}
-          clickLogin={this.onClickLogin}
+          
         />
 
-        <PageBody pageBodyState={this.state.PageBodyState} />
+        <PageBody 
+        pageBodyState={this.state.PageBodyState}
+        clickLogin={this.onClickLogin}
+         />
         <Footer />
       </div>
     );

@@ -9,7 +9,7 @@ import Login from "../WelcomePages/Login/Login";
 
 const pageBody = (props) => {
   if (props.pageBodyState === "homePage") {
-    return <Home />;
+    return <Home onClickToLogin={props.clickLogin}/>;
   } else if (props.pageBodyState === "toEmployees") {
     return <ToEmployees />;
   } else if (props.pageBodyState === "login") {

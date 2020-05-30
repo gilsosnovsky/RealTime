@@ -7,7 +7,7 @@
   direction: rtl;
 }
 
-#empButton {
+#empButton_login {
   position: relative;
   background: #7925c0;
   border: 0px solid #ffffff;
@@ -25,7 +25,7 @@
   transition-duration: 0.5s;
 }
 
-#empButton:hover {
+#empButton_login:hover {
   position: relative;
   cursor: pointer;
   position: relative;
@@ -34,7 +34,7 @@
   transition-duration: 0.5s;
 }
 
-#busButton {
+#busButton_login {
   position: relative;
   background: #7925c0;
   border: 0px solid #ffffff;
@@ -52,7 +52,7 @@
   transition-duration: 0.5s;
 }
 
-#busButton:hover {
+#busButton_login:hover {
   position: relative;
   cursor: pointer;
   position: relative;
