@@ -41,7 +41,7 @@ const aboutUs = (props) => {
                     </div>
                     <div id='aboutUs_yuval_pic_div'>
                         <img className='personal_pic'
-                            src={require('./yuval_pic.jpg')} />
+                            src={require('./yuval_pic_square.jpg')} />
                     </div>
                 </div>
             </div>
