@@ -5,15 +5,48 @@
   text-align: center;
   direction: rtl;
 }
-
+#employees_top{
+  display: block;
+  height: 20%;
+  min-height: 200px;
+}
 #employees_p1 {
   color: #7925c0;
   font-size: 30px;
+  width:50%;
+  float: right;
 }
 
 #employees_p2 {
   color: black;
   font-size: 20px;
+  width:50%;
+  float: right;
+  
+}
+#employees_top_right{
+  width: 24%;
+  float: right;
+  display: flex;
+}
+
+#employees_top_left{
+  width: 24%;
+  float:right,top;
+  display: flex;
+}
+#employees_waiter_pic{
+  max-width: 90%;
+  max-height: 90%;
+  float: center;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+#employees_phone_pic{
+  margin-right: 5%;
+  max-width: 90%;
+  max-height: 90%;
+  float: center;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
 #carousel_container{
@@ -45,15 +78,41 @@
   margin-left: auto;
   margin-right: auto;
 }
+#employees_p3{
+  display: flex;
 
-#employees_p3 {
+}
+#employees_p3_empty{
+  width:25%;
+  margin: 0,0,0,0;
+  padding: 0,0,0,0;
+
+  
+}
+#employees_p3_text {
   background-color: white;
   font-size: 20px;
   padding-top: 20px;
   padding-bottom: 30px;
   padding-right: 10px;
   text-align: center;
+  width:50%;
+  float:right;
+  
 }
+#employees_p3_pic{
+  width:25%;
+  float:right;
+}
+#employees_hands_pic{
+  width:80%;
+  float: center;
+  height: 100%;
+  transition: 0.4s;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+
 
 #employees_p4 {
   color: #7925c0;
@@ -65,4 +124,8 @@
   color: black;
   font-size: 20px;
   padding-bottom: 30px;
+}
+#employees_hands{
+  width:20%;
+  
 }
