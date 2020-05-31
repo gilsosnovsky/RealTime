@@ -1,23 +1,29 @@
 #footer {
-    position: relative;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 120px;
-    background-color:#7925c0;
-    color: white;
-    text-align: center;
-    direction: rtl;
-  }
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 120px;
+  background-color: #7925c0;
+  color: white;
+  text-align: center;
+  direction: rtl;
+}
 
-#facebook_icon{
-    margin-left: 0.5%;
+#facebook_icon {
+  margin-left: 0.5%;
 }
-#instagram_icon{
-    margin-right: 0.5%;
+#instagram_icon {
+  margin-right: 0.5%;
 }
-.social_media_buttons{
-    height: 35%;
-    margin-top: 2%;
-    cursor: pointer;
+.social_media_buttons {
+  height: 35%;
+  margin-top: 2%;
+  cursor: pointer;
+}
+
+.social_media_buttons:hover {
+  cursor: pointer;
+  opacity: 0.6;
+  transition: 0.3s;
 }

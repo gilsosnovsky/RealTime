@@ -8,7 +8,17 @@ const NavBar = (props) => {
   return (
     <div id="navBar">
       <div id="navBarTabs">
-      
+        <img
+          class="leftLogos"
+          src={jerusalem_city_logo}
+          onClick={props.clickOnLogo}
+        />
+        <img
+          class="leftLogos"
+          src={promote_teenagers_logo}
+          onClick={props.clickOnLogo}
+        />
+
         <label
           id="ContactUs"
           className="NavBarButton"
@@ -42,8 +52,6 @@ const NavBar = (props) => {
         </label>
 
         <img id="logo" src={logo} alt="Logo" onClick={props.clickOnLogo} />
-        <img id="logo" src={jerusalem_city_logo} alt="Logo" onClick={props.clickOnLogo} />
-        <img id="logo" src={promote_teenagers_logo} alt="Logo" onClick={props.clickOnLogo} /> 
       </div>
 
       {/* </div> */}

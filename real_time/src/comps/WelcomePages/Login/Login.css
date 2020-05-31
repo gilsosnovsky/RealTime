@@ -1,9 +1,18 @@
 #Login {
-  min-height: 620px;
+  min-height: 600px;
   padding-top: 100px;
-  margin-top: 90px;
-
   text-align: center;
+  margin: 0 auto;
+}
+
+#loginContainer {
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 450px;
+  background: #f9f9f9;
+  padding: 25px;
+  padding-top: 0px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
 #wellcome {
@@ -42,7 +51,7 @@
 }
 
 .loginWithButton {
-  height: 60px;
+  height: 50px;
   margin: 20px;
 }
 

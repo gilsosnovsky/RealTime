@@ -20,7 +20,6 @@
   font-size: 18px;
   font-weight: bold;
   cursor: pointer;
-  float: left;
   line-height: 80px;
 }
 
@@ -32,8 +31,27 @@
 #logo {
   height: 70px;
   float: right;
+  padding-top: 12px;
+  padding-right: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#logo:hover {
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.leftLogos {
+  height: 70px;
+  float: left;
   padding-top: 10px;
   padding-right: 10px;
   cursor: pointer;
-  margin: 0 auto;
+  transition: 0.3s;
+}
+
+.leftLogos:hover {
+  opacity: 0.6;
+  transition: 0.3s;
 }
