@@ -1,11 +1,14 @@
 import React from "react";
 import logo from "./logo.gif";
+import jerusalem_city_logo from "./jerusalem_city_logo.jpg";
+import promote_teenagers_logo from "./promote_teenagers_logo.jpg";
 import "./NavBar.css";
 
 const NavBar = (props) => {
   return (
     <div id="navBar">
       <div id="navBarTabs">
+      
         <label
           id="ContactUs"
           className="NavBarButton"
@@ -39,6 +42,8 @@ const NavBar = (props) => {
         </label>
 
         <img id="logo" src={logo} alt="Logo" onClick={props.clickOnLogo} />
+        <img id="logo" src={jerusalem_city_logo} alt="Logo" onClick={props.clickOnLogo} />
+        <img id="logo" src={promote_teenagers_logo} alt="Logo" onClick={props.clickOnLogo} /> 
       </div>
 
       {/* </div> */}
