@@ -21,7 +21,7 @@
   margin: 0 auto;
   margin-bottom: 50px;
   color: white;
-  font-size: 35px;
+  font-size: 25px;
   font-weight: bold;
   top: 145px;
   left: -460px;
@@ -48,9 +48,9 @@
   margin: 0 auto;
   margin-bottom: 50px;
   color: white;
-  font-size: 35px;
+  font-size: 25px;
   font-weight: bold;
-  top:20px;
+  top: 20px;
   left: 430px;
   transition-duration: 0.5s;
 }

@@ -1,18 +1,17 @@
 import React from "react";
 import "./Login.css";
+import facebook from "./facebook.png";
+import google from "./google.png";
 
 const Login = (props) => {
   return (
     <div id="Login">
-      <link
-        rel="stylesheet"
-        type="text/css"
-        href="vendor/bootstrap/css/bootstrap.min.css"
-      ></link>
-      <h1>ברוכים הבאים</h1>
+      <div id="wellcome">ברוכים הבאים</div>
+
       <div id="loginCenter">
         <fieldset>
           <input
+            class="field"
             id="username"
             placeholder="Username"
             type="text"
@@ -24,6 +23,7 @@ const Login = (props) => {
 
         <fieldset>
           <input
+            class="field"
             id="fname"
             placeholder="Password"
             type="password"
@@ -34,27 +34,16 @@ const Login = (props) => {
         </fieldset>
 
         <fieldset>
-          <button
-            name="submit"
-            type="submit"
-            id="contact-submit"
-            data-submit="...Sending"
-          >
-            Submit
-          </button>
+          <div id="login">Login</div>
         </fieldset>
 
-        <div class="flex-c-m">
-          <a href="#" class="login100-social-item bg1">
-            <i class="fa fa-facebook"></i>
+        <div class="loginWith">
+          <a href="#">
+            <img src={google} class="loginWithButton"></img>
           </a>
 
-          <a href="#" class="login100-social-item bg2">
-            <i class="fa fa-twitter"></i>
-          </a>
-
-          <a href="#" class="login100-social-item bg3">
-            <i class="fa fa-google"></i>
+          <a href="#">
+            <img src={facebook} class="loginWithButton"></img>
           </a>
         </div>
       </div>
