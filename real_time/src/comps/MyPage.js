@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import NavBar from "./NavBar/NavBar";
 import PageBody from "./PageBody/PageBody";
 import Footer from "./Footer/Footer";
-import fire from '../firebaseConfig';
+import fire from "../firebaseConfig";
 
 class MyPage extends Component {
   state = {
@@ -25,7 +25,6 @@ class MyPage extends Component {
   };
 
   onClickLoginEmployee = () => {
-    alert("employeelogin");
     this.setState({
       PageBodyState: "EmloyeeLogin",
     });
@@ -44,19 +43,15 @@ class MyPage extends Component {
   };
 
   onClickSignUp = () => {
-
-    if(this.state.PageBodyState=="EmloyeeLogin"){
-        this.setState({
-          PageBodyState: "EmployeeSignUp",
-        });
-    }
-
-    else{
+    if (this.state.PageBodyState == "EmloyeeLogin") {
+      this.setState({
+        PageBodyState: "EmployeeSignUp",
+      });
+    } else {
       this.setState({
         PageBodyState: "BusinessSignUp",
       });
     }
-    
   };
 
   onClickContact = () => {
@@ -79,15 +74,14 @@ class MyPage extends Component {
           clickToBusiness={this.onClickToBusiness}
           clickContact={this.onClickContact}
           clickAboutUs={this.onClickAboutUs}
-          
         />
 
-        <PageBody 
-        pageBodyState={this.state.PageBodyState}
-        clickLoginEmployee={this.onClickLoginEmployee}
-        clickLoginBusiness={this.onClickLoginBusiness}
-        clickSignUp={this.onClickSignUp}
-         />
+        <PageBody
+          pageBodyState={this.state.PageBodyState}
+          clickLoginEmployee={this.onClickLoginEmployee}
+          clickLoginBusiness={this.onClickLoginBusiness}
+          clickSignUp={this.onClickSignUp}
+        />
         <Footer />
       </div>
     );

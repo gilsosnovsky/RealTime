@@ -35,11 +35,13 @@ const Login = (props) => {
           </fieldset>
 
           <fieldset>
-            <div id="login">Login</div>
+            <div id="login">התחבר</div>
           </fieldset>
 
           <fieldset>
-            <div id="SignUp" onClick={props.clickSignUp}>הרשמה</div>
+            <div id="SignUponLogin" onClick={props.clickSignUp}>
+              הרשמה
+            </div>
           </fieldset>
 
           <div class="loginWith">
