@@ -22,9 +22,16 @@ class MyPage extends Component {
     });
   };
 
-  onClickLogin = () => {
+  onClickLoginEmployee = () => {
+    alert("employeelogin");
     this.setState({
-      PageBodyState: "login",
+      PageBodyState: "EmloyeeLogin",
+    });
+  };
+
+  onClickLoginBusiness = () => {
+    this.setState({
+      PageBodyState: "BusinessLogin",
     });
   };
 
@@ -32,6 +39,22 @@ class MyPage extends Component {
     this.setState({
       PageBodyState: "toBusiness",
     });
+  };
+
+  onClickSignUp = () => {
+
+    if(this.state.PageBodyState=="EmloyeeLogin"){
+        this.setState({
+          PageBodyState: "EmployeeSignUp",
+        });
+    }
+
+    else{
+      this.setState({
+        PageBodyState: "BusinessSignUp",
+      });
+    }
+    
   };
 
   onClickContact = () => {
@@ -59,7 +82,9 @@ class MyPage extends Component {
 
         <PageBody 
         pageBodyState={this.state.PageBodyState}
-        clickLogin={this.onClickLogin}
+        clickLoginEmployee={this.onClickLoginEmployee}
+        clickLoginBusiness={this.onClickLoginBusiness}
+        clickSignUp={this.onClickSignUp}
          />
         <Footer />
       </div>

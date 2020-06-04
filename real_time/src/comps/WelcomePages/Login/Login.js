@@ -38,6 +38,10 @@ const Login = (props) => {
             <div id="login">Login</div>
           </fieldset>
 
+          <fieldset>
+            <div id="SignUp" onClick={props.clickSignUp}>הרשמה</div>
+          </fieldset>
+
           <div class="loginWith">
             <a href="#">
               <img src={google} class="loginWithButton"></img>
