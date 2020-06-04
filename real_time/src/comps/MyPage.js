@@ -2,12 +2,14 @@ import React, { Component } from "react";
 import NavBar from "./NavBar/NavBar";
 import PageBody from "./PageBody/PageBody";
 import Footer from "./Footer/Footer";
+import fire from '../firebaseConfig';
 
 class MyPage extends Component {
   state = {
     NavBarState: "homePage",
     PageBodyState: "homePage",
     FooterState: "homePage",
+    name: "gil",
   };
 
   onClickToEmployees = () => {
@@ -45,12 +47,23 @@ class MyPage extends Component {
     });
   };
 
+  checkFireBase = () => {
+    const db = fire.database();
+    function writeUserData(name, email) {
+      db.ref('/').set({
+        username: name,
+        email: email,
+      });
+    }
+    writeUserData ("please workkkkkkkk", "!!!!!!!");
+  };
+
   render() {
     return (
       <div id="MyPage">
         <NavBar
           clickToEmployees={this.onClickToEmployees}
-          clickOnLogo={this.onClickLogo}
+          clickOnLogo={this.checkFireBase}
           clickToBusiness={this.onClickToBusiness}
           clickContact={this.onClickContact}
           clickAboutUs={this.onClickAboutUs}
