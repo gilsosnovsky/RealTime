@@ -47,23 +47,12 @@ class MyPage extends Component {
     });
   };
 
-  checkFireBase = () => {
-    const db = fire.database();
-    function writeUserData(name, email) {
-      db.ref('/').set({
-        username: name,
-        email: email,
-      });
-    }
-    writeUserData ("please workkkkkkkk", "!!!!!!!");
-  };
-
   render() {
     return (
       <div id="MyPage">
         <NavBar
           clickToEmployees={this.onClickToEmployees}
-          clickOnLogo={this.checkFireBase}
+          clickOnLogo={this.onClickLogo}
           clickToBusiness={this.onClickToBusiness}
           clickContact={this.onClickContact}
           clickAboutUs={this.onClickAboutUs}
