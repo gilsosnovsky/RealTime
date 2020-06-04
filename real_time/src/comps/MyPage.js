@@ -2,12 +2,14 @@ import React, { Component } from "react";
 import NavBar from "./NavBar/NavBar";
 import PageBody from "./PageBody/PageBody";
 import Footer from "./Footer/Footer";
+import fire from '../firebaseConfig';
 
 class MyPage extends Component {
   state = {
     NavBarState: "homePage",
     PageBodyState: "homePage",
     FooterState: "homePage",
+    name: "gil",
   };
 
   onClickToEmployees = () => {

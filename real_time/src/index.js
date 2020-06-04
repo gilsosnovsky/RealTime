@@ -4,10 +4,9 @@ import './index.css';
 import MyPage from './comps/MyPage';
 import * as serviceWorker from './serviceWorker';
 
-
 ReactDOM.render(
   <React.StrictMode>
-    <MyPage />
+   <MyPage />
   </React.StrictMode>,
   document.getElementById('root')
 );
