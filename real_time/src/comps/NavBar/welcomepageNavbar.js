@@ -14,11 +14,13 @@ const welcomepageNavbar = (props) => {
             class="leftLogos"
             src={jerusalem_city_logo}
             onClick={props.clickOnLogo}
+            alt="jerusalem city logo"
           />
           <img
             class="leftLogos"
             src={promote_teenagers_logo}
             onClick={props.clickOnLogo}
+            alt="promte teenagers logo"
           />
   
           <label

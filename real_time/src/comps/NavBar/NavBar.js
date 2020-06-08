@@ -10,12 +10,12 @@ const NavBar = (props) => {
       <WelcomepageNavbar
         clickToEmployees={props.clickToEmployees}
         clickOnLogo={props.clickOnLogo}
-        clickToBusiness={props. clickToBusiness}
+        clickToBusiness={props.clickToBusiness}
         clickContact={props.clickContact}
         clickAboutUs={props.clickAboutUs}/>
     );
   }
-  else if(props.navBarState== "employee_interface"){
+  else if(props.navBarState=== "employee_interface"){
     return(
       <EmployeeNavBar
       clickMyJobsEmployee={props.clickMyJobsEmployee}
@@ -25,7 +25,7 @@ const NavBar = (props) => {
     );
   }
 
-  else if(props.navBarState== "business_interface"){
+  else if(props.navBarState=== "business_interface"){
     return(
       <BusinessNavBar
       clickPostJobBusiness={props.clickPostJobBusiness}

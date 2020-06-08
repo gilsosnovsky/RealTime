@@ -13,16 +13,18 @@ const BusinessNavBar = (props) => {
           <img
             class="leftLogos"
             src={jerusalem_city_logo}
+            alt="jerusalem city logo"
           />
           <img
             class="leftLogos"
             src={promote_teenagers_logo}
+            alt="promte teenagers logo"
           />
 
           <label
-            id="candidates_business"
+            //id="candidates_business"
             className="NavBarButton"
-            onClick={props. clickWatchCandidates}
+            onClick={props.clickWatchCandidates}
           >
             צפייה במועמדים
           </label>

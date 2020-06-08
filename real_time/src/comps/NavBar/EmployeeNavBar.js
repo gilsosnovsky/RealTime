@@ -13,17 +13,17 @@ const EmployeeNavBar = (props) => {
           <img
             class="leftLogos"
             src={jerusalem_city_logo}
+            alt="jerusalem city logo"
           />
           <img
             class="leftLogos"
             src={promote_teenagers_logo}
+            alt="promte teenagers logo"
           />
   
           <label
-            //id="settings_employee"
             className="NavBarButton"
-            onClick={props.clickSettingsEmployee}
-          >
+            onClick={props.clickSettingsEmployee}>
             הגדרות
           </label>
 
@@ -51,7 +51,7 @@ const EmployeeNavBar = (props) => {
             משרות
           </label>
   
-          <img id="logo" src={logo} alt="Logo" />
+          <img id="logo" src={logo} alt="Logo"/>
         </div>
   
         {/* </div> */}

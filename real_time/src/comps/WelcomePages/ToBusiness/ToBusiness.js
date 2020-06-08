@@ -132,7 +132,7 @@ const ToBusiness = (props) => {
       <p />
       <div id="three_qal">
         <div id="helping_hands">
-          <img src={helping_hands} height='80px'></img>
+          <img src={helping_hands} height='80px' alt="helping hands"></img>
           <p />
           <label>
             <b>ליווי קבוע</b>
@@ -144,8 +144,8 @@ const ToBusiness = (props) => {
                 </label>
         </div>
         <div id="social_media">
-          <img src={facebook} height='80px'></img>
-          <img src={instegram} height='80px'></img>
+          <img src={facebook} height='80px' alt="facebook"></img>
+          <img src={instegram} height='80px' alt="instegram"></img>
           <p />
 
           <label>
@@ -156,7 +156,7 @@ const ToBusiness = (props) => {
           </label>
         </div>
         <div id="hug">
-          <img src={hug} height='80px'></img>
+          <img src={hug} height='80px' alt="hug"></img>
           <p />
           <label>
             <b>מעטפת צמודה</b>
@@ -174,7 +174,7 @@ const ToBusiness = (props) => {
           היתרונות בלעבוד עם זמן אמת 
           </label>
           <div className="advantages_item">
-            <img src={medal} width="35px" />
+            <img src={medal} width="35px" alt="medal" />
             <label className="advantages_item_title">
               זמן = כסף!
           </label>
@@ -184,7 +184,7 @@ const ToBusiness = (props) => {
           </label>
           </div>
           <div className="advantages_item">
-            <img src={medal} width="35px" />
+            <img src={medal} width="35px" alt="medal"/>
             <label className="advantages_item_title">
               מהירות
           </label>
@@ -194,7 +194,7 @@ const ToBusiness = (props) => {
           </label>
           </div>
           <div className="advantages_item">
-            <img src={medal} width="35px" />
+            <img src={medal} width="35px" alt="medal"/>
             <label className="advantages_item_title">
               זמינות
           </label>
@@ -204,7 +204,7 @@ const ToBusiness = (props) => {
           </label>
           </div>
           <div className="advantages_item">
-            <img src={medal} width="35px" />
+            <img src={medal} width="35px" alt="medal"/>
             <label className="advantages_item_title">
               שירות
           </label>
@@ -214,7 +214,7 @@ const ToBusiness = (props) => {
           </label>
           </div>
           <div className="advantages_item">
-            <img src={medal} width="35px" />
+            <img src={medal} width="35px" alt="medal"/>
             <label className="advantages_item_title">
               איכות
           </label>
@@ -224,7 +224,7 @@ const ToBusiness = (props) => {
           </label>
           </div>
           <div className="advantages_item">
-            <img src={medal} width="35px" />
+            <img src={medal} width="35px" alt="medal"/>
             <label className="advantages_item_title">
               שקט נפשי
           </label>
@@ -248,43 +248,43 @@ const ToBusiness = (props) => {
         <p />
         <div className="our_employees_item">
           <div className="single_employee_item">
-            <img className="sand_clock" src={sand_clock} />
+            <img className="sand_clock" src={sand_clock} alt="sand clock"/>
             <label className="type_of_employee">
               מלש"בים אשר רוצים לחסוך לפני שירות צבאי/לאומי
             </label>
           </div>
           <div className="single_employee_item">
-          <img className="sand_clock" src={sand_clock} />
+          <img className="sand_clock" src={sand_clock} alt="sand clock"/>
             <label className="type_of_employee">
               חיילים בסדיר אשר רוצים לעבוד ולא יכולים להתחייב למקום קבוע
             </label>
           </div>
           <div className="single_employee_item">
-            <img className="sand_clock" src={sand_clock} />
+            <img className="sand_clock" src={sand_clock} alt="sand clock"/>
             <label className="type_of_employee">
               חיילים משוחררים אשר רוצים לחסוך כסף ומחפשים עבודה עם כסף טוב ומהיר, אשר אינה מצריכה מיומנות מיוחדת.
             </label>
           </div>
           <div className="single_employee_item">
-            <img className="sand_clock" src={sand_clock} />
+            <img className="sand_clock" src={sand_clock} alt="sand clock"/>
             <label className="type_of_employee">
               עובדים בין עבודות.
             </label>
           </div>
           <div className="single_employee_item">
-            <img className="sand_clock" src={sand_clock} />
+            <img className="sand_clock" src={sand_clock} alt="sand clock"/>
             <label className="type_of_employee">
               סטודנטים אשר זמינותם לעבודה משתנה כתוצאה מלימודים / בחינות
             </label>
           </div>
           <div className="single_employee_item">
-            <img className="sand_clock" src={sand_clock} />
+            <img className="sand_clock" src={sand_clock} alt="sand clock"/>
             <label className="type_of_employee">
               עובדים הזקוקים להכנסה נוספת זמנית / או קבועה בזמנים משתנים.
             </label>
           </div>
           <div className="single_employee_item">
-            <img className="sand_clock" src={sand_clock} />
+            <img className="sand_clock" src={sand_clock} alt="sand clock"/>
             <label className="type_of_employee">
               עובדים אשר אוהבים לגוון בין עבודות ומעסיקים
             </label>

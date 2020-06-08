@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import NavBar from "./NavBar/NavBar";
 import PageBody from "./PageBody/PageBody";
 import Footer from "./Footer/Footer";
-import fire from "../firebaseConfig";
+//import fire from "../firebaseConfig";
 
 class MyPage extends Component {
   state = {
@@ -93,7 +93,7 @@ class MyPage extends Component {
   }
 
   onClickSignUp = () => {
-    if (this.state.PageBodyState == "EmloyeeLogin") {
+    if (this.state.PageBodyState === "EmloyeeLogin") {
       this.setState({
         PageBodyState: "EmployeeSignUp",
       });
