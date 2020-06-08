@@ -74,6 +74,7 @@ class MyPage extends Component {
     return (
       <div id="MyPage">
         <NavBar
+          navBarState={this.state.NavBarState}
           clickToEmployees={this.onClickToEmployees}
           clickOnLogo={this.onClickLogo}
           clickToBusiness={this.onClickToBusiness}
