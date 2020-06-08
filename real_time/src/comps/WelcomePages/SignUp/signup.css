@@ -1,13 +1,16 @@
-#Login {
+#SignUp {
   min-height: 600px;
   padding-top: 100px;
   text-align: center;
   margin: 0 auto;
+  direction: rtl;
 }
 
-#loginContainer {
+#signUpContainer {
+  direction: rtl;
   margin: 0 auto;
-  margin-top: 20px;
+  text-align: center;
+  margin-top: 120px;
   margin-bottom: 30px;
   width: 450px;
   background: #f9f9f9;
@@ -16,7 +19,7 @@
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
-#wellcome {
+#signUpTitle {
   color: #7925c0;
   font-size: 30px;
   padding: 30px;
@@ -28,7 +31,7 @@
   padding: 5px;
 }
 
-#login {
+#signUpButton {
   background: #7925c0;
   width: 200px;
   padding: 10px 1px;
@@ -41,22 +44,12 @@
   margin-top: 30px;
 }
 
-#login:hover {
+#signUpButton:hover {
   position: relative;
   cursor: pointer;
   position: relative;
   background: white;
   color: #7925c0;
-  opacity: 0.6;
-  transition: 0.3s;
-}
-
-.loginWithButton {
-  height: 50px;
-  margin: 20px;
-}
-
-.loginWithButton:hover {
   opacity: 0.6;
   transition: 0.3s;
 }
