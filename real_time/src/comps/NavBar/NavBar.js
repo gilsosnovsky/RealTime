@@ -1,5 +1,7 @@
 import React from "react";
 import WelcomepageNavbar from "./welcomepageNavbar";
+import EmployeeNavBar from "./EmployeeNavBar";
+import BusinessNavBar from "./BusinessNavBar";
 
 const NavBar = (props) => {
 
@@ -13,6 +15,25 @@ const NavBar = (props) => {
         clickAboutUs={props.clickAboutUs}/>
     );
   }
+  else if(props.navBarState== "employee_interface"){
+    return(
+      <EmployeeNavBar
+      clickMyJobsEmployee={props.clickMyJobsEmployee}
+      clickJobOffersEmployee={props.clickJobOffersEmployee}
+      clickMessagesEmployee={props.clickMessagesEmployee}
+      clickSettingsEmployee={props.clickSettingsEmployee}/>
+    );
+  }
+
+  else if(props.navBarState== "business_interface"){
+    return(
+      <BusinessNavBar
+      clickPostJobBusiness={props.clickPostJobBusiness}
+      clickWatchCandidates={props.clickWatchCandidates}/>
+    );
+  }
+  
+
   else {
     return (
       <div id="firstPageBody">
