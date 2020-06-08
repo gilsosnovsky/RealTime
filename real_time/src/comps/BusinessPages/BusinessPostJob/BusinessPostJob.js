@@ -2,9 +2,8 @@ import React from "react";
 import "./BusinessPostJob.css";
 
 const BusinessPostJob = (props) => {
-
-    return (
-      <div class="post_job_business">
+  return (
+    <div class="post_job_business">
       <div id="postJobContainer">
         <div id="postJobTitle">פרסם עבודה</div>
 
@@ -43,7 +42,7 @@ const BusinessPostJob = (props) => {
         </fieldset>
 
         <fieldset>
-          משעה
+          <h3>משעה:</h3>
           <input
             class="field"
             placeholder="שעות העבודה"
@@ -51,7 +50,7 @@ const BusinessPostJob = (props) => {
             tabindex="1"
             required
           />
-          עד שעה
+          <h3>עד שעה:</h3>
           <input
             class="field"
             placeholder="שעות העבודה"
@@ -72,49 +71,30 @@ const BusinessPostJob = (props) => {
             autofocus
           />
         </fieldset>
-
         <fieldset>
-          <label id="radio_button_container">
-            אופן התשלום:
+          <div class="radioButtons">
+            <p>אופן התשלום:</p>
+            <input type="radio" id="male" name="gender" value="male" />
+            <label for="male">מזומן</label>
             <br />
-            <label className="radio_button">
-              <input
-                type="radio"
-                id="cash"
-                name="radAnswer"
-                checked="checked"
-              />
-              מזומן
-            </label>
-            <label className="radio_button">
-              <input type="radio" id="check" name="radAnswer" />
-             צ'ק
-            </label>
-            <label className="radio_button">
-              <input type="radio" id="transfer" name="radAnswer" />
-              העברה בנקאית
-            </label>
-          </label>
+            <input type="radio" id="female" name="gender" value="female" />
+            <label for="female">המחאה</label>
+            <br />
+            <input type="radio" id="other" name="gender" value="other" />
+            <label for="other">העברה בנקאית</label>
+          </div>
         </fieldset>
 
         <fieldset>
-          <label id="radio_button_container">
-            קבלת התשלום:
+          <div class="radioButtons">
+            <p>קבלת התשלום:</p>
+            <input type="radio" id="age1" name="age" value="30" />
+            <label for="age1">בסוף יום העבודה</label>
             <br />
-            <label className="radio_button">
-              <input
-                type="radio"
-                id="end_of_the_day"
-                name="radAnswer"
-                checked="checked"
-              />
-              בסוף יום העבודה
-            </label>
-            <label className="radio_button">
-              <input type="radio" id="end_of_the_nonth" name="radAnswer" />
-             בסוף החודש
-            </label>
-          </label>
+            <input type="radio" id="age2" name="age" value="60" />
+            <label for="age2">בסוף החודש</label>
+            <br />
+          </div>
         </fieldset>
 
         <fieldset>
@@ -159,11 +139,10 @@ const BusinessPostJob = (props) => {
           />
         </fieldset>
         <fieldset>
-          <div id="post">פרסם</div>
+          <div id="postButton">פרסם</div>
         </fieldset>
       </div>
-      </div>
-    );
- 
+    </div>
+  );
 };
 export default BusinessPostJob;

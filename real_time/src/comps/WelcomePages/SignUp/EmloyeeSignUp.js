@@ -42,7 +42,7 @@ const EmployeeSignUp = (props) => {
         <fieldset>
           <input
             class="field"
-            placeholder="date"
+            placeholder="תאריך לידה"
             type="date"
             tabindex="3"
             required
