@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import "./Login.css";
 import facebook from "./facebook.png";
 import google from "./google.png";
-//import fire from "../../../firebaseConfig"
+import fire from "../../../firebaseConfig"
+import ToEmployees from "../ToEmployees/ToEmployees";
 
 
 
@@ -10,59 +11,99 @@ class Login extends Component{
 
   constructor(props) {
     super(props);
+    this.login=this.login.bind(this);
+    this.handleChangeEmail=this.handleChangeEmail.bind(this);
+    this.handleChangePassword=this.handleChangePassword.bind(this);
+    this.state={
+      user: {},
+      email: '',
+      password: ''
+    }
   }
 
+  authListener(){
+    fire.auth().onAuthStateChanged((user)=>{
+      //console.log(user);
+      if(user)
+      {
+        this.setState({user});
+      }
+      else
+      {
+        this.setState({user:null});
+      }
+    });
+  }
+
+  componentDidMount(){
+    this.authListener();
+  }
+  handleChangeEmail(e){
+    this.setState({
+      email: e.target.value
+    });
+  }
+  handleChangePassword(e){
+    this.setState({
+      password: e.target.value
+    });
+  }
+  login(e){
+    e.preventDefault();
+    fire.auth().signInWithEmailAndPassword(this.state.email,this.state.password).then((u)=>{
+      //callback
+      console.log('successful sign in');
+      this.onClickConnect();
+    }).catch((error)=>{
+      console.log(error);
+    });
+  }
 
   onClickConnect=()=>{
-    if(this.props.pageBodyState==="EmloyeeLogin"){
-      //check fields
-
-      //if correct
+    if(this.props.pageBodyState==="EmloyeeLogin")
       this.props.clickConnectEmployee();
-    }
-    else{
-      //check files
-
-      //if correct
+    else
       this.props.clickConnectBusiness();
-    }
-    
-    
-  
   };
+
+//{//this.state.user ? (<ToEmployees/>) : (<Login/>)} 
   render(){
   return (
     <div id="Login">
       <div id="loginContainer">
+        
         <div id="wellcome">ברוכים הבאים</div>
 
         <div id="loginCenter">
           <fieldset>
             <input
-              class="field"
-              id="username"
+              className="field"
+              id="email"
               placeholder="Username"
               type="text"
-              tabindex="4"
+              tabIndex="4"
+              value={this.state.email}
+              onChange={this.handleChangeEmail}
               required
-              autofocus
+              autoFocus
             />
           </fieldset>
 
           <fieldset>
             <input
-              class="field"
-              id="fname"
+              className="field"
+              id="password"
               placeholder="Password"
               type="password"
-              tabindex="5"
+              tabIndex="5"
+              value={this.state.password}
+              onChange={this.handleChangePassword}
               required
-              autofocus
             />
           </fieldset>
 
           <fieldset>
-            <div id="login" onClick={this.onClickConnect}>התחבר</div>
+            <div id="login" onClick={this.login}>התחבר</div>
           </fieldset>
 
           <fieldset>
