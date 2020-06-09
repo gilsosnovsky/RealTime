@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import $ from "jquery";
 import './SingleJobItem.css'
 
 class SingleJobItem extends React.Component {
