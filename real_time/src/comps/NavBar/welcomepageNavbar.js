@@ -17,6 +17,7 @@ function myFunction() {
 }
 
 const welcomepageNavbar = (props) => {
+<<<<<<< HEAD
   return (
     <div id="navBar">
       <div id="navBarTabs">
@@ -41,6 +42,24 @@ const welcomepageNavbar = (props) => {
         <img id="logo" src={logo} alt="Logo" onClick={props.clickOnLogo} />
 
         <div id="navLinks">
+=======
+    return (
+        <div id="navBar">
+        <div id="navBarTabs">
+          <img
+            class="leftLogos"
+            src={jerusalem_city_logo}
+            onClick={props.clickOnLogo}
+            alt="jerusalem city logo"
+          />
+          <img
+            class="leftLogos"
+            src={promote_teenagers_logo}
+            onClick={props.clickOnLogo}
+            alt="promte teenagers logo"
+          />
+  
+>>>>>>> 8b43a02029fb64814f15023155f0a25854ce9fd2
           <label
             id="ContactUs"
             className="NavBarButton"

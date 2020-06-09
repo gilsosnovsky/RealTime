@@ -12,7 +12,7 @@ class Login extends Component{
 
 
   onClickConnect=()=>{
-    if(this.props.pageBodyState=="EmloyeeLogin"){
+    if(this.props.pageBodyState==="EmloyeeLogin"){
       //check fields
 
       //if correct
