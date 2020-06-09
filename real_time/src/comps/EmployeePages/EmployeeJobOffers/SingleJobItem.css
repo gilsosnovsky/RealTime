@@ -1,0 +1,82 @@
+#job_item_container{
+    height: 120px;
+    width: 85%;
+    margin: 5px;
+    border: 2.5px solid #7925c0;
+    border-radius: 10px;
+    background-color: white;
+}
+
+#job_item_top{
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+#job_item_logo_container{
+    height: 100%;
+    width: 25%;
+    float: right;
+}
+#job_item_logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    height: 80%;
+}
+#job_item_logo:hover {
+    opacity: 0.6;
+    transition: 0.3s;
+  }
+#job_item_brief_info{
+    height: 100%;
+    width: 50%;
+    float: right;
+}
+#job_item_salary_container{
+    height: 100%;
+    width: 25%;
+    float: right;
+    border-top-left-radius: 5px;
+    text-align: center;
+    background-color: #7925c0;
+}
+#job_item_salary{
+    color: white;
+    font-size: 25px;
+}
+#job_item_bottom{
+    visibility: hidden;
+    height: 0%;
+}
+
+#job_item_full_info{
+    height: 100%;
+    width: 75%;
+    float: right;
+    padding-right: 5px;
+    border-bottom-right-radius: 10px;
+    background-color: rgb(233, 232, 232);
+}
+
+#job_item_buttons{
+    height: 100%;
+    width: 25%;
+    text-align: center;
+    color: white;
+    float: right;
+}
+
+#job_item_buttons_no{
+    height: 50%;
+    width: 100%;
+    cursor: pointer;
+    background-color: rgb(253, 85, 85);
+}
+#job_item_buttons_yes{
+    height: 50%;
+    width: 100%;
+    cursor: pointer;
+    border-bottom-left-radius: 10px;
+    background-color: rgb(77, 223, 77);
+}
