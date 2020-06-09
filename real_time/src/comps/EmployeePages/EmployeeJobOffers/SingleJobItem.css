@@ -5,6 +5,7 @@
     border: 2.5px solid #7925c0;
     border-radius: 10px;
     background-color: white;
+    transition: 0.3s;
 }
 
 #job_item_top{
@@ -16,6 +17,7 @@
     height: 100%;
     width: 25%;
     float: right;
+    max-height: 100px;
 }
 #job_item_logo{
     display: block;
@@ -73,10 +75,18 @@
     cursor: pointer;
     background-color: rgb(253, 85, 85);
 }
+#job_item_buttons_no:hover{
+    opacity: 0.6;
+    transition: 0.3s;
+}
 #job_item_buttons_yes{
     height: 50%;
     width: 100%;
     cursor: pointer;
     border-bottom-left-radius: 10px;
     background-color: rgb(77, 223, 77);
+}
+#job_item_buttons_yes:hover{
+    opacity: 0.7;
+    transition: 0.3s;
 }
