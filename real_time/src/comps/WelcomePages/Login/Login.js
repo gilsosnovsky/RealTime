@@ -2,6 +2,8 @@ import React from "react";
 import "./Login.css";
 import facebook from "./facebook.png";
 import google from "./google.png";
+//import fire from "../../../firebaseConfig"
+
 
 const Login = (props) => {
   return (
