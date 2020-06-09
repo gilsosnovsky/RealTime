@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import './SingleJobItem.css'
 
 class SingleJobItem extends React.Component {
@@ -43,7 +43,7 @@ class SingleJobItem extends React.Component {
                 <div id="job_item_top" onClick={this.openFullInfo}
                     style={{ height: `${this.state.item_top_height}` }}>
                     <div id="job_item_logo_container">
-                        <img id="job_item_logo" src={this.state.job_logo} />
+                        <img id="job_item_logo" src={this.state.job_logo} alt="job_logo"/>
                     </div>
                     <div id="job_item_brief_info">
                         <div class="brief_info">

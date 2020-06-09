@@ -31,11 +31,13 @@ const welcomepageNavbar = (props) => {
           className="leftLogos"
           src={jerusalem_city_logo}
           onClick={props.clickOnLogo}
+          alt="erusalem_city_logo"
         />
         <img
           className="leftLogos"
           src={promote_teenagers_logo}
           onClick={props.clickOnLogo}
+          alt="promote_teenagers_logo"
         />
 
         <img id="logo" src={logo} alt="Logo" onClick={props.clickOnLogo} />

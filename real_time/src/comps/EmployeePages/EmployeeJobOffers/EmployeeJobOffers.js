@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import "./EmployeeJobOffers.css";
 import SingleJobItem from "./SingleJobItem";
 

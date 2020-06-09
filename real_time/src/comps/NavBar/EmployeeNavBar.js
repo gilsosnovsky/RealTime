@@ -10,6 +10,7 @@ const EmployeeNavBar = (props) => {
     return (
         <div id="navBar">
         <div id="navBarTabs">
+          
           <img
             class="leftLogos"
             src={jerusalem_city_logo}
@@ -52,6 +53,16 @@ const EmployeeNavBar = (props) => {
           </label>
   
           <img id="logo" src={logo} alt="Logo"/>
+
+          <div class="hello_plus_logout">
+            <label className="hello_emloyee">
+            "שלום "משתמש
+            </label>
+            <br/>
+            <label className="logout_employee">
+              התנתק
+            </label>
+          </div>
         </div>
   
         {/* </div> */}

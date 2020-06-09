@@ -110,6 +110,15 @@
     height: 90px;
   }
 
+  .hello_plus_logout{
+    height: 40px;
+    width: fit-content;
+    float: right;
+    text-align: center;
+    padding-top: 10px;
+    padding-left: 2px;
+  }
+
   #navLinks {
     display: contents;
   }
@@ -132,7 +141,7 @@
     height: 70px;
     float: right;
     padding-top: 12px;
-    padding-right: 10px;
+    padding-right: 3px;
     cursor: pointer;
     transition: 0.3s;
     top: -200;

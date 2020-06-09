@@ -85,6 +85,15 @@ class BusinessSignUp extends Component
             />
           </fieldset>
 
+          <fieldset>
+            <input
+              class="field"
+              placeholder="url של הלוגו"
+              type="url"
+              tabindex="3"
+            />
+          </fieldset>
+
 
 
           <fieldset>
