@@ -1,6 +1,6 @@
-/*import * as firebase from 'firebase';
+import  firebase from 'firebase';
 
-var config = {
+const config = {
   apiKey: "AIzaSyDNXB2K37xOKi7xCYph9UNqHeK-ePDLJ1I",
   authDomain: "realtime-8bad3.firebaseapp.com",
   databaseURL: "https://realtime-8bad3.firebaseio.com",
@@ -11,6 +11,6 @@ var config = {
   measurementId: "G-BWRB8J9KND"
 };
 
-var fire = firebase.initializeApp(config);
+const fire = firebase.initializeApp(config);
 
-export default fire;*/
+export default fire;
