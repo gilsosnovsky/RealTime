@@ -66,7 +66,7 @@ class Login extends Component{
       this.props.clickConnectBusiness();
   };
 
-//{//this.state.user ? (<ToEmployees/>) : (<Login/>)} 
+
   render(){
   return (
     <div id="Login">
