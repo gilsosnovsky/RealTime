@@ -1,26 +1,46 @@
-import React from 'react';
-import 'bootstrap/dist/css/bootstrap.css';
+import React from "react";
+import "bootstrap/dist/css/bootstrap.css";
 import logo from "./logo.gif";
 import jerusalem_city_logo from "./jerusalem_city_logo.jpg";
 import promote_teenagers_logo from "./promote_teenagers_logo.jpg";
 import "./NavBar.css";
 
+function myFunction() {
+  var x = document.getElementById("navLinks");
+  if (x.style.display === "list-item") {
+    x.style.display = "none";
+    x.style.transitionDelay = "2s";
+  } else {
+    x.style.display = "list-item";
+    x.style.transitionDelay = "2s";
+  }
+}
 
 const welcomepageNavbar = (props) => {
-    return (
-        <div id="navBar">
-        <div id="navBarTabs">
-          <img
-            class="leftLogos"
-            src={jerusalem_city_logo}
-            onClick={props.clickOnLogo}
-          />
-          <img
-            class="leftLogos"
-            src={promote_teenagers_logo}
-            onClick={props.clickOnLogo}
-          />
-  
+  return (
+    <div id="navBar">
+      <div id="navBarTabs">
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <div id="menuButton" className="icon" onClick={myFunction}>
+          <i className="fa fa-bars"></i>
+        </div>
+        <img
+          className="leftLogos"
+          src={jerusalem_city_logo}
+          onClick={props.clickOnLogo}
+        />
+        <img
+          className="leftLogos"
+          src={promote_teenagers_logo}
+          onClick={props.clickOnLogo}
+        />
+
+        <img id="logo" src={logo} alt="Logo" onClick={props.clickOnLogo} />
+
+        <div id="navLinks">
           <label
             id="ContactUs"
             className="NavBarButton"
@@ -28,7 +48,7 @@ const welcomepageNavbar = (props) => {
           >
             צור קשר
           </label>
-  
+
           <label
             id="about_us"
             className="NavBarButton"
@@ -36,7 +56,7 @@ const welcomepageNavbar = (props) => {
           >
             מי אנחנו
           </label>
-  
+
           <label
             id="to_business"
             className="NavBarButton"
@@ -44,7 +64,7 @@ const welcomepageNavbar = (props) => {
           >
             לעסקים
           </label>
-  
+
           <label
             id="to_employees"
             className="NavBarButton"
@@ -52,12 +72,12 @@ const welcomepageNavbar = (props) => {
           >
             לעובדים
           </label>
-  
-          <img id="logo" src={logo} alt="Logo" onClick={props.clickOnLogo} />
         </div>
-  
-        {/* </div> */}
-      </div> 
-    );
+      </div>
+
+      {/* </div> */}
+    </div>
+  );
 };
+
 export default welcomepageNavbar;

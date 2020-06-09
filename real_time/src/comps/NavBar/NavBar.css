@@ -1,57 +1,162 @@
-#navBar {
-  position: fixed;
-  border-bottom: 1px solid black;
-  background-color: white;
-  top: 0;
-  width: 100%;
-  height: 90px;
-  z-index: 100;
-}
+/* For Mobile: */
+@media only screen and (max-width: 480px) {
+  #navBar {
+    border-bottom: 1px solid black;
+    background-color: white;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    overflow: hidden;
+    position: relative;
+  }
 
-#navBarTabs {
-  margin: 0 auto;
-  width: 1000px;
-  height: 90px;
-}
+  #logo {
+    height: 50px;
+    float: right;
+    padding-right: 10px;
+    padding-top: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
 
-.NavBarButton {
-  padding-right: 10px;
-  padding-left: 10px;
-  font-size: 18px;
-  font-weight: bold;
-  cursor: pointer;
-  line-height: 80px;
-}
+  #logo:hover {
+    opacity: 0.6;
+    transition: 0.3s;
+  }
 
-.NavBarButton:hover {
-  color: #7925c0;
-  border-top: 4px solid #7925c0;
-}
+  #menuButton {
+    margin: 9px;
+    width: 35px;
+    height: 35px;
+    background-color: #7925c0;
+    border: 1px solid white;
+    float: left;
+    border-radius: 10px;
+  }
 
-#logo {
-  height: 70px;
-  float: right;
-  padding-top: 12px;
-  padding-right: 10px;
-  cursor: pointer;
-  transition: 0.3s;
-}
+  #menuButton:active {
+    background-color: white;
+    border: 1px solid #7925c0;
+    opacity: 0.6;
+    transition: 0.3s;
+  }
+  i {
+    margin-left: 10px;
+    margin-top: 8px;
+    color: white;
+  }
 
-#logo:hover {
-  opacity: 0.6;
-  transition: 0.3s;
-}
+  i:active {
+    color: #7925c0;
+  }
 
-.leftLogos {
-  height: 70px;
-  float: left;
-  padding-top: 10px;
-  padding-right: 10px;
-  cursor: pointer;
-  transition: 0.3s;
-}
+  #navLinks {
+    border-top: 1px solid black;
+    display: none;
+    transition: 0.3s;
+    float: right;
+    top: 200px;
+    width: 100%;
+    margin-top: 10px;
+  }
 
-.leftLogos:hover {
-  opacity: 0.6;
-  transition: 0.3s;
+  .NavBarButton {
+    width: 100%;
+    padding: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    text-align: right;
+    color: #7925c0;
+    transition: 0.3s;
+  }
+
+  .NavBarButton:active {
+    color: white;
+    background-color: #7925c0;
+    transition: 0.3s;
+  }
+
+  .leftLogos {
+    display: none;
+    height: 70px;
+    float: left;
+    padding-top: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .leftLogos:hover {
+    opacity: 0.6;
+    transition: 0.3s;
+  }
+}
+/* For desktop: */
+@media only screen and (min-width: 480px) {
+  #navBar {
+    position: fixed;
+    border-bottom: 1px solid black;
+    background-color: white;
+    top: 0;
+    width: 100%;
+    height: 90px;
+    z-index: 100;
+  }
+
+  #navBarTabs {
+    margin: 0 auto;
+    width: 1000px;
+    height: 90px;
+  }
+
+  #navLinks {
+    display: contents;
+  }
+
+  .NavBarButton {
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 80px;
+  }
+
+  .NavBarButton:hover {
+    color: #7925c0;
+    border-top: 4px solid #7925c0;
+  }
+
+  #logo {
+    height: 70px;
+    float: right;
+    padding-top: 12px;
+    padding-right: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    top: -200;
+  }
+
+  #logo:hover {
+    opacity: 0.6;
+    transition: 0.3s;
+  }
+
+  .leftLogos {
+    height: 70px;
+    float: left;
+    padding-top: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .leftLogos:hover {
+    opacity: 0.6;
+    transition: 0.3s;
+  }
+
+  #menuButton {
+    display: none;
+  }
 }
