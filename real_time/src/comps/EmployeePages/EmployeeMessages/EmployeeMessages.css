@@ -1,0 +1,11 @@
+#employee_messages{
+    min-height: 650px;
+    padding-top: 100px;
+    width: 85%;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: white;
+    text-align: right;
+    direction: rtl;
+    font-size: 20px;
+}

@@ -1,61 +1,45 @@
 import React from "react";
-import logo from "./logo.gif";
-import jerusalem_city_logo from "./jerusalem_city_logo.jpg";
-import promote_teenagers_logo from "./promote_teenagers_logo.jpg";
-import "./NavBar.css";
+import WelcomepageNavbar from "./welcomepageNavbar";
+import EmployeeNavBar from "./EmployeeNavBar";
+import BusinessNavBar from "./BusinessNavBar";
 
 const NavBar = (props) => {
-  return (
-    <div id="navBar">
-      <div id="navBarTabs">
-        <img
-          class="leftLogos"
-          src={jerusalem_city_logo}
-          onClick={props.clickOnLogo}
-        />
-        <img
-          class="leftLogos"
-          src={promote_teenagers_logo}
-          onClick={props.clickOnLogo}
-        />
 
-        <label
-          id="ContactUs"
-          className="NavBarButton"
-          onClick={props.clickContact}
-        >
-          צור קשר
-        </label>
+  if(props.navBarState=== "homePage"){
+    return (
+      <WelcomepageNavbar
+        clickToEmployees={props.clickToEmployees}
+        clickOnLogo={props.clickOnLogo}
+        clickToBusiness={props.clickToBusiness}
+        clickContact={props.clickContact}
+        clickAboutUs={props.clickAboutUs}/>
+    );
+  }
+  else if(props.navBarState=== "employee_interface"){
+    return(
+      <EmployeeNavBar
+      clickMyJobsEmployee={props.clickMyJobsEmployee}
+      clickJobOffersEmployee={props.clickJobOffersEmployee}
+      clickMessagesEmployee={props.clickMessagesEmployee}
+      clickSettingsEmployee={props.clickSettingsEmployee}/>
+    );
+  }
 
-        <label
-          id="about_us"
-          className="NavBarButton"
-          onClick={props.clickAboutUs}
-        >
-          מי אנחנו
-        </label>
+  else if(props.navBarState=== "business_interface"){
+    return(
+      <BusinessNavBar
+      clickPostJobBusiness={props.clickPostJobBusiness}
+      clickWatchCandidates={props.clickWatchCandidates}/>
+    );
+  }
+  
 
-        <label
-          id="to_business"
-          className="NavBarButton"
-          onClick={props.clickToBusiness}
-        >
-          לעסקים
-        </label>
-
-        <label
-          id="to_employees"
-          className="NavBarButton"
-          onClick={props.clickToEmployees}
-        >
-          לעובדים
-        </label>
-
-        <img id="logo" src={logo} alt="Logo" onClick={props.clickOnLogo} />
+  else {
+    return (
+      <div id="firstPageBody">
+        <h1>default</h1>
       </div>
-
-      {/* </div> */}
-    </div>
-  );
+    );
+  }
 };
 export default NavBar;

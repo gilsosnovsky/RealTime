@@ -28,7 +28,6 @@ const EmployeeSignUp = (props) => {
             required
           />
         </fieldset>
-
         <fieldset>
           <input
             class="field"
@@ -38,17 +37,16 @@ const EmployeeSignUp = (props) => {
             required
           />
         </fieldset>
-
+        <label id="birthdate_title">תאריך לידה:</label>
         <fieldset>
           <input
             class="field"
-            placeholder="date"
+            placeholder="תאריך לידה"
             type="date"
             tabindex="3"
             required
           />
         </fieldset>
-
         <fieldset>
           <input
             class="field"

@@ -1,11 +1,36 @@
-import React from "react";
+import React, { Component } from "react";
 import "./Login.css";
 import facebook from "./facebook.png";
 import google from "./google.png";
 //import fire from "../../../firebaseConfig"
 
 
-const Login = (props) => {
+
+class Login extends Component{
+
+  constructor(props) {
+    super(props);
+  }
+
+
+  onClickConnect=()=>{
+    if(this.props.pageBodyState==="EmloyeeLogin"){
+      //check fields
+
+      //if correct
+      this.props.clickConnectEmployee();
+    }
+    else{
+      //check files
+
+      //if correct
+      this.props.clickConnectBusiness();
+    }
+    
+    
+  
+  };
+  render(){
   return (
     <div id="Login">
       <div id="loginContainer">
@@ -37,11 +62,11 @@ const Login = (props) => {
           </fieldset>
 
           <fieldset>
-            <div id="login">התחבר</div>
+            <div id="login" onClick={this.onClickConnect}>התחבר</div>
           </fieldset>
 
           <fieldset>
-            <div id="SignUponLogin" onClick={props.clickSignUp}>
+            <div id="SignUponLogin" onClick={this.props.clickSignUp}>
               הרשמה
             </div>
           </fieldset>
@@ -59,5 +84,6 @@ const Login = (props) => {
       </div>
     </div>
   );
+  }
 };
 export default Login;

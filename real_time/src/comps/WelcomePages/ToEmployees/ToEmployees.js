@@ -8,7 +8,7 @@ const toEmployees = (props) => {
         <div id="toEmployees">
             <div id='employees_top'>
                 <div id ="employees_top_right">
-                    <img id='employees_phone_pic' src = {require('./phone_pic.jpg')} />  
+                    <img id='employees_phone_pic' src = {require('./phone_pic.jpg')} alt="guy with a phone" />  
                 </div>
                 <div id="employees_p1">
                 מחפשים עבודה? בשביל זה אנחנו כאן!
@@ -24,7 +24,7 @@ const toEmployees = (props) => {
                         מחויבות לכמות משמרות במגוון מקצועות וענפים ברחבי ירושלים.
                 </div>
                 <div id ="employees_top_left">
-                    <img id='employees_waiter_pic' src = {require('./waiter_pic.jpg')} />
+                    <img id='employees_waiter_pic' src = {require('./waiter_pic.jpg')} alt="waiter"/>
                 </div>
             </div>
             <p></p>
@@ -34,7 +34,7 @@ const toEmployees = (props) => {
                 <Carousel.Item className="carousel_item">
                     <div className = "job_pic">
                         <img src = {require('./service.png')}
-                        width="80%"/>
+                        width="80%" alt="service"/>
                     </div>
                     <Carousel.Caption>
                         <h3>First job</h3>
@@ -44,7 +44,7 @@ const toEmployees = (props) => {
                 <Carousel.Item className="carousel_item">
                     <div className = "job_pic">
                         <img src = {require('./build.png')}
-                        width="80%"/>
+                        width="80%" alt="builder"/>
                     </div>
                     <Carousel.Caption>
                         <h3>Second job</h3>
@@ -54,7 +54,7 @@ const toEmployees = (props) => {
                 <Carousel.Item className="carousel_item">
                         <div className = "job_pic">
                             <img src = {require('./service.png')}
-                            width="80%"/>
+                            width="80%" alt="service"/>
                         </div>
                     <Carousel.Caption>
                         <h3>Third job</h3>
@@ -66,7 +66,7 @@ const toEmployees = (props) => {
             <p />
             <div id="employees_p3">
                 <div id= 'employees_p3_empty'>
-                    <img id='employees_hands_pic' src = {require('./employees_hands.jpg')} />   
+                    <img id='employees_hands_pic' src = {require('./employees_hands.jpg')} alt="hands" />   
                 </div>
                 <div id='employees_p3_text'>
                     אנחנו ב'זמן אמת' בחרנו בשבילכם/ן את העסקים הכי טובים בירושלים.
