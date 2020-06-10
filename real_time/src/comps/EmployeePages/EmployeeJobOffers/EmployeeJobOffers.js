@@ -29,6 +29,7 @@ class EmployeeJobOffers extends React.Component {
     return (
       <div id="jobs_employee">
         <div id="jobs_employee_title">
+           שלום אוראל,
           משרות במיוחד עבורך
         </div>
         <div id="jobs_employee_loading_jobs_container" style={{ visibility: `${this.state.loading}`, }}>

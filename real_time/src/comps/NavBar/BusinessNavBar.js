@@ -38,8 +38,7 @@ const BusinessNavBar = (props) => {
 
         <img id="logo" src={logo} alt="Logo" onClick={props.clickOnLogo} />
 
-        <div class="hello_plus_logout">
-          <label className="hello_emloyee">"שלום "משתמש</label>
+        <div class="logout">
           <label className="logout_employee" onClick={props.clickLogout}>
             התנתק
           </label>
