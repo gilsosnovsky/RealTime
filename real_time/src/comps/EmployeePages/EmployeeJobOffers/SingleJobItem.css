@@ -72,20 +72,24 @@
 }
 
 #job_item_buttons_no{
-    height: 50%;
-    width: 100%;
+    height: 30%;
+    width: 80%;
     cursor: pointer;
+    border-radius: 10px;
+    margin: 7%;
     background-color: rgb(253, 85, 85);
+    
 }
 #job_item_buttons_no:hover{
     opacity: 0.6;
     transition: 0.3s;
 }
 #job_item_buttons_yes{
-    height: 50%;
-    width: 100%;
+    height: 30%;
+    width: 80%;
+    margin: 7%;
     cursor: pointer;
-    border-bottom-left-radius: 10px;
+    border-radius: 10px;
     background-color: rgb(77, 223, 77);
 }
 #job_item_buttons_yes:hover{
