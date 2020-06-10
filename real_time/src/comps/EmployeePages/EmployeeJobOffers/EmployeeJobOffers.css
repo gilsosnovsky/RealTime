@@ -13,3 +13,16 @@
 #jobs_employee_title{
     font-size: 25px;
 }
+
+#jobs_employee_loading_jobs_container{
+    color:#7925c0 ;
+    font-size: 25px;
+    position: absolute;
+    padding-left: 15%;
+    width: 100%;
+    text-align: center;
+}
+
+#jobs_employee_loading_jobs{
+    font-size: 20px;
+}
