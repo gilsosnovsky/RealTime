@@ -1,66 +1,139 @@
-#Login {
-  min-height: 600px;
-  padding-top: 100px;
-  text-align: center;
-  margin: 0 auto;
+/* For Mobile: */
+@media only screen and (max-width: 480px) {
+  #Login {
+    min-height: 500px;
+    padding-top: 20px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  #loginContainer {
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width: 90%;
+    background: #f9f9f9;
+    padding: 25px;
+    padding-top: 0px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  }
+
+  #wellcome {
+    color: #7925c0;
+    font-size: 30px;
+    padding: 30px;
+    font-weight: bold;
+  }
+
+  .field {
+    width: 200px;
+    padding: 5px;
+  }
+
+  #login {
+    background: #7925c0;
+    width: 200px;
+    padding: 10px 1px;
+    cursor: pointer;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    color: white;
+    font-size: 15px;
+    transition: 0.3s;
+    margin-top: 30px;
+  }
+
+  #login:hover {
+    position: relative;
+    cursor: pointer;
+    position: relative;
+    background: white;
+    color: #7925c0;
+    opacity: 0.6;
+    transition: 0.3s;
+  }
+
+  .loginWithButton {
+    height: 50px;
+    margin: 20px;
+  }
+
+  .loginWithButton:hover {
+    opacity: 0.6;
+    transition: 0.3s;
+  }
+
+  #SignUponLogin {
+    cursor: pointer;
+  }
 }
 
-#loginContainer {
-  margin: 0 auto;
-  margin-top: 20px;
-  margin-bottom: 30px;
-  width: 450px;
-  background: #f9f9f9;
-  padding: 25px;
-  padding-top: 0px;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-}
+/* For desktop: */
+@media only screen and (min-width: 480px) {
+  #Login {
+    min-height: 600px;
+    padding-top: 100px;
+    text-align: center;
+    margin: 0 auto;
+  }
 
-#wellcome {
-  color: #7925c0;
-  font-size: 30px;
-  padding: 30px;
-  font-weight: bold;
-}
+  #loginContainer {
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width: 450px;
+    background: #f9f9f9;
+    padding: 25px;
+    padding-top: 0px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  }
 
-.field {
-  width: 200px;
-  padding: 5px;
-}
+  #wellcome {
+    color: #7925c0;
+    font-size: 30px;
+    padding: 30px;
+    font-weight: bold;
+  }
 
-#login {
-  background: #7925c0;
-  width: 200px;
-  padding: 10px 1px;
-  cursor: pointer;
-  margin: 0 auto;
-  margin-bottom: 50px;
-  color: white;
-  font-size: 15px;
-  transition: 0.3s;
-  margin-top: 30px;
-}
+  .field {
+    width: 200px;
+    padding: 5px;
+  }
 
-#login:hover {
-  position: relative;
-  cursor: pointer;
-  position: relative;
-  background: white;
-  color: #7925c0;
-  opacity: 0.6;
-  transition: 0.3s;
-}
+  #login {
+    background: #7925c0;
+    width: 200px;
+    padding: 10px 1px;
+    cursor: pointer;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    color: white;
+    font-size: 15px;
+    transition: 0.3s;
+    margin-top: 30px;
+  }
 
-.loginWithButton {
-  height: 50px;
-  margin: 20px;
-}
+  #login:hover {
+    position: relative;
+    cursor: pointer;
+    position: relative;
+    background: white;
+    color: #7925c0;
+    opacity: 0.6;
+    transition: 0.3s;
+  }
 
-.loginWithButton:hover {
-  opacity: 0.6;
-  transition: 0.3s;
-}
+  .loginWithButton {
+    height: 50px;
+    margin: 20px;
+  }
 
-#SignUponLogin{
-  cursor: pointer;
+  .loginWithButton:hover {
+    opacity: 0.6;
+    transition: 0.3s;
+  }
+
+  #SignUponLogin {
+    cursor: pointer;
+  }
 }
