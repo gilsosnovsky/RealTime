@@ -9,7 +9,7 @@ class MyPage extends Component {
     NavBarState: "homePage",
     PageBodyState: "homePage",
     FooterState: "homePage",
-    name: "gil"
+    user: "guest"
   };
 
   onClickToEmployees = () => {
@@ -115,6 +115,15 @@ class MyPage extends Component {
     });
   };
 
+  onClickLogout = () => {
+    this.setState({
+      NavBarState: "homePage",
+      PageBodyState: "homePage",
+      FooterState: "homePage",
+      user: "guest"
+    });
+  };
+
   render() {
     return (
       <div id="MyPage">
@@ -131,6 +140,7 @@ class MyPage extends Component {
           clickSettingsEmployee={this.onClickSettingsEmployee}
           clickPostJobBusiness={this.onClickPostJobBusiness}
           clickWatchCandidates={this.onClickWatchCandidates}
+          clickLogout={this.onClickLogout}
         />
 
         <PageBody

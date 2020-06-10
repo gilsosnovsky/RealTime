@@ -59,7 +59,7 @@ const EmployeeNavBar = (props) => {
             "שלום "משתמש
             </label>
             <br/>
-            <label className="logout_employee">
+            <label className="logout_employee" onClick={props.clickLogout}>
               התנתק
             </label>
           </div>

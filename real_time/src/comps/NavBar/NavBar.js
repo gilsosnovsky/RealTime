@@ -21,7 +21,8 @@ const NavBar = (props) => {
       clickMyJobsEmployee={props.clickMyJobsEmployee}
       clickJobOffersEmployee={props.clickJobOffersEmployee}
       clickMessagesEmployee={props.clickMessagesEmployee}
-      clickSettingsEmployee={props.clickSettingsEmployee}/>
+      clickSettingsEmployee={props.clickSettingsEmployee}
+      clickLogout={props.clickLogout}/>
     );
   }
 
@@ -29,7 +30,8 @@ const NavBar = (props) => {
     return(
       <BusinessNavBar
       clickPostJobBusiness={props.clickPostJobBusiness}
-      clickWatchCandidates={props.clickWatchCandidates}/>
+      clickWatchCandidates={props.clickWatchCandidates}
+      clickLogout={props.clickLogout}/>
     );
   }
   
