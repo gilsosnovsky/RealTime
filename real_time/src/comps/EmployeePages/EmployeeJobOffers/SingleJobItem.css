@@ -52,7 +52,9 @@
 #job_item_bottom{
     visibility: hidden;
     height: 0%;
-    background-color: rgb(233, 232, 232);
+    background-color: rgb(245, 245, 245);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 #job_item_full_info{
@@ -60,7 +62,6 @@
     width: 75%;
     float: right;
     padding-right: 5px;
-    border-bottom-right-radius: 10px;
 }
 
 #job_item_buttons{
@@ -72,12 +73,15 @@
 }
 
 #job_item_buttons_no{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 30%;
     width: 80%;
     cursor: pointer;
     border-radius: 10px;
     margin: 7%;
-    background-color: rgb(253, 85, 85);
+    background-color: rgb(228, 82, 82);
     
 }
 #job_item_buttons_no:hover{
@@ -85,12 +89,15 @@
     transition: 0.3s;
 }
 #job_item_buttons_yes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 30%;
     width: 80%;
     margin: 7%;
     cursor: pointer;
     border-radius: 10px;
-    background-color: rgb(77, 223, 77);
+    background-color: rgb(85, 216, 85);
 }
 #job_item_buttons_yes:hover{
     opacity: 0.7;
