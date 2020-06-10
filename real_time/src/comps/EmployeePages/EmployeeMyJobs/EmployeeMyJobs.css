@@ -11,7 +11,9 @@
 }
 
 #my_jobs_employee_title{
-    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 20px;
 }
 
 #my_jobs_employee_loading_jobs_container{

@@ -15,6 +15,9 @@ class SingleJobItem extends React.Component {
         job_salary:  this.props.salary,
         job_logo: this.props.logo,
         job_long_info: this.props.long_info,
+        job_remarks: this.props.remarks,
+        job_clothing: this.props.clothing,
+        job_payment_time:this.props.payment_time,
         buttons_visibility: this.props.buttons_visibility,
         item_bottom_visibility: 'hidden',
         container_height: '120px',
@@ -32,9 +35,9 @@ class SingleJobItem extends React.Component {
         }
         this.setState({
             item_bottom_visibility: 'visible',
-            container_height: '240px',
-            item_top_height: '50%',
-            item_bottom_height: '50%'
+            container_height: '300px',
+            item_top_height: '35%',
+            item_bottom_height: '65%'
         });
     }
     hideFullInfo() {
@@ -72,6 +75,15 @@ class SingleJobItem extends React.Component {
                     <div id="job_item_full_info">
                         <b>פרטים נוספים:</b><br />
                         {this.state.job_long_info}
+                        <br/>
+                        <b>ביגוד: </b>
+                        {this.state.job_clothing}
+                        <br/>
+                        <b>זמן תשלום : </b>
+                        {this.state.job_payment_time}
+                        <br/>
+                        <b>הערות: </b>
+                        {this.state.job_remarks}
                     </div>
                     <div id="job_item_buttons" style={{visibility: `${this.state.buttons_visibility}`}}>
                         <div id="job_item_buttons_no" onClick={this.hideFullInfo}>

@@ -48,6 +48,9 @@ class EmployeeJobOffers extends React.Component {
                 salary={job.salary}
                 long_info={job.long_info}
                 logo={job.logo}
+                remarks={job.remarks}
+                clothing={job.clothing}
+                payment_time={job.payment_time}
                 buttons_visibility="visible" />
             })
           }

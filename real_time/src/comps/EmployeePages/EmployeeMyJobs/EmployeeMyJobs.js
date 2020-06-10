@@ -26,7 +26,7 @@ class EmployeeMyJobs extends React.Component {
     return (
       <div id="my_jobs_employee">
         <div id="my_jobs_employee_title">
-          הצעות העבודה שלך
+           שלום אוראל, הצעות העבודה שלך
         </div>
         <div id="my_jobs_employee_loading_jobs_container" style={{ visibility: `${this.state.loading}`, }}>
           טוען...<br />
@@ -44,6 +44,9 @@ class EmployeeMyJobs extends React.Component {
                 salary={job.salary}
                 long_info={job.long_info}
                 logo={job.logo}
+                remarks={job.remarks}
+                clothing={job.clothing}
+                payment_time={job.payment_time}
                 buttons_visibility="hidden" />
             })
           }
