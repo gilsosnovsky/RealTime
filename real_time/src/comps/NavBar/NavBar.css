@@ -77,6 +77,10 @@
     transition: 0.3s;
   }
 
+  #hello_plus_logout {
+    display: none;
+  }
+
   .leftLogos {
     display: none;
     height: 70px;
@@ -97,7 +101,7 @@
 @media only screen and (min-width: 480px) {
   #navBar {
     position: fixed;
-    border-bottom: 1px solid black;
+    /*border-bottom: 1px solid black;*/
     background-color: white;
     top: 0;
     width: 100%;
@@ -113,18 +117,26 @@
 
   #hello_plus_logout {
     width: 100%;
-    font-weight: bold;
-    font-size: 14px;
+    background-color: white;
   }
 
   .hello_emloyee {
     float: right;
     padding-right: 10px;
+    font-weight: bold;
+    font-size: 14px;
   }
 
   .logout_employee {
     float: left;
     padding-left: 15px;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  .logout_employee:hover {
+    cursor: pointer;
+    color: #7925c0;
   }
 
   #navLinks {

@@ -4,8 +4,8 @@ import logo from "./logo.gif";
 import jerusalem_city_logo from "./jerusalem_city_logo.jpg";
 import promote_teenagers_logo from "./promote_teenagers_logo.jpg";
 import "./NavBar.css";
-import $ from "jquery";
-window.$ = $;
+//import $ from "jquery";
+//window.$ = $;
 
 var x = window.matchMedia("(min-width: 480px)"); //only on Desktop mode
 x.addListener(helloUser); // Attach listener function on state changes
@@ -16,7 +16,7 @@ function helloUser() {
     // If media query matches
     console.log("Desktop");
     if (isNaN(document.getElementById("hello_plus_logout"))) {
-      alert("INSIDE!!");
+      console.log("INSIDE!");
       document.getElementById("navBar").style.height = "120px";
       document.getElementById("navBarTabs").style.height = "120px";
     }
@@ -73,7 +73,6 @@ const EmployeeNavBar = (props) => {
         <div class="hello_plus_logout">
           {helloUser}
           <label className="hello_emloyee">"שלום "משתמש</label>
-          <br />
           <label className="logout_employee" onClick={props.clickLogout}>
             התנתק
           </label>
