@@ -8,7 +8,7 @@ const EmployeeSettings = (props) => {
       <div id="settings_container">
       <div id="settings_employee">
         <div class="user_pic">
-          <img id="emloyee_image" src={person}></img>
+          <img id="emloyee_image" src={person} alt="user pic"></img>
         </div>
         <div id="employee_name">
               אוראל שלמה
@@ -17,13 +17,26 @@ const EmployeeSettings = (props) => {
           <button id="edit_pic_button">ערוך תמונת פרופיל</button>
         </div>
         <div id="employee_details_to_edit">
-          <div id="full_name_to_edit">
+          <div id="first_name_to_edit">
           <fieldset >
-            <label>שם מלא:</label>
+            <label>שם פרטי:</label>
             <br/>
             <input
               class="field"
-              placeholder="current full name"
+              placeholder="current first name"
+              type="text"
+              tabindex="2"
+              autofocus
+            />
+          </fieldset>
+          </div>
+          <div id="last_name_to_edit">
+          <fieldset >
+            <label>שם משפחה:</label>
+            <br/>
+            <input
+              class="field"
+              placeholder="current last name"
               type="text"
               tabindex="2"
               autofocus
@@ -42,18 +55,7 @@ const EmployeeSettings = (props) => {
             />
           </fieldset>
           </div>
-          <div id="email_to_edit">
-          <fieldset>
-            <label>אימייל:</label>
-            <br/>
-            <input
-              class="field"
-              placeholder="current email"
-              type="email"
-              tabindex="2"
-            />
-          </fieldset>
-          </div>
+
           <div id="birthday_to_edit">
           <fieldset>
             <label>תאריך לידה:</label>
@@ -66,6 +68,20 @@ const EmployeeSettings = (props) => {
             />
           </fieldset>
           </div>
+
+          
+          <fieldset>
+            <label>אימייל:</label>
+            <br/>
+            <input
+              id="email_to_edit"
+              placeholder="current email"
+              type="email"
+              tabindex="2"
+            />
+          </fieldset>
+          
+          
           <fieldset>
             <label>כתובת מלאה:</label>
             <br/>

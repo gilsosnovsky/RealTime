@@ -46,7 +46,7 @@ const BusinessNavBar = (props) => {
             "שלום "משתמש
             </label>
             <br/>
-            <label className="logout_business">
+            <label className="logout_business" onClick={props.clickLogout}>
               התנתק
             </label>
           </div>

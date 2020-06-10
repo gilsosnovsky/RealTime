@@ -12,7 +12,8 @@ class EmployeeSignUp extends Component{
       email: '',
       password: '',
       secondPassword: '',  // compare between the two passwords before sign up
-      fullName: '',
+      firstName: '',
+      lastName: '',
       phoneNumber: '',
       birthdate: '',
       address: '',
@@ -57,15 +58,25 @@ class EmployeeSignUp extends Component{
           <fieldset>
             <input
               class="field"
-              id="Sname"
-              placeholder="שם מלא"
+              id="Sfirstname"
+              placeholder="שם פרטי"
               type="text"
               tabindex="1"
               required
               autofocus
             />
           </fieldset>
-
+          <fieldset>
+            <input
+              class="field"
+              id="Slastname"
+              placeholder="שם משפחה"
+              type="text"
+              tabindex="1"
+              required
+              autofocus
+            />
+          </fieldset>
           <fieldset>
             <input
               class="field"

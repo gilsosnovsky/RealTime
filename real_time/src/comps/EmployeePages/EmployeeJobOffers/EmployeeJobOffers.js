@@ -1,47 +1,42 @@
 import React from "react";
 import "./EmployeeJobOffers.css";
 import SingleJobItem from "./SingleJobItem";
+import fire from "../../../firebaseConfig";
 
 class EmployeeJobOffers extends React.Component {
-  
-  state = {
-    jobs_list: [
-
-      {
-        type: 'מלצר',
-        hours: "08:00 - 17:00",
-        date: "28.07.2020",
-        place: "אולם אירועים  מלון יהודה, ירושלים",
-        salary: "420",
-        long_info: "מידע ארוך על משרת המלצר",
-        logo: "https://grupohonor.com.br/wp-content/uploads/2015/10/Logo-Default.png"
-      },
-
-      {
-        type: 'טבח',
-        hours: "08:30 - 16:00",
-        date: "28.06.2020",
-        place: "מלון דניאל, ים המלח",
-        salary: "350",
-        long_info: "מידע ארוך על משרת הטבח",
-        logo: "https://images.globes.co.il/Images/NewGlobes/big_image/2014/aroma-575.2014731T130210.jpg"
-      },
-
-      {
-        type: 'נהג',
-        hours: "18:00 - 00:00",
-        date: "03.07.2020",
-        place: "תחנה מרכזית, ירושלים",
-        salary: "500",
-        long_info: "מידע ארוך על משרת הנהג",
-        logo: "https://files.geektime.co.il/wp-content/uploads/2018/06/gett-1528377628.jpg"
-      }
-    ]
+  constructor(props) {
+    super(props);
   }
+
+  state = {
+    jobs_list: [],
+    loading: "visible"
+  }
+
+  componentDidMount() {
+    const db = fire.database();
+    db.ref("/jobs/jobs_list").on("value", snapshot => {
+      let allJobs = [];
+      snapshot.forEach(snap => {
+        if(snap.val().is_my_job != true)
+          allJobs.push(snap.val());
+      });
+      this.setState({ jobs_list: allJobs, loading: "hidden" });
+    });
+  }
+
   render() {
     return (
       <div id="jobs_employee">
-        משרות במיוחד עבורך
+        <div id="jobs_employee_title">
+          משרות במיוחד עבורך
+        </div>
+        <div id="jobs_employee_loading_jobs_container" style={{ visibility: `${this.state.loading}`, }}>
+          טוען...<br />
+          <div id="jobs_employee_loading_jobs" class="spinner-border" role="status" style={{}}>
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
         <ul>
           {
             this.state.jobs_list.map((job, index) => {
@@ -51,7 +46,8 @@ class EmployeeJobOffers extends React.Component {
                 place={job.place}
                 salary={job.salary}
                 long_info={job.long_info}
-                logo={job.logo} />
+                logo={job.logo}
+                buttons_visibility="visible" />
             })
           }
         </ul>

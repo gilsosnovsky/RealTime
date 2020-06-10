@@ -59,7 +59,12 @@
     font-size: 15px;
 }
 
-#full_name_to_edit{
+#first_name_to_edit{
+    width: 40%;
+    float: right;
+}
+
+#last_name_to_edit{
     width: 40%;
     float: right;
 }
@@ -70,8 +75,8 @@
 }
 
 #email_to_edit{
-    width: 40%;
-    float: right;
+    width: 75.5%;
+    height: 37px;
 }
 
 #birthday_to_edit{

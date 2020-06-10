@@ -36,11 +36,13 @@
     float: right;
 }
 #job_item_salary_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100%;
     width: 25%;
     float: right;
     border-top-left-radius: 5px;
-    text-align: center;
     background-color: #7925c0;
 }
 #job_item_salary{
@@ -50,6 +52,7 @@
 #job_item_bottom{
     visibility: hidden;
     height: 0%;
+    background-color: rgb(233, 232, 232);
 }
 
 #job_item_full_info{
@@ -58,7 +61,6 @@
     float: right;
     padding-right: 5px;
     border-bottom-right-radius: 10px;
-    background-color: rgb(233, 232, 232);
 }
 
 #job_item_buttons{

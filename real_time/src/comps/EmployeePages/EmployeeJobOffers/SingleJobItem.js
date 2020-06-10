@@ -4,7 +4,7 @@ import './SingleJobItem.css'
 class SingleJobItem extends React.Component {
     constructor(props) {
         super(props);
-        this.openFullInfo = this.openFullInfo.bind(this);
+        this.clickTopItem = this.clickTopItem.bind(this);
         this.hideFullInfo = this.hideFullInfo.bind(this);
     }
     state = {
@@ -15,12 +15,21 @@ class SingleJobItem extends React.Component {
         job_salary:  this.props.salary,
         job_logo: this.props.logo,
         job_long_info: this.props.long_info,
+        buttons_visibility: this.props.buttons_visibility,
         item_bottom_visibility: 'hidden',
         container_height: '120px',
         item_top_height: '100%',
         item_bottom_height: '0%'
     };
-    openFullInfo() {
+
+    signuUpForWork(){
+        alert("להירשם למשרה");
+    }
+    clickTopItem() {
+        if(this.state.item_bottom_height === "50%"){
+            this.hideFullInfo();
+            return;
+        }
         this.setState({
             item_bottom_visibility: 'visible',
             container_height: '240px',
@@ -40,7 +49,7 @@ class SingleJobItem extends React.Component {
         return (
             <div id="job_item_container"
                 style={{ height: `${this.state.container_height}` }}>
-                <div id="job_item_top" onClick={this.openFullInfo}
+                <div id="job_item_top" onClick={this.clickTopItem}
                     style={{ height: `${this.state.item_top_height}` }}>
                     <div id="job_item_logo_container">
                         <img id="job_item_logo" src={this.state.job_logo} alt="job_logo"/>
@@ -64,11 +73,11 @@ class SingleJobItem extends React.Component {
                         <b>פרטים נוספים:</b><br />
                         {this.state.job_long_info}
                     </div>
-                    <div id="job_item_buttons">
+                    <div id="job_item_buttons" style={{visibility: `${this.state.buttons_visibility}`}}>
                         <div id="job_item_buttons_no" onClick={this.hideFullInfo}>
                             לא מתאים לי
                         </div>
-                        <div id="job_item_buttons_yes">
+                        <div id="job_item_buttons_yes" onClick={this.signuUpForWork}>
                             מתאים לי בול!
                         </div>
                     </div>

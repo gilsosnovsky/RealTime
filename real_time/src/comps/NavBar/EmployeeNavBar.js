@@ -70,14 +70,15 @@ const EmployeeNavBar = (props) => {
 
         <img id="logo" src={logo} alt="Logo" />
 
-        <div id="hello_plus_logout">
+        <div class="hello_plus_logout">
           {helloUser}
           <label className="hello_emloyee">"שלום "משתמש</label>
-          <label className="logout_employee">התנתק</label>
+          <br />
+          <label className="logout_employee" onClick={props.clickLogout}>
+            התנתק
+          </label>
         </div>
       </div>
-
-      {/* </div> */}
     </div>
   );
 };
