@@ -3,10 +3,9 @@ import "./EmployeeJobOffers.css";
 import SingleJobItem from "./SingleJobItem";
 
 class EmployeeJobOffers extends React.Component {
-  
+
   state = {
     jobs_list: [
-
       {
         type: 'מלצר',
         hours: "08:00 - 17:00",
@@ -35,13 +34,25 @@ class EmployeeJobOffers extends React.Component {
         salary: "500",
         long_info: "מידע ארוך על משרת הנהג",
         logo: "https://files.geektime.co.il/wp-content/uploads/2018/06/gett-1528377628.jpg"
+      },
+      
+      {
+        type: 'נהג',
+        hours: "18:00 - 00:00",
+        date: "03.07.2020",
+        place: "תחנה מרכזית, ירושלים",
+        salary: "500",
+        long_info: "מידע ארוך על משרת הנהג",
+        logo: "https://files.geektime.co.il/wp-content/uploads/2018/06/gett-1528377628.jpg"
       }
     ]
   }
   render() {
     return (
       <div id="jobs_employee">
-        משרות במיוחד עבורך
+        <div id="jobs_employee_title">
+          משרות במיוחד עבורך
+        </div>
         <ul>
           {
             this.state.jobs_list.map((job, index) => {
@@ -51,7 +62,8 @@ class EmployeeJobOffers extends React.Component {
                 place={job.place}
                 salary={job.salary}
                 long_info={job.long_info}
-                logo={job.logo} />
+                logo={job.logo}
+                buttons_visibility="visible" />
             })
           }
         </ul>
