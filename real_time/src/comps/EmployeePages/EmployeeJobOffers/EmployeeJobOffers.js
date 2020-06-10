@@ -4,9 +4,6 @@ import SingleJobItem from "./SingleJobItem";
 import fire from "../../../firebaseConfig";
 
 class EmployeeJobOffers extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   state = {
     jobs_list: [],
@@ -18,7 +15,7 @@ class EmployeeJobOffers extends React.Component {
     db.ref("/jobs/jobs_list").on("value", snapshot => {
       let allJobs = [];
       snapshot.forEach(snap => {
-        if(snap.val().is_my_job != true)
+        if(snap.val().is_my_job !== true)
           allJobs.push(snap.val());
       });
       this.setState({ jobs_list: allJobs, loading: "hidden" });

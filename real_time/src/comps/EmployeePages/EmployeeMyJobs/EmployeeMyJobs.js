@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import "./EmployeeMyJobs.css"
 import SingleJobItem from "../EmployeeJobOffers/SingleJobItem";
 import fire from "../../../firebaseConfig";
@@ -15,7 +15,7 @@ class EmployeeMyJobs extends React.Component {
     db.ref("/jobs/jobs_list").on("value", snapshot => {
       let allJobs = [];
       snapshot.forEach(snap => {
-        if(snap.val().is_my_job == true)
+        if(snap.val().is_my_job === true)
           allJobs.push(snap.val());
       });
       this.setState({ jobs_list: allJobs, loading: "hidden" });

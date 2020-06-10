@@ -2,7 +2,6 @@
 import "./signup.css";
 import "bootstrap/dist/css/bootstrap.css";
 import React, { Component } from "react";
-import fire from '../../../firebaseConfig';
 
 class EmployeeSignUp extends Component{
 
