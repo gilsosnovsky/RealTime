@@ -1,131 +1,259 @@
-#toEmployees {
-  min-height: 650px;
-  padding-top: 100px;
-  background-color: white;
-  text-align: center;
-  direction: rtl;
-}
-#employees_top{
-  display: block;
-  height: 20%;
-  min-height: 200px;
-}
-#employees_p1 {
-  color: #7925c0;
-  font-size: 30px;
-  width:50%;
-  float: right;
+/* For Mobile: */
+@media only screen and (max-width: 480px) {
+  #toEmployees {
+    width: 90%;
+    min-height: 650px;
+    padding-top: 20px;
+    background-color: white;
+    text-align: center;
+    direction: rtl;
+    margin: 0 auto;
+  }
+  #employees_top {
+    display: block;
+    margin: 0 auto;
+    align-items: center;
+    align-content: center;
+  }
+  #employees_p1 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #7925c0;
+    font-size: 30px;
+    width: 100%;
+    text-align: center;
+  }
+
+  #employees_p2 {
+    color: black;
+    font-size: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  #employees_top_right {
+    width: 100%;
+    display: flex;
+  }
+
+  #employees_top_left {
+    width: 100%;
+    display: flex;
+    margin-bottom: 20px;
+  }
+  #employees_waiter_pic {
+    width: 80%;
+    margin: 0 auto;
+    align-items: center;
+    align-content: center;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  }
+  #employees_phone_pic {
+    width: 80%;
+    margin: 0 auto;
+    align-items: center;
+    align-content: center;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  }
+
+  #carousel_container {
+    background-color: rgb(56, 56, 56);
+    color: white;
+  }
+
+  #hot_jobs_carousel {
+    font-size: 30px;
+    font-weight: bold;
+  }
+  #carousel {
+    background-color: rgb(56, 56, 56);
+    height: 320px;
+    color: white;
+    z-index: 1;
+  }
+
+  .carousel_item {
+    height: 320px;
+    text-align: center;
+  }
+
+  .job_pic {
+    width: 15%;
+    height: 50%;
+    margin-top: 2%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #employees_p3 {
+    color: black;
+    font-size: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  #employees_p3_empty {
+    width: 100%;
+  }
+  #employees_p3_text {
+    background-color: white;
+    font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    padding-right: 10px;
+    text-align: center;
+    width: 100%;
+    float: right;
+  }
+  #employees_p3_pic {
+    width: 25%;
+    float: right;
+  }
+  #employees_hands_pic {
+    width: 80%;
+    float: center;
+    height: 100%;
+    transition: 0.4s;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  }
+
+  #employees_p4 {
+    color: #7925c0;
+    font-size: 35px;
+    font-weight: bold;
+  }
+
+  #employees_p5 {
+    color: black;
+    font-size: 20px;
+    padding-bottom: 30px;
+  }
+  #employees_hands {
+    width: 20%;
+  }
 }
 
-#employees_p2 {
-  color: black;
-  font-size: 20px;
-  width:50%;
-  float: right;
-  
-}
-#employees_top_right{
-  width: 24%;
-  float: right;
-  display: flex;
-}
+/* For desktop: */
+@media only screen and (min-width: 480px) {
+  #toEmployees {
+    min-height: 650px;
+    padding-top: 100px;
+    background-color: white;
+    text-align: center;
+    direction: rtl;
+  }
+  #employees_top {
+    display: block;
+    height: 20%;
+    min-height: 200px;
+  }
+  #employees_p1 {
+    color: #7925c0;
+    font-size: 30px;
+    width: 50%;
+    float: right;
+  }
 
-#employees_top_left{
-  width: 24%;
-  float:right,top;
-  display: flex;
-}
-#employees_waiter_pic{
-  max-width: 90%;
-  max-height: 90%;
-  float: center;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-}
-#employees_phone_pic{
-  margin-right: 5%;
-  max-width: 90%;
-  max-height: 90%;
-  float: center;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-}
+  #employees_p2 {
+    color: black;
+    font-size: 20px;
+    width: 50%;
+    float: right;
+  }
+  #employees_top_right {
+    width: 24%;
+    float: right;
+    display: flex;
+  }
 
-#carousel_container{
-  background-color: rgb(56, 56, 56);
-  color: white;
-}
+  #employees_top_left {
+    width: 24%;
+    float: right, top;
+    display: flex;
+  }
+  #employees_waiter_pic {
+    max-width: 90%;
+    max-height: 90%;
+    float: center;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  }
+  #employees_phone_pic {
+    margin-right: 5%;
+    max-width: 90%;
+    max-height: 90%;
+    float: center;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  }
 
-#hot_jobs_carousel{
-  font-size: 30px;
-  font-weight: bold;
-}
-#carousel {
-  background-color: rgb(56, 56, 56);
-  height: 320px;
-  color: white;
-  z-index: 1;
-}
+  #carousel_container {
+    background-color: rgb(56, 56, 56);
+    color: white;
+  }
 
-.carousel_item {
-  height: 320px;
-  text-align: center;
-}
+  #hot_jobs_carousel {
+    font-size: 30px;
+    font-weight: bold;
+  }
+  #carousel {
+    background-color: rgb(56, 56, 56);
+    height: 320px;
+    color: white;
+    z-index: 1;
+  }
 
-.job_pic {
-  width: 15%;
-  height: 50%;
-  margin-top: 2%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-#employees_p3{
-  display: flex;
+  .carousel_item {
+    height: 320px;
+    text-align: center;
+  }
 
-}
-#employees_p3_empty{
-  width:25%;
-  margin: 0,0,0,0;
-  padding: 0,0,0,0;
+  .job_pic {
+    width: 15%;
+    height: 50%;
+    margin-top: 2%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #employees_p3 {
+    display: flex;
+  }
+  #employees_p3_empty {
+    width: 25%;
+    margin: 0, 0, 0, 0;
+    padding: 0, 0, 0, 0;
+  }
+  #employees_p3_text {
+    background-color: white;
+    font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    padding-right: 10px;
+    text-align: center;
+    width: 50%;
+    float: right;
+  }
+  #employees_p3_pic {
+    width: 25%;
+    float: right;
+  }
+  #employees_hands_pic {
+    width: 80%;
+    float: center;
+    height: 100%;
+    transition: 0.4s;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  }
 
-  
-}
-#employees_p3_text {
-  background-color: white;
-  font-size: 20px;
-  padding-top: 20px;
-  padding-bottom: 30px;
-  padding-right: 10px;
-  text-align: center;
-  width:50%;
-  float:right;
-  
-}
-#employees_p3_pic{
-  width:25%;
-  float:right;
-}
-#employees_hands_pic{
-  width:80%;
-  float: center;
-  height: 100%;
-  transition: 0.4s;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-}
+  #employees_p4 {
+    color: #7925c0;
+    font-size: 35px;
+    font-weight: bold;
+  }
 
-
-
-#employees_p4 {
-  color: #7925c0;
-  font-size: 35px;
-  font-weight: bold;
-}
-
-#employees_p5 {
-  color: black;
-  font-size: 20px;
-  padding-bottom: 30px;
-}
-#employees_hands{
-  width:20%;
-  
+  #employees_p5 {
+    color: black;
+    font-size: 20px;
+    padding-bottom: 30px;
+  }
+  #employees_hands {
+    width: 20%;
+  }
 }
