@@ -101,7 +101,7 @@
 @media only screen and (min-width: 480px) {
   #navBar {
     position: fixed;
-    /*border-bottom: 1px solid black;*/
+    border-bottom: 1px solid #7925c0;
     background-color: white;
     top: 0;
     width: 100%;
@@ -115,16 +115,9 @@
     height: 90px;
   }
 
-  #hello_plus_logout {
+  #logout {
     width: 100%;
     background-color: white;
-  }
-
-  .hello_emloyee {
-    float: right;
-    padding-right: 10px;
-    font-weight: bold;
-    font-size: 14px;
   }
 
   .logout_employee {
