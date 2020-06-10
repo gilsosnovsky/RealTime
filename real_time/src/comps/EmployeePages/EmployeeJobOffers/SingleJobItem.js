@@ -26,7 +26,7 @@ class SingleJobItem extends React.Component {
         alert("להירשם למשרה");
     }
     clickTopItem() {
-        if(this.state.item_bottom_height == "50%"){
+        if(this.state.item_bottom_height === "50%"){
             this.hideFullInfo();
             return;
         }
