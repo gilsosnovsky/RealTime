@@ -8,21 +8,21 @@ class EmployeeSignUp extends Component{
 
   constructor(props) {
     super(props);
-    
+    this.state={
+      email: '',
+      password: '',
+      secondPassword: '',  // compare between the two passwords before sign up
+      first_name: '',
+      last_name: '',
+      phone_number: '',
+      birth_date: '',
+      address: '',
+      favorite_jobs: '',
+      about_me: ''
+    }
   }
 
-  state={
-    email: '',
-    password: '',
-    secondPassword: '',  // compare between the two passwords before sign up
-    first_name: '',
-    last_name: '',
-    phone_number: '',
-    birth_date: '',
-    address: '',
-    favorite_jobs: '',
-    about_me: ''
-  }
+  
 
   onSignUpEmployee=(e)=>{
     e.preventDefault();
