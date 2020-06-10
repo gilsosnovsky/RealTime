@@ -1,72 +1,85 @@
-import React from 'react';
-import 'bootstrap/dist/css/bootstrap.css';
+import React from "react";
+import "bootstrap/dist/css/bootstrap.css";
 import logo from "./logo.gif";
 import jerusalem_city_logo from "./jerusalem_city_logo.jpg";
 import promote_teenagers_logo from "./promote_teenagers_logo.jpg";
 import "./NavBar.css";
+import $ from "jquery";
+window.$ = $;
 
+var x = window.matchMedia("(min-width: 480px)"); //only on Desktop mode
+x.addListener(helloUser); // Attach listener function on state changes
+
+//changing the navbar height, called in "hello_plus_logout" div
+function helloUser() {
+  if (x.matches) {
+    // If media query matches
+    console.log("Desktop");
+    if (isNaN(document.getElementById("hello_plus_logout"))) {
+      alert("INSIDE!!");
+      document.getElementById("navBar").style.height = "120px";
+      document.getElementById("navBarTabs").style.height = "120px";
+    }
+  } else {
+    console.log("Mobile");
+  }
+}
 
 const EmployeeNavBar = (props) => {
-    return (
-        <div id="navBar">
-        <div id="navBarTabs">
-          
-          <img
-            class="leftLogos"
-            src={jerusalem_city_logo}
-            alt="jerusalem city logo"
-          />
-          <img
-            class="leftLogos"
-            src={promote_teenagers_logo}
-            alt="promte teenagers logo"
-          />
-  
-          <label
-            className="NavBarButton"
-            onClick={props.clickSettingsEmployee}>
-            הגדרות
-          </label>
+  return (
+    <div id="navBar">
+      <div id="navBarTabs">
+        <img
+          class="leftLogos"
+          src={jerusalem_city_logo}
+          alt="jerusalem city logo"
+        />
+        <img
+          class="leftLogos"
+          src={promote_teenagers_logo}
+          alt="promte teenagers logo"
+        />
 
-          <label
-            id="message_employee"
-            className="NavBarButton"
-            onClick={props.clickMessagesEmployee}
-          >
-            הודעות
-          </label>
+        <label className="NavBarButton" onClick={props.clickSettingsEmployee}>
+          הגדרות
+        </label>
 
-          <label
-            id="my_jobs_emplyee"
-            className="NavBarButton"
-            onClick={props.clickMyJobsEmployee}
-          >
-             הצעות העבודה שלי
-          </label>
+        <label
+          id="message_employee"
+          className="NavBarButton"
+          onClick={props.clickMessagesEmployee}
+        >
+          הודעות
+        </label>
 
-          <label
-            id="Jobs_emloyee"
-            className="NavBarButton"
-            onClick={props.clickJobOffersEmployee}
-          >
-            משרות
-          </label>
-  
-          <img id="logo" src={logo} alt="Logo"/>
+        <label
+          id="my_jobs_emplyee"
+          className="NavBarButton"
+          onClick={props.clickMyJobsEmployee}
+        >
+          הצעות העבודה שלי
+        </label>
 
-          <div class="hello_plus_logout">
-            <label className="hello_emloyee">
-            "שלום "משתמש
-            </label>
-            <br/>
-            <label className="logout_employee">
-              התנתק
-            </label>
-          </div>
+        <label
+          id="Jobs_emloyee"
+          className="NavBarButton"
+          onClick={props.clickJobOffersEmployee}
+        >
+          משרות
+        </label>
+
+        <img id="logo" src={logo} alt="Logo" />
+
+        <div id="hello_plus_logout">
+          {helloUser}
+          <label className="hello_emloyee">"שלום "משתמש</label>
+          <label className="logout_employee">התנתק</label>
         </div>
-  
-        {/* </div> */}
-      </div> 
-    );
+      </div>
+
+      {/* </div> */}
+    </div>
+  );
 };
+
 export default EmployeeNavBar;

@@ -92,6 +92,7 @@
     transition: 0.3s;
   }
 }
+
 /* For desktop: */
 @media only screen and (min-width: 480px) {
   #navBar {
@@ -110,13 +111,20 @@
     height: 90px;
   }
 
-  .hello_plus_logout{
-    height: 40px;
-    width: fit-content;
+  #hello_plus_logout {
+    width: 100%;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  .hello_emloyee {
     float: right;
-    text-align: center;
-    padding-top: 10px;
-    padding-left: 2px;
+    padding-right: 10px;
+  }
+
+  .logout_employee {
+    float: left;
+    padding-left: 15px;
   }
 
   #navLinks {
@@ -135,6 +143,7 @@
   .NavBarButton:hover {
     color: #7925c0;
     border-top: 4px solid #7925c0;
+    line-height: 72px;
   }
 
   #logo {

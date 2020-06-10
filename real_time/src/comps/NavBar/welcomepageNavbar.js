@@ -5,7 +5,7 @@ import jerusalem_city_logo from "./jerusalem_city_logo.jpg";
 import promote_teenagers_logo from "./promote_teenagers_logo.jpg";
 import "./NavBar.css";
 
-function myFunction() {
+function mobileMenuButton() {
   var x = document.getElementById("navLinks");
   if (x.style.display === "list-item") {
     x.style.display = "none";
@@ -24,7 +24,7 @@ const welcomepageNavbar = (props) => {
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
         />
-        <div id="menuButton" className="icon" onClick={myFunction}>
+        <div id="menuButton" className="icon" onClick={mobileMenuButton}>
           <i className="fa fa-bars"></i>
         </div>
         <img
