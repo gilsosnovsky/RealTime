@@ -46,9 +46,9 @@ const pageBody = (props) => {
     return <EmployeeMessages />;
   } else if (props.pageBodyState === "employee_settings") {
     return <EmployeeSettings />;
-  } else if (props.pageBodyState === "business_interface" || props.pageBodyState ==="business_post_job") {
+  } else if ( props.pageBodyState ==="business_post_job") {
     return <BusinessPostJob />;
-  } else if (props.pageBodyState === "business_watch_candidates") {
+  } else if (props.pageBodyState === "business_interface" || props.pageBodyState === "business_watch_candidates") {
     return <BusinessMyCadidates />;
   }else {
     return (

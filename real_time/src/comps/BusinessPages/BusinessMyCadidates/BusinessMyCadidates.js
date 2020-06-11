@@ -91,9 +91,7 @@ class BusinessMyCadidates extends React.Component {
                 <span className="sr-only">Loading...</span>
               </div>
             </div>
-            <div id="goto">
-              <button id="go_back_to_jobs" onClick={this.setBodyTypeState}>חזור</button>
-            </div>
+              <div id="return_jobs" onClick={this.setBodyTypeState}>חזור</div>
             <ul>
               {
                 this.state.candidate_list.map((candidate, index) => {

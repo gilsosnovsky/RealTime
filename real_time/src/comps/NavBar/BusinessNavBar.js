@@ -21,6 +21,14 @@ const BusinessNavBar = (props) => {
         />
 
         <label
+          //id="post_job_business"
+          className="NavBarButton"
+          onClick={props.clickPostJobBusiness}
+        >
+          פרסם משרה
+        </label>
+
+        <label
           //id="candidates_business"
           className="NavBarButton"
           onClick={props.clickWatchCandidates}
@@ -28,13 +36,7 @@ const BusinessNavBar = (props) => {
           צפייה במועמדים
         </label>
 
-        <label
-          //id="post_job_business"
-          className="NavBarButton"
-          onClick={props.clickPostJobBusiness}
-        >
-          פרסם משרה
-        </label>
+        
 
         <img id="logo" src={logo} alt="Logo" onClick={props.clickOnLogo} />
 
