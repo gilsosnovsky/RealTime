@@ -16,7 +16,6 @@ class BusinessPostJob extends React.Component {
     date: "",
     place: "",
     salary: "",
-    logo: "",
     long_info: "",
     remarks: "",
     clothing: "",

@@ -2,7 +2,7 @@ import React from "react";
 import "./EmployeeJobOffers.css";
 import SingleJobItem from "./SingleJobItem";
 import fire from "../../../firebaseConfig";
-
+import logo from "./symbol.gif";
 class EmployeeJobOffers extends React.Component {
 
   state = {
@@ -44,7 +44,7 @@ class EmployeeJobOffers extends React.Component {
                 place={job.place}
                 salary={job.salary}
                 long_info={job.long_info}
-                logo={job.logo}
+                logo={logo}
                 remarks={job.remarks}
                 clothing={job.clothing}
                 payment_time={job.payment_time}
