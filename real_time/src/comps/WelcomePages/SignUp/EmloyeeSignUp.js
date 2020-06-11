@@ -47,6 +47,7 @@ class EmployeeSignUp extends Component{
   render(){
     return (
       <div class="SignUp">
+        <form action="" method="post" onSubmit={this.onSignUpEmployee}>
         <div id="signUpContainer">
           <div id="signUpTitle">הרשמה</div>
           <fieldset>
@@ -158,9 +159,15 @@ class EmployeeSignUp extends Component{
           </fieldset>
 
           <fieldset>
-            <div id="signUpButton" onClick={this.onSignUpEmployee}>הרשם</div>
+            <button
+             id="signUpButton" 
+             name="submit"
+            type="submit"
+            data-submit="...Sending">הרשם
+            </button>
           </fieldset>
         </div>
+        </form>
       </div>
     );
   }

@@ -1,11 +1,39 @@
-import React from 'react';
+import React, { Component } from "react";
 import './Contact.css'
 import 'bootstrap/dist/css/bootstrap.css';
+import fire from "../../../firebaseConfig";
 
-const Contact = (props) => {
+class Contact extends Component{
+
+  constructor(props)
+  {
+    super(props);
+    this.state={
+      full_name: "",
+      email: "",
+      phone_number: "",  
+      message: ""
+    }
+  }
+
+  onClickContact=(e)=>{
+    e.preventDefault();
+    this.setState({
+      full_name: this.full_name.value,
+      email: this.email.value,
+      phone_number: this.tel.value,  
+      message: this.message.value
+    }, () => {
+      const db = fire.database();
+      db.ref("/messages/messages_contact").push(this.state);
+    });
+  }
+
+
+  render() {
   return (
     <div class="contactPageContainer">
-      <form id="contactPage" action="" method="post">
+      <form id="contactPage" action="" method="post" onSubmit={this.onClickContact}>
         <div id="contactPage_p1">
           צור קשר
         </div>
@@ -13,6 +41,7 @@ const Contact = (props) => {
           <input
             id="fname"
             placeholder="שם מלא"
+            ref={(c) => this.full_name = c}
             type="text"
             tabindex="1"
             required
@@ -21,16 +50,17 @@ const Contact = (props) => {
         </fieldset>
 
         <fieldset>
-          <input placeholder="אימייל" type="email" tabindex="2" required />
+          <input placeholder="אימייל" ref={(c) => this.email = c} type="email" tabindex="2" required />
         </fieldset>
 
         <fieldset>
-          <input placeholder="טלפון" type="tel" tabindex="3" required />
+          <input placeholder="טלפון" type="tel" ref={(c) => this.tel = c} tabindex="3" required />
         </fieldset>
 
         <fieldset>
           <textarea
             placeholder="תוכן ההודעה"
+            ref={(c) => this.message = c}
             tabindex="4"
             required
           ></textarea>
@@ -50,5 +80,6 @@ const Contact = (props) => {
       </form>
     </div>
   );
+  }
 };
 export default Contact;

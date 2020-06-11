@@ -7,7 +7,7 @@ class BusinessPostJob extends React.Component {
 
   constructor(props) {
     super(props);
-    this.onSubmit = this.onSubmit.bind(this);
+    this.onSubmitjob = this.onSubmitjob.bind(this);
   }
 
   state = {
@@ -23,7 +23,7 @@ class BusinessPostJob extends React.Component {
     payment_method: ""
   };
 
-  onSubmit = (e) => {
+  onSubmitjob = (e) => {
     e.preventDefault();
     this.setState({
       type: this.type.value,
@@ -57,7 +57,7 @@ class BusinessPostJob extends React.Component {
     return (
       <div class="post_job_business">
         <div id="postJobContainer">
-          <form action="" method="post">
+          <form action="" method="post" onSubmit={this.onSubmitjob}>
             <div id="postJobTitle">פרסם עבודה</div>
 
             <fieldset>
@@ -204,7 +204,7 @@ class BusinessPostJob extends React.Component {
               />
             </fieldset>
             <fieldset>
-              <button id="postButton" name="submit" data-submit="...Sending" onClick={this.onSubmit} type="submit">פרסם</button>
+              <button id="postButton" name="submit" data-submit="...Sending" type="submit">פרסם</button>
             </fieldset>
           </form>
         </div>

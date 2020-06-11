@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import "./ToBusiness.css";
 import helping_hands from "./helping_hand.png";
 import instegram from "./instagram.png";
@@ -6,9 +6,50 @@ import facebook from "./facebook.png";
 import hug from "./hug.png";
 import medal from "./medal.png";
 import sand_clock from "./sand_clock.png";
+import fire from "../../../firebaseConfig";
 
 
-const ToBusiness = (props) => {
+class ToBusiness extends Component{
+
+  constructor(props)
+  {
+    super(props);
+    this.state={
+      full_name: "",
+      email: "",
+      phone_number: "",
+      how_got_us:"",
+      business_name:"",  
+      message: "",
+      offer_jobs: ""
+    }
+  }
+
+  onClickBusinessContact=(e)=>{
+    e.preventDefault();
+    this.setState({
+      full_name: this.full_name.value,
+      email: this.email.value,
+      phone_number: this.tel.value,
+      how_got_us: this.how_got_us.value,
+      business_name: this.business_name.value,
+      message: this.message.value
+    }, () => {
+      const db = fire.database();
+      db.ref("/messages/messages_toBusiness").push(this.state);
+    });
+  }
+
+  onToBusinessChanged = (e) => {
+    this.setState({
+      offer_jobs: e.currentTarget.value
+    });
+  }
+
+
+
+
+  render() {
   return (
     <div id="toBusiness">
       <div id="infoToBusiness">
@@ -34,13 +75,14 @@ const ToBusiness = (props) => {
       </div>
       <div id="intrestMe">
         <div class="container">
-          <form id="contact" action="" method="post">
+          <form id="contact" action="" method="post" onSubmit={this.onClickBusinessContact}>
             <h3>מעניין אותי!</h3>
             <h4>אשמח לשמוע פרטים</h4>
             <fieldset>
               <input
                 id="fname"
-                placeholder="שם:"
+                placeholder="שם מלא:"
+                ref={(c) => this.full_name = c}
                 type="text"
                 tabindex="1"
                 required
@@ -49,17 +91,18 @@ const ToBusiness = (props) => {
             </fieldset>
 
             <fieldset>
-              <input placeholder="אימייל:" type="email" tabindex="2" required />
+              <input placeholder="אימייל:" type="email" ref={(c) => this.email = c} tabindex="2" required />
             </fieldset>
 
             <fieldset>
-              <input placeholder="טלפון:" type="tel" tabindex="3" required />
+              <input placeholder="טלפון:" ref={(c) => this.tel = c} type="tel" tabindex="3" required />
             </fieldset>
 
             <fieldset>
               <input
                 id="fname"
                 placeholder="איך הגעת אלינו?"
+                ref={(c) => this.how_got_us = c}
                 type="text"
                 tabindex="4"
                 required
@@ -71,6 +114,7 @@ const ToBusiness = (props) => {
               <input
                 id="fname"
                 placeholder="שם העסק:"
+                ref={(c) => this.business_name = c}
                 type="text"
                 tabindex="5"
                 required
@@ -81,6 +125,7 @@ const ToBusiness = (props) => {
             <fieldset>
               <textarea
                 placeholder="עוד משהו להוסיף?"
+                ref={(c) => this.message = c}
                 tabindex="5"
                 required
               ></textarea>
@@ -90,17 +135,17 @@ const ToBusiness = (props) => {
               <label id="radio_button_container">המשרות המוצעות:
               <br />
                 <label className="radio_button">
-                  <input type="radio" id="short_term" name="radAnswer" checked="checked" />
+                  <input type="radio" id="short_term" name="radAnswer" value="טווח קצר" onChange={this.onToBusinessChanged} />
               טווח קצר
               </label>
 
                 <label className="radio_button">
-                  <input type="radio" id="long_term" name="radAnswer" />
+                  <input type="radio" id="long_term" name="radAnswer" value="עבודה קבועה" onChange={this.onToBusinessChanged}/>
               עבודה קבועה
               </label>
 
                 <label className="radio_button">
-                  <input type="radio" id="both" name="radAnswer" />
+                  <input type="radio" id="both" name="radAnswer" value="גם וגם" onChange={this.onToBusinessChanged}/>
               גם וגם
               </label>
               </label>
@@ -293,5 +338,6 @@ const ToBusiness = (props) => {
       </div>
     </div>
   );
+  }
 };
 export default ToBusiness;

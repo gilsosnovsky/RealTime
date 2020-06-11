@@ -47,6 +47,7 @@ class BusinessSignUp extends Component
   render() {
     return (
       <div class="SignUp">
+        <form action="" method="post" onSubmit={this.onSignUpBusiness}>
         <div id="signUpContainer">
           <div id="signUpTitle">הרשמה</div>
           <fieldset>
@@ -164,9 +165,15 @@ class BusinessSignUp extends Component
           </fieldset>
 
           <fieldset>
-            <div id="signUpButton" onClick={this.onSignUpBusiness}>הרשם</div>
+            <button
+             id="signUpButton" 
+             name="submit"
+            type="submit"
+            data-submit="...Sending">הרשם
+            </button>
           </fieldset>
         </div>
+      </form>
       </div>
     );
   };
