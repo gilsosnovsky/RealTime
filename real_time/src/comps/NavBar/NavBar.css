@@ -79,6 +79,34 @@
 
   #hello_plus_logout {
     display: none;
+    float: right;
+    top: 200px;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .hello {
+    float: right;
+    padding-right: 10px;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  .hello:hover {
+    cursor: pointer;
+    color: #7925c0;
+  }
+
+  .logout {
+    float: left;
+    padding-left: 10px;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  .logout:hover {
+    cursor: pointer;
+    color: #7925c0;
   }
 
   .leftLogos {
@@ -115,19 +143,31 @@
     height: 90px;
   }
 
-  #logout {
+  #hello_plus_logout {
     width: 100%;
     background-color: white;
   }
 
-  .logout_employee {
-    float: left;
-    padding-left: 15px;
+  .hello {
+    float: right;
+    padding-right: 10px;
     font-weight: bold;
     font-size: 14px;
   }
 
-  .logout_employee:hover {
+  .hello:hover {
+    cursor: pointer;
+    color: #7925c0;
+  }
+
+  .logout {
+    float: left;
+    padding-left: 10px;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  .logout:hover {
     cursor: pointer;
     color: #7925c0;
   }

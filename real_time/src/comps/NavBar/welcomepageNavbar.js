@@ -27,6 +27,7 @@ const welcomepageNavbar = (props) => {
         <div id="menuButton" className="icon" onClick={mobileMenuButton}>
           <i className="fa fa-bars"></i>
         </div>
+
         <img
           className="leftLogos"
           src={jerusalem_city_logo}
