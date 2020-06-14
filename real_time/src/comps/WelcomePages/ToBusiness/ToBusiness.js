@@ -135,7 +135,7 @@ class ToBusiness extends Component{
               <label id="radio_button_container">המשרות המוצעות:
               <br />
                 <label className="radio_button">
-                  <input type="radio" id="short_term" name="radAnswer" value="טווח קצר" onChange={this.onToBusinessChanged} />
+                  <input type="radio" id="short_term" name="radAnswer" value="טווח קצר" onChange={this.onToBusinessChanged} required/>
               טווח קצר
               </label>
 

@@ -135,7 +135,7 @@ class BusinessPostJob extends React.Component {
             <fieldset>
               <div class="radioButtons">
                 <p>אופן התשלום:</p>
-                <input type="radio" name="gender" value="מזומן" onChange={this.onPaymentMethodChanged} />
+                <input type="radio" name="gender" value="מזומן" onChange={this.onPaymentMethodChanged} required/>
                 <label for="cash">מזומן</label>
                 <br />
                 <input type="radio" name="gender" value="המחאה" onChange={this.onPaymentMethodChanged} />
@@ -149,7 +149,7 @@ class BusinessPostJob extends React.Component {
             <fieldset>
               <div class="radioButtons" required>
                 <p>קבלת התשלום:</p>
-                <input type="radio" name="age" value="בסוף יום עבודה" onChange={this.onPaymentTimeChanged} />
+                <input type="radio" name="age" value="בסוף יום עבודה" onChange={this.onPaymentTimeChanged} required/>
                 <label for="age1">בסוף יום העבודה</label>
                 <br />
                 <input type="radio" name="age" value="בסוף החודש" onChange={this.onPaymentTimeChanged} />
