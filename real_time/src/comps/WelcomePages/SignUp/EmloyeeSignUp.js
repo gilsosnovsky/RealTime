@@ -8,17 +8,20 @@ class EmployeeSignUp extends Component{
 
   constructor(props) {
     super(props);
+    this.signUp=this.signUp.bind(this);
     this.state={
       email: '',
-      password: '',
-      secondPassword: '',  // compare between the two passwords before sign up
       first_name: '',
-      last_name: '',
+      last_name: '',  
       phone_number: '',
       birth_date: '',
       address: '',
       favorite_jobs: '',
-      about_me: ''
+      type:'',
+      about_me: '',
+      password: '',
+      secondPassword: '',  // compare between the two passwords before sign up
+      error_msg: ''
     }
   }
 
@@ -34,14 +37,42 @@ class EmployeeSignUp extends Component{
       last_name: this.last_name.value,
       phone_number: this.phone_number.value,
       birth_date: this.birth_date.value,
-      address: this.full_adress.value,
+      address: this.adress.value,
       favorite_jobs: this.favorite_job.value,
       about_me: this.about_me.value
     }, () => {
-      const db = fire.database();
-      db.ref("/employees/employees_list").push(this.state);
+      if(this.password.value !== this.secondPassword.value)
+      {
+        this.setState({error_msg: 'second password wrong'}); // need more checks for the input
+        return;
+      }
+      this.signUp();
     });
   }
+
+  signUp(){
+    fire.auth().createUserWithEmailAndPassword(this.state.email,this.state.password).then((user)=>{
+      const db = fire.database();
+      var to_db={
+        email: this.state.email,
+        first_name:this.state.first_name ,
+        last_name: this.state.last_name,  
+        phone_number: this.state.phone_number,
+        birth_date: this.state.birth_date,
+        address: this.state.address,
+        favorite_jobs: this.state.favorite_jobs,
+        type: 'employee',
+        about_me: this.state.about_me,
+      }
+      db.ref("/employees/employees_list").push(to_db);
+    }).catch((error)=>{ 
+      console.log(error.message);                 //posting the error from firebase in english
+      this.setState({error_msg: error.message});
+      })
+         
+  }
+
+  
 
 
   render(){
@@ -52,32 +83,32 @@ class EmployeeSignUp extends Component{
           <div id="signUpTitle">הרשמה</div>
           <fieldset>
             <input
-              class="field"
+              className="field"
               placeholder="אימייל"
               ref={(c) => this.email = c}
               type="email"
-              tabindex="2"
+              tabIndex="2"
               required
-              autofocus
+              autoFocus
             />
           </fieldset>
           <fieldset>
             <input
-              class="field"
+              className="field"
               placeholder="סיסמא"
               ref={(c) => this.password = c}
               type="password"
-              tabindex="2"
+              tabIndex="2"
               required
             />
           </fieldset>
           <fieldset>
             <input
-              class="field"
+              className="field"
               placeholder="חזור על הסיסמא"
               ref={(c) => this.secondPassword = c}
               type="password"
-              tabindex="2"
+              tabIndex="2"
               required
             />
           </fieldset>
@@ -87,11 +118,11 @@ class EmployeeSignUp extends Component{
               class="field"
               id="Sfirstname"
               placeholder="שם פרטי"
-              ref={(c) => this.first_name = c}
+              ref={(c) => this.first_name=c}
               type="text"
-              tabindex="1"
+              tabIndex="1"
               required
-              autofocus
+
             />
           </fieldset>
           <fieldset>
@@ -101,9 +132,9 @@ class EmployeeSignUp extends Component{
               placeholder="שם משפחה"
               ref={(c) => this.last_name = c}
               type="text"
-              tabindex="1"
+              tabIndex="1"
               required
-              autofocus
+          
             />
           </fieldset>
           <fieldset>
@@ -112,7 +143,7 @@ class EmployeeSignUp extends Component{
               placeholder="טלפון"
               ref={(c) => this.phone_number = c}
               type="tel"
-              tabindex="3"
+              tabIndex="3"
               required
             />
           </fieldset>
@@ -123,7 +154,7 @@ class EmployeeSignUp extends Component{
               placeholder="תאריך לידה"
               ref={(c) => this.birth_date = c}
               type="date"
-              tabindex="3"
+              tabIndex="3"
               required
             />
           </fieldset>
@@ -131,9 +162,9 @@ class EmployeeSignUp extends Component{
             <input
               class="field"
               placeholder="כתובת מלאה"
-              ref={(c) => this.full_adress = c}
+              ref={(c) => this.adress = c}
               type="text"
-              tabindex="2"
+              tabIndex="2"
               required
             />
           </fieldset>
@@ -144,7 +175,7 @@ class EmployeeSignUp extends Component{
               placeholder="תחומי עבודה מועדפים"
               ref={(c) => this.favorite_job = c}
               type="text"
-              tabindex="2"
+              tabIndex="2"
               required
             />
           </fieldset>
@@ -154,7 +185,7 @@ class EmployeeSignUp extends Component{
               class="field"
               placeholder="קצת על עצמי"
               ref={(c) => this.about_me = c}
-              tabindex="4"
+              tabIndex="4"
             ></textarea>
           </fieldset>
 
@@ -166,6 +197,7 @@ class EmployeeSignUp extends Component{
             data-submit="...Sending">הרשם
             </button>
           </fieldset>
+          <h5>{this.state.error_msg}</h5>
         </div>
         </form>
       </div>
