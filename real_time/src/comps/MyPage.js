@@ -92,6 +92,36 @@ class MyPage extends Component {
     });
   }
 
+  onClickConnectAdmin=()=>{
+    this.setState({
+      NavBarState:"admin_interface",
+      PageBodyState: "admin_interface"
+    });
+  }
+
+  onClickAdminJobs=()=>{
+    this.setState({
+      PageBodyState: "admin_jobs"
+    });
+  }
+
+  onClickAdminEmployees=()=>{
+    this.setState({
+      PageBodyState: "admin_employees"
+    });
+  }
+
+  onClickAdminBusiness=()=>{
+    this.setState({
+      PageBodyState: "admin_business"
+    });
+  }
+  onClickAdminMessages=()=>{
+    this.setState({
+      PageBodyState: "admin_messages"
+    });
+  }
+
   onClickSignUp = () => {
     if (this.state.PageBodyState === "EmloyeeLogin") {
       this.setState({
@@ -147,6 +177,10 @@ class MyPage extends Component {
           clickSettingsEmployee={this.onClickSettingsEmployee}
           clickPostJobBusiness={this.onClickPostJobBusiness}
           clickWatchCandidates={this.onClickWatchCandidates}
+          clickAdminJobs={this.onClickAdminJobs}
+          clickAdminEmployees={this.onClickAdminEmployees}
+          clickAdminBusiness={this.onClickAdminBusiness}
+          clickAdminMessages={this.onClickAdminMessages}
           clickLogout={this.onClickLogout}
         />
 
@@ -156,6 +190,7 @@ class MyPage extends Component {
           clickLoginBusiness={this.onClickLoginBusiness}
           clickConnectEmployee={this.onClickConnectEmployee}
           clickConnectBusiness={this.onClickConnectBusiness}
+          clickConnectAdmin={this.onClickConnectAdmin}
           clickSignUp={this.onClickSignUp}
           clickForgotPassword={this.onClickForgotPassword}
         

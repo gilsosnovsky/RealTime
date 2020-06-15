@@ -2,6 +2,7 @@ import React from "react";
 import WelcomepageNavbar from "./welcomepageNavbar";
 import EmployeeNavBar from "./EmployeeNavBar";
 import BusinessNavBar from "./BusinessNavBar";
+import AdminNavBar from "./AdminNavBar";
 
 const NavBar = (props) => {
 
@@ -13,6 +14,7 @@ const NavBar = (props) => {
         clickToBusiness={props.clickToBusiness}
         clickContact={props.clickContact}
         clickAboutUs={props.clickAboutUs}/>
+        
     );
   }
   else if(props.navBarState=== "employee_interface"){
@@ -32,6 +34,16 @@ const NavBar = (props) => {
       clickPostJobBusiness={props.clickPostJobBusiness}
       clickWatchCandidates={props.clickWatchCandidates}
       clickLogout={props.clickLogout}/>
+    );
+  }
+
+  else if(props.navBarState=== "admin_interface"){
+    return(
+      <AdminNavBar
+      clickAdminJobs={props.clickAdminJobs}
+      clickAdminEmployees={props.clickAdminEmployees}
+      clickAdminBusiness={props.clickAdminBusiness}
+      clickAdminMessages={props.clickAdminMessages}/>
     );
   }
   

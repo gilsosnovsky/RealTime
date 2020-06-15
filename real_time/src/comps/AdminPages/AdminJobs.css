@@ -1,0 +1,45 @@
+
+#jobs_admin{
+    min-height: 650px;
+    padding-top: 100px;
+    width: 85%;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: white;
+    text-align: right;
+    direction: rtl;
+    font-size: 20px;
+}
+
+#jobs_admin_title{
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+#jobs_admin_loading_jobs_container{
+    color:#7925c0 ;
+    font-size: 25px;
+    position: absolute;
+    padding-left: 15%;
+    width: 100%;
+    text-align: center;
+}
+
+#jobs_admin_loading_jobs{
+    font-size: 20px;
+}
+
+#return_jobs_admin{
+    width: 10%;
+    height: 40px;
+    border: 2px solid #7925c0;
+    background-color: white;
+    color: #7925c0;
+    border-radius:5px;
+    text-align: center;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+

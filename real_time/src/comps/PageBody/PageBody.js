@@ -14,6 +14,10 @@ import EmployeeMessages from "../EmployeePages/EmployeeMessages/EmployeeMessages
 import EmployeeSettings from "../EmployeePages/EmployeeSettings/EmployeeSettings";
 import BusinessPostJob from "../BusinessPages/BusinessPostJob/BusinessPostJob";
 import BusinessMyCadidates from "../BusinessPages/BusinessMyCadidates/BusinessMyCadidates";
+import AdminBusiness from "../AdminPages/AdminBusiness";
+import AdminEmployees from "../AdminPages/AdminEmployees";
+import AdminJobs from "../AdminPages/AdminJobs";
+import AdminMessages from "../AdminPages/AdminMessages";
 
 const pageBody = (props) => {
   if (props.pageBodyState === "homePage") {
@@ -28,7 +32,8 @@ const pageBody = (props) => {
     clickConnectEmployee={props.clickConnectEmployee}
     pageBodyState={props.pageBodyState}
     clickConnectBusiness={props.clickConnectBusiness}
-    clickForgotPassword={props.clickForgotPassword}/>;
+    clickForgotPassword={props.clickForgotPassword}
+    clickConnectAdmin={props.clickConnectAdmin}/>;
   } else if (props.pageBodyState === "toBusiness") {
     return <ToBusiness />;
   } else if (props.pageBodyState === "contact") {
@@ -52,9 +57,15 @@ const pageBody = (props) => {
     return <BusinessPostJob />;
   } else if (props.pageBodyState === "business_interface" || props.pageBodyState === "business_watch_candidates") {
     return <BusinessMyCadidates />;
-  }
-  else if(props.pageBodyState ==='forgot_password')
-  {
+  }else if (props.pageBodyState === "admin_jobs") {
+    return <AdminJobs />;
+  } else if (props.pageBodyState === "admin_interface" || props.pageBodyState ==="admin_employees") {
+    return <AdminEmployees />;
+  } else if ( props.pageBodyState ==="admin_business") {
+    return <AdminBusiness />;
+  } else if ( props.pageBodyState ==="admin_messages") {
+    return <AdminMessages />;
+  }else if(props.pageBodyState ==="forgot_password"){
     return (
       <div id="firstPageBody">
         <h1>forgot password page</h1>  

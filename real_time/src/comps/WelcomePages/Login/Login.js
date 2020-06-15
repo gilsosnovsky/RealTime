@@ -61,6 +61,7 @@ class Login extends Component{
   onClickConnect=()=>{
     if(this.props.pageBodyState==="EmloyeeLogin")
       this.props.clickConnectEmployee();
+      //this.props.clickConnectAdmin();
     else
       this.props.clickConnectBusiness();
   };
