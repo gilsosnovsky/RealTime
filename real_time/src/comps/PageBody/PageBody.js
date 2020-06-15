@@ -27,7 +27,8 @@ const pageBody = (props) => {
     clickSignUp={props.clickSignUp}
     clickConnectEmployee={props.clickConnectEmployee}
     pageBodyState={props.pageBodyState}
-    clickConnectBusiness={props.clickConnectBusiness}/>;
+    clickConnectBusiness={props.clickConnectBusiness}
+    clickForgotPassword={props.clickForgotPassword}/>;
   } else if (props.pageBodyState === "toBusiness") {
     return <ToBusiness />;
   } else if (props.pageBodyState === "contact") {
@@ -35,7 +36,8 @@ const pageBody = (props) => {
   } else if (props.pageBodyState === "aboutUs") {
     return <AboutUs />;
   } else if (props.pageBodyState === "EmployeeSignUp") {
-    return <EmployeeSignUp />;
+    return <EmployeeSignUp 
+    clickConnectEmployee={props.clickConnectEmployee}/>;
   } else if (props.pageBodyState === "BusinessSignUp") {
     return <BusinessSignUp />;
   } else if (props.pageBodyState === "employee_interface" || props.pageBodyState ==="employee_job_offers") {
@@ -50,7 +52,16 @@ const pageBody = (props) => {
     return <BusinessPostJob />;
   } else if (props.pageBodyState === "business_interface" || props.pageBodyState === "business_watch_candidates") {
     return <BusinessMyCadidates />;
-  }else {
+  }
+  else if(props.pageBodyState ==='forgot_password')
+  {
+    return (
+      <div id="firstPageBody">
+        <h1>forgot password page</h1>  
+      </div>
+    );
+  }
+  else {
     return (
       <div id="firstPageBody">
         <h1>default</h1>

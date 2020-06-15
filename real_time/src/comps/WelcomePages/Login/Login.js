@@ -34,7 +34,6 @@ class Login extends Component{
       }
     });
   }
-
   componentDidMount(){
     this.authListener();
   }
@@ -104,6 +103,12 @@ class Login extends Component{
 
           <fieldset>
             <div id="login" onClick={this.login}>התחבר</div>
+          </fieldset>
+
+          <fieldset>
+            <div id="forgotPassword" onClick={this.props.clickForgotPassword}>
+              שכחתי סיסמא
+            </div>
           </fieldset>
 
           <fieldset>

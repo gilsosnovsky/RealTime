@@ -65,6 +65,7 @@ class EmployeeSignUp extends Component{
         about_me: this.state.about_me,
       }
       db.ref("/employees/employees_list").push(to_db);
+      this.props.clickConnectEmployee();
     }).catch((error)=>{ 
       console.log(error.message);                 //posting the error from firebase in english
       this.setState({error_msg: error.message});

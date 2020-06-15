@@ -136,4 +136,7 @@
   #SignUponLogin {
     cursor: pointer;
   }
+  #forgotPassword{
+    cursor: pointer;
+  }
 }

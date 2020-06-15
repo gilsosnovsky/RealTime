@@ -124,6 +124,13 @@ class MyPage extends Component {
     });
   };
 
+
+  onClickForgotPassword = () => {
+    this.setState({
+      PageBodyState: "forgot_password",
+    });
+  };
+
   render() {
     return (
       <div id="MyPage">
@@ -150,6 +157,8 @@ class MyPage extends Component {
           clickConnectEmployee={this.onClickConnectEmployee}
           clickConnectBusiness={this.onClickConnectBusiness}
           clickSignUp={this.onClickSignUp}
+          clickForgotPassword={this.onClickForgotPassword}
+        
         />
         <Footer />
       </div>
