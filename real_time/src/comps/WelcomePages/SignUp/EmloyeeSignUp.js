@@ -63,6 +63,7 @@ class EmployeeSignUp extends Component{
         favorite_jobs: this.state.favorite_jobs,
         type: 'employee',
         about_me: this.state.about_me,
+        jobs: ["no jobs yet"]
       }
       db.ref("/employees/employees_list").push(to_db);
       this.props.clickConnectEmployee(to_db);

@@ -11,7 +11,7 @@ class EmployeeNavBar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      user: this.props.userName,
+      userName: this.props.userName,
     };
   }
 
@@ -64,12 +64,12 @@ class EmployeeNavBar extends React.Component {
           </div>
 
           <img
-            class="leftLogos"
+            className="leftLogos"
             src={jerusalem_city_logo}
             alt="jerusalem city logo"
           />
           <img
-            class="leftLogos"
+            className="leftLogos"
             src={promote_teenagers_logo}
             alt="promte teenagers logo"
           />
@@ -109,7 +109,7 @@ class EmployeeNavBar extends React.Component {
           </div>
           <div id="hello_plus_logout">
             <label className="hello" onClick={this.props.clickSettingsEmployee}>
-              שלום {this.state.user}
+              שלום {this.state.userName}
             </label>
             <label className="logout" onClick={this.props.clickLogout}>
               התנתק

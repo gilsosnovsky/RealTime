@@ -9,7 +9,8 @@ class MyPage extends Component {
     NavBarState: "homePage",
     PageBodyState: "homePage",
     FooterState: "homePage",
-    user: "guest"
+    user: "guest",
+    index: ""
   };
 
   onClickToEmployees = () => {
@@ -42,12 +43,13 @@ class MyPage extends Component {
     });
   };
 
-  onClickConnectEmployee=(user)=>{
+  onClickConnectEmployee=(user, index)=>{
     console.log(user);
     this.setState({
       user: user,
       NavBarState:"employee_interface",
-      PageBodyState: "employee_interface"
+      PageBodyState: "employee_interface",
+      index: index
     });
   }
 
@@ -166,6 +168,14 @@ class MyPage extends Component {
     });
   };
 
+  setUser = (newuser) =>{
+  
+    this.setState({
+      user: newuser
+    });
+    
+  }
+
   render() {
     return (
       <div id="MyPage">
@@ -199,7 +209,9 @@ class MyPage extends Component {
           clickConnectAdmin={this.onClickConnectAdmin}
           clickSignUp={this.onClickSignUp}
           clickForgotPassword={this.onClickForgotPassword}
-        
+          user={this.state.user}
+          setUser={this.setUser}
+          index={this.state.index}
         />
         <Footer />
       </div>

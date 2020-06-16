@@ -53,6 +53,7 @@ class EmployeeMyJobs extends React.Component {
                 remarks={job.remarks}
                 clothing={job.clothing}
                 payment_time={job.payment_time}
+                user={this.props.user}
                 buttons_visibility="hidden"
               />
             );

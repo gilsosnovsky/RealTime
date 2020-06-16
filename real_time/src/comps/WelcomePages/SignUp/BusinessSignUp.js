@@ -16,7 +16,7 @@ class BusinessSignUp extends Component
       secondPassword: '',  // compare between the two passwords before sign up
       company_name: '',
       first_name: '',
-      full_name: '',
+      last_name: '',
       phone_number: '',
       jobs_length: '',
       error_msg: '',
@@ -37,7 +37,7 @@ class BusinessSignUp extends Component
       secondPassword: this.secondPassword.value,  // compare between the two passwords before sign up
       company_name: this.business_name.value,
       first_name: this.first_name.value,
-      full_name: this.last_name.value,
+      last_name: this.last_name.value,
       phone_number: this.phone_number.value,
     }, () => {
       if(this.password.value !== this.secondPassword.value)
@@ -58,11 +58,12 @@ class BusinessSignUp extends Component
       var to_db={
         email: (this.state.email).toLocaleLowerCase(),
         first_name:this.state.first_name ,
-        last_name: this.state.full_name,  
+        last_name: this.state.last_name,  
         phone_number: this.state.phone_number,
         jobs_length: this.state.jobs_length,
         type: 'business',
-        company_name: this.state.company_name
+        company_name: this.state.company_name,
+        jobs:[]
       }
       const db = fire.database();
       db.ref("/business/business_list").push(to_db);

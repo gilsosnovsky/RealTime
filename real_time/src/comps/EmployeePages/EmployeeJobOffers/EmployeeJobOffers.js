@@ -7,6 +7,8 @@ class EmployeeJobOffers extends React.Component {
   state = {
     jobs_list: [],
     loading: "visible",
+    user: this.props.user,
+    index: this.props.index
   };
 
   componentDidMount() {
@@ -14,7 +16,7 @@ class EmployeeJobOffers extends React.Component {
     db.ref("/jobs/jobs_list").on("value", (snapshot) => {
       let allJobs = [];
       snapshot.forEach((snap) => {
-        if (snap.val().is_my_job !== true) allJobs.push(snap.val());
+        if (snap.val().is_my_job !== true) allJobs.push(snap);
       });
       this.setState({ jobs_list: allJobs, loading: "hidden" });
     });
@@ -43,16 +45,20 @@ class EmployeeJobOffers extends React.Component {
           {this.state.jobs_list.map((job, index) => {
             return (
               <SingleJobItem
-                type={job.type}
-                hours={job.hours}
-                date={job.date}
-                place={job.place}
-                salary={job.salary}
-                long_info={job.long_info}
+                type={job.val().type}
+                hours={job.val().hours}
+                date={job.val().date}
+                place={job.val().place}
+                salary={job.val().salary}
+                long_info={job.val().long_info}
                 logo={logo}
-                remarks={job.remarks}
-                clothing={job.clothing}
-                payment_time={job.payment_time}
+                remarks={job.val().remarks}
+                clothing={job.val().clothing}
+                payment_time={job.val().payment_time}
+                id={job.val().id}
+                ref_job={job.ref.key}
+                user={this.state.user}
+                index={this.state.index}
                 buttons_visibility="visible"
               />
             );

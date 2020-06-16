@@ -45,6 +45,7 @@ const NavBar = (props) => {
       clickAdminJobs={props.clickAdminJobs}
       clickAdminEmployees={props.clickAdminEmployees}
       clickAdminBusiness={props.clickAdminBusiness}
+      clickLogout={props.clickLogout}
       clickAdminMessages={props.clickAdminMessages}/>
     );
   }

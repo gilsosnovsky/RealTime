@@ -1,11 +1,13 @@
 import React from "react";
 import "./SingleJobItem.css";
+import fire from "../../../firebaseConfig";
 
 class SingleJobItem extends React.Component {
   constructor(props) {
     super(props);
     this.clickTopItem = this.clickTopItem.bind(this);
     this.hideFullInfo = this.hideFullInfo.bind(this);
+    this.signuUpForWork = this.signuUpForWork.bind(this);
   }
   state = {
     job_type: this.props.type,
@@ -18,6 +20,10 @@ class SingleJobItem extends React.Component {
     job_remarks: this.props.remarks,
     job_clothing: this.props.clothing,
     job_payment_time: this.props.payment_time,
+    job_id: this.props.id,
+    user: this.props.user,
+    index: this.props.index,
+    ref_job: this.props.ref_job,
     buttons_visibility: this.props.buttons_visibility,
     item_bottom_visibility: "hidden",
     container_height: "120px",
@@ -26,7 +32,8 @@ class SingleJobItem extends React.Component {
   };
 
   signuUpForWork() {
-    alert("להירשם למשרה");
+    const db = fire.database();
+    db.ref("/employees/employees_list/" + this.state.index + "/jobs").push(this.state.ref_job);
   }
   clickTopItem() {
     if (this.state.item_bottom_height === "65%") {

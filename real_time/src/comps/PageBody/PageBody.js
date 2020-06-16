@@ -47,13 +47,20 @@ const pageBody = (props) => {
     return <BusinessSignUp 
     clickConnectBusiness={props.clickConnectBusiness}/>;
   } else if (props.pageBodyState === "employee_interface" || props.pageBodyState ==="employee_job_offers") {
-    return <EmployeeJobOffers />;
+    return <EmployeeJobOffers 
+    user={props.user}
+    index={props.index}/>;
   } else if (props.pageBodyState === "employee_my_jobs") {
-    return <EmployeeMyJobs />;
+    return <EmployeeMyJobs 
+    user={props.user}
+    index={props.index}/>;
   } else if (props.pageBodyState === "employee_messages") {
     return <EmployeeMessages />;
   } else if (props.pageBodyState === "employee_settings") {
-    return <EmployeeSettings />;
+    return <EmployeeSettings 
+    user={props.user}
+    setUser={props.setUser} 
+    index={props.index}/>;
   } else if ( props.pageBodyState ==="business_post_job") {
     return <BusinessPostJob />;
   } else if (props.pageBodyState === "business_interface" || props.pageBodyState === "business_watch_candidates") {

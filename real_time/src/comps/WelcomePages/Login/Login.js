@@ -60,7 +60,7 @@ class Login extends Component {
         db.ref("/employees/employees_list").on("value", (snapshot) => {
           snapshot.forEach((snap) => {
             if (snap.val().email === userEmail) {
-              this.props.clickConnectEmployee(snap.val());
+              this.props.clickConnectEmployee(snap.val(), snap.ref.key);
               return;
             }
           });
