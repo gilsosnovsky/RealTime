@@ -56,7 +56,7 @@ class BusinessSignUp extends Component
   signUp(){
       fire.auth().createUserWithEmailAndPassword(this.state.email,this.state.password).then((user)=>{
       var to_db={
-        email: this.state.email,
+        email: (this.state.email).toLocaleLowerCase(),
         first_name:this.state.first_name ,
         last_name: this.state.full_name,  
         phone_number: this.state.phone_number,
@@ -66,7 +66,7 @@ class BusinessSignUp extends Component
       }
       const db = fire.database();
       db.ref("/business/business_list").push(to_db);
-      this.props.clickConnectBusiness();
+      this.props.clickConnectBusiness(to_db);
     }).catch((error)=>{ 
       console.log(error.message);                 //posting the error from firebase in english
       this.setState({error_msg: error.message});

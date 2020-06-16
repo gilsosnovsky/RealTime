@@ -42,8 +42,10 @@ class MyPage extends Component {
     });
   };
 
-  onClickConnectEmployee=()=>{
+  onClickConnectEmployee=(user)=>{
+    console.log(user);
     this.setState({
+      user: user,
       NavBarState:"employee_interface",
       PageBodyState: "employee_interface"
     });
@@ -73,8 +75,10 @@ class MyPage extends Component {
     });
   }
 
-  onClickConnectBusiness=()=>{
+  onClickConnectBusiness=(user)=>{
+    console.log(user);
     this.setState({
+      user: user,
       NavBarState:"business_interface",
       PageBodyState: "business_interface"
     });
@@ -92,8 +96,9 @@ class MyPage extends Component {
     });
   }
 
-  onClickConnectAdmin=()=>{
+  onClickConnectAdmin=(user)=>{
     this.setState({
+      user: user,
       NavBarState:"admin_interface",
       PageBodyState: "admin_interface"
     });
@@ -165,6 +170,7 @@ class MyPage extends Component {
     return (
       <div id="MyPage">
         <NavBar
+          userName={this.state.user.first_name}
           navBarState={this.state.NavBarState}
           clickToEmployees={this.onClickToEmployees}
           clickOnLogo={this.onClickLogo}

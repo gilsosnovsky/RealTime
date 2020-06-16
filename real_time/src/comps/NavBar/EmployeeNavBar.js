@@ -11,7 +11,7 @@ class EmployeeNavBar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      user: "אורח ",
+      user: this.props.userName,
     };
   }
 

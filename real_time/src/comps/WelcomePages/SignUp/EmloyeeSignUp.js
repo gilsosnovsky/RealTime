@@ -54,7 +54,7 @@ class EmployeeSignUp extends Component{
     fire.auth().createUserWithEmailAndPassword(this.state.email,this.state.password).then((user)=>{
       const db = fire.database();
       var to_db={
-        email: this.state.email,
+        email: (this.state.email).toLocaleLowerCase(),
         first_name:this.state.first_name ,
         last_name: this.state.last_name,  
         phone_number: this.state.phone_number,
@@ -65,7 +65,7 @@ class EmployeeSignUp extends Component{
         about_me: this.state.about_me,
       }
       db.ref("/employees/employees_list").push(to_db);
-      this.props.clickConnectEmployee();
+      this.props.clickConnectEmployee(to_db);
     }).catch((error)=>{ 
       console.log(error.message);                 //posting the error from firebase in english
       this.setState({error_msg: error.message});
@@ -116,7 +116,7 @@ class EmployeeSignUp extends Component{
           <br/>
           <fieldset>
             <input
-              class="field"
+              className="field"
               id="Sfirstname"
               placeholder="שם פרטי"
               ref={(c) => this.first_name=c}
@@ -128,7 +128,7 @@ class EmployeeSignUp extends Component{
           </fieldset>
           <fieldset>
             <input
-              class="field"
+              className="field"
               id="Slastname"
               placeholder="שם משפחה"
               ref={(c) => this.last_name = c}
@@ -140,7 +140,7 @@ class EmployeeSignUp extends Component{
           </fieldset>
           <fieldset>
             <input
-              class="field"
+              className="field"
               placeholder="טלפון"
               ref={(c) => this.phone_number = c}
               type="tel"
@@ -151,7 +151,7 @@ class EmployeeSignUp extends Component{
           <label id="birthdate_title">תאריך לידה:</label>
           <fieldset>
             <input
-              class="field"
+              className="field"
               placeholder="תאריך לידה"
               ref={(c) => this.birth_date = c}
               type="date"
@@ -161,7 +161,7 @@ class EmployeeSignUp extends Component{
           </fieldset>
           <fieldset>
             <input
-              class="field"
+              className="field"
               placeholder="כתובת מלאה"
               ref={(c) => this.adress = c}
               type="text"
@@ -172,7 +172,7 @@ class EmployeeSignUp extends Component{
 
           <fieldset>
             <input
-              class="field"
+              className="field"
               placeholder="תחומי עבודה מועדפים"
               ref={(c) => this.favorite_job = c}
               type="text"
@@ -183,7 +183,7 @@ class EmployeeSignUp extends Component{
 
           <fieldset>
             <textarea
-              class="field"
+              className="field"
               placeholder="קצת על עצמי"
               ref={(c) => this.about_me = c}
               tabIndex="4"
