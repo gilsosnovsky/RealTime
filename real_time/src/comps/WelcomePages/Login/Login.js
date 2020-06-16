@@ -118,13 +118,13 @@ class Login extends Component{
             </div>
           </fieldset>
 
-          <div class="loginWith">
+          <div className="loginWith">
             {/* <a href="#"> */}
-              <img src={google} class="loginWithButton" alt ="google_img"></img>
+              <img src={google} className="loginWithButton" alt ="google_img"></img>
             {/* </a> */}
 
             {/* <a href="#"> */}
-              <img src={facebook} class="loginWithButton" alt ="facebook_img"></img>
+              <img src={facebook} className="loginWithButton" alt ="facebook_img"></img>
             {/* </a> */}
           </div>
         </div>

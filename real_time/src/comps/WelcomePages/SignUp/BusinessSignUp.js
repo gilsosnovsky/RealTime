@@ -9,32 +9,19 @@ class BusinessSignUp extends Component
   constructor(props)
   {
     super(props);
+    this.signUp=this.signUp.bind(this);
     this.state={
       email: '',
       password: '',
       secondPassword: '',  // compare between the two passwords before sign up
       company_name: '',
-      first_Name: '',
+      first_name: '',
       full_name: '',
       phone_number: '',
-      jobs_length: ''
+      jobs_length: '',
+      error_msg: '',
+      type: '',
     }
-  }
-
-  onSignUpBusiness=(e)=>{
-    e.preventDefault();
-    this.setState({
-      email: this.email.value,
-      password: this.password.value,
-      secondPassword: this.secondPassword.value,  // compare between the two passwords before sign up
-      company_name: this.business_name.value,
-      first_Name: this.first_Name.value,
-      full_name: this.last_name.value,
-      phone_number: this.phone_number.value,
-    }, () => {
-      const db = fire.database();
-      db.ref("/business/business_list").push(this.state);
-    });
   }
 
   onOfferJobsChanged = (e) => {
@@ -42,89 +29,133 @@ class BusinessSignUp extends Component
       jobs_length: e.currentTarget.value
     });
   }
-  
+  onSignUpBusiness=(e)=>{
+    e.preventDefault();
+    this.setState({
+      email: this.email.value,
+      password: this.password.value,
+      secondPassword: this.secondPassword.value,  // compare between the two passwords before sign up
+      company_name: this.business_name.value,
+      first_name: this.first_name.value,
+      full_name: this.last_name.value,
+      phone_number: this.phone_number.value,
+    }, () => {
+      if(this.password.value !== this.secondPassword.value)
+      {
+        this.setState({error_msg: 'second password is incorrect '});
+        return;
+      }
+      this.signUp(); //after all the input checks
+    });
+  }
+
+
+
+
+
+  signUp(){
+      fire.auth().createUserWithEmailAndPassword(this.state.email,this.state.password).then((user)=>{
+      var to_db={
+        email: this.state.email,
+        first_name:this.state.first_name ,
+        last_name: this.state.full_name,  
+        phone_number: this.state.phone_number,
+        jobs_length: this.state.jobs_length,
+        type: 'business',
+        company_name: this.state.company_name
+      }
+      const db = fire.database();
+      db.ref("/business/business_list").push(to_db);
+      this.props.clickConnectBusiness();
+    }).catch((error)=>{ 
+      console.log(error.message);                 //posting the error from firebase in english
+      this.setState({error_msg: error.message});
+      })
+         
+  }
+
 
   render() {
     return (
-      <div class="SignUp">
+      <div className="SignUp">
         <form action="" method="post" onSubmit={this.onSignUpBusiness}>
         <div id="signUpContainer">
           <div id="signUpTitle">הרשמה</div>
           <fieldset>
             <input
-              class="field"
+              className="field"
               placeholder="אימייל"
               ref={(c) => this.email = c}
               type="email"
-              tabindex="2"
+              tabIndex="2"
               required
-              autofocus
+              autoFocus
             />
           </fieldset>
 
           <fieldset>
             <input
-              class="field"
+              className="field"
               placeholder="סיסמא"
               ref={(c) => this.password = c}
               type="password"
-              tabindex="2"
+              tabIndex="2"
               required
             />
           </fieldset>
           <fieldset>
             <input
-              class="field"
+              className="field"
               placeholder="חזור על הסיסמא"
               ref={(c) => this.secondPassword = c}
               type="password"
-              tabindex="2"
+              tabIndex="2"
               required
             />
           </fieldset>
           <br/>
           <fieldset>
             <input
-              class="field"
+              className="field"
               id="Sfirst_name"
               placeholder="שם פרטי"
-              ref={(c) => this.first_Name = c}
+              ref={(c) => this.first_name = c}
               type="text"
-              tabindex="1"
+              tabIndex="1"
               required
             />
           </fieldset>
           
           <fieldset>
             <input
-              class="field"
+              className="field"
               id="Slast_name"
               placeholder="שם משפחה"
               ref={(c) => this.last_name = c}
               type="text"
-              tabindex="1"
+              tabIndex="1"
               required
             />
           </fieldset>
 
           <fieldset>
             <input
-              class="field"
+              className="field"
               placeholder="שם העסק"
               ref={(c) => this.business_name = c}
               type="text"
-              tabindex="2"
+              tabIndex="2"
               required
             />
           </fieldset>
 
           <fieldset>
             <input
-              class="field"
+              className="field"
               placeholder="טלפון"
               ref={(c) => this.phone_number = c}
               type="tel"
-              tabindex="3"
+              tabIndex="3"
               required
             />
           </fieldset>
@@ -172,6 +203,7 @@ class BusinessSignUp extends Component
             data-submit="...Sending">הרשם
             </button>
           </fieldset>
+          <h5>{this.state.error_msg}</h5>
         </div>
       </form>
       </div>

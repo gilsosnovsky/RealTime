@@ -44,7 +44,8 @@ const pageBody = (props) => {
     return <EmployeeSignUp 
     clickConnectEmployee={props.clickConnectEmployee}/>;
   } else if (props.pageBodyState === "BusinessSignUp") {
-    return <BusinessSignUp />;
+    return <BusinessSignUp 
+    clickConnectBusiness={props.clickConnectBusiness}/>;
   } else if (props.pageBodyState === "employee_interface" || props.pageBodyState ==="employee_job_offers") {
     return <EmployeeJobOffers />;
   } else if (props.pageBodyState === "employee_my_jobs") {
