@@ -33,7 +33,7 @@ class SingleJobItem extends React.Component {
 
   signuUpForWork() {
     const db = fire.database();
-    db.ref("/employees/employees_list/" + this.state.index + "/jobs").push(this.state.ref_job);
+    db.ref("/employees/employees_list/" + this.state.index + "/jobs").child(this.state.ref_job).set(this.state.ref_job);
   }
   clickTopItem() {
     if (this.state.item_bottom_height === "65%") {
