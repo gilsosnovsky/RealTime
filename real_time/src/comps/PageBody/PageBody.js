@@ -63,7 +63,8 @@ const pageBody = (props) => {
       index={props.index} />;
   } else if (props.pageBodyState === "business_post_job") {
     return <BusinessPostJob 
-      index={props.index}/>;
+      index={props.index}
+      clickWatchCandidates={props.clickWatchCandidates}/>;
   } else if (props.pageBodyState === "business_interface" || props.pageBodyState === "business_watch_candidates") {
     return <BusinessMyCadidates 
       index={props.index}/>;

@@ -211,6 +211,7 @@ class MyPage extends Component {
           clickConnectAdmin={this.onClickConnectAdmin}
           clickSignUp={this.onClickSignUp}
           clickForgotPassword={this.onClickForgotPassword}
+          clickWatchCandidates={this.onClickWatchCandidates}
           user={this.state.user}
           setUser={this.setUser}
           index={this.state.index}

@@ -40,7 +40,8 @@ class BusinessPostJob extends React.Component {
     }, () => {
       const db = fire.database();
       db.ref("/jobs/jobs_list").push(this.state);
-      alert("צריך להקפיץ הודעה אם העבודה נכנסה בהצלחה ואז לנקות את העמוד.");
+      alert("העבודה פורסמה בהצלחה!");
+      this.props.clickWatchCandidates();
     });
   }
 
