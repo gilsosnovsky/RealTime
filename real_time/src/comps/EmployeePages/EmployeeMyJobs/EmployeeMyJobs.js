@@ -9,7 +9,7 @@ class EmployeeMyJobs extends React.Component {
     jobs_list: [],
     loading: "visible",
     index: this.props.index,
-    msg_jobs:""
+    msg_jobs: ""
   };
 
   componentDidMount() {
@@ -17,26 +17,16 @@ class EmployeeMyJobs extends React.Component {
     let allJobs = [];
     db.ref("/employees/employees_list/" + this.state.index + "/jobs").on("value", (snapshot) => {
       snapshot.forEach((snap) => {
-        console.log("HERE!!!!!!!!!!!!" + db.ref("/jobs/jobs_list/" + snap.val()));
         if (snap.val() !== "no jobs yet") {
           db.ref("/jobs/jobs_list/" + snap.val()).on("value", (snapshot) => {
-            console.log("S VAL  " + snapshot.val().name);
             allJobs.push(snapshot.val());
           });
         }
       });
       this.setState({ jobs_list: allJobs, loading: "hidden" });
     })
-    if(allJobs.length === 0)
-      this.setState({msg_jobs: "עדיין לא נרשמת לעבודה"})
-    // db.ref("/jobs/jobs_list").on("value", (snapshot) => {
-    //   let allJobs = [];
-    //   snapshot.forEach((snap) => {
-    //     if (snap.val().is_my_job === true) 
-    //       allJobs.push(snap.val());
-    //   });
-    //   this.setState({ jobs_list: allJobs, loading: "hidden" });
-    // });
+    if (allJobs.length === 0)
+      this.setState({ msg_jobs: "עדיין לא נרשמת לעבודה" });
   }
 
   render() {
@@ -45,17 +35,15 @@ class EmployeeMyJobs extends React.Component {
         <div id="my_jobs_employee_title">הצעות העבודה שלך</div>
         <div
           id="my_jobs_employee_loading_jobs_container"
-          style={{ visibility: `${this.state.loading}` }}
-        >
+          style={{ visibility: `${this.state.loading}` }}>
           טוען...
           <br />
           <div
             id="my_jobs_employee_loading_jobs"
-            class="spinner-border"
+            className="spinner-border"
             role="status"
-            style={{}}
-          >
-            <span class="sr-only">Loading...</span>
+            style={{}}>
+            <span className="sr-only">Loading...</span>
           </div>
         </div>
         <ul>
@@ -73,8 +61,7 @@ class EmployeeMyJobs extends React.Component {
                 clothing={job.clothing}
                 payment_time={job.payment_time}
                 user={this.props.user}
-                buttons_visibility="hidden"
-              />
+                buttons_visibility="hidden" />
             );
           })}
         </ul>

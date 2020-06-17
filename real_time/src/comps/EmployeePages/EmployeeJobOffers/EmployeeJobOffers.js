@@ -28,16 +28,14 @@ class EmployeeJobOffers extends React.Component {
         <div id="jobs_employee_title">משרות במיוחד עבורך</div>
         <div
           id="jobs_employee_loading_jobs_container"
-          style={{ visibility: `${this.state.loading}` }}
-        >
+          style={{ visibility: `${this.state.loading}` }}>
           טוען...
           <br />
           <div
             id="jobs_employee_loading_jobs"
             className="spinner-border"
             role="status"
-            style={{}}
-          >
+            style={{}}>
             <span className="sr-only">Loading...</span>
           </div>
         </div>
@@ -59,8 +57,7 @@ class EmployeeJobOffers extends React.Component {
                 ref_job={job.ref.key}
                 user={this.state.user}
                 index={this.state.index}
-                buttons_visibility="visible"
-              />
+                buttons_visibility="visible" />
             );
           })}
         </ul>
