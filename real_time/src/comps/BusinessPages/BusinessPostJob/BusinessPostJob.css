@@ -1,81 +1,170 @@
-#post_job_business {
-  min-height: 600px;
-  padding-top: 100px;
-  text-align: center;
-  margin: 0 auto;
-  direction: rtl;
+/* For Mobile: */
+@media only screen and (max-width: 480px) {
+  #post_job_business {
+    min-height: 600px;
+    text-align: center;
+    margin: 0 auto;
+    direction: rtl;
+  }
+
+  #postJobContainer {
+    direction: rtl;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 90%;
+    background: #f9f9f9;
+    padding: 25px;
+    padding-top: 0px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  }
+
+  #postJobTitle {
+    color: #7925c0;
+    font-size: 30px;
+    padding: 30px;
+    font-weight: bold;
+  }
+
+  .field {
+    width: 200px;
+    padding: 5px;
+  }
+
+  #postButton {
+    background: #7925c0;
+    width: 200px;
+    padding: 10px 1px;
+    cursor: pointer;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    color: white;
+    font-size: 15px;
+    transition: 0.3s;
+    margin-top: 30px;
+  }
+
+  #postButton:hover {
+    position: relative;
+    cursor: pointer;
+    position: relative;
+    background: white;
+    color: #7925c0;
+    opacity: 0.6;
+    transition: 0.3s;
+  }
+
+  h3 {
+    position: relative;
+    text-align: right;
+    font-size: small;
+    color: gray;
+    right: 40px;
+    padding-top: 10px;
+  }
+
+  h2 {
+    position: relative;
+    font-size: small;
+    color: gray;
+    text-align: right;
+    right: 40px;
+  }
+  .radioButtons {
+    padding-top: 10px;
+    position: relative;
+    text-align: right;
+    font-size: small;
+    color: gray;
+    right: 40px;
+  }
+  p {
+    font-weight: bold;
+  }
 }
 
-#postJobContainer {
-  direction: rtl;
-  margin: 0 auto;
-  text-align: center;
-  margin-top: 120px;
-  margin-bottom: 30px;
-  width: 450px;
-  background: #f9f9f9;
-  padding: 25px;
-  padding-top: 0px;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-}
+/* For desktop: */
+@media only screen and (min-width: 480px) {
+  #post_job_business {
+    min-height: 600px;
+    padding-top: 100px;
+    text-align: center;
+    margin: 0 auto;
+    direction: rtl;
+  }
 
-#postJobTitle {
-  color: #7925c0;
-  font-size: 30px;
-  padding: 30px;
-  font-weight: bold;
-}
+  #postJobContainer {
+    direction: rtl;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 120px;
+    margin-bottom: 30px;
+    width: 450px;
+    background: #f9f9f9;
+    padding: 25px;
+    padding-top: 0px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  }
 
-.field {
-  width: 200px;
-  padding: 5px;
-}
+  #postJobTitle {
+    color: #7925c0;
+    font-size: 30px;
+    padding: 30px;
+    font-weight: bold;
+  }
 
-#postButton {
-  background: #7925c0;
-  width: 200px;
-  padding: 10px 1px;
-  cursor: pointer;
-  margin: 0 auto;
-  margin-bottom: 50px;
-  color: white;
-  font-size: 15px;
-  transition: 0.3s;
-  margin-top: 30px;
-}
+  .field {
+    width: 200px;
+    padding: 5px;
+  }
 
-#postButton:hover {
-  position: relative;
-  cursor: pointer;
-  position: relative;
-  background: white;
-  color: #7925c0;
-  opacity: 0.6;
-  transition: 0.3s;
-}
+  #postButton {
+    background: #7925c0;
+    width: 200px;
+    padding: 10px 1px;
+    cursor: pointer;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    color: white;
+    font-size: 15px;
+    transition: 0.3s;
+    margin-top: 30px;
+  }
 
-h3 {
-  position: relative;
-  text-align: right;
-  font-size: small;
-  color: gray;
-  right: 100px;
-  padding-top: 10px;
-}
+  #postButton:hover {
+    position: relative;
+    cursor: pointer;
+    position: relative;
+    background: white;
+    color: #7925c0;
+    opacity: 0.6;
+    transition: 0.3s;
+  }
 
-h2 {
-  font-size: small;
-  color: gray;
-  text-align: right;
-}
-.radioButtons {
-  padding-top: 10px;
-  position: relative;
-  text-align: right;
-  font-size: small;
-  color: gray;
-  right: 100px;
-}
-p {
-  font-weight: bold;
+  h3 {
+    position: relative;
+    text-align: right;
+    font-size: small;
+    color: gray;
+    right: 100px;
+    padding-top: 10px;
+  }
+
+  h2 {
+    font-size: small;
+    color: gray;
+    text-align: right;
+  }
+  .radioButtons {
+    padding-top: 10px;
+    position: relative;
+    text-align: right;
+    font-size: small;
+    color: gray;
+    right: 100px;
+  }
+  p {
+    font-weight: bold;
+  }
 }
