@@ -67,7 +67,7 @@ class BusinessSignUp extends Component
       }
       const db = fire.database();
       db.ref("/business/business_list").push(to_db);
-      this.props.clickConnectBusiness(to_db);
+      this.props.clickLoginBusiness();
     }).catch((error)=>{ 
       console.log(error.message);                 //posting the error from firebase in english
       this.setState({error_msg: error.message});

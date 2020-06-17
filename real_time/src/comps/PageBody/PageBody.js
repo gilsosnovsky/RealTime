@@ -42,10 +42,10 @@ const pageBody = (props) => {
     return <AboutUs />;
   } else if (props.pageBodyState === "EmployeeSignUp") {
     return <EmployeeSignUp
-      clickConnectEmployee={props.clickConnectEmployee} />;
+      clickLoginEmployee={props.clickLoginEmployee}/>;
   } else if (props.pageBodyState === "BusinessSignUp") {
     return <BusinessSignUp
-      clickConnectBusiness={props.clickConnectBusiness} />;
+      clickLoginBusiness={props.clickLoginBusiness} />;
   } else if (props.pageBodyState === "employee_interface" || props.pageBodyState === "employee_job_offers") {
     return <EmployeeJobOffers
       user={props.user}
