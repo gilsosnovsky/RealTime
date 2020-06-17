@@ -10,7 +10,6 @@ import EmployeeSignUp from "../WelcomePages/SignUp/EmloyeeSignUp";
 import BusinessSignUp from "../WelcomePages/SignUp/BusinessSignUp";
 import EmployeeJobOffers from "../EmployeePages/EmployeeJobOffers/EmployeeJobOffers";
 import EmployeeMyJobs from "../EmployeePages/EmployeeMyJobs/EmployeeMyJobs";
-import EmployeeMessages from "../EmployeePages/EmployeeMessages/EmployeeMessages";
 import EmployeeSettings from "../EmployeePages/EmployeeSettings/EmployeeSettings";
 import BusinessPostJob from "../BusinessPages/BusinessPostJob/BusinessPostJob";
 import BusinessMyCadidates from "../BusinessPages/BusinessMyCadidates/BusinessMyCadidates";
@@ -54,8 +53,6 @@ const pageBody = (props) => {
     return <EmployeeMyJobs
       user={props.user}
       index={props.index} />;
-  } else if (props.pageBodyState === "employee_messages") {
-    return <EmployeeMessages />;
   } else if (props.pageBodyState === "employee_settings") {
     return <EmployeeSettings
       user={props.user}

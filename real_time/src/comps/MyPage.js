@@ -65,12 +65,6 @@ class MyPage extends Component {
     });
   }
 
-  onClickMessagesEmployee=()=>{
-    this.setState({
-      PageBodyState: "employee_messages"
-    });
-  }
-
   onClickSettingsEmployee=()=>{
     this.setState({
       PageBodyState: "employee_settings"
@@ -191,7 +185,6 @@ class MyPage extends Component {
           clickAboutUs={this.onClickAboutUs}
           clickMyJobsEmployee={this.onClickMyJobsEmployee}
           clickJobOffersEmployee={this.onClickJobOffersEmployee}
-          clickMessagesEmployee={this.onClickMessagesEmployee}
           clickSettingsEmployee={this.onClickSettingsEmployee}
           clickPostJobBusiness={this.onClickPostJobBusiness}
           clickWatchCandidates={this.onClickWatchCandidates}

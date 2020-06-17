@@ -15,7 +15,8 @@ class Login extends Component {
       user: {},
       email: '',
       password: '',
-      error_msg: ''
+      error_msg: '',
+      found: false
     }
   }
 
@@ -46,20 +47,18 @@ class Login extends Component {
   login(e) {
     e.preventDefault();
     fire.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((user) => {
-      //callback
+      
       console.log('successful sign in');
       console.log(user.user.email);
       console.log(user);
-      // this.onClickConnect();
       const db = fire.database();
       var userEmail = user.user.email;
+      
       if (this.props.pageBodyState === "EmloyeeLogin") {
-
         db.ref("/employees/employees_list").on("value", (snapshot) => {
           snapshot.forEach((snap) => {
             if (snap.val().email === userEmail) {
               this.props.clickConnectEmployee(snap.val(), snap.ref.key);
-              return;
             }
           });
         });
@@ -68,10 +67,8 @@ class Login extends Component {
           snapshot.forEach((snap) => {
             if (snap.val().email === userEmail) {
               this.props.clickConnectAdmin(snap.val(), snap.ref.key);
-              return;
             }
           });
-          this.setState({error_msg: "המשתמש לא קיים במערכת העובדים"});
         });
       }
       else if (this.props.pageBodyState === 'BusinessLogin') {
@@ -79,11 +76,10 @@ class Login extends Component {
           snapshot.forEach((snap) => {
             if (snap.val().email === userEmail) {
               this.props.clickConnectBusiness(snap.val(), snap.ref.key);
-              return;
             }
           });
         });
-        this.setState({error_msg: "המשתמש לא קיים במערכת העסקים"});
+        
       }
     }).catch((error) => {
       this.setState({error_msg: "שם משתמש או סיסמה שגויים"});
