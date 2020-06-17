@@ -34,11 +34,11 @@ class EmployeeJobOffers extends React.Component {
           <br />
           <div
             id="jobs_employee_loading_jobs"
-            class="spinner-border"
+            className="spinner-border"
             role="status"
             style={{}}
           >
-            <span class="sr-only">Loading...</span>
+            <span className="sr-only">Loading...</span>
           </div>
         </div>
         <ul>

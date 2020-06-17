@@ -59,18 +59,16 @@ class SingleJobItem extends React.Component {
     return (
       <div
         id="job_item_container"
-        style={{ height: `${this.state.container_height}` }}
-      >
+        style={{ height: `${this.state.container_height}` }}>
         <div
           id="job_item_top"
           onClick={this.clickTopItem}
-          style={{ height: `${this.state.item_top_height}` }}
-        >
+          style={{ height: `${this.state.item_top_height}` }}>
           <div id="job_item_logo_container">
             <img id="job_item_logo" src={this.state.job_logo} alt="job_logo" />
           </div>
           <div id="job_item_brief_info">
-            <div class="brief_info">
+            <div className="brief_info">
               <b> קצת על העבודה: </b>
               {this.state.job_type}
               <br />
@@ -90,8 +88,7 @@ class SingleJobItem extends React.Component {
           style={{
             height: `${this.state.item_bottom_height}`,
             visibility: `${this.state.item_bottom_visibility}`,
-          }}
-        >
+          }}>
           <div id="job_item_full_info">
             <b>פרטים נוספים:</b>
             <br />
@@ -108,8 +105,7 @@ class SingleJobItem extends React.Component {
           </div>
           <div
             id="job_item_buttons"
-            style={{ visibility: `${this.state.buttons_visibility}` }}
-          >
+            style={{ visibility: `${this.state.buttons_visibility}` }}>
             <div id="job_item_buttons_no" onClick={this.hideFullInfo}>
               לא מתאים לי
             </div>

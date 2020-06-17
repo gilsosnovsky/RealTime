@@ -4,9 +4,6 @@ import facebook from "./facebook.png";
 import google from "./google.png";
 import fire from "../../../firebaseConfig"
 
-
-
-
 class Login extends Component {
 
   constructor(props) {
@@ -17,7 +14,8 @@ class Login extends Component {
     this.state = {
       user: {},
       email: '',
-      password: ''
+      password: '',
+      error_msg: ''
     }
   }
 
@@ -73,6 +71,7 @@ class Login extends Component {
               return;
             }
           });
+          this.setState({error_msg: "המשתמש לא קיים במערכת העובדים"});
         });
       }
       else if (this.props.pageBodyState === 'BusinessLogin') {
@@ -80,13 +79,14 @@ class Login extends Component {
           snapshot.forEach((snap) => {
             if (snap.val().email === userEmail) {
               this.props.clickConnectBusiness(snap.val());
+              return;
             }
           });
-
         });
+        this.setState({error_msg: "המשתמש לא קיים במערכת העסקים"});
       }
-
     }).catch((error) => {
+      this.setState({error_msg: "שם משתמש או סיסמה שגויים"});
       console.log(error);
     });
   }
@@ -95,9 +95,7 @@ class Login extends Component {
     return (
       <div id="Login">
         <div id="loginContainer">
-
           <div id="wellcome">ברוכים הבאים</div>
-
           <div id="loginCenter">
             <fieldset>
               <input
@@ -129,7 +127,7 @@ class Login extends Component {
             <fieldset>
               <div id="login" onClick={this.login}>התחבר</div>
             </fieldset>
-
+            <h6>{this.state.error_msg}</h6>
             <fieldset>
               <div id="forgotPassword" onClick={this.props.clickForgotPassword}>
                 שכחתי סיסמא
@@ -146,7 +144,6 @@ class Login extends Component {
               {/* <a href="#"> */}
               <img src={google} className="loginWithButton" alt="google_img"></img>
               {/* </a> */}
-
               {/* <a href="#"> */}
               <img src={facebook} className="loginWithButton" alt="facebook_img"></img>
               {/* </a> */}

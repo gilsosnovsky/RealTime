@@ -3,21 +3,40 @@ import "./EmployeeMyJobs.css";
 import SingleJobItem from "../EmployeeJobOffers/SingleJobItem";
 import fire from "../../../firebaseConfig";
 import logo from "../EmployeeJobOffers/symbol.gif";
+
 class EmployeeMyJobs extends React.Component {
   state = {
     jobs_list: [],
     loading: "visible",
+    index: this.props.index,
+    msg_jobs:""
   };
 
   componentDidMount() {
     const db = fire.database();
-    db.ref("/jobs/jobs_list").on("value", (snapshot) => {
-      let allJobs = [];
+    let allJobs = [];
+    db.ref("/employees/employees_list/" + this.state.index + "/jobs").on("value", (snapshot) => {
       snapshot.forEach((snap) => {
-        if (snap.val().is_my_job === true) allJobs.push(snap.val());
+        console.log("HERE!!!!!!!!!!!!" + db.ref("/jobs/jobs_list/" + snap.val()));
+        if (snap.val() !== "no jobs yet") {
+          db.ref("/jobs/jobs_list/" + snap.val()).on("value", (snapshot) => {
+            console.log("S VAL  " + snapshot.val().name);
+            allJobs.push(snapshot.val());
+          });
+        }
       });
       this.setState({ jobs_list: allJobs, loading: "hidden" });
-    });
+    })
+    if(allJobs.length === 0)
+      this.setState({msg_jobs: "עדיין לא נרשמת לעבודה"})
+    // db.ref("/jobs/jobs_list").on("value", (snapshot) => {
+    //   let allJobs = [];
+    //   snapshot.forEach((snap) => {
+    //     if (snap.val().is_my_job === true) 
+    //       allJobs.push(snap.val());
+    //   });
+    //   this.setState({ jobs_list: allJobs, loading: "hidden" });
+    // });
   }
 
   render() {
@@ -59,6 +78,7 @@ class EmployeeMyJobs extends React.Component {
             );
           })}
         </ul>
+        <div id="my_jobs_msg">{this.state.msg_jobs}</div>
       </div>
     );
   }

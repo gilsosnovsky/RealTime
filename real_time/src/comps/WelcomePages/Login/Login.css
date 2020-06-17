@@ -133,6 +133,10 @@
     transition: 0.3s;
   }
 
+  h6{
+    color: red;
+  }
+
   #SignUponLogin {
     cursor: pointer;
   }

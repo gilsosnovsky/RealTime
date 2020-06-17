@@ -73,4 +73,9 @@
   #my_jobs_employee_loading_jobs {
     font-size: 20px;
   }
+
+  #my_jobs_msg{
+    font-size: 25px;
+    text-align: center;
+  }
 }
