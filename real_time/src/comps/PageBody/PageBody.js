@@ -64,7 +64,8 @@ const pageBody = (props) => {
       clickWatchCandidates={props.clickWatchCandidates}/>;
   } else if (props.pageBodyState === "business_interface" || props.pageBodyState === "business_watch_candidates") {
     return <BusinessMyCadidates 
-      index={props.index}/>;
+      index={props.index}
+      clickWatchCandidates={props.clickWatchCandidates}/>;
   } else if (props.pageBodyState === "admin_jobs") {
     return <AdminJobs />;
   } else if (props.pageBodyState === "admin_interface" || props.pageBodyState === "admin_employees") {

@@ -41,7 +41,7 @@ class singleJobItemBusiness extends React.Component {
                         <div id="job_item_buttons_show_candi" onClick={() => this.props.setBodyTypeState(this.state.job_index)}>
                             צפייה במועמדים
                         </div>
-                        <div id="job_item_buttons_delete_job">
+                        <div id="job_item_buttons_delete_job" onClick={() => this.props.deleteJob(this.state.job_index)}>
                             מחק משרה
                         </div>
                     </div>

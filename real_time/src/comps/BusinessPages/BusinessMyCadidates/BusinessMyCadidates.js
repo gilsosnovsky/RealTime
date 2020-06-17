@@ -11,6 +11,7 @@ class BusinessMyCadidates extends React.Component {
   constructor(props) {
     super(props);
     this.setBodyTypeState = this.setBodyTypeState.bind(this);
+    this.deleteJob = this.deleteJob.bind(this);
   }
 
   state = {
@@ -64,6 +65,25 @@ class BusinessMyCadidates extends React.Component {
     }
   }
 
+  deleteJob(job_index){
+    const db = fire.database();
+    db.ref("/jobs/jobs_list/" + job_index).remove();
+    //delete from employees
+    db.ref("/employees/employees_list/").on("value", snapshot1 => {
+      snapshot1.forEach((snap1) => {
+        db.ref("/employees/employees_list/"+snap1.ref.key+ "/jobs").on("value", snapshot2 => {
+          snapshot2.forEach((snap2) => {
+            if(snap2.val()===job_index){
+              let x=db.ref("/employees/employees_list/"+snap1.ref.key+ "/jobs/" +job_index).remove();
+              console.log(x);
+            }
+          })
+        })
+      })
+    });
+    //this.props.clickWatchCandidates();
+  }
+
   render() {
     if (this.state.bodyType === "jobs") {
       return (
@@ -91,7 +111,8 @@ class BusinessMyCadidates extends React.Component {
                 clothing={job.val().clothing}
                 payment_time={job.val().payment_time}
                 job_index={job.ref.key}
-                setBodyTypeState={this.setBodyTypeState} />
+                setBodyTypeState={this.setBodyTypeState}
+                deleteJob={this.deleteJob} />
             })
             }
           </ul>
