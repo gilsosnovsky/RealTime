@@ -14,13 +14,11 @@ class singleJobItemBusiness extends React.Component {
         job_long_info: this.props.long_info,
         job_remarks: this.props.remarks,
         job_clothing: this.props.clothing,
-        job_payment_time:this.props.payment_time
+        job_payment_time:this.props.payment_time,
+        job_index:this.props.job_index
     };
 
-    
-
     render() {
-        
         return (
             <div id="job_item_business_container">
                 <div id="job_item_business" >
@@ -40,7 +38,7 @@ class singleJobItemBusiness extends React.Component {
                             <b>הערות: </b>{this.state.job_remarks}
                         </div>
                         <div id="job_item_buttons_business">
-                        <div id="job_item_buttons_show_candi" onClick={this.props.setBodyTypeState}>
+                        <div id="job_item_buttons_show_candi" onClick={() => this.props.setBodyTypeState(this.state.job_index)}>
                             צפייה במועמדים
                         </div>
                         <div id="job_item_buttons_delete_job">

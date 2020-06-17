@@ -20,7 +20,9 @@ class BusinessPostJob extends React.Component {
     remarks: "",
     clothing: "",
     payment_time: "",
-    payment_method: ""
+    payment_method: "",
+    employer_index: "",
+    candidates:["no candidates yet"]
   };
 
   onSubmitjob = (e) => {
@@ -33,10 +35,12 @@ class BusinessPostJob extends React.Component {
       salary: this.salary.value,
       long_info: this.detailes.value,
       remarks: this.remarks.value,
+      employer_index: this.props.index,
       clothing: this.clothing.value
     }, () => {
       const db = fire.database();
       db.ref("/jobs/jobs_list").push(this.state);
+      alert("צריך להקפיץ הודעה אם העבודה נכנסה בהצלחה ואז לנקות את העמוד.");
     });
   }
 

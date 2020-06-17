@@ -67,7 +67,7 @@ class Login extends Component {
         db.ref("/admins/admins_list").on("value", (snapshot) => {
           snapshot.forEach((snap) => {
             if (snap.val().email === userEmail) {
-              this.props.clickConnectAdmin(snap.val());
+              this.props.clickConnectAdmin(snap.val(), snap.ref.key);
               return;
             }
           });
@@ -78,7 +78,7 @@ class Login extends Component {
         db.ref("/business/business_list").on("value", (snapshot) => {
           snapshot.forEach((snap) => {
             if (snap.val().email === userEmail) {
-              this.props.clickConnectBusiness(snap.val());
+              this.props.clickConnectBusiness(snap.val(), snap.ref.key);
               return;
             }
           });

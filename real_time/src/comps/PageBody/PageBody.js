@@ -62,9 +62,11 @@ const pageBody = (props) => {
       setUser={props.setUser}
       index={props.index} />;
   } else if (props.pageBodyState === "business_post_job") {
-    return <BusinessPostJob />;
+    return <BusinessPostJob 
+      index={props.index}/>;
   } else if (props.pageBodyState === "business_interface" || props.pageBodyState === "business_watch_candidates") {
-    return <BusinessMyCadidates />;
+    return <BusinessMyCadidates 
+      index={props.index}/>;
   } else if (props.pageBodyState === "admin_jobs") {
     return <AdminJobs />;
   } else if (props.pageBodyState === "admin_interface" || props.pageBodyState === "admin_employees") {

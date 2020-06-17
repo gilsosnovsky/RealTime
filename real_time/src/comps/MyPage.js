@@ -77,10 +77,11 @@ class MyPage extends Component {
     });
   }
 
-  onClickConnectBusiness=(user)=>{
+  onClickConnectBusiness=(user, index)=>{
     console.log(user);
     this.setState({
       user: user,
+      index: index,
       NavBarState:"business_interface",
       PageBodyState: "business_interface"
     });
@@ -98,9 +99,10 @@ class MyPage extends Component {
     });
   }
 
-  onClickConnectAdmin=(user)=>{
+  onClickConnectAdmin=(user, index)=>{
     this.setState({
       user: user,
+      index: index,
       NavBarState:"admin_interface",
       PageBodyState: "admin_interface"
     });
