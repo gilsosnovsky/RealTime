@@ -44,7 +44,7 @@ class MyPage extends Component {
   };
 
   onClickConnectEmployee=(user, index)=>{
-    console.log(user);
+    //console.log("HERE!!!!!!!------");
     this.setState({
       user: user,
       NavBarState:"employee_interface",
