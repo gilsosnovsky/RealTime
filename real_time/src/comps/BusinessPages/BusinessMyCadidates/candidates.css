@@ -1,48 +1,99 @@
-#candidate_item_business_container {
-  margin-top: 50px;
-  min-height: 500px;
-  width: 900px;
-  margin: 5px;
-  border: 2.5px solid #7925c0;
-  border-radius: 10px;
-  background-color: white;
-  transition: 0.3s;
-  font-size: 15px;
+/* For Mobile: */
+@media only screen and (max-width: 480px) {
+  #candidate_item_business_container {
+    margin-top: 50px;
+    width: 100%;
+    min-height: 150px;
+    margin: 5px;
+    border: 2.5px solid #7925c0;
+    border-radius: 10px;
+    background-color: white;
+    transition: 0.3s;
+    font-size: 12px;
+  }
+
+  #candidate_item_business {
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  #candidate_item_logo_business_container {
+    height: 100%;
+    width: 20%;
+    float: right;
+    border-left: 2.5px solid #7925c0;
+  }
+  #candidate_item_business_logo {
+    display: block;
+    margin: 0 auto;
+    max-width: 70px;
+  }
+  #candidate_item_business_logo:hover {
+    opacity: 0.6;
+    transition: 0.3s;
+  }
+
+  #candidate_item_info_business {
+    height: 100%;
+    width: 75%;
+    float: left;
+  }
+
+  .candidate_full_info_business {
+    height: 100%;
+    width: 100%;
+    float: right;
+    padding-right: 10px;
+  }
 }
 
-#candidate_item_business {
-  height: 100%;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-#candidate_item_logo_business_container {
-  height: 100%;
-  width: 20%;
-  float: right;
-  max-height: 200px;
-  border-left: 2.5px solid #7925c0;
-}
-#candidate_item_business_logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 25%;
-  height: 50%;
-}
-#candidate_item_business_logo:hover {
-  opacity: 0.6;
-  transition: 0.3s;
-}
+/* For desktop: */
+@media only screen and (min-width: 480px) {
+  #candidate_item_business_container {
+    margin-top: 50px;
+    width: 900px;
+    height: 200px;
+    margin: 5px;
+    border: 2.5px solid #7925c0;
+    border-radius: 10px;
+    background-color: white;
+    transition: 0.3s;
+    font-size: 15px;
+  }
 
-#candidate_item_info_business {
-  height: 100%;
-  width: 80%;
-  float: right;
-}
+  #candidate_item_business {
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  #candidate_item_logo_business_container {
+    height: 100%;
+    width: 20%;
+    float: right;
+    border-left: 2.5px solid #7925c0;
+  }
+  #candidate_item_business_logo {
+    display: block;
+    margin: 0 auto;
+    height: 90%;
+  }
+  #candidate_item_business_logo:hover {
+    opacity: 0.6;
+    transition: 0.3s;
+  }
 
-.candidate_full_info_business {
-  height: 100%;
-  width: 70%;
-  float: right;
-  padding-right: 2%;
+  #candidate_item_info_business {
+    height: 100%;
+    width: 80%;
+    float: right;
+  }
+
+  .candidate_full_info_business {
+    height: 100%;
+    width: 70%;
+    float: right;
+    padding-right: 2%;
+  }
 }
