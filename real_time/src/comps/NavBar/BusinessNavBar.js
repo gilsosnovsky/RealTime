@@ -87,7 +87,7 @@ class BusinessNavBar extends React.Component {
               className="NavBarButton"
               onClick={this.props.clickWatchCandidates}
             >
-              צפייה במועמדים
+              משרות שפרסמת
             </label>
           </div>
           <div id="hello_plus_logout">
