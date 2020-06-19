@@ -1,0 +1,100 @@
+/* For Mobile: */
+@media only screen and (max-width: 480px) {
+    #employee_deatils_container {
+      margin-top: 50px;
+      width: 100%;
+      min-height: 150px;
+      margin: 5px;
+      border: 2.5px solid #7925c0;
+      border-radius: 10px;
+      background-color: white;
+      transition: 0.4s;
+      font-size: 12px;
+    }
+  
+    #employee_deatils_item {
+      height: 100%;
+      width: 100%;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+    #employee_item_logo_container {
+      height: 100%;
+      width: 20%;
+      float: right;
+      border-left: 2.5px solid #7925c0;
+    }
+    #employee_item_logo {
+      display: block;
+      margin: 0 auto;
+      max-width: 70px;
+    }
+    #employee_item_logo:hover {
+      opacity: 0.6;
+      transition: 0.3s;
+    }
+  
+    #employee_item_info {
+      height: 100%;
+      width: 75%;
+      float: left;
+    }
+  
+    .employee_full_info {
+      height: 100%;
+      width: 100%;
+      float: right;
+      padding-right: 10px;
+    }
+  }
+  
+  /* For desktop: */
+  @media only screen and (min-width: 480px) {
+    #employee_deatils_container {
+      margin-top: 50px;
+      width: 900px;
+      height: 200px;
+      margin: 5px;
+      border: 2.5px solid #7925c0;
+      border-radius: 10px;
+      background-color: white;
+      transition: 0.3s;
+      font-size: 15px;
+    }
+  
+    #employee_deatils_item {
+      height: 100%;
+      width: 100%;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+    #employee_item_logo_container {
+      height: 100%;
+      width: 20%;
+      float: right;
+      border-left: 2.5px solid #7925c0;
+    }
+    #employee_item_logo {
+      display: block;
+      margin: 0 auto;
+      height: 90%;
+    }
+    #employee_item_logo:hover {
+      opacity: 0.6;
+      transition: 0.3s;
+    }
+  
+    #employee_item_info {
+      height: 100%;
+      width: 80%;
+      float: right;
+    }
+  
+    .employee_full_info {
+      height: 100%;
+      width: 70%;
+      float: right;
+      padding-right: 2%;
+    }
+  }
+  

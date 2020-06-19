@@ -9,3 +9,8 @@
     direction: rtl;
     font-size: 20px;
 }
+
+#registered_employees{
+    margin-top: 20px;
+    color: purple;
+}
