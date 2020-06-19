@@ -26,9 +26,18 @@ class MyPage extends Component {
   };
 
   onClickLogo = () => {
-    this.setState({
-      PageBodyState: "homePage"
-    });
+    // if (this.state.navBarState === "employee_interface") {
+    if (this.state.PageBodyState === "employee_job_offers" || this.state.PageBodyState === "employee_settings" ||
+        this.state.PageBodyState === "employee_my_jobs"    || this.state.PageBodyState === "employee_interface") {
+      this.setState({
+        PageBodyState: "employee_job_offers",
+      });
+    }
+    else {
+      this.setState({
+        PageBodyState: "homePage",
+      });
+    }
   };
 
   onClickLoginEmployee = () => {

@@ -74,7 +74,7 @@ class EmployeeNavBar extends React.Component {
             alt="promte teenagers logo"
           />
 
-          <img id="logo" src={logo} alt="Logo" />
+          <img id="logo" src={logo} alt="Logo" onClick={this.props.clickOnLogo} />
           <div id="navLinks">
             <label
               className="NavBarButton"
