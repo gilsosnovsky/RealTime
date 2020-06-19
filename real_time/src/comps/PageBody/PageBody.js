@@ -10,7 +10,6 @@ import EmployeeSignUp from "../WelcomePages/SignUp/EmloyeeSignUp";
 import BusinessSignUp from "../WelcomePages/SignUp/BusinessSignUp";
 import EmployeeJobOffers from "../EmployeePages/EmployeeJobOffers/EmployeeJobOffers";
 import EmployeeMyJobs from "../EmployeePages/EmployeeMyJobs/EmployeeMyJobs";
-import EmployeeMessages from "../EmployeePages/EmployeeMessages/EmployeeMessages";
 import EmployeeSettings from "../EmployeePages/EmployeeSettings/EmployeeSettings";
 import BusinessPostJob from "../BusinessPages/BusinessPostJob/BusinessPostJob";
 import BusinessMyCadidates from "../BusinessPages/BusinessMyCadidates/BusinessMyCadidates";
@@ -42,10 +41,10 @@ const pageBody = (props) => {
     return <AboutUs />;
   } else if (props.pageBodyState === "EmployeeSignUp") {
     return <EmployeeSignUp
-      clickConnectEmployee={props.clickConnectEmployee} />;
+      clickLoginEmployee={props.clickLoginEmployee}/>;
   } else if (props.pageBodyState === "BusinessSignUp") {
     return <BusinessSignUp
-      clickConnectBusiness={props.clickConnectBusiness} />;
+      clickLoginBusiness={props.clickLoginBusiness} />;
   } else if (props.pageBodyState === "employee_interface" || props.pageBodyState === "employee_job_offers") {
     return <EmployeeJobOffers
       user={props.user}
@@ -54,17 +53,18 @@ const pageBody = (props) => {
     return <EmployeeMyJobs
       user={props.user}
       index={props.index} />;
-  } else if (props.pageBodyState === "employee_messages") {
-    return <EmployeeMessages />;
   } else if (props.pageBodyState === "employee_settings") {
     return <EmployeeSettings
       user={props.user}
       setUser={props.setUser}
       index={props.index} />;
   } else if (props.pageBodyState === "business_post_job") {
-    return <BusinessPostJob />;
+    return <BusinessPostJob 
+      index={props.index}
+      clickWatchCandidates={props.clickWatchCandidates}/>;
   } else if (props.pageBodyState === "business_interface" || props.pageBodyState === "business_watch_candidates") {
-    return <BusinessMyCadidates />;
+    return <BusinessMyCadidates 
+      index={props.index}/>;
   } else if (props.pageBodyState === "admin_jobs") {
     return <AdminJobs />;
   } else if (props.pageBodyState === "admin_interface" || props.pageBodyState === "admin_employees") {

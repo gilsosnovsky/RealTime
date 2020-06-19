@@ -84,14 +84,6 @@ class EmployeeNavBar extends React.Component {
             </label>
 
             <label
-              id="message_employee"
-              className="NavBarButton"
-              onClick={this.props.clickMessagesEmployee}
-            >
-              הודעות
-            </label>
-
-            <label
               id="my_jobs_emplyee"
               className="NavBarButton"
               onClick={this.props.clickMyJobsEmployee}

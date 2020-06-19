@@ -16,8 +16,6 @@ class Candidates extends React.Component {
         user_pic:this.props.user_pic
     };
 
-    
-
     render() {
         
         return (

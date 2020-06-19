@@ -9,14 +9,14 @@ class EmployeeSettings extends React.Component {
     super(props);
     this.onSubmitSveChanges = this.onSubmitSveChanges.bind(this);
     this.state = {
-      email: props.user.email,
-      first_name: props.user.first_name,
-      last_name: props.user.last_name,
-      phone_number: props.user.phone_number,
-      birth_date: props.user.birth_date,
-      address: props.user.address,
-      favorite_jobs: props.user.favorite_jobs,
-      about_me: props.user.about_me
+      email: this.props.user.email,
+      first_name: this.props.user.first_name,
+      last_name: this.props.user.last_name,
+      phone_number: this.props.user.phone_number,
+      birth_date: this.props.user.birth_date,
+      address: this.props.user.address,
+      favorite_jobs: this.props.user.favorite_jobs,
+      about_me: this.props.user.about_me
     }
   }
 

@@ -65,22 +65,17 @@ class MyPage extends Component {
     });
   }
 
-  onClickMessagesEmployee=()=>{
-    this.setState({
-      PageBodyState: "employee_messages"
-    });
-  }
-
   onClickSettingsEmployee=()=>{
     this.setState({
       PageBodyState: "employee_settings"
     });
   }
 
-  onClickConnectBusiness=(user)=>{
+  onClickConnectBusiness=(user, index)=>{
     console.log(user);
     this.setState({
       user: user,
+      index: index,
       NavBarState:"business_interface",
       PageBodyState: "business_interface"
     });
@@ -98,9 +93,10 @@ class MyPage extends Component {
     });
   }
 
-  onClickConnectAdmin=(user)=>{
+  onClickConnectAdmin=(user, index)=>{
     this.setState({
       user: user,
+      index: index,
       NavBarState:"admin_interface",
       PageBodyState: "admin_interface"
     });
@@ -189,7 +185,6 @@ class MyPage extends Component {
           clickAboutUs={this.onClickAboutUs}
           clickMyJobsEmployee={this.onClickMyJobsEmployee}
           clickJobOffersEmployee={this.onClickJobOffersEmployee}
-          clickMessagesEmployee={this.onClickMessagesEmployee}
           clickSettingsEmployee={this.onClickSettingsEmployee}
           clickPostJobBusiness={this.onClickPostJobBusiness}
           clickWatchCandidates={this.onClickWatchCandidates}
@@ -209,6 +204,7 @@ class MyPage extends Component {
           clickConnectAdmin={this.onClickConnectAdmin}
           clickSignUp={this.onClickSignUp}
           clickForgotPassword={this.onClickForgotPassword}
+          clickWatchCandidates={this.onClickWatchCandidates}
           user={this.state.user}
           setUser={this.setUser}
           index={this.state.index}
