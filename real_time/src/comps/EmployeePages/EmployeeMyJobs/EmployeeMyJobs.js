@@ -19,7 +19,8 @@ class EmployeeMyJobs extends React.Component {
       snapshot.forEach((snap) => {
         if (snap.val() !== "no jobs yet") {
           db.ref("/jobs/jobs_list/" + snap.val()).on("value", (snapshot) => {
-            allJobs.push(snapshot.val());
+            if(snapshot.val()!==null)
+              allJobs.push(snapshot.val());
           });
         }
       });
