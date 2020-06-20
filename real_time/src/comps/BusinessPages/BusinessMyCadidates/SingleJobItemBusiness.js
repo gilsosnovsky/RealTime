@@ -23,8 +23,7 @@ class singleJobItemBusiness extends React.Component {
             <img
               id="job_item_business_logo"
               src={this.state.job_logo}
-              alt="job_logo"
-            />
+              alt="job_logo"/>
           </div>
 
           <div id="job_item_info_business">
@@ -57,14 +56,12 @@ class singleJobItemBusiness extends React.Component {
         <div id="job_item_buttons_business">
           <div
             id="job_item_buttons_show_candi"
-            onClick={() => this.props.setBodyTypeState(this.state.job_index)}
-          >
+            onClick={() => this.props.setBodyTypeState(this.state.job_index)}>
             צפייה במועמדים
           </div>
           <div
             id="job_item_buttons_delete_job"
-            onClick={() => this.props.deleteJob(this.state.job_index)}
-          >
+            onClick={() => this.props.deleteJob(this.state.job_index)}>
             מחק משרה
           </div>
         </div>
