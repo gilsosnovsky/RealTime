@@ -16,6 +16,7 @@ class Login extends Component {
       email: '',
       password: '',
       error_msg: '',
+      loading: 'hidden',
       found: false
     }
   }
@@ -45,19 +46,20 @@ class Login extends Component {
     });
   }
   login(e) {
+    this.setState({ loading: 'visible', error_msg: '' });
     e.preventDefault();
     fire.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((user) => {
-      
       console.log('successful sign in');
       console.log(user.user.email);
       console.log(user);
       const db = fire.database();
       var userEmail = user.user.email;
-      
+
       if (this.props.pageBodyState === "EmloyeeLogin") {
         db.ref("/employees/employees_list").on("value", (snapshot) => {
           snapshot.forEach((snap) => {
             if (snap.val().email === userEmail) {
+              this.setState({ loading: 'hidden' });
               this.props.clickConnectEmployee(snap.val(), snap.ref.key);
             }
           });
@@ -66,23 +68,27 @@ class Login extends Component {
         db.ref("/admins/admins_list").on("value", (snapshot) => {
           snapshot.forEach((snap) => {
             if (snap.val().email === userEmail) {
+              this.setState({ loading: 'hidden' });
               this.props.clickConnectAdmin(snap.val(), snap.ref.key);
             }
           });
+          this.setState({ loading: 'hidden', error_msg: "שם משתמש או סיסמה שגויים" });
         });
       }
       else if (this.props.pageBodyState === 'BusinessLogin') {
         db.ref("/business/business_list").on("value", (snapshot) => {
           snapshot.forEach((snap) => {
             if (snap.val().email === userEmail) {
+              this.setState({ loading: 'hidden' });
               this.props.clickConnectBusiness(snap.val(), snap.ref.key);
             }
           });
+          this.setState({ loading: 'hidden', error_msg: "שם משתמש או סיסמה שגויים" });
         });
-        
       }
     }).catch((error) => {
-      this.setState({error_msg: "שם משתמש או סיסמה שגויים"});
+      this.setState({ loading: 'hidden' });
+      this.setState({ error_msg: "שם משתמש או סיסמה שגויים" });
       console.log(error);
     });
   }
@@ -123,7 +129,20 @@ class Login extends Component {
             <fieldset>
               <div id="login" onClick={this.login}>התחבר</div>
             </fieldset>
-            <h6>{this.state.error_msg}</h6>
+            <div id="loginMsg">{this.state.error_msg}</div>
+            <div
+              id="loginLoadingContainer"
+              style={{ visibility: `${this.state.loading}` }}>
+              ...מתחבר
+              <br />
+              <div
+                id="loginLoading"
+                className="spinner-border"
+                role="status"
+                style={{ color: 'green' }}>
+                <span className="sr-only">Loading...</span>
+              </div>
+            </div>
             <fieldset>
               <div id="forgotPassword" onClick={this.props.clickForgotPassword}>
                 שכחתי סיסמא
