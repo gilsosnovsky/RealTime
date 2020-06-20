@@ -13,6 +13,7 @@ class singleJobItemBusiness extends React.Component {
     job_remarks: this.props.remarks,
     job_clothing: this.props.clothing,
     job_payment_time: this.props.payment_time,
+    job_index:this.props.job_index
   };
 
   render() {
@@ -27,7 +28,7 @@ class singleJobItemBusiness extends React.Component {
           </div>
 
           <div id="job_item_info_business">
-            <div class="full_info_business">
+            <div className="full_info_business">
               <b> תחום כללי של העבודה: </b>
               {this.state.job_type}
               <br />

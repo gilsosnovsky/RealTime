@@ -1,9 +1,7 @@
 import React from "react";
 import "./candidates.css";
 
-
-class Candidates extends React.Component {
-    
+class Candidates extends React.Component {    
     state = {
         email: this.props.email,
         first_name: this.props.first_name,
