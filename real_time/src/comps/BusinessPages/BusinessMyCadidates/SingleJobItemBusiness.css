@@ -143,7 +143,7 @@
     height: 100%;
     width: 25%;
     float: left;
-    display: inline-block;
+    /* display: inline-block; */
   }
 
   #job_item_buttons_show_candi {
