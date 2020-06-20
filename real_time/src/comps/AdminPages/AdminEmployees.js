@@ -1,6 +1,7 @@
 import React from "react";
 import "./AdminEmployees.css"
 import EmployeeDeatils from "./employee_deatils";
+import EmployeeSettings from "../EmployeePages/EmployeeSettings/EmployeeSettings";
 import fire from "../../firebaseConfig.js";
 import user_pic from "../EmployeePages/EmployeeSettings/person.png";
 
@@ -8,6 +9,7 @@ class AdminEmployees extends React.Component {
     state = {
         employees: [],
         loading: "visible",
+        bodyType: "employees_deatils",
         index: this.props.index,
         msg: ""
       };
@@ -27,6 +29,7 @@ class AdminEmployees extends React.Component {
     }
     
     render(){
+      if (this.state.bodyType === "employees_deatils")
         return (
           <div id="admin_employees">
               <div id="registered_employees">עובדים רשומים </div>
@@ -48,10 +51,9 @@ class AdminEmployees extends React.Component {
               <ul>
               {this.state.employees.map((employee, index) => {
                   return (
-                    <EmployeeDeatils
-                      email = {employee.email}
-                      fisrt_name = {employee.fisrt_name}
+                    <EmployeeDeatils fisrt_name = {employee.fisrt_name}
                       last_name = {employee.last_name}
+                      email = {employee.email}
                       phone_number = {employee.phone_number}
                       birth_date = {employee.birth_date}
                       address = {employee.address}
@@ -65,6 +67,24 @@ class AdminEmployees extends React.Component {
                 <div id="msg">{this.state.msg}</div>
             </div>
         );
+      /* else if (this.state.bodyType === "edit_employee")
+          return (
+            <ul>
+                {this.state.employees.map((employee, index) => {
+                    return (
+                      <EmployeeSettings fisrt_name = {employee.fisrt_name}
+                        last_name = {employee.last_name}
+                        email = {employee.email}
+                        phone_number = {employee.phone_number}
+                        birth_date = {employee.birth_date}
+                        address = {employee.address}
+                        favorite_jobs = {employee.favorite_jobs}
+                        about_me = {employee.about_me}
+                        setBodyTypeState = {this.setBodyTypeState} />
+                      );             
+                  })}
+              </ul>
+          );*/
     }
 };
 export default AdminEmployees;
