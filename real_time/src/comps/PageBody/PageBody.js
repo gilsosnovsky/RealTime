@@ -17,6 +17,8 @@ import AdminBusiness from "../AdminPages/AdminBusiness";
 import AdminEmployees from "../AdminPages/AdminEmployees";
 import AdminJobs from "../AdminPages/AdminJobs";
 import AdminMessages from "../AdminPages/AdminMessages";
+import ForgotPassword from "../WelcomePages/ForgotPassword/ForgotPassword"
+import EmailSent from "../WelcomePages/ForgotPassword/EmailSent"
 
 const pageBody = (props) => {
   if (props.pageBodyState === "homePage") {
@@ -75,11 +77,13 @@ const pageBody = (props) => {
   } else if (props.pageBodyState === "admin_messages") {
     return <AdminMessages />;
   } else if (props.pageBodyState === "forgot_password") {
-    return (
-      <div id="firstPageBody">
-        <h1>forgot password page</h1>
-      </div>
-    );
+      return <ForgotPassword 
+      passwordChange={props.passwordChange}
+          />; 
+  }
+  else if(props.pageBodyState ==='PasswordChange')
+  {
+    return <EmailSent />
   }
   else {
     return (

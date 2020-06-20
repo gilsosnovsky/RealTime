@@ -39,7 +39,6 @@ class MyPage extends Component {
       });
     }
   };
-
   onClickLoginEmployee = () => {
     this.setState({
       PageBodyState: "EmloyeeLogin"
@@ -145,7 +144,10 @@ class MyPage extends Component {
       });
     }
   };
+  onPasswordChange =(email)=>{
+    this.setState({PageBodyState: 'PasswordChange'});
 
+  }
   onClickContact = () => {
     this.setState({
       PageBodyState: "contact",
@@ -217,6 +219,7 @@ class MyPage extends Component {
           user={this.state.user}
           setUser={this.setUser}
           index={this.state.index}
+          passwordChange={this.onPasswordChange}
         />
         <Footer />
       </div>
