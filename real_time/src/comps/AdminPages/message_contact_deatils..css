@@ -1,0 +1,122 @@
+/* For Mobile: */
+@media only screen and (max-width: 480px) {
+    #message_contact_deatils_container {
+      margin-top: 50px;
+      width: 100%;
+      min-height: 150px;
+      margin: 5px;
+      border: 2.5px solid #7925c0;
+      border-radius: 10px;
+      background-color: white;
+      transition: 0.4s;
+      font-size: 12px;
+    }
+  
+    #message_contact_deatils_item {
+      height: 100%;
+      width: 100%;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+  
+    #message_contact_item_info {
+      height: 100%;
+      width: 75%;
+      float: left;
+    }
+  
+    .message_contact_full_info {
+      height: 100%;
+      width: 100%;
+      float: right;
+      padding-right: 10px;
+    }
+
+    #message_contact_deatils_button {
+      height: 100%;
+      width: 100%;
+      align-items: center;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    #message_contact_deatils_button_delete_message {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50px;
+      width: 120px;
+      cursor: pointer;
+      border-radius: 10px;
+      background-color: #7925c0;
+      color: white;
+      font-weight: bold;
+      float: left;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+  }
+  
+  /* For desktop: */
+  @media only screen and (min-width: 480px) {
+    #message_contact_deatils_container {
+      margin-top: 50px;
+      width: 900px;
+      height: 200px;
+      margin: 5px;
+      border: 2.5px solid #7925c0;
+      border-radius: 10px;
+      background-color: white;
+      transition: 0.3s;
+      font-size: 15px;
+    }
+  
+    #message_contact_deatils_item {
+      height: 100%;
+      width: 100%;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+   
+    #message_contact_item_info {
+      height: 100%;
+      width: 80%;
+      float: right;
+    }
+  
+    .message_contact_full_info {
+      height: 100%;
+      width: 70%;
+      float: right;
+      padding-right: 2%;
+    }
+
+    .messqge_contact_content {
+    height: 100%;
+      width: 70%;
+      float: center;
+      padding-right: 2%;
+    }
+
+    #message_contact_deatils_button {
+      height: 100%;
+      width: 25%;
+      /* float: left;  */
+      display: inline-block;
+    }
+
+    #message_contact_deatils_button_delete_message {
+      display: flex;
+      justify-content: right;
+      align-items: right;
+      height: 24%;
+      width: 80%;
+      cursor: pointer;
+      border-radius: 10px;
+      margin: 7%;
+      background-color: #7925c0;
+      color: white;
+      font-weight: bold;
+    }
+  }
+  
