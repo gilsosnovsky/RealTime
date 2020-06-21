@@ -15,18 +15,8 @@ class EmployeeJobOffers extends React.Component {
     const db = fire.database();
     db.ref("/jobs/jobs_list").on("value", (snapshot) => {
       let allJobs = [];
-      let temp=0;
       snapshot.forEach((snap1) => {
-        db.ref("/employees/employees_list/" + this.state.index + "/jobs").on("value", (snapshot) => {
-          snapshot.forEach((snap2) => {
-            if(snap1.ref.key===snap2.ref.key)
-              temp=1;
-          })
-        })
-        if(temp!==1){
           allJobs.push(snap1);
-          temp=0;
-        }
       });
       this.setState({ jobs_list: allJobs, loading: "hidden" });
     });
