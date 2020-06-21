@@ -53,7 +53,7 @@ class AdminJobs extends React.Component {
         return (
           <div id="jobs_admin">
             <div id="jobs_admin_title">
-                שלום עמית
+                עבודות רשומות 
             </div>
             <div id="jobs_admin_loading_jobs_container" style={{ visibility: `${this.state.loading}`, }}>
               טוען...<br />

@@ -55,37 +55,6 @@
       padding-right: 15px;
     }
   
-    #employee_deatils_buttons_edit_deatils {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 50px;
-      width: 120px;
-      cursor: pointer;
-      border-radius: 10px;
-      background-color: #7925c0;
-      color: white;
-      font-weight: bold;
-      float: right;
-      margin-top: 20px;
-      margin-bottom: 10px;
-    } 
-
-    #employee_deatils_buttons_make_admin {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 50px;
-      width: 120px;
-      cursor: pointer;
-      border-radius: 10px;
-      background-color: #7925c0;
-      color: white;
-      font-weight: bold;
-      float: left;
-      margin-top: 20px;
-      margin-bottom: 10px;
-    }
 
     #employee_deatils_buttons_delete_employee {
       display: flex;
@@ -157,36 +126,8 @@
       height: 100%;
       width: 25%;
       float: left; 
-      display: inline-block;
     }
   
-    #employee_deatils_buttons_edit_deatils {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 24%;
-      width: 80%;
-      cursor: pointer;
-      border-radius: 10px;
-      margin: 7%;
-      background-color: #7925c0;
-      color: white;
-      font-weight: bold;
-    }
-  
-    #employee_deatils_buttons_make_admin {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 24%;
-      width: 80%;
-      cursor: pointer;
-      border-radius: 10px;
-      margin: 7%;
-      background-color: #7925c0;
-      color: white;
-      font-weight: bold;
-    }
 
     #employee_deatils_buttons_delete_employee {
       display: flex;
@@ -196,7 +137,7 @@
       width: 80%;
       cursor: pointer;
       border-radius: 10px;
-      margin: 7%;
+      margin-top: 70%;
       background-color: #7925c0;
       color: white;
       font-weight: bold;

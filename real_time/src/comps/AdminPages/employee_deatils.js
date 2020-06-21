@@ -50,18 +50,6 @@ class EmployeeDeatils extends React.Component {
                         </div>
                         <div id="employee_deatils_buttons">
                             <div
-                                id="employee_deatils_buttons_edit_deatils"
-                                onClick={() => alert("edit settings")}>
-                                ערוך פרטי משתמש
-                            </div>
-                            <div
-                                id="employee_deatils_buttons_make_admin"
-                                // onClick={this.make_admin}
-                                onClick={() => { alert("make admin"); }}//this.make_admin}
-                            >
-                                הפוך לאדמין
-                            </div>
-                            <div
                                 id="employee_deatils_buttons_delete_employee"
                                 onClick={() => {
                                     alert("delete user");
