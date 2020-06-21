@@ -48,7 +48,8 @@ const NavBar = (props) => {
       clickAdminEmployees={props.clickAdminEmployees}
       clickAdminBusiness={props.clickAdminBusiness}
       clickLogout={props.clickLogout}
-      clickAdminMessages={props.clickAdminMessages}/>
+      clickAdminMessages={props.clickAdminMessages}
+      userName={props.userName}/>
     );
   }
   

@@ -13,6 +13,7 @@ class singleJobItemBusiness extends React.Component {
     job_remarks: this.props.remarks,
     job_clothing: this.props.clothing,
     job_payment_time: this.props.payment_time,
+    job_index:this.props.job_index
   };
 
   render() {
@@ -23,12 +24,11 @@ class singleJobItemBusiness extends React.Component {
             <img
               id="job_item_business_logo"
               src={this.state.job_logo}
-              alt="job_logo"
-            />
+              alt="job_logo"/>
           </div>
 
           <div id="job_item_info_business">
-            <div class="full_info_business">
+            <div className="full_info_business">
               <b> תחום כללי של העבודה: </b>
               {this.state.job_type}
               <br />
@@ -57,14 +57,12 @@ class singleJobItemBusiness extends React.Component {
         <div id="job_item_buttons_business">
           <div
             id="job_item_buttons_show_candi"
-            onClick={() => this.props.setBodyTypeState(this.state.job_index)}
-          >
+            onClick={() => this.props.setBodyTypeState(this.state.job_index)}>
             צפייה במועמדים
           </div>
           <div
             id="job_item_buttons_delete_job"
-            onClick={() => this.props.deleteJob(this.state.job_index)}
-          >
+            onClick={() => this.props.deleteJob(this.state.job_index)}>
             מחק משרה
           </div>
         </div>

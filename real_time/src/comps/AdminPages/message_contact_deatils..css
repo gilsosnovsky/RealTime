@@ -1,6 +1,6 @@
 /* For Mobile: */
 @media only screen and (max-width: 480px) {
-    #employee_deatils_container {
+    #message_contact_deatils_container {
       margin-top: 50px;
       width: 100%;
       min-height: 150px;
@@ -12,51 +12,35 @@
       font-size: 12px;
     }
   
-    #employee_deatils_item {
+    #message_contact_deatils_item {
       height: 100%;
       width: 100%;
       border-top-left-radius: 10px;
       border-top-right-radius: 10px;
     }
-    #employee_item_logo_container {
-      height: 100%;
-      width: 20%;
-      float: right;
-      border-left: 2.5px solid #7925c0;
-    }
-    #employee_item_logo {
-      display: block;
-      margin: 0 auto;
-      max-width: 70px;
-    }
-    #employee_item_logo:hover {
-      opacity: 0.6;
-      transition: 0.3s;
-    }
   
-    #employee_item_info {
+    #message_contact_item_info {
       height: 100%;
       width: 75%;
       float: left;
     }
   
-    .employee_full_info {
+    .message_contact_full_info {
       height: 100%;
       width: 100%;
       float: right;
       padding-right: 10px;
     }
 
-    #employee_deatils_buttons {
+    #message_contact_deatils_button {
       height: 100%;
       width: 100%;
       align-items: center;
       padding-left: 15px;
       padding-right: 15px;
     }
-  
 
-    #employee_deatils_buttons_delete_employee {
+    #message_contact_deatils_button_delete_message {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -75,7 +59,7 @@
   
   /* For desktop: */
   @media only screen and (min-width: 480px) {
-    #employee_deatils_container {
+    #message_contact_deatils_container {
       margin-top: 50px;
       width: 900px;
       height: 200px;
@@ -87,57 +71,49 @@
       font-size: 15px;
     }
   
-    #employee_deatils_item {
+    #message_contact_deatils_item {
       height: 100%;
       width: 100%;
       border-top-left-radius: 10px;
       border-top-right-radius: 10px;
     }
-    #employee_item_logo_container {
-      height: 100%;
-      width: 20%;
-      float: right;
-      border-left: 2.5px solid #7925c0;
-    }
-    #employee_item_logo {
-      display: block;
-      margin: 0 auto;
-      height: 90%;
-    }
-    #employee_item_logo:hover {
-      opacity: 0.6;
-      transition: 0.3s;
-    }
-  
-    #employee_item_info {
+   
+    #message_contact_item_info {
       height: 100%;
       width: 80%;
       float: right;
     }
   
-    .employee_full_info {
+    .message_contact_full_info {
       height: 100%;
       width: 70%;
       float: right;
       padding-right: 2%;
     }
 
-    #employee_deatils_buttons {
+    .messqge_contact_content {
+    height: 100%;
+      width: 70%;
+      float: center;
+      padding-right: 2%;
+    }
+
+    #message_contact_deatils_button {
       height: 100%;
       width: 25%;
-      float: left; 
+      /* float: left;  */
+      display: inline-block;
     }
-  
 
-    #employee_deatils_buttons_delete_employee {
+    #message_contact_deatils_button_delete_message {
       display: flex;
-      justify-content: center;
-      align-items: center;
+      justify-content: right;
+      align-items: right;
       height: 24%;
       width: 80%;
       cursor: pointer;
       border-radius: 10px;
-      margin-top: 70%;
+      margin: 7%;
       background-color: #7925c0;
       color: white;
       font-weight: bold;

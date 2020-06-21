@@ -43,11 +43,10 @@ class BusinessMyCadidates extends React.Component {
         loading: "visible",
       });
       const db = fire.database();
-      db.ref("/jobs/jobs_list/" + job_index + "/candidates").on(
-        "value",
-        (snapshot) => {
+      db.ref("/jobs/jobs_list/" + job_index + "/candidates").on("value",(snapshot) => {
           console.log("in ref");
           snapshot.forEach((snap) => {
+            console.log("in for!");
             if (snap.val() !== "no candidates yet") {
               db.ref("/employees/employees_list/" + snap.val()).on(
                 "value",
@@ -74,20 +73,6 @@ class BusinessMyCadidates extends React.Component {
   deleteJob(job_index) {
     const db = fire.database();
     db.ref("/jobs/jobs_list/" + job_index).remove();
-    //delete from employees
-    /*db.ref("/employees/employees_list/").on("value", snapshot1 => {
-      snapshot1.forEach((snap1) => {
-        db.ref("/employees/employees_list/"+snap1.ref.key+ "/jobs").on("value", snapshot2 => {
-          snapshot2.forEach((snap2) => {
-            if(snap2.val()===job_index){
-              let x=db.ref("/employees/employees_list/"+snap1.ref.key).child("jobs").child(job_index).set("");
-              console.log(x);
-            }
-          })
-        })
-      })
-    });
-    //this.props.clickWatchCandidates();*/
   }
 
   render() {
@@ -146,8 +131,7 @@ class BusinessMyCadidates extends React.Component {
               id="jobs_business_loading_jobs"
               className="spinner-border"
               role="status"
-              style={{}}
-            >
+              style={{}}>
               <span className="sr-only">Loading...</span>
             </div>
           </div>
@@ -167,8 +151,7 @@ class BusinessMyCadidates extends React.Component {
                   user_pic={user_pic}
                   favorite_jobs={candidate.favorite_jobs}
                   about_me={candidate.about_me}
-                  setBodyTypeState={this.setBodyTypeState}
-                />
+                  setBodyTypeState={this.setBodyTypeState}/>
               );
             })}
           </ul>
