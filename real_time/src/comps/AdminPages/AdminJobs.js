@@ -21,32 +21,54 @@ class AdminJobs extends React.Component {
           let allJobs = [];
           snapshot.forEach(snap => {
             if(snap.val().is_my_job !== true)
-              allJobs.push(snap.val());
+              allJobs.push(snap);
           });
           this.setState({ jobs_list: allJobs, loading: "hidden" });
         });
     }
     
-    setBodyTypeState=()=>{
-        if(this.state.bodyType==="jobs"){
-          this.setState({
-            bodyType: "candidates"
-          });
-          const db = fire.database();
-          db.ref("/employees/employees_list").on("value", snapshot => {
-            let allcandidates = [];
-            snapshot.forEach(snap => {
-              allcandidates.push(snap.val());
+    setBodyTypeState=(job_index)=>{
+      var allcandidates = [];
+      console.log(job_index);
+      if (this.state.bodyType === "jobs") {
+        console.log("in if!");
+        this.setState({
+          bodyType: "candidates",
+          loading: "visible",
+        });
+        const db = fire.database();
+        db.ref("/jobs/jobs_list/" + job_index + "/candidates").on("value",(snapshot) => {
+            console.log("in ref");
+            snapshot.forEach((snap) => {
+              console.log("in for!");
+              if (snap.val() !== "no candidates yet") {
+                db.ref("/employees/employees_list/" + snap.val()).on(
+                  "value",
+                  (snapshot) => {
+                    allcandidates.push(snapshot.val());
+                    console.log("Push candidate: " + snapshot.val());
+                  }
+                );
+              }
             });
-            this.setState({ candidate_list: allcandidates, loading: "hidden" });
-          });
-        }
-        else{
-          this.setState({
-            bodyType: "jobs"
-          });
-        }
+            this.setState(
+              { candidate_list: allcandidates, loading: "hidden" },
+              () => console.log("CANDIDATE: " + allcandidates.length)
+            );
+          }
+        );
+      } else {
+        this.setState({
+          bodyType: "jobs",
+        });
+      }
     }
+
+    deleteJob(job_index) {
+      const db = fire.database();
+      db.ref("/jobs/jobs_list/" + job_index).remove();
+    }
+  
     
       render() {
         if (this.state.bodyType=== "jobs"){
@@ -65,16 +87,18 @@ class AdminJobs extends React.Component {
               {
                 this.state.jobs_list.map((job, index) => {
                   return <SingleJobItemBusiness type={job.type}
-                    hours={job.hours}
-                    date={job.date}
-                    place={job.place}
-                    salary={job.salary}
-                    long_info={job.long_info}
+                    hours={job.val().hours}
+                    date={job.val().date}
+                    place={job.val().place}
+                    salary={job.val().salary}
+                    long_info={job.val().long_info}
                     logo={logo}
-                    remarks={job.remarks}
-                    clothing={job.clothing}
-                    payment_time={job.payment_time}
+                    remarks={job.val().remarks}
+                    clothing={job.val().clothing}
+                    payment_time={job.val().payment_time}
+                    job_index={job.ref.key}
                     setBodyTypeState={this.setBodyTypeState}
+                    deleteJob={this.deleteJob}
                    />
                 })
               }
