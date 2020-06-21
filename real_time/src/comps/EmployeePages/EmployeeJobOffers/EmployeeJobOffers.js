@@ -15,8 +15,18 @@ class EmployeeJobOffers extends React.Component {
     const db = fire.database();
     db.ref("/jobs/jobs_list").on("value", (snapshot) => {
       let allJobs = [];
-      snapshot.forEach((snap) => {
-        allJobs.push(snap);
+      let temp=0;
+      snapshot.forEach((snap1) => {
+        db.ref("/employees/employees_list/" + this.state.index + "/jobs").on("value", (snapshot) => {
+          snapshot.forEach((snap2) => {
+            if(snap1.ref.key===snap2.ref.key)
+              temp=1;
+          })
+        })
+        if(temp!==1){
+          allJobs.push(snap1);
+          temp=0;
+        }
       });
       this.setState({ jobs_list: allJobs, loading: "hidden" });
     });
@@ -25,7 +35,7 @@ class EmployeeJobOffers extends React.Component {
   render() {
     return (
       <div id="jobs_employee">
-        <div id="jobs_employee_title">משרות במיוחד עבורך</div>
+        <div id="jobs_employee_title">משרות זמינות באתר</div>
         <div
           id="jobs_employee_loading_jobs_container"
           style={{ visibility: `${this.state.loading}` }}>
