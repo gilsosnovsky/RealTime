@@ -65,24 +65,6 @@ class AdminEmployees extends React.Component {
           <div id="msg">{this.state.msg}</div>
         </div>
       );
-    /* else if (this.state.bodyType === "edit_employee")
-        return (
-          <ul>
-              {this.state.employees.map((employee, index) => {
-                  return (
-                    <EmployeeSettings fisrt_name = {employee.fisrt_name}
-                      last_name = {employee.last_name}
-                      email = {employee.email}
-                      phone_number = {employee.phone_number}
-                      birth_date = {employee.birth_date}
-                      address = {employee.address}
-                      favorite_jobs = {employee.favorite_jobs}
-                      about_me = {employee.about_me}
-                      setBodyTypeState = {this.setBodyTypeState} />
-                    );             
-                })}
-            </ul>
-        );*/
   }
 };
 export default AdminEmployees;
