@@ -1,6 +1,6 @@
 #admin_business{
     min-height: 650px;
-    padding-top: 100px;
+    padding-top: 130px;
     width: 85%;
     margin-right: auto;
     margin-left: auto;
@@ -8,4 +8,9 @@
     text-align: right;
     direction: rtl;
     font-size: 20px;
+}
+
+#registered_business{
+    color: #7925c0;
+    margin-bottom:  auto;
 }

@@ -20,7 +20,6 @@ class AdminJobs extends React.Component {
         db.ref("/jobs/jobs_list").on("value", snapshot => {
           let allJobs = [];
           snapshot.forEach(snap => {
-            if(snap.val().is_my_job !== true)
               allJobs.push(snap);
           });
           this.setState({ jobs_list: allJobs, loading: "hidden" });

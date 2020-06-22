@@ -1,0 +1,70 @@
+
+    #business_deatils_container {
+      margin-top: 50px;
+      width: 900px;
+      height: 200px;
+      margin: 5px;
+      border: 2.5px solid #7925c0;
+      border-radius: 10px;
+      background-color: white;
+      transition: 0.3s;
+      font-size: 15px;
+    }
+  
+    #business_deatils_item {
+      height: 100%;
+      width: 100%;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+    #business_item_logo_container {
+      height: 100%;
+      width: 20%;
+      float: right;
+      border-left: 2.5px solid #7925c0;
+    }
+    #business_item_logo {
+      display: block;
+      margin: 0 auto;
+      height: 90%;
+    }
+    #business_item_logo:hover {
+      opacity: 0.6;
+      transition: 0.3s;
+    }
+  
+    #business_item_info {
+      height: 100%;
+      width: 80%;
+      float: right;
+    }
+  
+    .business_full_info {
+      height: 100%;
+      width: 70%;
+      float: right;
+      padding-right: 2%;
+    }
+
+    #business_deatils_buttons {
+      height: 100%;
+      width: 25%;
+      float: left; 
+    }
+  
+
+    #business_deatils_buttons_delete_employee {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 24%;
+      width: 80%;
+      cursor: pointer;
+      border-radius: 10px;
+      margin-top: 70%;
+      background-color: #7925c0;
+      color: white;
+      font-weight: bold;
+    }
+  
+  
