@@ -53,6 +53,7 @@ class EmployeeSettings extends React.Component {
       db.ref("/employees/employees_list/" + this.props.index).update({ 'about_me': newUser.about_me });
     }
     this.props.setUser(newUser);
+    //this.forceUpdate();
   }
 
   render() {

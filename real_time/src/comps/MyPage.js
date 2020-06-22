@@ -178,6 +178,7 @@ class MyPage extends Component {
   setUser = (newuser) =>{
   
     this.setState({
+      NavBarState:"employee_interface",
       user: newuser
     });
     
@@ -204,6 +205,7 @@ class MyPage extends Component {
           clickAdminBusiness={this.onClickAdminBusiness}
           clickAdminMessages={this.onClickAdminMessages}
           clickLogout={this.onClickLogout}
+          index={this.state.index}
         />
 
         <PageBody

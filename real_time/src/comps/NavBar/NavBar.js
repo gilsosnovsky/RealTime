@@ -25,7 +25,8 @@ const NavBar = (props) => {
       clickJobOffersEmployee={props.clickJobOffersEmployee}
       clickSettingsEmployee={props.clickSettingsEmployee}
       clickLogout={props.clickLogout}
-      userName={props.userName}/>
+      userName={props.userName}
+      index={props.index}/>
     );
   }
 

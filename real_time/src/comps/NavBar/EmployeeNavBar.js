@@ -4,15 +4,19 @@ import logo from "./logo.gif";
 import jerusalem_city_logo from "./jerusalem_city_logo.jpg";
 import promote_teenagers_logo from "./promote_teenagers_logo.jpg";
 import "./NavBar.css";
+import fire from "../../firebaseConfig";
 //import $ from "jquery";
 //window.$ = $;
 
 class EmployeeNavBar extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      userName: this.props.userName,
-    };
+    const db = fire.database();
+    db.ref("/employees/employees_list/" + props.index).on("value", snapshot => {
+      this.state = {
+        userName: snapshot.val().first_name
+      };
+  });
   }
 
   componentDidMount() {
