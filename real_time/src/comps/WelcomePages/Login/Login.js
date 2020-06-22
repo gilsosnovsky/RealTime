@@ -80,10 +80,13 @@ class Login extends Component {
           snapshot.forEach((snap) => {
             if (snap.val().email === userEmail) {
               this.setState({ loading: 'hidden' });
-              this.props.clickConnectBusiness(snap.val(), snap.ref.key);
+              if(snap.val().status==="wating")
+                this.setState({ error_msg: "האדמין טרם אישר את ההרשמה שלך" });
+              else
+                this.props.clickConnectBusiness(snap.val(), snap.ref.key);
             }
           });
-          this.setState({ loading: 'hidden', error_msg: "שם משתמש או סיסמה שגויים" });
+          //this.setState({ loading: 'hidden', error_msg: "שם משתמש או סיסמה שגויים" });
         });
       }
     }).catch((error) => {

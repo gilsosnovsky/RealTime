@@ -20,7 +20,7 @@ class BusinessSignUp extends Component
       phone_number: '',
       jobs_length: '',
       error_msg: '',
-      type: '',
+      status: "wating"
     }
   }
 
@@ -61,7 +61,7 @@ class BusinessSignUp extends Component
         last_name: this.state.last_name,  
         phone_number: this.state.phone_number,
         jobs_length: this.state.jobs_length,
-        type: 'business',
+        status: "wating",
         company_name: this.state.company_name,
         jobs:[]
       }

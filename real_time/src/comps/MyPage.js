@@ -215,6 +215,7 @@ class MyPage extends Component {
           clickConnectEmployee={this.onClickConnectEmployee}
           clickConnectBusiness={this.onClickConnectBusiness}
           clickConnectAdmin={this.onClickConnectAdmin}
+          clickAdminEmployees={this.onClickAdminEmployees}
           clickSignUp={this.onClickSignUp}
           clickForgotPassword={this.onClickForgotPassword}
           clickWatchCandidates={this.onClickWatchCandidates}

@@ -32,7 +32,7 @@ class AdminEmployees extends React.Component {
     if (this.state.bodyType === "employees_deatils")
       return (
         <div id="admin_employees">
-          <div id="registered_employees">עובדים רשומים </div>
+          
           <div
             id="admin_employees_loading_employees_container"
             style={{ visibility: `${this.state.loading}` }}>
@@ -46,6 +46,7 @@ class AdminEmployees extends React.Component {
               <span className="sr-only">Loading...</span>
             </div>
           </div>
+          <div id="employee_admin_title">עובדים רשומים </div>
           <ul>
             {this.state.employees.map((employee, index) => {
               return (

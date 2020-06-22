@@ -1,16 +1,34 @@
-#admin_business{
+#admin_business {
     min-height: 650px;
-    padding-top: 130px;
-    width: 85%;
-    margin-right: auto;
-    margin-left: auto;
+    padding-top: 120px;
+    width: 900px;
+    margin: 0 auto;
     background-color: white;
     text-align: right;
     direction: rtl;
     font-size: 20px;
+  }
+
+#business_admin_title {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #7925c0;
+    padding-right: 30px;
 }
 
-#registered_business{
+  #admin_business_loading_business {
     color: #7925c0;
-    margin-bottom:  auto;
-}
+    font-size: 25px;
+    position: absolute;
+    padding-left: 15%;
+    width: 100%;
+    text-align: center;
+  }
+
+  #admin_business_loading_business {
+    font-size: 20px;
+  }
+
+  

@@ -11,6 +11,8 @@ class BusinessItemAdmin extends React.Component {
         phone_number: this.props.phone_number,
         company_name: this.props.company_name,
         job_length: this.props.job_length,
+        business_index:this.props.business_index,
+        onClickFunc:this.props.onClickFunc,
         user_pic: this.props.user_pic,
         text_in_button: this.props.text_in_button
     };
@@ -38,7 +40,7 @@ class BusinessItemAdmin extends React.Component {
                             <div
                                 id="business_deatils_buttons_delete_employee"
                                 onClick={() => {
-                                    alert("delete user");
+                                    {this.state.onClickFunc(this.state.business_index, this.state.email)}
                                 }}>
                                {this.state.text_in_button}
                             </div>
