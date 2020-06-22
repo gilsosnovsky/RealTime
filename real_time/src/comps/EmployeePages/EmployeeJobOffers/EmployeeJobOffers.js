@@ -16,7 +16,8 @@ class EmployeeJobOffers extends React.Component {
     db.ref("/jobs/jobs_list").on("value", (snapshot) => {
       let allJobs = [];
       snapshot.forEach((snap1) => {
-          allJobs.push(snap1);
+        if(snap1.val().status==="רלוונטי")
+            allJobs.push(snap1);
       });
       this.setState({ jobs_list: allJobs, loading: "hidden" });
     });

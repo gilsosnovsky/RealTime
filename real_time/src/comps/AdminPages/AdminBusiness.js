@@ -35,15 +35,16 @@ class AdminBusiness extends React.Component {
 
       onClickApproved(business_index){
         const db = fire.database();
-        db.ref("/business/business_list/"+business_index).update({status: "approved"});
-        alert("המעסיק אושר בהצלחה!");
-        //this.props.clickAdminEmployees();
+        db.ref("/business/business_list/"+business_index).update({status: "approved"}).then({function: ()=>{alert("המעסיק אושר בהצלחה!");}});
+        
       }
 
       onClickDelete(business_index, business_email){
+        alert("המעסיק נמחק בהצלחה!")
         const db = fire.database();
         db.ref("/business/business_list/"+business_index).remove(); 
         this.props.clickAdminEmployees();
+        //we need to delete also from auth
       }
     
       render() {

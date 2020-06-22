@@ -21,6 +21,7 @@ class BusinessPostJob extends React.Component {
     payment_time: "",
     payment_method: "",
     employer_index: "",
+    status: "",
     candidates: ["no candidates yet"],
   };
 
@@ -37,6 +38,7 @@ class BusinessPostJob extends React.Component {
         remarks: this.remarks.value,
         employer_index: this.props.index,
         clothing: this.clothing.value,
+        status: "רלוונטי"
       },
       () => {
         const db = fire.database();
