@@ -9,16 +9,7 @@ import fire from "../../firebaseConfig";
 //window.$ = $;
 
 class EmployeeNavBar extends React.Component {
-  constructor(props) {
-    super(props);
-    const db = fire.database();
-    db.ref("/employees/employees_list/" + props.index).on("value", snapshot => {
-      this.state = {
-        userName: snapshot.val().first_name
-      };
-  });
-  }
-
+  
   componentDidMount() {
     var m = window.matchMedia("(min-width: 480px)"); //only on Desktop mode
     //x.addListener(componentDidMount); // Attach listener function on state changes
@@ -105,7 +96,7 @@ class EmployeeNavBar extends React.Component {
           </div>
           <div id="hello_plus_logout">
             <label className="hello" onClick={this.props.clickSettingsEmployee}>
-              שלום {this.state.userName}
+              שלום {this.props.userName}
             </label>
             <label className="logout" onClick={this.props.clickLogout}>
               התנתק
