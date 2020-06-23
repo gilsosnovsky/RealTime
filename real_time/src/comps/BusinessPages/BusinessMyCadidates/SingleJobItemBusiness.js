@@ -2,21 +2,6 @@ import React from "react";
 import "./SingleJobItemBusiness.css";
 
 class singleJobItemBusiness extends React.Component {
-  state = {
-    job_type: this.props.type,
-    job_hours: this.props.hours,
-    job_date: this.props.date,
-    job_place: this.props.place,
-    job_salary: this.props.salary,
-    job_logo: this.props.logo,
-    job_long_info: this.props.long_info,
-    job_remarks: this.props.remarks,
-    job_clothing: this.props.clothing,
-    job_payment_time: this.props.payment_time,
-    status: this.props.status,
-    job_index:this.props.job_index,
-  };
-  
 
   render() {
     return (
@@ -25,34 +10,34 @@ class singleJobItemBusiness extends React.Component {
           <div id="job_item_logo_business_container">
             <img
               id="job_item_business_logo"
-              src={this.state.job_logo}
+              src={this.props.logo}
               alt="job_logo"/>
           </div>
 
           <div id="job_item_info_business">
             <div className="full_info_business">
               <b> תחום כללי של העבודה: </b>
-              {this.state.job_type}
+              {this.props.type}
               <br />
               <b> מתי: </b>
-              {this.state.job_date} , {this.state.job_hours}
+              {this.props.date} , {this.props.hours}
               <br />
               <b> איפה: </b>
-              {this.state.job_place}
+              {this.props.place}
               <br />
               <b> משכורת: </b>
-              {this.state.job_salary}₪<br />
+              { this.props.salary}₪<br />
               <b>פרטים נוספים:</b>
-              {this.state.job_long_info}
+              {this.props.long_info}
               <br />
               <b>ביגוד: </b>
-              {this.state.job_clothing}
+              {this.props.clothing}
               <br />
               <b>זמן תשלום : </b>
-              {this.state.job_payment_time}
+              {this.props.payment_time}
               <br />
               <b>הערות: </b>
-              {this.state.job_remarks}
+              {this.props.remarks}
             </div>
           </div>
         </div>
@@ -60,7 +45,7 @@ class singleJobItemBusiness extends React.Component {
           <div id="job_status"><b>סטטוס:</b> {this.props.status}</div>
           <div
             id="job_item_buttons_show_candi"
-            onClick={() => this.props.setBodyTypeState(this.state.job_index)}>
+            onClick={() => this.props.setBodyTypeState(this.props.job_index)}>
             צפייה במועמדים
           </div>
           {this.props.status==="רלוונטי" && 
@@ -74,7 +59,7 @@ class singleJobItemBusiness extends React.Component {
           <div
             id="job_item_buttons_delete_job"
             onClick={() => {
-              this.props.changeStatusJob(this.props.job_index, this.state.status)}} >
+              this.props.changeStatusJob(this.props.job_index, this.props.status)}} >
               הפוך לרלוונטי
           </div> }
         </div>
