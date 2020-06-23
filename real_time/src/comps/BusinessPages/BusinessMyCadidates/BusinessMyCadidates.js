@@ -7,10 +7,11 @@ import logo from "../../EmployeePages/EmployeeJobOffers/symbol.gif";
 import user_pic from "../../EmployeePages/EmployeeSettings/person.png";
 
 class BusinessMyCadidates extends React.Component {
+  _isMounted = false;
   constructor(props) {
     super(props);
     this.setBodyTypeState = this.setBodyTypeState.bind(this);
-    this.deleteJob = this.deleteJob.bind(this);
+    this.changeStatusJob = this.changeStatusJob.bind(this);
   }
 
   state = {
@@ -23,6 +24,7 @@ class BusinessMyCadidates extends React.Component {
 
   componentDidMount() {
     console.log("A");
+    this._isMounted = true;
     const db = fire.database();
     db.ref("/jobs/jobs_list").on("value", (snapshot) => {
       let allJobs = [];
@@ -32,6 +34,7 @@ class BusinessMyCadidates extends React.Component {
       this.setState({ jobs_list: allJobs, loading: "hidden" });
     });
   }
+
 
   setBodyTypeState(job_index) {
     var allcandidates = [];
@@ -48,9 +51,7 @@ class BusinessMyCadidates extends React.Component {
           snapshot.forEach((snap) => {
             console.log("in for!");
             if (snap.val() !== "no candidates yet") {
-              db.ref("/employees/employees_list/" + snap.val()).on(
-                "value",
-                (snapshot) => {
+              db.ref("/employees/employees_list/" + snap.val()).on("value",(snapshot) => {
                   allcandidates.push(snapshot.val());
                   console.log("Push candidate: " + snapshot.val());
                 }
@@ -70,10 +71,14 @@ class BusinessMyCadidates extends React.Component {
     }
   }
 
-  deleteJob(job_index) {
+  changeStatusJob(job_index, current_status) {
     const db = fire.database();
-    db.ref("/jobs/jobs_list/" + job_index).remove();
+    if(current_status==="רלוונטי") 
+      db.ref("/jobs/jobs_list/" + job_index).update({status: "לא רלוונטי"});
+    else
+      db.ref("/jobs/jobs_list/" + job_index).update({status: "רלוונטי"});
   }
+
 
   render() {
     if (this.state.bodyType === "jobs") {
@@ -109,9 +114,11 @@ class BusinessMyCadidates extends React.Component {
                   remarks={job.val().remarks}
                   clothing={job.val().clothing}
                   payment_time={job.val().payment_time}
+                  status={job.val().status}
                   job_index={job.ref.key}
+                  button_status="visible"
                   setBodyTypeState={this.setBodyTypeState}
-                  deleteJob={this.deleteJob}
+                  changeStatusJob={this.changeStatusJob}
                 />
               );
             })}

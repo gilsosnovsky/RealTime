@@ -16,6 +16,19 @@ class BusinessItemAdmin extends React.Component {
     text_in_button: this.props.text_in_button,
   };
 
+  state = {
+    email: this.props.email,
+    first_name: this.props.first_name,
+    last_name: this.props.last_name,
+    phone_number: this.props.phone_number,
+    company_name: this.props.company_name,
+    job_length: this.props.job_length,
+    business_index: this.props.business_index,
+    onClickFunc: this.props.onClickFunc,
+    user_pic: this.props.user_pic,
+    text_in_button: this.props.text_in_button,
+  };
+
   render() {
     return (
       <div id="business_deatils_container">
@@ -48,20 +61,30 @@ class BusinessItemAdmin extends React.Component {
               {this.state.job_length}
               <br />
             </div>
-          </div>
-          <div id="business_deatils_buttons">
-            <div
-              id="business_deatils_buttons_delete_employee"
-              onClick={() => {
-                {
-                  this.state.onClickFunc(
-                    this.state.business_index,
-                    this.state.email
-                  );
-                }
-              }}
-            >
-              {this.state.text_in_button}
+            <div id="business_deatils_buttons">
+              {this.props.text_in_button === "מחק מעסיק" && (
+                <div
+                  id="business_deatils_buttons_watch_jobs"
+                  onClick={() => {
+                    this.props.clickWatchJobs(this.props.business_index);
+                  }}
+                >
+                  צפייה במשרות
+                </div>
+              )}
+              <div
+                id="business_deatils_buttons_delete_business"
+                onClick={() => {
+                  {
+                    this.props.onClickFunc(
+                      this.props.business_index,
+                      this.props.email
+                    );
+                  }
+                }}
+              >
+                {this.props.text_in_button}
+              </div>
             </div>
           </div>
         </div>

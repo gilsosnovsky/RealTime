@@ -8,7 +8,6 @@ class EmployeeSignUp extends Component {
 
   constructor(props) {
     super(props);
-    this.signUp = this.signUp.bind(this);
     this.state = {
       email: '',
       first_name: '',
@@ -27,48 +26,32 @@ class EmployeeSignUp extends Component {
 
   onSignUpEmployee = (e) => {
     e.preventDefault();
-    this.setState({
-      email: this.email.value,
-      password: this.password.value,
-      secondPassword: this.secondPassword.value,  // compare between the two passwords before sign up
-      first_name: this.first_name.value,
-      last_name: this.last_name.value,
-      phone_number: this.phone_number.value,
-      birth_date: this.birth_date.value,
-      address: this.adress.value,
-      favorite_jobs: this.favorite_job.value,
-      about_me: this.about_me.value
-    }, () => {
-      if (this.password.value !== this.secondPassword.value) {
-        this.setState({ error_msg: 'second password wrong' }); // need more checks for the input
-        return;
-      }
-      this.signUp();
-    });
-  }
-
-  signUp() {
-    fire.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).then((user) => {
+    if (this.password.value !== this.secondPassword.value) {
+      this.setState({ error_msg: 'second password wrong' }); // need more checks for the input
+      return;
+    }
+    fire.auth().createUserWithEmailAndPassword(this.email.value, this.password.value).then((user) => {
       const db = fire.database();
       var to_db = {
-        email: (this.state.email).toLocaleLowerCase(),
-        first_name: this.state.first_name,
-        last_name: this.state.last_name,
-        phone_number: this.state.phone_number,
-        birth_date: this.state.birth_date,
-        address: this.state.address,
-        favorite_jobs: this.state.favorite_jobs,
+        email: ( this.email.value).toLocaleLowerCase(),
+        first_name:this.first_name.value,
+        last_name: this.last_name.value,
+        phone_number: this.phone_number.value,
+        birth_date: this.birth_date.value,
+        address: this.adress.value,
+        favorite_jobs: this.favorite_job.value,
         type: 'employee',
-        about_me: this.state.about_me,
+        about_me: this.about_me.value,
         jobs: ["no jobs yet"]
       }
       db.ref("/employees/employees_list").push(to_db);
       this.props.clickLoginEmployee();
-    }).catch((error) => {
-      console.log(error.message);                 //posting the error from firebase in english
-      this.setState({ error_msg: error.message });
-    })
+      }).catch((error) => {
+        console.log(error.message);                 //posting the error from firebase in english
+        this.setState({ error_msg: error.message });
+      })
   }
+
 
   render() {
     return (

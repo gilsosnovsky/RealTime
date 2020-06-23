@@ -9,7 +9,6 @@ class BusinessSignUp extends Component
   constructor(props)
   {
     super(props);
-    this.signUp=this.signUp.bind(this);
     this.state={
       email: '',
       password: '',
@@ -29,50 +28,34 @@ class BusinessSignUp extends Component
       jobs_length: e.currentTarget.value
     });
   }
+
+  
   onSignUpBusiness=(e)=>{
     e.preventDefault();
-    this.setState({
-      email: this.email.value,
-      password: this.password.value,
-      secondPassword: this.secondPassword.value,  // compare between the two passwords before sign up
-      company_name: this.business_name.value,
-      first_name: this.first_name.value,
-      last_name: this.last_name.value,
-      phone_number: this.phone_number.value,
-    }, () => {
       if(this.password.value !== this.secondPassword.value)
       {
         this.setState({error_msg: 'second password is incorrect '});
         return;
       }
-      this.signUp(); //after all the input checks
-    });
-  }
-
-
-
-
-
-  signUp(){
-      fire.auth().createUserWithEmailAndPassword(this.state.email,this.state.password).then((user)=>{
-      var to_db={
-        email: (this.state.email).toLocaleLowerCase(),
-        first_name:this.state.first_name ,
-        last_name: this.state.last_name,  
-        phone_number: this.state.phone_number,
-        jobs_length: this.state.jobs_length,
-        status: "wating",
-        company_name: this.state.company_name,
-        jobs:[]
-      }
-      const db = fire.database();
-      db.ref("/business/business_list").push(to_db);
-      this.props.clickLoginBusiness();
-    }).catch((error)=>{ 
-      console.log(error.message);                 //posting the error from firebase in english
-      this.setState({error_msg: error.message});
-      })
-         
+      fire.auth().createUserWithEmailAndPassword(this.email.value,this.password.value).then((user)=>{
+        var to_db={
+          email: (this.email.value).toLocaleLowerCase(),
+          first_name:this.first_name.value ,
+          last_name: this.last_name.value,  
+          phone_number: this.phone_number.value,
+          jobs_length: this.state.jobs_length,
+          status: "wating",
+          company_name: this.business_name.value,
+          jobs:[]
+        }
+        const db = fire.database();
+        db.ref("/business/business_list").push(to_db);
+        this.props.clickLoginBusiness();
+      }).catch((error)=>{ 
+        console.log(error.message);                 //posting the error from firebase in english
+        this.setState({error_msg: error.message});
+        })
+    
   }
 
 

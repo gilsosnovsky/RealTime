@@ -74,7 +74,8 @@ const pageBody = (props) => {
     return <AdminEmployees/>;
   } else if (props.pageBodyState === "admin_business") {
     return <AdminBusiness 
-    clickAdminEmployees={props.clickAdminEmployees}/>;
+    clickAdminEmployees={props.clickAdminEmployees}
+    clickAdminBusiness={props.clickAdminBusiness}/>;
   } else if (props.pageBodyState === "admin_messages") {
     return <AdminMessages />;
   } else if (props.pageBodyState === "forgot_password") {
