@@ -1,7 +1,8 @@
-#admin_business {
+/* For Mobile: */
+@media only screen and (max-width: 480px) {
+  #admin_business {
     min-height: 650px;
-    padding-top: 120px;
-    width: 900px;
+    width: 100%;
     margin: 0 auto;
     background-color: white;
     text-align: right;
@@ -9,14 +10,13 @@
     font-size: 20px;
   }
 
-#business_admin_title {
-    margin-top: 30px;
+  #business_admin_title {
     margin-bottom: 20px;
     font-size: 16px;
     font-weight: bold;
     color: #7925c0;
-    padding-right: 30px;
-}
+    padding-right: 20px;
+  }
 
   #admin_business_loading_business {
     color: #7925c0;
@@ -30,5 +30,40 @@
   #admin_business_loading_business {
     font-size: 20px;
   }
+}
 
-  
+/* For desktop: */
+@media only screen and (min-width: 480px) {
+  #admin_business {
+    min-height: 650px;
+    padding-top: 50px;
+    width: 900px;
+    margin: 0 auto;
+    background-color: white;
+    text-align: right;
+    direction: rtl;
+    font-size: 20px;
+  }
+
+  #business_admin_title {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #7925c0;
+    padding-right: 30px;
+  }
+
+  #admin_business_loading_business {
+    color: #7925c0;
+    font-size: 25px;
+    position: absolute;
+    padding-left: 15%;
+    width: 100%;
+    text-align: center;
+  }
+
+  #admin_business_loading_business {
+    font-size: 20px;
+  }
+}
