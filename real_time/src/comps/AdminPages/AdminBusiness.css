@@ -8,6 +8,7 @@
     text-align: right;
     direction: rtl;
     font-size: 20px;
+    margin-left: 5%;
   }
 
   #business_admin_title {
@@ -15,7 +16,7 @@
     font-size: 16px;
     font-weight: bold;
     color: #7925c0;
-    padding-right: 20px;
+    padding-right: 40px;
   }
 
   #admin_business_loading_business {

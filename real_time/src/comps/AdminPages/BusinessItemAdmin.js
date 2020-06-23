@@ -40,6 +40,31 @@ class BusinessItemAdmin extends React.Component {
               alt="user_pic"
             />
           </div>
+          <div id="business_deatils_buttons">
+            {this.props.text_in_button === "מחק מעסיק" && (
+              <div
+                id="business_deatils_buttons_watch_jobs"
+                onClick={() => {
+                  this.props.clickWatchJobs(this.props.business_index);
+                }}
+              >
+                צפייה במשרות
+              </div>
+            )}
+            <div
+              id="business_deatils_buttons_delete_business"
+              onClick={() => {
+                {
+                  this.props.onClickFunc(
+                    this.props.business_index,
+                    this.props.email
+                  );
+                }
+              }}
+            >
+              {this.props.text_in_button}
+            </div>
+          </div>
           <div id="business_item_info">
             <div className="business_full_info">
               <b>שם פרטי: </b>
@@ -60,31 +85,6 @@ class BusinessItemAdmin extends React.Component {
               <b>המשרות המוצעות: </b>
               {this.state.job_length}
               <br />
-            </div>
-            <div id="business_deatils_buttons">
-              {this.props.text_in_button === "מחק מעסיק" && (
-                <div
-                  id="business_deatils_buttons_watch_jobs"
-                  onClick={() => {
-                    this.props.clickWatchJobs(this.props.business_index);
-                  }}
-                >
-                  צפייה במשרות
-                </div>
-              )}
-              <div
-                id="business_deatils_buttons_delete_business"
-                onClick={() => {
-                  {
-                    this.props.onClickFunc(
-                      this.props.business_index,
-                      this.props.email
-                    );
-                  }
-                }}
-              >
-                {this.props.text_in_button}
-              </div>
             </div>
           </div>
         </div>

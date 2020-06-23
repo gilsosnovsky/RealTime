@@ -3,7 +3,7 @@
   #business_deatils_container {
     margin-top: 10px;
     width: 95%;
-    min-height: 230px;
+    min-height: 300px;
     margin: 5px;
     border: 2.5px solid #7925c0;
     border-radius: 10px;
@@ -48,25 +48,38 @@
   }
 
   #business_deatils_buttons {
-    display: block;
-    position: absolute;
+    float: left;
     height: 45%;
     width: 45%;
     right: 62%;
     padding-top: 15px;
   }
 
-  #business_deatils_buttons_delete_employee {
+  #business_deatils_buttons_delete_business {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
+    height: 40px;
     width: 120px;
     cursor: pointer;
     border-radius: 10px;
     background-color: #7925c0;
     color: white;
     font-weight: bold;
+  }
+
+  #business_deatils_buttons_watch_jobs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 120px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #7925c0;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 10px;
   }
 }
 
@@ -132,10 +145,10 @@
     width: 150px;
     cursor: pointer;
     border-radius: 10px;
-    margin-top: 35%;
     background-color: #7925c0;
     color: white;
     font-weight: bold;
+    margin-top: 20px;
   }
 
   #business_deatils_buttons_watch_jobs {
@@ -146,9 +159,9 @@
     width: 150px;
     cursor: pointer;
     border-radius: 10px;
-    margin-top: 35%;
     background-color: #7925c0;
     color: white;
     font-weight: bold;
+    margin-top: 40px;
   }
 }
