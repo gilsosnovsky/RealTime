@@ -40,9 +40,9 @@ class BusinessItemAdmin extends React.Component {
                             <div
                                 id="business_deatils_buttons_delete_employee"
                                 onClick={() => {
-                                    {this.state.onClickFunc(this.state.business_index, this.state.email)}
+                                    {this.state.onClickFunc(this.props.business_index,  this.props.email)}
                                 }}>
-                               {this.state.text_in_button}
+                               {this.props.text_in_button}
                             </div>
                         </div>
                     </div>

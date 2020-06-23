@@ -41,9 +41,11 @@ class AdminBusiness extends React.Component {
 
       onClickDelete(business_index, business_email){
         alert("המעסיק נמחק בהצלחה!")
-        const db = fire.database();
-        db.ref("/business/business_list/"+business_index).remove(); 
-        this.props.clickAdminEmployees();
+        this.setState({ business_approved: [], business_waiting: [] }, ()=>{
+          const db = fire.database();
+          db.ref("/business/business_list/"+business_index).remove(); 
+        });
+        //this.props.clickAdminEmployees();
         //we need to delete also from auth
       }
     
