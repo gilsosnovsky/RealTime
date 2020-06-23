@@ -1,22 +1,54 @@
-#admin_messages{
-    min-height: 650px;
-    padding-top: 100px;
-    width: 85%;
-    margin-right: auto;
-    margin-left: auto;
+/* For Mobile: */
+@media only screen and (max-width: 480px) {
+  #admin_messages {
+    min-height: 400px;
+    padding-bottom: 20px;
+    width: 95%;
+    margin: 0 auto;
     background-color: white;
     text-align: right;
     direction: rtl;
-    font-size: 20px;
-}
-#messages{
+  }
+  #messages {
     margin-top: 20px;
-    color: purple;
-    font-size: 50px;
+    color: #7925c0;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  #msg {
+    text-align: center;
+    color: #7925c0;
+    font-size: 14px;
+    width: 100%;
+    height: 100%;
+  }
 }
 
-#msg{
+/* For desktop: */
+@media only screen and (min-width: 480px) {
+  #admin_messages {
+    min-height: 400px;
+    padding-top: 100px;
+    padding-bottom: 20px;
+    width: 900px;
+    margin: 0 auto;
+    background-color: white;
+    text-align: right;
+    direction: rtl;
+  }
+  #messages {
+    margin-top: 40px;
+    color: #7925c0;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  #msg {
     text-align: center;
-    color: purple;
-    font-size: 30px;
+    color: #7925c0;
+    font-size: 14px;
+    width: 100%;
+    height: 100%;
+  }
 }
