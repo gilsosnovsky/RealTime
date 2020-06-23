@@ -63,12 +63,14 @@ class AdminJobs extends React.Component {
       }
     }
 
-    deleteJob(job_index) {
+    changeStatusJob(job_index, current_status) {
       const db = fire.database();
-      db.ref("/jobs/jobs_list/" + job_index).remove();
+      if(current_status==="רלוונטי") 
+        db.ref("/jobs/jobs_list/" + job_index).update({status: "לא רלוונטי"});
+      else
+        db.ref("/jobs/jobs_list/" + job_index).update({status: "רלוונטי"});
     }
   
-    
       render() {
         if (this.state.bodyType=== "jobs"){
         return (
@@ -96,9 +98,10 @@ class AdminJobs extends React.Component {
                     remarks={job.val().remarks}
                     clothing={job.val().clothing}
                     payment_time={job.val().payment_time}
+                    status={job.val().status}
                     job_index={job.ref.key}
                     setBodyTypeState={this.setBodyTypeState}
-                    deleteJob={this.deleteJob}
+                    changeStatusJob={this.changeStatusJob}
                    />
                 })
               }
