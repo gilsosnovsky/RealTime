@@ -1,18 +1,22 @@
 import React from "react";
 import "./AdminBusiness.css"
 import BusinessItemAdmin from "./BusinessItemAdmin";
+import SingleJobItemBusiness from "../BusinessPages/BusinessMyCadidates/SingleJobItemBusiness";
 import fire from "../../firebaseConfig";
 import user_pic from "../EmployeePages/EmployeeSettings/person.png";
+import logo from "../EmployeePages/EmployeeJobOffers/symbol.gif";
 
 class AdminBusiness extends React.Component {
   constructor(props) {
     super(props);
     this.onClickApproved = this.onClickApproved.bind(this);
     this.onClickDelete = this.onClickDelete.bind(this);
+    this.onClickWatchJobs=this.onClickWatchJobs.bind(this);
   }
     state = {
         business_approved: [],
         business_waiting: [],
+        business_jobs: [],
         loading: "visible",
         bodyType: "business_deatils",
         msg: ""
@@ -34,22 +38,43 @@ class AdminBusiness extends React.Component {
       }
 
       onClickApproved(business_index){
+        alert("המעסיק אושר בהצלחה!")
         const db = fire.database();
-        db.ref("/business/business_list/"+business_index).update({status: "approved"}).then({function: ()=>{alert("המעסיק אושר בהצלחה!");}});
-        
+        db.ref("/business/business_list/"+business_index).update({status: "approved"}).then(this.forceUpdate());
+        this.props.clickAdminEmployees();
       }
 
       onClickDelete(business_index, business_email){
-        alert("המעסיק נמחק בהצלחה!")
-        const db = fire.database();
-        db.ref("/business/business_list/"+business_index).remove(); 
-        
-        //this.props.clickAdminEmployees();
-        //we need to delete also from auth
+        if (window.confirm("האם אתה בטוח שאתה רוצה למחוק מעסיק זה?")){
+          const db = fire.database();
+          db.ref("/business/business_list/"+business_index).remove().then(this.forceUpdate()); 
+          this.props.clickAdminEmployees();
+          alert("המעסיק נמחק בהצלחה!");
+        }
+      }
+
+      onClickWatchJobs(business_index){
+        if(this.state.bodyType==="business_deatils"){
+          this.setState({bodyType: "watch_jobs"});
+          let jobs=[];
+          const db = fire.database();
+          db.ref("/jobs/jobs_list").on("value",(snapshot) => {
+            snapshot.forEach((snap) => {
+              if (snap.val().employer_index === business_index) {
+                jobs.push(snap);
+              }
+            });
+            this.setState({business_jobs: jobs, loading: "hidden" });
+          });  
+        }
+        else{
+          this.setState({bodyType: "business_deatils"});
+        }
       }
     
+    
       render() {
-        if (this.state.bodyType === "business_deatils")
+        if (this.state.bodyType === "business_deatils"){
           return (
             <div id="admin_business">
               <div
@@ -94,6 +119,7 @@ class AdminBusiness extends React.Component {
                       job_length={business.val().jobs_length}
                       business_index={business.ref.key}
                       text_in_button="מחק מעסיק"
+                      clickWatchJobs={this.onClickWatchJobs}
                       onClickFunc={this.onClickDelete}
                       user_pic={user_pic} />
                   );
@@ -102,6 +128,54 @@ class AdminBusiness extends React.Component {
               <div id="msg">{this.state.msg}</div>
             </div>
           );
+        }
+        else{
+          return (
+            <div id="admin_business">
+              <div
+                id="admin_business_loading_business_container"
+                style={{ visibility: `${this.state.loading}` }}>
+                טוען...
+                    <br />
+                <div
+                  id="admin_business_loading_business"
+                  className="spinner-border"
+                  role="status"
+                  style={{}}>
+                  <span className="sr-only">Loading...</span>
+                </div>
+              </div>
+              <div id="return_jobs" onClick={this.onClickWatchJobs}>
+                  חזור
+              </div>
+              <ul>
+                {this.state.business_jobs.map((job, index) => {
+                  return (
+                   <SingleJobItemBusiness 
+                    type={job.val().type}
+                    hours={job.val().hours}
+                    date={job.val().date}
+                    place={job.val().place}
+                    salary={job.val().salary}
+                    long_info={job.val().long_info}
+                    logo={logo}
+                    remarks={job.val().remarks}
+                    clothing={job.val().clothing}
+                    payment_time={job.val().payment_time}
+                    status={job.val().status}
+                    job_index={job.ref.key}
+                    setBodyTypeState={this.setBodyTypeState}
+                    button_status="invisible"
+                    changeStatusJob={this.changeStatusJob}
+                   />
+                  );
+                })}
+              </ul>
+              <div id="msg">{this.state.msg}</div>
+            </div>
+          );  
+        }
       }
+      
 };
 export default AdminBusiness;

@@ -8,7 +8,6 @@ class EmployeeSignUp extends Component {
 
   constructor(props) {
     super(props);
-    this.signUp = this.signUp.bind(this);
     this.state = {
       email: '',
       first_name: '',

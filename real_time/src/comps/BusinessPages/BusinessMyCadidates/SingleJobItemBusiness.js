@@ -43,19 +43,22 @@ class singleJobItemBusiness extends React.Component {
         </div>
         <div id="job_item_buttons_business">
           <div id="job_status"><b>סטטוס:</b> {this.props.status}</div>
+
+          {this.props.button_status==="visible" &&
           <div
             id="job_item_buttons_show_candi"
             onClick={() => this.props.setBodyTypeState(this.props.job_index)}>
             צפייה במועמדים
           </div>
-          {this.props.status==="רלוונטי" && 
+          }
+          {this.props.status==="רלוונטי" && this.props.button_status==="visible" &&
           <div
             id="job_item_buttons_delete_job"
             onClick={() => {
               this.props.changeStatusJob(this.props.job_index, this.props.status)}} >
               הפוך ללא רלוונטי
           </div> }
-          {this.props.status==="לא רלוונטי" && 
+          {this.props.status==="לא רלוונטי" && this.props.button_status==="visible" &&
           <div
             id="job_item_buttons_delete_job"
             onClick={() => {

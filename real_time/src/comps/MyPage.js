@@ -47,6 +47,7 @@ class MyPage extends Component {
 
   onClickLoginBusiness = () => {
     this.setState({
+      NavBarState: "homePage",
       PageBodyState: "BusinessLogin"
     });
   };
@@ -118,12 +119,14 @@ class MyPage extends Component {
 
   onClickAdminEmployees=()=>{
     this.setState({
+      NavBarState:"admin_interface",
       PageBodyState: "admin_employees"
     });
   }
 
   onClickAdminBusiness=()=>{
     this.setState({
+      NavBarState:"admin_interface",
       PageBodyState: "admin_business"
     });
   }
@@ -216,6 +219,7 @@ class MyPage extends Component {
           clickConnectBusiness={this.onClickConnectBusiness}
           clickConnectAdmin={this.onClickConnectAdmin}
           clickAdminEmployees={this.onClickAdminEmployees}
+          clickAdminBusiness={this.onClickAdminBusiness}
           clickSignUp={this.onClickSignUp}
           clickForgotPassword={this.onClickForgotPassword}
           clickWatchCandidates={this.onClickWatchCandidates}

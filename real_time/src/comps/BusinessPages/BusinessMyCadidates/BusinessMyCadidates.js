@@ -116,6 +116,7 @@ class BusinessMyCadidates extends React.Component {
                   payment_time={job.val().payment_time}
                   status={job.val().status}
                   job_index={job.ref.key}
+                  button_status="visible"
                   setBodyTypeState={this.setBodyTypeState}
                   changeStatusJob={this.changeStatusJob}
                 />

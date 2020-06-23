@@ -9,7 +9,6 @@ class BusinessSignUp extends Component
   constructor(props)
   {
     super(props);
-    this.signUp=this.signUp.bind(this);
     this.state={
       email: '',
       password: '',
