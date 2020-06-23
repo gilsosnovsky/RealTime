@@ -1,146 +1,144 @@
 /* For Mobile: */
 @media only screen and (max-width: 480px) {
-    #employee_deatils_container {
-      margin-top: 50px;
-      width: 100%;
-      min-height: 150px;
-      margin: 5px;
-      border: 2.5px solid #7925c0;
-      border-radius: 10px;
-      background-color: white;
-      transition: 0.4s;
-      font-size: 12px;
-    }
-  
-    #employee_deatils_item {
-      height: 100%;
-      width: 100%;
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
-    }
-    #employee_item_logo_container {
-      height: 100%;
-      width: 20%;
-      float: right;
-      border-left: 2.5px solid #7925c0;
-    }
-    #employee_item_logo {
-      display: block;
-      margin: 0 auto;
-      max-width: 70px;
-    }
-    #employee_item_logo:hover {
-      opacity: 0.6;
-      transition: 0.3s;
-    }
-  
-    #employee_item_info {
-      height: 100%;
-      width: 75%;
-      float: left;
-    }
-  
-    .employee_full_info {
-      height: 100%;
-      width: 100%;
-      float: right;
-      padding-right: 10px;
-    }
-
-    #employee_deatils_buttons {
-      height: 100%;
-      width: 100%;
-      align-items: center;
-      padding-left: 15px;
-      padding-right: 15px;
-    }
-  
-
-    #employee_deatils_buttons_delete_employee {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 50px;
-      width: 120px;
-      cursor: pointer;
-      border-radius: 10px;
-      background-color: #7925c0;
-      color: white;
-      font-weight: bold;
-      float: left;
-      margin-top: 20px;
-      margin-bottom: 10px;
-    }
+  #employee_deatils_container {
+    margin-top: 20px;
+    width: 100%;
+    min-height: 250px;
+    margin: 5px;
+    border: 2.5px solid #7925c0;
+    border-radius: 10px;
+    background-color: white;
+    transition: 0.4s;
+    font-size: 12px;
   }
-  
-  /* For desktop: */
-  @media only screen and (min-width: 480px) {
-    #employee_deatils_container {
-      margin-top: 50px;
-      width: 900px;
-      height: 200px;
-      margin: 5px;
-      border: 2.5px solid #7925c0;
-      border-radius: 10px;
-      background-color: white;
-      transition: 0.3s;
-      font-size: 15px;
-    }
-  
-    #employee_deatils_item {
-      height: 100%;
-      width: 100%;
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
-    }
-    #employee_item_logo_container {
-      height: 100%;
-      width: 20%;
-      float: right;
-      border-left: 2.5px solid #7925c0;
-    }
-    #employee_item_logo {
-      display: block;
-      margin: 0 auto;
-      height: 90%;
-    }
-    #employee_item_logo:hover {
-      opacity: 0.6;
-      transition: 0.3s;
-    }
-  
-    #employee_item_info {
-      height: 100%;
-      width: 80%;
-      float: right;
-    }
-  
-    .employee_full_info {
-      height: 100%;
-      width: 70%;
-      float: right;
-      padding-right: 2%;
-    }
 
-    #employee_deatils_buttons {
-      height: 100%;
-      width: 25%;
-      float: left; 
-    }
-  
-
-    #employee_deatils_buttons_delete_employee {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 24%;
-      width: 80%;
-      cursor: pointer;
-      border-radius: 10px;
-      margin-top: 70%;
-      background-color: #7925c0;
-      color: white;
-      font-weight: bold;
-    }
+  #employee_deatils_item {
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
   }
-  
+  #employee_item_logo_container {
+    height: 45%;
+    width: 45%;
+    float: right;
+    border-left: 2.5px solid #7925c0;
+  }
+  #employee_item_logo {
+    display: block;
+    margin: 0 auto;
+    max-width: 70px;
+  }
+  #employee_item_logo:hover {
+    opacity: 0.6;
+    transition: 0.3s;
+  }
+
+  #employee_item_info {
+    height: 100%;
+    width: 95%;
+    float: left;
+  }
+
+  .employee_full_info {
+    height: 50%;
+    width: 100%;
+    float: right;
+    padding-right: 10px;
+  }
+
+  #employee_deatils_buttons {
+    height: 45%;
+    width: 45%;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    top: 150px;
+  }
+
+  #employee_deatils_buttons_delete_employee {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 120px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #7925c0;
+    color: white;
+    font-weight: bold;
+    float: left;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+}
+
+/* For desktop: */
+@media only screen and (min-width: 480px) {
+  #employee_deatils_container {
+    margin-top: 30px;
+    width: 900px;
+    height: 200px;
+    margin: 5px;
+    border: 2.5px solid #7925c0;
+    border-radius: 10px;
+    background-color: white;
+    transition: 0.3s;
+    font-size: 15px;
+  }
+
+  #employee_deatils_item {
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  #employee_item_logo_container {
+    height: 100%;
+    width: 20%;
+    float: right;
+    border-left: 2.5px solid #7925c0;
+  }
+  #employee_item_logo {
+    display: block;
+    margin: 0 auto;
+    height: 90%;
+  }
+  #employee_item_logo:hover {
+    opacity: 0.6;
+    transition: 0.3s;
+  }
+
+  #employee_item_info {
+    height: 100%;
+    width: 45%;
+    float: right;
+  }
+
+  .employee_full_info {
+    height: 100%;
+    width: 95%;
+    float: right;
+    padding-right: 2%;
+  }
+
+  #employee_deatils_buttons {
+    height: 100%;
+    width: 25%;
+    float: left;
+  }
+
+  #employee_deatils_buttons_delete_employee {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 24%;
+    width: 80%;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 32%;
+    background-color: #7925c0;
+    color: white;
+    font-weight: bold;
+  }
+}

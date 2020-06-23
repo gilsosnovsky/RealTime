@@ -1,85 +1,167 @@
+/* For Mobile: */
+@media only screen and (max-width: 480px) {
+  #business_deatils_container {
+    margin-top: 10px;
+    width: 95%;
+    min-height: 300px;
+    margin: 5px;
+    border: 2.5px solid #7925c0;
+    border-radius: 10px;
+    background-color: white;
+    transition: 0.3s;
+    font-size: 15px;
+  }
 
-    #business_deatils_container {
-      margin-top: 50px;
-      width: 900px;
-      height: 200px;
-      margin: 5px;
-      border: 2.5px solid #7925c0;
-      border-radius: 10px;
-      background-color: white;
-      transition: 0.3s;
-      font-size: 15px;
-    }
-  
-    #business_deatils_item {
-      height: 100%;
-      width: 100%;
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
-    }
-    #business_item_logo_container {
-      height: 100%;
-      width: 20%;
-      float: right;
-      border-left: 2.5px solid #7925c0;
-    }
-    #business_item_logo {
-      display: block;
-      margin: 0 auto;
-      height: 90%;
-    }
-    #business_item_logo:hover {
-      opacity: 0.6;
-      transition: 0.3s;
-    }
-  
-    #business_item_info {
-      height: 100%;
-      width: 80%;
-      float: right;
-    }
-  
-    .business_full_info {
-      height: 100%;
-      width: 70%;
-      float: right;
-      padding-right: 2%;
-    }
+  #business_deatils_item {
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  #business_item_logo_container {
+    height: 70px;
+    width: 50%;
+    float: right;
+    border-left: 2.5px solid #7925c0;
+  }
+  #business_item_logo {
+    display: block;
+    margin: 0 auto;
+    height: 90%;
+  }
+  #business_item_logo:hover {
+    opacity: 0.6;
+    transition: 0.3s;
+  }
 
-    #business_deatils_buttons {
-      height: 100%;
-      width: 25%;
-      float: left; 
-    }
-  
+  #business_item_info {
+    height: 50%;
+    width: 95%;
+    float: right;
+  }
 
-    #business_deatils_buttons_delete_business {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 24%;
-      width: 80%;
-      cursor: pointer;
-      border-radius: 10px;
-      margin-top: 10%;
-      background-color: #7925c0;
-      color: white;
-      font-weight: bold;
-    }
+  .business_full_info {
+    height: 100%;
+    width: 100%;
+    float: right;
+    padding: 10px;
+  }
 
-    
-    #business_deatils_buttons_watch_jobs {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 24%;
-      width: 80%;
-      cursor: pointer;
-      border-radius: 10px;
-      margin-top: 20%;
-      background-color: #7925c0;
-      color: white;
-      font-weight: bold;
-    }
-  
-  
+  #business_deatils_buttons {
+    float: left;
+    height: 45%;
+    width: 45%;
+    right: 62%;
+    padding-top: 15px;
+  }
+
+  #business_deatils_buttons_delete_business {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 120px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #7925c0;
+    color: white;
+    font-weight: bold;
+  }
+
+  #business_deatils_buttons_watch_jobs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 120px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #7925c0;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+}
+
+/* For desktop: */
+@media only screen and (min-width: 480px) {
+  #business_deatils_container {
+    margin-top: 50px;
+    width: 900px;
+    height: 200px;
+    margin: 5px;
+    border: 2.5px solid #7925c0;
+    border-radius: 10px;
+    background-color: white;
+    transition: 0.3s;
+    font-size: 15px;
+  }
+
+  #business_deatils_item {
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  #business_item_logo_container {
+    height: 100%;
+    width: 20%;
+    float: right;
+    border-left: 2.5px solid #7925c0;
+  }
+  #business_item_logo {
+    margin: 0 auto;
+    height: 90%;
+  }
+  #business_item_logo:hover {
+    opacity: 0.6;
+    transition: 0.3s;
+  }
+
+  #business_item_info {
+    height: 100%;
+    width: 50%;
+    float: right;
+  }
+
+  .business_full_info {
+    height: 100%;
+    width: 70%;
+    float: right;
+    padding: 15px;
+  }
+
+  #business_deatils_buttons {
+    height: 100%;
+    width: 25%;
+    float: left;
+  }
+
+  #business_deatils_buttons_delete_business {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 150px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #7925c0;
+    color: white;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+
+  #business_deatils_buttons_watch_jobs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 150px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #7925c0;
+    color: white;
+    font-weight: bold;
+    margin-top: 40px;
+  }
+}
