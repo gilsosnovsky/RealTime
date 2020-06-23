@@ -18,29 +18,28 @@ class EmployeeSettings extends React.Component {
       address: this.props.user.address,
       favorite_jobs: this.props.user.favorite_jobs,
       about_me: this.props.user.about_me,
-      picture: '123'
+      picture: person,
+      new_url: ''
     }
+    console.log('/'+this.state.email+'/profile_pic.jpg');
+    var storage = fire.storage().ref('/'+this.state.email+'/profile_pic.jpg');
+    console.log(storage);
+    storage.getDownloadURL().then(url=>{
+      this.setState({picture: url});
+    }).catch(()=>{
+      this.setState({picture: person});
+    });
   }
-  editPicture =(e)=>{
-    e.preventDefault();
-    var storageRef = fire.storage().ref();
-    var imageRef = storageRef.child(this.props.user.email+'/profile_pic.jpg').put(this.state.picture);
-
-    console.log(this.state.picture);
-    // Create a reference to 'images/mountains.jpg'
-    //var mountainImagesRef = storageRef.child('images/mountains.jpg');
-    
-    // While the file names are the same, the references point to different files
-  
+  editPicture =()=>{
+    var storageRef = fire.storage();
+    storageRef.ref(this.props.user.email+'/profile_pic.jpg').put(this.state.new_url);
   }
 
 
   onChangePicture=(e)=>
   {
     e.preventDefault();
-    this.setState({picture: e.target.files[0]},()=>{
-      console.log(this.picture);
-    })
+    this.setState({new_url: e.target.files[0]});
   }
   onSubmitSveChanges = (e) => {
     e.preventDefault();
@@ -74,7 +73,11 @@ class EmployeeSettings extends React.Component {
       newUser.about_me = this.about_me.value;
       db.ref("/employees/employees_list/" + this.props.index).update({ 'about_me': newUser.about_me });
     }
+    if(this.state.new_url!==''){
+      this.editPicture();
+    }
     this.props.setUser(newUser);
+
     //this.forceUpdate();
   }
 
@@ -84,20 +87,19 @@ class EmployeeSettings extends React.Component {
         <form action="" method="post" onSubmit={this.onSubmitSveChanges}>
           <div id="settings_employee">
             <div className="user_pic">
-              <img id="emloyee_image" src={person} alt="user pic"></img>
+              <img id="emloyee_image" src={this.state.picture} alt="user pic"></img>
             </div>
             <div id="employee_name">
               {this.props.user.first_name} {this.props.user.last_name}
             </div>
             <div id="edit_pic_con">
-              <form action="" method="post" onSubmit={this.editPicture}>
-                <input 
-                  type="file"  
-                  name="picture"
-                  onChange={this.onChangePicture}
-                  accept="image/x-png,image/gif,image/jpeg"/>
-                <button id="edit_pic_button" type='submit' >ערוך תמונת פרופיל</button>
-              </form>
+              <input
+                id="pic_input" 
+                type="file"  
+                name="picture"
+                onChange={this.onChangePicture}
+                accept="image/x-png,image/gif,image/jpeg"
+                />
             </div>
             <div id="employee_details_to_edit">
               <div id="first_name_to_edit">
