@@ -11,6 +11,7 @@ class Login extends Component {
     this.login = this.login.bind(this);
     this.handleChangeEmail = this.handleChangeEmail.bind(this);
     this.handleChangePassword = this.handleChangePassword.bind(this);
+    this.handleKeyDown = this.handleKeyDown.bind(this);
     this.state = {
       user: {},
       email: '',
@@ -45,6 +46,14 @@ class Login extends Component {
       password: e.target.value
     });
   }
+
+  handleKeyDown(e){
+    console.log('do')
+    if (e.key === 'Enter') {
+      console.log('do validate')
+    }
+  }
+
   login(e) {
     this.setState({ loading: 'visible', error_msg: '' });
     e.preventDefault();
