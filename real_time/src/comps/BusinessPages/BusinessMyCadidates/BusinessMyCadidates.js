@@ -35,10 +35,6 @@ class BusinessMyCadidates extends React.Component {
     });
   }
 
-  componentWillUnmount() {
-    this._isMounted = false;
-  }
-
 
   setBodyTypeState(job_index) {
     var allcandidates = [];
@@ -80,28 +76,7 @@ class BusinessMyCadidates extends React.Component {
     if(current_status==="רלוונטי") 
       db.ref("/jobs/jobs_list/" + job_index).update({status: "לא רלוונטי"});
     else
-      db.ref("/jobs/jobs_list/" + job_index).update({status: "רלוונטי"},
-        (value) => {
-          db.ref("/jobs/jobs_list").on("value", (snapshot) => {
-                let allJobs = [];
-                snapshot.forEach((snap) => {
-                 if (snap.val().employer_index === this.state.index) allJobs.push(snap);
-                });
-                this.setState({ jobs_list: allJobs, loading: "hidden" });
-           })
-        
-      })
-      // ( data =>{
-      //   alert(data);
-      //   db.ref("/jobs/jobs_list").on("value", (snapshot) => {
-      //     let allJobs = [];
-      //     snapshot.forEach((snap) => {
-      //      if (snap.val().employer_index === this.state.index) allJobs.push(snap);
-      //     });
-      //     this.setState({ jobs_list: allJobs, loading: "hidden" });
-      //   })
-      // }
-      // ) 
+      db.ref("/jobs/jobs_list/" + job_index).update({status: "רלוונטי"});
   }
 
 

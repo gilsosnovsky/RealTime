@@ -16,6 +16,7 @@ class singleJobItemBusiness extends React.Component {
     status: this.props.status,
     job_index:this.props.job_index,
   };
+  
 
   render() {
     return (
@@ -56,24 +57,24 @@ class singleJobItemBusiness extends React.Component {
           </div>
         </div>
         <div id="job_item_buttons_business">
-          <div id="job_status"><b>סטטוס:</b> {this.state.status}</div>
+          <div id="job_status"><b>סטטוס:</b> {this.props.status}</div>
           <div
             id="job_item_buttons_show_candi"
             onClick={() => this.props.setBodyTypeState(this.state.job_index)}>
             צפייה במועמדים
           </div>
-          {this.state.status==="רלוונטי" && 
+          {this.props.status==="רלוונטי" && 
           <div
             id="job_item_buttons_delete_job"
             onClick={() => {
-              this.props.changeStatusJob(this.state.job_index, this.state.status)}} >
+              this.props.changeStatusJob(this.props.job_index, this.props.status)}} >
               הפוך ללא רלוונטי
           </div> }
-          {this.state.status==="לא רלוונטי" && 
+          {this.props.status==="לא רלוונטי" && 
           <div
             id="job_item_buttons_delete_job"
             onClick={() => {
-              this.props.changeStatusJob(this.state.job_index, this.state.status)}} >
+              this.props.changeStatusJob(this.props.job_index, this.state.status)}} >
               הפוך לרלוונטי
           </div> }
         </div>
