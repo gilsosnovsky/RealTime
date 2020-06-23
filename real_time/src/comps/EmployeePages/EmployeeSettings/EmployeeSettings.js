@@ -8,6 +8,7 @@ class EmployeeSettings extends React.Component {
   constructor(props) {
     super(props);
     this.onSubmitSveChanges = this.onSubmitSveChanges.bind(this);
+    this.editPicture=this.editPicture.bind(this);
     this.state = {
       email: this.props.user.email,
       first_name: this.props.user.first_name,
@@ -16,10 +17,31 @@ class EmployeeSettings extends React.Component {
       birth_date: this.props.user.birth_date,
       address: this.props.user.address,
       favorite_jobs: this.props.user.favorite_jobs,
-      about_me: this.props.user.about_me
+      about_me: this.props.user.about_me,
+      picture: '123'
     }
   }
+  editPicture =(e)=>{
+    e.preventDefault();
+    var storageRef = fire.storage().ref();
+    var imageRef = storageRef.child(this.props.user.email+'/profile_pic.jpg').put(this.state.picture);
 
+    console.log(this.state.picture);
+    // Create a reference to 'images/mountains.jpg'
+    //var mountainImagesRef = storageRef.child('images/mountains.jpg');
+    
+    // While the file names are the same, the references point to different files
+  
+  }
+
+
+  onChangePicture=(e)=>
+  {
+    e.preventDefault();
+    this.setState({picture: e.target.files[0]},()=>{
+      console.log(this.picture);
+    })
+  }
   onSubmitSveChanges = (e) => {
     e.preventDefault();
     const db = fire.database();
@@ -68,7 +90,14 @@ class EmployeeSettings extends React.Component {
               {this.props.user.first_name} {this.props.user.last_name}
             </div>
             <div id="edit_pic_con">
-              <button id="edit_pic_button">ערוך תמונת פרופיל</button>
+              <form action="" method="post" onSubmit={this.editPicture}>
+                <input 
+                  type="file"  
+                  name="picture"
+                  onChange={this.onChangePicture}
+                  accept="image/x-png,image/gif,image/jpeg"/>
+                <button id="edit_pic_button" type='submit' >ערוך תמונת פרופיל</button>
+              </form>
             </div>
             <div id="employee_details_to_edit">
               <div id="first_name_to_edit">
