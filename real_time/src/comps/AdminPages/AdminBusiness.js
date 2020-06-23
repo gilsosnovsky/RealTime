@@ -167,6 +167,7 @@ class AdminBusiness extends React.Component {
                     setBodyTypeState={this.setBodyTypeState}
                     button_status="invisible"
                     changeStatusJob={this.changeStatusJob}
+                    show_fire = {false}
                    />
                   );
                 })}

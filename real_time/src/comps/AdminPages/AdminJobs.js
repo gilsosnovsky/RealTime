@@ -63,6 +63,14 @@ class AdminJobs extends React.Component {
       }
     }
 
+    onClickFire(job_index, is_fire){
+      const db = fire.database();
+      if(is_fire)
+        db.ref("/jobs/jobs_list/" + job_index).update({is_fire: false});
+      else
+        db.ref("/jobs/jobs_list/" + job_index).update({is_fire: true});
+    }
+
     changeStatusJob(job_index, current_status) {
       const db = fire.database();
       if(current_status==="רלוונטי") 
@@ -103,6 +111,9 @@ class AdminJobs extends React.Component {
                     button_status="visible"
                     setBodyTypeState={this.setBodyTypeState}
                     changeStatusJob={this.changeStatusJob}
+                    onClickFire = {this.onClickFire}
+                    show_fire = {true}
+                    is_fire = {job.val().is_fire}
                    />
                 })
               }

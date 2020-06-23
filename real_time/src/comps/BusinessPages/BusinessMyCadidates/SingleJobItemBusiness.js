@@ -1,6 +1,7 @@
 import React from "react";
 import "./SingleJobItemBusiness.css";
-
+import fire from './fire.png'
+import not_fire from './not_fire.png'
 class singleJobItemBusiness extends React.Component {
 
   render() {
@@ -11,7 +12,7 @@ class singleJobItemBusiness extends React.Component {
             <img
               id="job_item_business_logo"
               src={this.props.logo}
-              alt="job_logo"/>
+              alt="job_logo" />
           </div>
 
           <div id="job_item_info_business">
@@ -26,7 +27,7 @@ class singleJobItemBusiness extends React.Component {
               {this.props.place}
               <br />
               <b> משכורת: </b>
-              { this.props.salary}₪<br />
+              {this.props.salary}₪<br />
               <b>פרטים נוספים:</b>
               {this.props.long_info}
               <br />
@@ -43,31 +44,38 @@ class singleJobItemBusiness extends React.Component {
         </div>
         <div id="job_item_buttons_business">
           <div id="job_status"><b>סטטוס:</b> {this.props.status}</div>
-
-          {this.props.button_status==="visible" &&
-          <div
-            id="job_item_buttons_show_candi"
-            onClick={() => this.props.setBodyTypeState(this.props.job_index)}>
-            צפייה במועמדים
+          {this.props.show_fire && !this.props.is_fire && <img id="is_fire_image" src={not_fire} onClick={() => {
+                this.props.onClickFire(this.props.job_index, false)
+              }} />}
+          {this.props.show_fire && this.props.is_fire && <img id="is_fire_image" src={fire} onClick={() => {
+                this.props.onClickFire(this.props.job_index, true)
+              }}/>}
+          {this.props.button_status === "visible" &&
+            <div
+              id="job_item_buttons_show_candi"
+              onClick={() => this.props.setBodyTypeState(this.props.job_index)}>
+              צפייה במועמדים
           </div>
           }
-          {this.props.status==="רלוונטי" && this.props.button_status==="visible" &&
-          <div
-            id="job_item_buttons_delete_job"
-            onClick={() => {
-              this.props.changeStatusJob(this.props.job_index, this.props.status)}} >
+          {this.props.status === "רלוונטי" && this.props.button_status === "visible" &&
+            <div
+              id="job_item_buttons_delete_job"
+              onClick={() => {
+                this.props.changeStatusJob(this.props.job_index, this.props.status)
+              }} >
               הפוך ללא רלוונטי
-          </div> }
-          {this.props.status==="לא רלוונטי" && this.props.button_status==="visible" &&
-          <div
-            id="job_item_buttons_delete_job"
-            onClick={() => {
-              this.props.changeStatusJob(this.props.job_index, this.props.status)}} >
+          </div>}
+          {this.props.status === "לא רלוונטי" && this.props.button_status === "visible" &&
+            <div
+              id="job_item_buttons_delete_job"
+              onClick={() => {
+                this.props.changeStatusJob(this.props.job_index, this.props.status)
+              }} >
               הפוך לרלוונטי
-          </div> }
+          </div>}
         </div>
       </div>
-      );
-    }
+    );
+  }
 }
 export default singleJobItemBusiness;
