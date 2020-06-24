@@ -1,7 +1,7 @@
 import React from "react";
 import "./Copyrights.css";
 import "bootstrap/dist/css/bootstrap.css";
-import orel from "./orel.png";
+import orel from "./orel.jpg";
 import michael from "./michael.png";
 import roy from "./roy.png";
 import gil from "./gil.png";
