@@ -10,12 +10,13 @@ class AdminBusiness extends React.Component {
   constructor(props) {
     super(props);
     this.onClickApproved = this.onClickApproved.bind(this);
-    this.onClickDelete = this.onClickDelete.bind(this);
+    this.onClickBlocked = this.onClickBlocked.bind(this);
     this.onClickWatchJobs=this.onClickWatchJobs.bind(this);
   }
     state = {
         business_approved: [],
         business_waiting: [],
+        business_blocked: [],
         business_jobs: [],
         loading: "visible",
         bodyType: "business_deatils",
@@ -26,14 +27,20 @@ class AdminBusiness extends React.Component {
         const db = fire.database();
         let business_list_wating = [];
         let business_list_approved = [];
+        let business_list_blocked = [];
         db.ref("/business/business_list").on("value", (snapshot) => {
             snapshot.forEach((snap) => {
                 if(snap.val().status==="wating")
                     business_list_wating.push(snap);
+                else if(snap.val().status==="blocked")
+                    business_list_blocked.push(snap);
                 else
                     business_list_approved.push(snap);
             });
-            this.setState({ business_approved: business_list_approved, business_waiting: business_list_wating, loading: "hidden" });
+            this.setState({ business_approved: business_list_approved, 
+                            business_waiting: business_list_wating,
+                            business_blocked: business_list_blocked,  
+                            loading: "hidden" });
         });
       }
 
@@ -44,12 +51,22 @@ class AdminBusiness extends React.Component {
         this.props.clickAdminMessages();
       }
 
-      onClickDelete(business_index, business_email){
-        if (window.confirm("האם אתה בטוח שאתה רוצה למחוק מעסיק זה?")){
-          const db = fire.database();
-          db.ref("/business/business_list/"+business_index).remove().then(this.forceUpdate()); 
-          this.props.clickAdminMessages();
-          alert("המעסיק נמחק בהצלחה!");
+      onClickBlocked(business_index, business_status){
+        if(business_status==="approved"){
+          if (window.confirm("האם אתה בטוח שאתה רוצה לחסום מעסיק זה?")){
+            const db = fire.database();
+            db.ref("/business/business_list/"+business_index).update({status: "blocked"}).then(this.forceUpdate());
+            this.props.clickAdminMessages();
+            alert("המעסיק נחסם בהצלחה!");
+          }
+        }
+        else{
+          if (window.confirm("האם אתה בטוח שאתה רוצה לבטל חסימה של מעסיק זה?")){
+            const db = fire.database();
+            db.ref("/business/business_list/"+business_index).update({status: "approved"}).then(this.forceUpdate());
+            this.props.clickAdminMessages();
+            alert("החסימה הוסרה בהצלחה!");
+          }
         }
       }
 
@@ -117,10 +134,30 @@ class AdminBusiness extends React.Component {
                       phone_number={business.val().phone_number}
                       company_name={business.val().company_name}
                       job_length={business.val().jobs_length}
+                      status={business.val().status}
                       business_index={business.ref.key}
-                      text_in_button="מחק מעסיק"
+                      text_in_button="חסום מעסיק"
                       clickWatchJobs={this.onClickWatchJobs}
-                      onClickFunc={this.onClickDelete}
+                      onClickFunc={this.onClickBlocked}
+                      user_pic={user_pic} />
+                  );
+                })}
+              </ul>
+              <div id="business_admin_title">מעסיקים חסומים </div>
+              <ul>
+                {this.state.business_blocked.map((business, index) => {
+                  return (
+                    <BusinessItemAdmin first_name={business.val().first_name}
+                      last_name={business.val().last_name}
+                      email={business.val().email}
+                      phone_number={business.val().phone_number}
+                      company_name={business.val().company_name}
+                      job_length={business.val().jobs_length}
+                      status={business.val().status}
+                      business_index={business.ref.key}
+                      text_in_button="בטל חסימת מעסיק"
+                      clickWatchJobs={this.onClickWatchJobs}
+                      onClickFunc={this.onClickBlocked}
                       user_pic={user_pic} />
                   );
                 })}

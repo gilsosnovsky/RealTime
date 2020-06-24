@@ -91,6 +91,8 @@ class Login extends Component {
               this.setState({ loading: 'hidden' });
               if(snap.val().status==="wating")
                 this.setState({ error_msg: "האדמין טרם אישר את ההרשמה שלך" });
+              else if(snap.val().status==="blocked")
+                this.setState({ error_msg: "האדמין חסם את המשתמש שלך" });
               else
                 this.props.clickConnectBusiness(snap.val(), snap.ref.key);
             }

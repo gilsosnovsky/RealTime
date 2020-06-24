@@ -41,7 +41,7 @@ class BusinessItemAdmin extends React.Component {
             />
           </div>
           <div id="business_deatils_buttons">
-            {this.props.text_in_button === "מחק מעסיק" && (
+            {this.props.text_in_button === "חסום מעסיק" && (
               <div
                 id="business_deatils_buttons_watch_jobs"
                 onClick={() => {
@@ -55,10 +55,7 @@ class BusinessItemAdmin extends React.Component {
               id="business_deatils_buttons_delete_business"
               onClick={() => {
                 {
-                  this.props.onClickFunc(
-                    this.props.business_index,
-                    this.props.email
-                  );
+                  this.props.onClickFunc(this.props.business_index, this.props.status);
                 }
               }}
             >
