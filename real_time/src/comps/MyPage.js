@@ -10,30 +10,33 @@ class MyPage extends Component {
     PageBodyState: "homePage",
     FooterState: "homePage",
     user: "guest",
-    index: ""
+    index: "",
   };
 
   onClickToEmployees = () => {
     this.setState({
-      PageBodyState: "toEmployees"
+      PageBodyState: "toEmployees",
     });
   };
 
   onClickToBusiness = () => {
     this.setState({
-      PageBodyState: "toBusiness"
+      PageBodyState: "toBusiness",
     });
   };
 
   onClickLogo = () => {
     // if (this.state.navBarState === "employee_interface") {
-    if (this.state.PageBodyState === "employee_job_offers" || this.state.PageBodyState === "employee_settings" ||
-        this.state.PageBodyState === "employee_my_jobs"    || this.state.PageBodyState === "employee_interface") {
+    if (
+      this.state.PageBodyState === "employee_job_offers" ||
+      this.state.PageBodyState === "employee_settings" ||
+      this.state.PageBodyState === "employee_my_jobs" ||
+      this.state.PageBodyState === "employee_interface"
+    ) {
       this.setState({
         PageBodyState: "employee_job_offers",
       });
-    }
-    else {
+    } else {
       this.setState({
         PageBodyState: "homePage",
       });
@@ -41,100 +44,100 @@ class MyPage extends Component {
   };
   onClickLoginEmployee = () => {
     this.setState({
-      PageBodyState: "EmloyeeLogin"
+      PageBodyState: "EmloyeeLogin",
     });
   };
 
   onClickLoginBusiness = () => {
     this.setState({
       NavBarState: "homePage",
-      PageBodyState: "BusinessLogin"
+      PageBodyState: "BusinessLogin",
     });
   };
 
-  onClickConnectEmployee=(user, index)=>{
+  onClickConnectEmployee = (user, index) => {
     //console.log("HERE!!!!!!!------");
     this.setState({
       user: user,
-      NavBarState:"employee_interface",
+      NavBarState: "employee_interface",
       PageBodyState: "employee_interface",
-      index: index
+      index: index,
     });
-  }
+  };
 
-  onClickJobOffersEmployee=()=>{
+  onClickJobOffersEmployee = () => {
     this.setState({
-      PageBodyState: "employee_job_offers"
+      PageBodyState: "employee_job_offers",
     });
-  }
+  };
 
-  onClickMyJobsEmployee=()=>{
+  onClickMyJobsEmployee = () => {
     this.setState({
-      PageBodyState: "employee_my_jobs"
+      PageBodyState: "employee_my_jobs",
     });
-  }
+  };
 
-  onClickSettingsEmployee=()=>{
+  onClickSettingsEmployee = () => {
     this.setState({
-      PageBodyState: "employee_settings"
+      PageBodyState: "employee_settings",
     });
-  }
+  };
 
-  onClickConnectBusiness=(user, index)=>{
+  onClickConnectBusiness = (user, index) => {
     console.log(user);
     this.setState({
       user: user,
       index: index,
-      NavBarState:"business_interface",
-      PageBodyState: "business_interface"
+      NavBarState: "business_interface",
+      PageBodyState: "business_interface",
     });
-  }
+  };
 
-  onClickPostJobBusiness=()=>{
+  onClickPostJobBusiness = () => {
     this.setState({
-      PageBodyState: "business_post_job"
+      PageBodyState: "business_post_job",
     });
-  }
+  };
 
-  onClickWatchCandidates=()=>{
+  onClickWatchCandidates = () => {
     this.setState({
-      PageBodyState: "business_watch_candidates"
+      PageBodyState: "business_watch_candidates",
     });
-  }
+  };
 
-  onClickConnectAdmin=(user, index)=>{
+  onClickConnectAdmin = (user, index) => {
     this.setState({
       user: user,
       index: index,
-      NavBarState:"admin_interface",
-      PageBodyState: "admin_interface"
+      NavBarState: "admin_interface",
+      PageBodyState: "admin_interface",
     });
-  }
+  };
 
-  onClickAdminJobs=()=>{
+  onClickAdminJobs = () => {
     this.setState({
-      PageBodyState: "admin_jobs"
+      PageBodyState: "admin_jobs",
     });
-  }
+  };
 
-  onClickAdminEmployees=()=>{
+  onClickAdminEmployees = () => {
     this.setState({
-      NavBarState:"admin_interface",
-      PageBodyState: "admin_employees"
+      NavBarState: "admin_interface",
+      PageBodyState: "admin_employees",
     });
-  }
+  };
 
-  onClickAdminBusiness=()=>{
+  onClickAdminBusiness = () => {
     this.setState({
-      NavBarState:"admin_interface",
-      PageBodyState: "admin_business"
+      NavBarState: "admin_interface",
+      PageBodyState: "admin_business",
     });
-  }
-  onClickAdminMessages=()=>{
+  };
+  onClickAdminMessages = () => {
     this.setState({
-      PageBodyState: "admin_messages"
+      PageBodyState: "admin_messages",
     });
-  }
+  };
 
   onClickSignUp = () => {
     if (this.state.PageBodyState === "EmloyeeLogin") {
@@ -147,10 +150,9 @@ class MyPage extends Component {
       });
     }
   };
-  onPasswordChange =(email)=>{
-    this.setState({PageBodyState: 'PasswordChange'});
-
-  }
+  onPasswordChange = (email) => {
+    this.setState({ PageBodyState: "PasswordChange" });
+  };
   onClickContact = () => {
     this.setState({
       PageBodyState: "contact",
@@ -167,10 +169,15 @@ class MyPage extends Component {
       NavBarState: "homePage",
       PageBodyState: "homePage",
       FooterState: "homePage",
-      user: "guest"
+      user: "guest",
     });
   };
 
+  onclickCopyrights = () => {
+    this.setState({
+      PageBodyState: "copyrights",
+    });
+  };
 
   onClickForgotPassword = () => {
     this.setState({
@@ -178,14 +185,12 @@ class MyPage extends Component {
     });
   };
 
-  setUser = (newuser) =>{
-  
+  setUser = (newuser) => {
     this.setState({
-      NavBarState:"employee_interface",
-      user: newuser
+      NavBarState: "employee_interface",
+      user: newuser,
     });
-    
-  }
+  };
 
   render() {
     return (
@@ -228,7 +233,7 @@ class MyPage extends Component {
           index={this.state.index}
           passwordChange={this.onPasswordChange}
         />
-        <Footer />
+        <Footer clickCopyrights={this.onclickCopyrights} />
       </div>
     );
   }

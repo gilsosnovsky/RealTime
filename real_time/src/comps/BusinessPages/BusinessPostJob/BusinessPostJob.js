@@ -1,7 +1,6 @@
 import React from "react";
 import "./BusinessPostJob.css";
 import fire from "../../../firebaseConfig";
-import "bootstrap/dist/css/bootstrap.css";
 
 class BusinessPostJob extends React.Component {
   constructor(props) {
@@ -38,7 +37,7 @@ class BusinessPostJob extends React.Component {
         remarks: this.remarks.value,
         employer_index: this.props.index,
         clothing: this.clothing.value,
-        status: "רלוונטי"
+        status: "רלוונטי",
       },
       () => {
         const db = fire.database();

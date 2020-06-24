@@ -27,3 +27,14 @@
   opacity: 0.6;
   transition: 0.3s;
 }
+
+#copyrights {
+  font-size: x-small;
+  color: white;
+  float: left;
+  margin-left: 20px;
+}
+
+#copy:hover {
+  cursor: pointer;
+}

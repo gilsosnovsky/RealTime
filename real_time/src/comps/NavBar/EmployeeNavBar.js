@@ -9,7 +9,6 @@ import fire from "../../firebaseConfig";
 //window.$ = $;
 
 class EmployeeNavBar extends React.Component {
-  
   componentDidMount() {
     var m = window.matchMedia("(min-width: 480px)"); //only on Desktop mode
     //x.addListener(componentDidMount); // Attach listener function on state changes
@@ -69,7 +68,12 @@ class EmployeeNavBar extends React.Component {
             alt="promte teenagers logo"
           />
 
-          <img id="logo" src={logo} alt="Logo" onClick={this.props.clickOnLogo} />
+          <img
+            id="logo"
+            src={logo}
+            alt="Logo"
+            onClick={this.props.clickOnLogo}
+          />
           <div id="navLinks">
             <label
               className="NavBarButton"
