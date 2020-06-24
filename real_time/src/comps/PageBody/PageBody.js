@@ -70,6 +70,7 @@ const pageBody = (props) => {
         user={props.user}
         setUser={props.setUser}
         index={props.index}
+        clickConnectEmployee={props.clickConnectEmployee}
       />
     );
   } else if (props.pageBodyState === "business_post_job") {

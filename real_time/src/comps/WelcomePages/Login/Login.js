@@ -24,7 +24,6 @@ class Login extends Component {
 
   authListener() {
     fire.auth().onAuthStateChanged((user) => {
-      //console.log(user);
       if (user) {
         this.setState({ user });
       }
@@ -59,8 +58,6 @@ class Login extends Component {
     e.preventDefault();
     fire.auth().signInWithEmailAndPassword(this.state.email, this.state.password).then((user) => {
       console.log('successful sign in');
-      console.log(user.user.email);
-      console.log(user);
       const db = fire.database();
       var userEmail = user.user.email;
 
@@ -100,7 +97,6 @@ class Login extends Component {
                 this.props.clickConnectBusiness(snap.val(), snap.ref.key);
             }
           });
-          //this.setState({ loading: 'hidden', error_msg: "שם משתמש או סיסמה שגויים" });
         });
       }
     }).catch((error) => {
