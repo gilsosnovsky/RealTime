@@ -21,9 +21,7 @@ class EmployeeSettings extends React.Component {
       picture: person,
       new_url: ''
     }
-    console.log('/'+this.state.email+'/profile_pic.jpg');
     var storage = fire.storage().ref('/'+this.state.email+'/profile_pic.jpg');
-    console.log(storage);
     storage.getDownloadURL().then(url=>{
       this.setState({picture: url});
     }).catch(()=>{
@@ -77,7 +75,7 @@ class EmployeeSettings extends React.Component {
       this.editPicture();
     }
     this.props.setUser(newUser);
-
+    this.props.clickConnectEmployee(newUser,this.props.index)
     //this.forceUpdate();
   }
 
@@ -92,6 +90,7 @@ class EmployeeSettings extends React.Component {
             <div id="employee_name">
               {this.props.user.first_name} {this.props.user.last_name}
             </div>
+            <label>שנה תמונת פרופיל</label>
             <div id="edit_pic_con">
               <input
                 id="pic_input" 
