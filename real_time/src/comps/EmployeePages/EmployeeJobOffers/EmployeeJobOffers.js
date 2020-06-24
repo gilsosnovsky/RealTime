@@ -55,6 +55,7 @@ class EmployeeJobOffers extends React.Component {
                 clothing={job.val().clothing}
                 payment_time={job.val().payment_time}
                 id={job.val().id}
+                status={job.val().status}
                 ref_job={job.ref.key}
                 user={this.state.user}
                 index={this.state.index}

@@ -105,8 +105,9 @@ class SingleJobItem extends React.Component {
             <br />
             <b>הערות: </b>
             {this.state.job_remarks}
+            {this.props.status === "לא רלוונטי" && <div id="sorry_not_relevent"> לצערנו המשרה כבר לא רלוונטית</div>}
           </div>
-          <div
+                  <div
             id="job_item_buttons"
             style={{ visibility: `${this.state.buttons_visibility}` }}>
             <div id="job_item_buttons_no" onClick={this.hideFullInfo}>

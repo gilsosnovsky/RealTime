@@ -57,6 +57,7 @@ class EmployeeMyJobs extends React.Component {
                 place={job.place}
                 salary={job.salary}
                 long_info={job.long_info}
+                status={job.status}
                 logo={logo}
                 remarks={job.remarks}
                 clothing={job.clothing}
