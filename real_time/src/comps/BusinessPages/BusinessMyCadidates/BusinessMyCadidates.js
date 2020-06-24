@@ -119,6 +119,7 @@ class BusinessMyCadidates extends React.Component {
                   button_status="visible"
                   setBodyTypeState={this.setBodyTypeState}
                   changeStatusJob={this.changeStatusJob}
+                  show_fire = {false}
                 />
               );
             })}

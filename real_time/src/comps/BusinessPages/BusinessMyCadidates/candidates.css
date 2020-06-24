@@ -77,7 +77,8 @@
   #candidate_item_business_logo {
     display: block;
     margin: 0 auto;
-    height: 90%;
+    height: 100%;
+    width:100%;
   }
   #candidate_item_business_logo:hover {
     opacity: 0.6;

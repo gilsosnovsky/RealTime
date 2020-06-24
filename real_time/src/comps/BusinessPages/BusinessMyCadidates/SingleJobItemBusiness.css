@@ -175,6 +175,14 @@
   }
 
   #job_status{
+    width: 70%;
     margin: 7%;
+    float: right;
+  }
+
+  #is_fire_image{
+    margin-top: 7%;
+    width: 10%;
+    float: right;
   }
 }

@@ -1,19 +1,34 @@
 import React from "react";
 import "./candidates.css";
+import fire from "../../../firebaseConfig"
 
 class Candidates extends React.Component {
-  state = {
-    email: this.props.email,
-    first_name: this.props.first_name,
-    last_name: this.props.last_name,
-    phone_number: this.props.phone_number,
-    birth_date: this.props.birth_date,
-    address: this.props.address,
-    favorite_jobs: this.props.favorite_jobs,
-    about_me: this.props.about_me,
-    user_pic: this.props.user_pic,
-  };
-
+  constructor(props)
+  {
+    super(props);
+    this.state = {
+      email: this.props.email,
+      first_name: this.props.first_name,
+      last_name: this.props.last_name,
+      phone_number: this.props.phone_number,
+      birth_date: this.props.birth_date,
+      address: this.props.address,
+      favorite_jobs: this.props.favorite_jobs,
+      about_me: this.props.about_me,
+      user_pic: this.props.user_pic
+    };
+    this.getPicture();
+  }
+  getPicture()
+  {
+    var storage = fire.storage().ref('/'+this.props.email+'/profile_pic.jpg');
+    console.log(storage);
+    storage.getDownloadURL().then(url=>{
+      this.setState({user_pic: url})
+    }).catch(()=>{
+      //return this.props.user_pic;
+    });
+  }
   render() {
     return (
       <div id="candidate_item_business_container">

@@ -38,6 +38,7 @@ class BusinessPostJob extends React.Component {
         employer_index: this.props.index,
         clothing: this.clothing.value,
         status: "רלוונטי",
+        is_fire: false,
       },
       () => {
         const db = fire.database();

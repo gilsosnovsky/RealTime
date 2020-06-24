@@ -2,6 +2,7 @@ import React from "react";
 import "./ToEmployees.css";
 import "bootstrap/dist/css/bootstrap.css";
 import Carousel from "react-bootstrap/Carousel";
+import handshake from './handshake.png'
 
 const toEmployees = (props) => {
   return (
@@ -41,28 +42,30 @@ const toEmployees = (props) => {
         <Carousel id="carousel">
           <Carousel.Item className="carousel_item">
             <div className="job_pic">
-              <img src={require("./service.png")} width="80%" alt="service" />
+              <img src={handshake} width="55%" alt="service" />
             </div>
             <Carousel.Caption>
-              <h3>First job</h3>
-              <p>Details for the first job</p>
+              <div id = "hot_job_details">
+                <p>First job</p>
+                <p>Details for the first job</p>
+              </div>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item className="carousel_item">
             <div className="job_pic">
-              <img src={require("./build.png")} width="80%" alt="builder" />
+              <img src={handshake} width="55%" alt="builder" />
             </div>
             <Carousel.Caption>
-              <h3>Second job</h3>
+              <p>Second job</p>
               <p>Details for the second job</p>
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item className="carousel_item">
             <div className="job_pic">
-              <img src={require("./service.png")} width="80%" alt="service" />
+              <img src={handshake} width="55%" alt="service" />
             </div>
             <Carousel.Caption>
-              <h3>Third job</h3>
+              <p>Third job</p>
               <p>Details for the third job</p>
             </Carousel.Caption>
           </Carousel.Item>
