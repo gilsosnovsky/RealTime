@@ -43,6 +43,7 @@ class EmployeeSignUp extends Component {
           favorite_jobs: this.favorite_job.value,
           type: "employee",
           about_me: this.about_me.value,
+          status:"approved",
           jobs: ["no jobs yet"],
         };
         db.ref("/employees/employees_list").push(to_db);

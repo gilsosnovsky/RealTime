@@ -92,7 +92,8 @@ const pageBody = (props) => {
   } else if (props.pageBodyState === "admin_jobs") {
     return <AdminJobs />;
   } else if (props.pageBodyState === "admin_employees") {
-    return <AdminEmployees />;
+    return <AdminEmployees 
+      clickAdminMessages={props.clickAdminMessages}/>;
   } else if (props.pageBodyState === "admin_business") {
     return (
       <AdminBusiness

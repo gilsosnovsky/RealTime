@@ -69,7 +69,10 @@ class Login extends Component {
           snapshot.forEach((snap) => {
             if (snap.val().email === userEmail) {
               this.setState({ loading: 'hidden' });
-              this.props.clickConnectEmployee(snap.val(), snap.ref.key);
+              if(snap.val().status==="blocked")
+                this.setState({ error_msg: "האדמין חסם את המשתמש שלך" });
+              else
+                this.props.clickConnectEmployee(snap.val(), snap.ref.key);
             }
           });
         });
@@ -81,7 +84,7 @@ class Login extends Component {
               this.props.clickConnectAdmin(snap.val(), snap.ref.key);
             }
           });
-          this.setState({ loading: 'hidden', error_msg: "שם משתמש או סיסמה שגויים" });
+          //this.setState({ loading: 'hidden', error_msg: "שם משתמש או סיסמה שגויים" });
         });
       }
       else if (this.props.pageBodyState === 'BusinessLogin') {

@@ -43,10 +43,10 @@ class EmployeeDeatils extends React.Component {
             <div
               id="employee_deatils_buttons_delete_employee"
               onClick={() => {
-                alert("delete user");
+                this.props.onClickBlocked(this.props.job_index, this.props.status)
               }}
             >
-              מחק משתמש
+              {this.props.txt_button}
             </div>
           </div>
           <div id="employee_item_info">
