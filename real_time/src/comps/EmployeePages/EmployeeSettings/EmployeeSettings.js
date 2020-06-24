@@ -92,6 +92,7 @@ class EmployeeSettings extends React.Component {
             <div id="employee_name">
               {this.props.user.first_name} {this.props.user.last_name}
             </div>
+            <label>שנה תמונת פרופיל</label>
             <div id="edit_pic_con">
               <input
                 id="pic_input" 
