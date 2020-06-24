@@ -86,6 +86,7 @@ const pageBody = (props) => {
   ) {
     return (
       <BusinessMyCadidates
+        
         index={props.index}
         clickWatchCandidates={props.clickWatchCandidates}
       />

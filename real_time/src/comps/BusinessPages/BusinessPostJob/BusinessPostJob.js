@@ -72,7 +72,7 @@ class BusinessPostJob extends React.Component {
 
             <fieldset>
               <input
-                class="field"
+                className="field"
                 id="Ptype"
                 ref={(c) => (this.type = c)}
                 placeholder="תחום כללי של העבודה"
@@ -86,7 +86,7 @@ class BusinessPostJob extends React.Component {
 
             <fieldset>
               <input
-                class="field"
+                className="field"
                 id="Pdetailes"
                 ref={(c) => (this.detailes = c)}
                 placeholder="פרטי העבודה"
@@ -101,7 +101,7 @@ class BusinessPostJob extends React.Component {
             <fieldset>
               <input
                 id="Pdate"
-                class="field"
+                className="field"
                 ref={(c) => (this.date = c)}
                 placeholder="date"
                 type="date"
@@ -113,7 +113,7 @@ class BusinessPostJob extends React.Component {
             <fieldset>
               <h3>משעה:</h3>
               <input
-                class="field"
+                className="field"
                 ref={(c) => (this.from_hour = c)}
                 placeholder="שעות העבודה"
                 type="time"
@@ -122,7 +122,7 @@ class BusinessPostJob extends React.Component {
               />
               <h3>עד שעה:</h3>
               <input
-                class="field"
+                className="field"
                 ref={(c) => (this.to_hour = c)}
                 placeholder="שעות העבודה"
                 type="time"
@@ -133,7 +133,7 @@ class BusinessPostJob extends React.Component {
 
             <fieldset>
               <input
-                class="field"
+                className="field"
                 id="Ppayment"
                 ref={(c) => (this.salary = c)}
                 placeholder="שכר"
@@ -156,7 +156,7 @@ class BusinessPostJob extends React.Component {
                   onChange={this.onPaymentMethodChanged}
                   required
                 />
-                <label for="cash">מזומן</label>
+                <label htmlFor="cash">מזומן</label>
                 <br />
                 <input
                   type="radio"
@@ -164,7 +164,7 @@ class BusinessPostJob extends React.Component {
                   value="המחאה"
                   onChange={this.onPaymentMethodChanged}
                 />
-                <label for="check">המחאה</label>
+                <label htmlFor="check">המחאה</label>
                 <br />
                 <input
                   type="radio"
@@ -172,7 +172,7 @@ class BusinessPostJob extends React.Component {
                   value="העברה בנקאית"
                   onChange={this.onPaymentMethodChanged}
                 />
-                <label for="transfer">העברה בנקאית</label>
+                <label htmlFor="transfer">העברה בנקאית</label>
               </div>
             </fieldset>
 
@@ -186,7 +186,7 @@ class BusinessPostJob extends React.Component {
                   onChange={this.onPaymentTimeChanged}
                   required
                 />
-                <label for="age1">בסוף יום העבודה</label>
+                <label htmlFor="age1">בסוף יום העבודה</label>
                 <br />
                 <input
                   type="radio"
@@ -194,14 +194,14 @@ class BusinessPostJob extends React.Component {
                   value="בסוף החודש"
                   onChange={this.onPaymentTimeChanged}
                 />
-                <label for="age2">בסוף החודש</label>
+                <label htmlFor="age2">בסוף החודש</label>
                 <br />
               </div>
             </fieldset>
 
             <fieldset>
               <input
-                class="field"
+                className="field"
                 id="Pplace"
                 ref={(c) => (this.place = c)}
                 placeholder="מיקום העבודה"
@@ -215,7 +215,7 @@ class BusinessPostJob extends React.Component {
 
             <fieldset>
               <input
-                class="field"
+                className="field"
                 ref={(c) => (this.business_name = c)}
                 placeholder="שם העסק"
                 maxLength="30"
@@ -227,7 +227,7 @@ class BusinessPostJob extends React.Component {
 
             <fieldset>
               <input
-                class="field"
+                className="field"
                 ref={(c) => (this.clothing = c)}
                 placeholder="ביגוד מיוחד"
                 type="text"
@@ -239,7 +239,7 @@ class BusinessPostJob extends React.Component {
 
             <fieldset>
               <input
-                class="field"
+                className="field"
                 ref={(c) => (this.remarks = c)}
                 placeholder="הערות"
                 type="text"

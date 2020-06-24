@@ -80,7 +80,9 @@ class AdminEmployees extends React.Component {
           <ul>
             {this.state.employees_approved.map((employee, index) => {
               return (
-                <EmployeeDeatils first_name={employee.val().first_name}
+                <EmployeeDeatils 
+                  key={index}
+                  first_name={employee.val().first_name}
                   last_name={employee.val().last_name}
                   email={employee.val().email}
                   phone_number={employee.val().phone_number}
@@ -101,7 +103,9 @@ class AdminEmployees extends React.Component {
           <ul>
             {this.state.employees_blocked.map((employee, index) => {
               return (
-                <EmployeeDeatils first_name={employee.val().first_name}
+                <EmployeeDeatils 
+                  key={index}
+                  first_name={employee.val().first_name}
                   last_name={employee.last_name}
                   email={employee.val().email}
                   phone_number={employee.val().phone_number}

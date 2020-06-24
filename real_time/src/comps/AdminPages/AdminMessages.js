@@ -46,6 +46,7 @@ class AdminMessages extends React.Component {
           {this.state.messages.map((message, index) => {
             return (
               <MessageContactDeatils
+                key={index}
                 full_name={message.full_name}
                 email={message.email}
                 phone_number={message.phone_number}

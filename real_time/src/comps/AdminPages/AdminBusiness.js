@@ -128,7 +128,9 @@ class AdminBusiness extends React.Component {
               <ul>
                 {this.state.business_approved.map((business, index) => {
                   return (
-                    <BusinessItemAdmin first_name={business.val().first_name}
+                    <BusinessItemAdmin
+                      key={index}
+                      first_name={business.val().first_name}
                       last_name={business.val().last_name}
                       email={business.val().email}
                       phone_number={business.val().phone_number}

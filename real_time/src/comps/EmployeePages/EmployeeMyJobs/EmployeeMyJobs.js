@@ -51,6 +51,7 @@ class EmployeeMyJobs extends React.Component {
           {this.state.jobs_list.map((job, index) => {
             return (
               <SingleJobItem
+                key={index}
                 type={job.type}
                 hours={job.hours}
                 date={job.date}
