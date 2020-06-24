@@ -74,14 +74,7 @@ class AdminNavBar extends React.Component {
 
           <img id="logo" src={logo} alt="Logo" />
           <div id="navLinks">
-            <label
-              //id="post_job_business"
-              className="NavBarButton"
-              onClick={this.props.clickAdminMessages}
-            >
-              הודעות
-            </label>
-
+            
             <label
               //id="candidates_business"
               className="NavBarButton"
@@ -105,7 +98,15 @@ class AdminNavBar extends React.Component {
             >
               עובדים
             </label>
+            <label
+              //id="post_job_business"
+              className="NavBarButton"
+              onClick={this.props.clickAdminMessages}
+            >
+              הודעות
+            </label>
           </div>
+          
           <div id="hello_plus_logout">
             <label className="hello" onClick={this.props.clickSettingsEmployee}>
               שלום {this.state.userName}

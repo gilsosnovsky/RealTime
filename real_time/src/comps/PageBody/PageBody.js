@@ -91,19 +91,16 @@ const pageBody = (props) => {
     );
   } else if (props.pageBodyState === "admin_jobs") {
     return <AdminJobs />;
-  } else if (
-    props.pageBodyState === "admin_interface" ||
-    props.pageBodyState === "admin_employees"
-  ) {
+  } else if (props.pageBodyState === "admin_employees") {
     return <AdminEmployees />;
   } else if (props.pageBodyState === "admin_business") {
     return (
       <AdminBusiness
-        clickAdminEmployees={props.clickAdminEmployees}
+      clickAdminMessages={props.clickAdminMessages}
         clickAdminBusiness={props.clickAdminBusiness}
       />
     );
-  } else if (props.pageBodyState === "admin_messages") {
+  } else if ( props.pageBodyState === "admin_interface" || props.pageBodyState === "admin_messages") {
     return <AdminMessages />;
   } else if (props.pageBodyState === "forgot_password") {
     return <ForgotPassword passwordChange={props.passwordChange} />;

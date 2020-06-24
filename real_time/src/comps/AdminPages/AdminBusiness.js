@@ -41,14 +41,14 @@ class AdminBusiness extends React.Component {
         alert("המעסיק אושר בהצלחה!")
         const db = fire.database();
         db.ref("/business/business_list/"+business_index).update({status: "approved"}).then(this.forceUpdate());
-        this.props.clickAdminEmployees();
+        this.props.clickAdminMessages();
       }
 
       onClickDelete(business_index, business_email){
         if (window.confirm("האם אתה בטוח שאתה רוצה למחוק מעסיק זה?")){
           const db = fire.database();
           db.ref("/business/business_list/"+business_index).remove().then(this.forceUpdate()); 
-          this.props.clickAdminEmployees();
+          this.props.clickAdminMessages();
           alert("המעסיק נמחק בהצלחה!");
         }
       }

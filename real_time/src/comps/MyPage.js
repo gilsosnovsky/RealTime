@@ -135,6 +135,7 @@ class MyPage extends Component {
   };
   onClickAdminMessages = () => {
     this.setState({
+      NavBarState: "admin_interface",
       PageBodyState: "admin_messages",
     });
   };
@@ -225,6 +226,7 @@ class MyPage extends Component {
           clickConnectAdmin={this.onClickConnectAdmin}
           clickAdminEmployees={this.onClickAdminEmployees}
           clickAdminBusiness={this.onClickAdminBusiness}
+          clickAdminMessages={this.onClickAdminMessages}
           clickSignUp={this.onClickSignUp}
           clickForgotPassword={this.onClickForgotPassword}
           clickWatchCandidates={this.onClickWatchCandidates}
