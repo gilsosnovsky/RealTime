@@ -69,7 +69,7 @@ class BusinessSignUp extends Component {
                 ref={(c) => (this.email = c)}
                 type="email"
                 tabIndex="2"
-                maxlength="40"
+                maxLength="40"
                 required
                 autoFocus
               />
@@ -82,7 +82,7 @@ class BusinessSignUp extends Component {
                 ref={(c) => (this.password = c)}
                 type="password"
                 tabIndex="2"
-                maxlength="30"
+                maxLength="30"
                 required
               />
             </fieldset>
@@ -93,7 +93,7 @@ class BusinessSignUp extends Component {
                 ref={(c) => (this.secondPassword = c)}
                 type="password"
                 tabIndex="2"
-                maxlength="30"
+                maxLength="30"
                 required
               />
             </fieldset>
@@ -106,7 +106,7 @@ class BusinessSignUp extends Component {
                 ref={(c) => (this.first_name = c)}
                 type="text"
                 tabIndex="1"
-                maxlength="20"
+                maxLength="20"
                 required
               />
             </fieldset>
@@ -119,7 +119,7 @@ class BusinessSignUp extends Component {
                 ref={(c) => (this.last_name = c)}
                 type="text"
                 tabIndex="1"
-                maxlength="20"
+                maxLength="20"
                 required
               />
             </fieldset>
@@ -131,7 +131,7 @@ class BusinessSignUp extends Component {
                 ref={(c) => (this.business_name = c)}
                 type="text"
                 tabIndex="2"
-                maxlength="30"
+                maxLength="30"
                 required
               />
             </fieldset>
@@ -143,7 +143,7 @@ class BusinessSignUp extends Component {
                 ref={(c) => (this.phone_number = c)}
                 type="tel"
                 tabIndex="3"
-                maxlength="20"
+                maxLength="20"
                 required
               />
             </fieldset>

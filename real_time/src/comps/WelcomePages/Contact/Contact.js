@@ -32,7 +32,7 @@ class Contact extends Component {
 
   render() {
     return (
-      <div class="contactPageContainer">
+      <div className="contactPageContainer">
         <form
           id="contactPage"
           action=""
@@ -46,9 +46,9 @@ class Contact extends Component {
               placeholder="שם מלא"
               ref={(c) => (this.full_name = c)}
               type="text"
-              tabindex="1"
+              tabIndex="1"
               required
-              autofocus
+              autoFocus
             />
           </fieldset>
 
@@ -57,7 +57,7 @@ class Contact extends Component {
               placeholder="אימייל"
               ref={(c) => (this.email = c)}
               type="email"
-              tabindex="2"
+              tabIndex="2"
               required
             />
           </fieldset>
@@ -67,7 +67,7 @@ class Contact extends Component {
               placeholder="טלפון"
               type="tel"
               ref={(c) => (this.tel = c)}
-              tabindex="3"
+              tabIndex="3"
               required
             />
           </fieldset>
@@ -76,7 +76,7 @@ class Contact extends Component {
             <textarea
               placeholder="תוכן ההודעה"
               ref={(c) => (this.message = c)}
-              tabindex="4"
+              tabIndex="4"
               required
             ></textarea>
           </fieldset>

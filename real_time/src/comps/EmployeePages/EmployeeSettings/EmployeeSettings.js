@@ -149,7 +149,7 @@ class EmployeeSettings extends React.Component {
                     className="field"
                     value={this.props.user.birth_date}
                     type="date"
-                    tabIndex="3" />
+                    tabIndex="3"/>
                 </fieldset>
               </div>
 

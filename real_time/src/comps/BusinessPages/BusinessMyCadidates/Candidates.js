@@ -41,7 +41,7 @@ class Candidates extends React.Component {
           </div>
 
           <div id="candidate_item_info_business">
-            <div class="candidate_full_info_business">
+            <div className="candidate_full_info_business">
               <b>שם פרטי: </b>
               {this.state.first_name}
               <br />

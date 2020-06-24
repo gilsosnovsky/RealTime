@@ -30,8 +30,7 @@ class AdminMessages extends React.Component {
         <div id="messages">הודעות </div>
         <div
           id="admin_messages_contact_loading_messages_container"
-          style={{ visibility: `${this.state.loading}` }}
-        >
+          style={{ visibility: `${this.state.loading}` }}>
           טוען...
           <br />
           <div

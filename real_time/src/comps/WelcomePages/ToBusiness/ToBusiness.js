@@ -71,7 +71,7 @@ class ToBusiness extends Component {
           </label>
         </div>
         <div id="intrestMe">
-          <div class="container">
+          <div className="container">
             <form
               id="contact"
               action=""
@@ -86,9 +86,9 @@ class ToBusiness extends Component {
                   placeholder="שם מלא:"
                   ref={(c) => (this.full_name = c)}
                   type="text"
-                  tabindex="1"
+                  tabIndex="1"
                   required
-                  autofocus
+                  autoFocus
                 />
               </fieldset>
 
@@ -97,7 +97,7 @@ class ToBusiness extends Component {
                   placeholder="אימייל:"
                   type="email"
                   ref={(c) => (this.email = c)}
-                  tabindex="2"
+                  tabIndex="2"
                   required
                 />
               </fieldset>
@@ -107,7 +107,7 @@ class ToBusiness extends Component {
                   placeholder="טלפון:"
                   ref={(c) => (this.tel = c)}
                   type="tel"
-                  tabindex="3"
+                  tabIndex="3"
                   required
                 />
               </fieldset>
@@ -118,9 +118,9 @@ class ToBusiness extends Component {
                   placeholder="איך הגעת אלינו?"
                   ref={(c) => (this.how_got_us = c)}
                   type="text"
-                  tabindex="4"
+                  tabIndex="4"
                   required
-                  autofocus
+                  autoFocus
                 />
               </fieldset>
 
@@ -130,9 +130,9 @@ class ToBusiness extends Component {
                   placeholder="שם העסק:"
                   ref={(c) => (this.business_name = c)}
                   type="text"
-                  tabindex="5"
+                  tabIndex="5"
                   required
-                  autofocus
+                  autoFocus
                 />
               </fieldset>
 
@@ -140,7 +140,7 @@ class ToBusiness extends Component {
                 <textarea
                   placeholder="עוד משהו להוסיף?"
                   ref={(c) => (this.message = c)}
-                  tabindex="5"
+                  tabIndex="5"
                   required
                 ></textarea>
               </fieldset>
