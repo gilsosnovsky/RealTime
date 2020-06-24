@@ -20,7 +20,6 @@ class ForgotPassword extends Component
 
   onForgotPassword =(e) =>
   {
-    var auth=fire.auth();
     e.preventDefault();
     this.setState({
         email: this.email.value

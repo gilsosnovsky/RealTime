@@ -57,10 +57,10 @@ class singleJobItemBusiness extends React.Component {
         </div>
         <div id="job_item_buttons_business">
           <div id="job_status"><b>סטטוס:</b> {this.props.status}</div>
-          {this.props.show_fire && !this.props.is_fire && <img id="is_fire_image" src={not_fire} onClick={() => {
+          {this.props.show_fire && !this.props.is_fire && <img id="is_fire_image" alt="not on fire" src={not_fire} onClick={() => {
                 this.props.onClickFire(this.props.job_index, false)
               }} />}
-          {this.props.show_fire && this.props.is_fire && <img id="is_fire_image" src={fire} onClick={() => {
+          {this.props.show_fire && this.props.is_fire && <img id="is_fire_image" alt="on fire" src={fire} onClick={() => {
                 this.props.onClickFire(this.props.job_index, true)
               }}/>}
           {this.props.button_status === "visible" &&

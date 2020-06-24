@@ -4,7 +4,6 @@ import logo from "./logo.gif";
 import jerusalem_city_logo from "./jerusalem_city_logo.jpg";
 import promote_teenagers_logo from "./promote_teenagers_logo.jpg";
 import "./NavBar.css";
-import fire from "../../firebaseConfig";
 //import $ from "jquery";
 //window.$ = $;
 
