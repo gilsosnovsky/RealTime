@@ -17,28 +17,41 @@ class singleJobItemBusiness extends React.Component {
 
           <div id="job_item_info_business">
             <div className="full_info_business">
+              <b> שם החברה: </b>
+              {this.props.business_name}
+              <br />
+
               <b> תחום כללי של העבודה: </b>
               {this.props.type}
               <br />
+
               <b> מתי: </b>
               {this.props.date} , {this.props.hours}
               <br />
+
               <b> איפה: </b>
               {this.props.place}
               <br />
+
               <b> משכורת: </b>
-              {this.props.salary}₪<br />
-              <b>פרטים נוספים:</b>
-              {this.props.long_info}
+              {this.props.salary}₪
+              <br/>
+
+              <b>מועד תשלום: </b>
+              {this.props.payment_time}
               <br />
+
               <b>ביגוד: </b>
               {this.props.clothing}
               <br />
-              <b>זמן תשלום : </b>
-              {this.props.payment_time}
+
+              <b>פרטי עבודה נוספים: </b>
+              {this.props.long_info}
               <br />
+
               <b>הערות: </b>
               {this.props.remarks}
+              
             </div>
           </div>
         </div>

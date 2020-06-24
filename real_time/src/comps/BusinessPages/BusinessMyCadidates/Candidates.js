@@ -37,8 +37,7 @@ class Candidates extends React.Component {
             <img
               id="candidate_item_business_logo"
               src={this.state.user_pic}
-              alt="user_pic"
-            />
+              alt="user_pic"/>
           </div>
 
           <div id="candidate_item_info_business">
@@ -47,7 +46,7 @@ class Candidates extends React.Component {
               {this.state.first_name}
               <br />
               <b> שם משפחה: </b>
-              {this.state.last_name} , {this.state.job_hours}
+              {this.state.last_name}
               <br />
               <b> אימייל: </b>
               {this.state.email}
@@ -55,7 +54,7 @@ class Candidates extends React.Component {
               <b> טלפון: </b>
               {this.state.phone_number}
               <br />
-              <b>כתובת:</b>
+              <b>כתובת: </b>
               {this.state.address}
               <br />
               <b>תאריך לידה: </b>

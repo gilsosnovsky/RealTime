@@ -44,6 +44,7 @@ class EmployeeJobOffers extends React.Component {
           {this.state.jobs_list.map((job, index) => {
             return (
               <SingleJobItem
+                business_name ={job.val().business_name}
                 type={job.val().type}
                 hours={job.val().hours}
                 date={job.val().date}

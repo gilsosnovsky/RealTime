@@ -68,6 +68,7 @@ class EmployeeSignUp extends Component {
                 ref={(c) => (this.email = c)}
                 type="email"
                 tabIndex="2"
+                maxlength="40"
                 required
                 autoFocus
               />
@@ -78,6 +79,7 @@ class EmployeeSignUp extends Component {
                 placeholder="סיסמא"
                 ref={(c) => (this.password = c)}
                 type="password"
+                maxlength="30"
                 tabIndex="2"
                 required
               />
@@ -89,6 +91,7 @@ class EmployeeSignUp extends Component {
                 ref={(c) => (this.secondPassword = c)}
                 type="password"
                 tabIndex="2"
+                maxlength="30"
                 required
               />
             </fieldset>
@@ -100,6 +103,7 @@ class EmployeeSignUp extends Component {
                 placeholder="שם פרטי"
                 ref={(c) => (this.first_name = c)}
                 type="text"
+                maxlength="20"
                 tabIndex="1"
                 required
               />
@@ -111,6 +115,7 @@ class EmployeeSignUp extends Component {
                 placeholder="שם משפחה"
                 ref={(c) => (this.last_name = c)}
                 type="text"
+                maxlength="20"
                 tabIndex="1"
                 required
               />
@@ -121,6 +126,7 @@ class EmployeeSignUp extends Component {
                 placeholder="טלפון"
                 ref={(c) => (this.phone_number = c)}
                 type="tel"
+                maxlength="20"
                 tabIndex="3"
                 required
               />
@@ -142,6 +148,7 @@ class EmployeeSignUp extends Component {
                 placeholder="כתובת מלאה"
                 ref={(c) => (this.adress = c)}
                 type="text"
+                maxlength="40"
                 tabIndex="2"
                 required
               />
@@ -153,6 +160,7 @@ class EmployeeSignUp extends Component {
                 placeholder="תחומי עבודה מועדפים"
                 ref={(c) => (this.favorite_job = c)}
                 type="text"
+                maxlength="50"
                 tabIndex="2"
                 required
               />
@@ -164,6 +172,7 @@ class EmployeeSignUp extends Component {
                 placeholder="קצת על עצמי"
                 ref={(c) => (this.about_me = c)}
                 tabIndex="4"
+                maxlength="100"
               ></textarea>
             </fieldset>
 

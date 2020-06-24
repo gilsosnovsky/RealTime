@@ -91,7 +91,7 @@
 /* For desktop: */
 @media only screen and (min-width: 480px) {
   #job_item_business_container {
-    height: 200px;
+    height: 225px;
     width: 100%;
     margin: 5px;
     border: 2.5px solid #7925c0;
@@ -103,7 +103,7 @@
 
   #job_item_business {
     height: 100%;
-    width: 70%;
+    width: 75%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     display: inline-block;
@@ -112,7 +112,7 @@
     height: 100%;
     width: 20%;
     float: right;
-    max-height: 200px;
+    max-height: 225px;
     border-left: 2.5px solid #7925c0;
   }
   #job_item_business_logo {
@@ -128,14 +128,15 @@
   }
 
   #job_item_info_business {
+    /* background-color: chartreuse; */
     height: 100%;
-    width: 70%;
+    width: 80%;
     float: right;
   }
 
   .full_info_business {
     height: 100%;
-    width: 70%;
+    /* width: 70%; */
     float: right;
     padding-right: 2%;
   }

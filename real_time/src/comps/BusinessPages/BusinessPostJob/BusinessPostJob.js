@@ -9,6 +9,7 @@ class BusinessPostJob extends React.Component {
   }
 
   state = {
+    business_name: "",
     type: "",
     hours: "",
     date: "",
@@ -28,6 +29,7 @@ class BusinessPostJob extends React.Component {
     e.preventDefault();
     this.setState(
       {
+        business_name: this.business_name.value,
         type: this.type.value,
         hours: this.from_hour.value + "-" + this.to_hour.value,
         date: this.date.value,
@@ -76,6 +78,7 @@ class BusinessPostJob extends React.Component {
                 placeholder="תחום כללי של העבודה"
                 type="text"
                 tabindex="1"
+                maxlength="25"
                 required
                 autofocus
               />
@@ -89,6 +92,7 @@ class BusinessPostJob extends React.Component {
                 placeholder="פרטי העבודה"
                 type="text"
                 tabindex="4"
+                maxlength="50"
                 required
                 autofocus
               />
@@ -133,7 +137,9 @@ class BusinessPostJob extends React.Component {
                 id="Ppayment"
                 ref={(c) => (this.salary = c)}
                 placeholder="שכר"
-                type="text"
+                type="number"
+                min="1" 
+                max="999999"
                 tabindex="4"
                 required
                 autofocus
@@ -200,6 +206,7 @@ class BusinessPostJob extends React.Component {
                 ref={(c) => (this.place = c)}
                 placeholder="מיקום העבודה"
                 type="text"
+                maxlength="40"
                 tabindex="4"
                 required
                 autofocus
@@ -211,6 +218,7 @@ class BusinessPostJob extends React.Component {
                 class="field"
                 ref={(c) => (this.business_name = c)}
                 placeholder="שם העסק"
+                maxlength="30"
                 type="text"
                 tabindex="2"
                 required
@@ -224,6 +232,7 @@ class BusinessPostJob extends React.Component {
                 placeholder="ביגוד מיוחד"
                 type="text"
                 tabindex="2"
+                maxlength="50"
                 required
               />
             </fieldset>
@@ -235,6 +244,7 @@ class BusinessPostJob extends React.Component {
                 placeholder="הערות"
                 type="text"
                 tabindex="2"
+                maxlength="50"
                 required
               />
             </fieldset>
@@ -243,8 +253,7 @@ class BusinessPostJob extends React.Component {
                 id="postButton"
                 name="submit"
                 data-submit="...Sending"
-                type="submit"
-              >
+                type="submit">
                 פרסם
               </button>
             </fieldset>

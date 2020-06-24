@@ -10,6 +10,7 @@ class SingleJobItem extends React.Component {
     this.signuUpForWork = this.signuUpForWork.bind(this);
   }
   state = {
+    business_name: this.props.business_name,
     job_type: this.props.type,
     job_hours: this.props.hours,
     job_date: this.props.date,
@@ -93,21 +94,24 @@ class SingleJobItem extends React.Component {
             visibility: `${this.state.item_bottom_visibility}`,
           }}>
           <div id="job_item_full_info">
-            <b>פרטים נוספים:</b>
+            <b> פרטי עבודה נוספים:</b>
             <br />
             {this.state.job_long_info}
+            <br />
+            <b> שם החברה: </b>
+            {this.state.business_name}
             <br />
             <b>ביגוד: </b>
             {this.state.job_clothing}
             <br />
-            <b>זמן תשלום : </b>
+            <b>מועד תשלום : </b>
             {this.state.job_payment_time}
             <br />
             <b>הערות: </b>
             {this.state.job_remarks}
-            {this.props.status === "לא רלוונטי" && <div id="sorry_not_relevent"> לצערנו המשרה כבר לא רלוונטית</div>}
+            {this.props.status === "לא רלוונטי" && <div id="sorry_not_relevent"> <b><i>לצערנו המשרה כבר לא רלוונטית</i></b></div>}
           </div>
-                  <div
+            <div
             id="job_item_buttons"
             style={{ visibility: `${this.state.buttons_visibility}` }}>
             <div id="job_item_buttons_no" onClick={this.hideFullInfo}>
