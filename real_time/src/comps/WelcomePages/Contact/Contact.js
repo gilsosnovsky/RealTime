@@ -26,6 +26,8 @@ class Contact extends Component {
       () => {
         const db = fire.database();
         db.ref("/messages/messages_contact").push(this.state);
+        alert ("הודעתך נקלטה בהצלחה !");
+        // this.props.clickContact();
       }
     );
   };
