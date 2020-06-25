@@ -23,6 +23,30 @@
     width: 100%;
     height: 100%;
   }
+
+  #message_business_deatils_button {
+    height: 60px;
+    width: 100%;
+    float: left;
+  }
+
+  #message_business_deatils_button_delete_message {
+    height: 50px;
+    width: 200px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 5px;
+    background-color: purple;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    line-height: 45px;
+  }
+  #message_business_deatils_button_delete_message:hover {
+    opacity: 0.7;
+    transition: 0.3s;
+  }
 }
 
 /* For desktop: */
@@ -50,5 +74,28 @@
     font-size: 14px;
     width: 100%;
     height: 100%;
+  }
+
+  #switch_message_button {
+    height: 100%;
+    width: 25%;
+    float: left;
+  }
+
+  #switch_message_type_button {
+    height: 50px;
+    width: 200px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin: 7%;
+    background-color: purple;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    line-height: 45px;
+  }
+  #switch_message_type_button:hover {
+    opacity: 0.7;
+    transition: 0.3s;
   }
 }

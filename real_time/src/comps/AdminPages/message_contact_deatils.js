@@ -3,6 +3,7 @@ import "./message_contact_deatils.css";
 
 class MessageContactDeatils extends React.Component {
   state = {
+    index: this.props.index,
     full_name: this.props.full_name,
     email: this.props.email,
     phone_number: this.props.phone_number,
@@ -24,7 +25,7 @@ class MessageContactDeatils extends React.Component {
           <br />
 
           <div className="messqge_contact_content">
-            <b>הודעה: </b>
+            <b>תוכן ההודעה: </b>
             <br />
             {this.state.message} <br />
           </div>
@@ -32,9 +33,7 @@ class MessageContactDeatils extends React.Component {
         <div id="message_contact_deatils_button">
           <div
             id="message_contact_deatils_button_delete_message"
-            onClick={() => {
-              alert("delete message");
-            }}
+            onClick = {() => this.props.onClickDeleteMessage(this.props.index)}
           >
             מחק הודעה
           </div>
