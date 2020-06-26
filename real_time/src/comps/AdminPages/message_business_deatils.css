@@ -1,104 +1,103 @@
 /* For Mobile: */
 @media only screen and (max-width: 480px) {
-    #message_container {
-      padding-bottom: 30px;
-      margin-bottom: 20px;
-      width: 90%;
-      min-height: 250px;
-      padding: 5px;
-      border: 2.5px solid #7925c0;
-      border-radius: 10px;
-      background-color: white;
-      transition: 0.3s;
-    }
-  
-    .message_business_full_info {
-      height: 40%;
-      width: 95%;
-      float: right;
-      padding-right: 2%;
-    }
-  
-    .messqge_business_content {
-      height: 40%;
-      width: 100%;
-      float: right;
-      padding-top: 7px;
-    }
-  
-    #message_business_deatils_button {
-      height: 60px;
-      width: 100%;
-      float: left;
-    }
-  
-    #message_business_deatils_button_delete_message {
-      height: 50px;
-      width: 150px;
-      cursor: pointer;
-      border-radius: 10px;
-      margin: 0 auto;
-      margin-top: 5px;
-      background-color: #c02525;
-      color: white;
-      font-weight: bold;
-      text-align: center;
-      line-height: 45px;
-    }
-    #message_business_deatils_button_delete_message:hover {
-      opacity: 0.7;
-      transition: 0.3s;
-    }
+  #message_container {
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+    width: 90%;
+    min-height: 300px;
+    padding: 5px;
+    border: 2.5px solid #7925c0;
+    border-radius: 10px;
+    background-color: white;
+    transition: 0.3s;
   }
-  
-  /* For desktop: */
-  @media only screen and (min-width: 480px) {
-    #message_container {
-      margin-top: 20px;
-      width: 900px;
-      height: 230px;
-      padding: 5px;
-      border: 2.5px solid #7925c0;
-      border-radius: 10px;
-      background-color: white;
-      transition: 0.3s;
-    }
-  
-    .message_business_full_info {
-      height: 100%;
-      width: 70%;
-      float: right;
-      padding-right: 2%;
-    }
-  
-    .messqge_business_content {
-      height: 100%;
-      width: 95%;
-      float: right;
-      padding-top: 7px;
-    }
-  
-    #message_business_deatils_button {
-      height: 100%;
-      width: 25%;
-      float: left;
-    }
-  
-    #message_business_deatils_button_delete_message {
-      height: 50px;
-      width: 150px;
-      cursor: pointer;
-      border-radius: 10px;
-      margin: 7%;
-      background-color: #c02525;
-      color: white;
-      font-weight: bold;
-      text-align: center;
-      line-height: 45px;
-    }
-    #message_business_deatils_button_delete_message:hover {
-      opacity: 0.7;
-      transition: 0.3s;
-    }
+
+  .message_business_full_info {
+    height: 40%;
+    width: 95%;
+    float: right;
+    padding-right: 2%;
   }
-  
+
+  .messqge_business_content {
+    height: 40%;
+    width: 100%;
+    float: right;
+    padding-top: 7px;
+  }
+
+  #message_business_deatils_button {
+    height: 60px;
+    width: 100%;
+    float: left;
+  }
+
+  #message_business_deatils_button_delete_message {
+    height: 50px;
+    width: 150px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 5px;
+    background-color: #c02525;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    line-height: 45px;
+  }
+  #message_business_deatils_button_delete_message:hover {
+    opacity: 0.7;
+    transition: 0.3s;
+  }
+}
+
+/* For desktop: */
+@media only screen and (min-width: 480px) {
+  #message_container {
+    margin-top: 20px;
+    width: 858px;
+    height: 230px;
+    padding: 5px;
+    border: 2.5px solid #7925c0;
+    border-radius: 10px;
+    background-color: white;
+    transition: 0.3s;
+  }
+
+  .message_business_full_info {
+    height: 100%;
+    width: 70%;
+    float: right;
+    padding-right: 2%;
+  }
+
+  .messqge_business_content {
+    height: 100%;
+    width: 95%;
+    float: right;
+    padding-top: 7px;
+  }
+
+  #message_business_deatils_button {
+    height: 100%;
+    width: 25%;
+    float: left;
+  }
+
+  #message_business_deatils_button_delete_message {
+    height: 50px;
+    width: 150px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin: 7%;
+    background-color: #c02525;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    line-height: 45px;
+  }
+  #message_business_deatils_button_delete_message:hover {
+    opacity: 0.7;
+    transition: 0.3s;
+  }
+}

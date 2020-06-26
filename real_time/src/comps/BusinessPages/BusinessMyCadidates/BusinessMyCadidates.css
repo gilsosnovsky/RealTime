@@ -10,6 +10,7 @@
     text-align: right;
     direction: rtl;
     font-size: 20px;
+    margin-left: 7%;
   }
 
   #jobs_business_title {
@@ -35,7 +36,7 @@
   }
 
   #return_jobs {
-    width: 10%;
+    width: 100px;
     height: 40px;
     border: 2px solid #7925c0;
     background-color: white;
@@ -44,6 +45,7 @@
     text-align: center;
     margin-bottom: 15px;
     cursor: pointer;
+    margin-right: 45px;
   }
 }
 

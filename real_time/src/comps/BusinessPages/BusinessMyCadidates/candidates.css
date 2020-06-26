@@ -3,7 +3,7 @@
   #candidate_item_business_container {
     margin-top: 50px;
     width: 100%;
-    min-height: 150px;
+    min-height: 220px;
     margin: 5px;
     border: 2.5px solid #7925c0;
     border-radius: 10px;
@@ -27,7 +27,7 @@
   #candidate_item_business_logo {
     display: block;
     margin: 0 auto;
-    max-width: 70px;
+    max-width: 55px;
   }
   #candidate_item_business_logo:hover {
     opacity: 0.6;
@@ -52,8 +52,8 @@
 @media only screen and (min-width: 480px) {
   #candidate_item_business_container {
     margin-top: 50px;
-    width: 900px;
-    height: 200px;
+    width: 850px;
+    height: 250px;
     margin: 5px;
     border: 2.5px solid #7925c0;
     border-radius: 10px;
@@ -77,8 +77,8 @@
   #candidate_item_business_logo {
     display: block;
     margin: 0 auto;
-    height: 100%;
-    width:100%;
+    height: 160px;
+    width: 160px;
   }
   #candidate_item_business_logo:hover {
     opacity: 0.6;

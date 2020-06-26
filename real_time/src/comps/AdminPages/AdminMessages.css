@@ -16,6 +16,19 @@
     font-size: 16px;
   }
 
+  #switch_message_type_button {
+    height: 50px;
+    width: 200px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #7925c0;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    line-height: 45px;
+    margin-top: 15px;
+  }
+
   #msg {
     text-align: center;
     color: #7925c0;
@@ -57,6 +70,7 @@
     padding-bottom: 20px;
     width: 900px;
     margin: 0 auto;
+
     background-color: white;
     text-align: right;
     direction: rtl;
@@ -77,8 +91,8 @@
   }
 
   #switch_message_button {
-    height: 100%;
-    width: 25%;
+    height: 50px;
+    width: 200px;
     float: left;
   }
 
@@ -87,8 +101,7 @@
     width: 200px;
     cursor: pointer;
     border-radius: 10px;
-    margin: 7%;
-    background-color: purple;
+    background-color: #7925c0;
     color: white;
     font-weight: bold;
     text-align: center;

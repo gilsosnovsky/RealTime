@@ -6,15 +6,16 @@
     text-align: right;
     direction: rtl;
     font-size: 20px;
+    height: 90%;
+    padding-top: 20px;
   }
 
   #settings_container {
     direction: rtl;
     margin: 0 auto;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 40px;
     margin-bottom: 30px;
-    padding-top: 20px;
     width: 95%;
     background: #f9f9f9;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
@@ -29,10 +30,14 @@
   }
 
   #emloyee_image {
-    width: 90%;
-    border-radius: 70%;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
     border: 3px solid rgb(56, 56, 56);
+    top: 50%;
     position: relative;
+    max-width: 150px;
+    max-height: 150px;
   }
 
   #employee_name {
@@ -50,11 +55,22 @@
     text-align: center;
   }
 
-  #edit_pic_button {
-    border-radius: 2px;
+  .hidden {
+    display: none;
+  }
+
+  #pictureButton {
+    border-radius: 10px;
     border: 1px solid #7925c0;
     background-color: #7925c0;
+    padding: 5px 10px 5px 10px;
     color: white;
+  }
+
+  #pictureButton:hover {
+    opacity: 0.7;
+    cursor: pointer;
+    transition: 0.3s;
   }
 
   #employee_details_to_edit {
@@ -164,11 +180,14 @@
   }
 
   #emloyee_image {
-    width: 80%;
-    border-radius: 70%;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
     border: 3px solid rgb(56, 56, 56);
     top: 50%;
     position: relative;
+    max-width: 150px;
+    max-height: 150px;
   }
 
   .user_pic {
@@ -182,7 +201,7 @@
     margin-top: 30px;
     float: right;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 28px;
   }
 
   #edit_pic_con {
@@ -190,11 +209,22 @@
     font-size: 15px;
   }
 
-  #edit_pic_button {
-    border-radius: 2px;
+  .hidden {
+    display: none;
+  }
+
+  #pictureButton {
+    border-radius: 10px;
     border: 1px solid #7925c0;
     background-color: #7925c0;
+    padding: 5px 10px 5px 10px;
     color: white;
+  }
+
+  #pictureButton:hover {
+    opacity: 0.7;
+    cursor: pointer;
+    transition: 0.3s;
   }
 
   #employee_details_to_edit {

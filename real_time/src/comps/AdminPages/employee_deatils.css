@@ -77,7 +77,7 @@
 @media only screen and (min-width: 480px) {
   #employee_deatils_container {
     margin-top: 30px;
-    width: 900px;
+    width: 850px;
     height: 200px;
     margin: 5px;
     border: 2.5px solid #7925c0;
@@ -103,7 +103,7 @@
     display: block;
     margin: 0 auto;
     height: 100%;
-    width:95%;
+    width: 95%;
   }
   #employee_item_logo:hover {
     opacity: 0.6;
@@ -112,7 +112,7 @@
 
   #employee_item_info {
     height: 100%;
-    width: 45%;
+    width: 55%;
     float: right;
   }
 
@@ -125,7 +125,7 @@
 
   #employee_deatils_buttons {
     height: 100%;
-    width: 25%;
+    width: 22%;
     float: left;
   }
 
@@ -134,10 +134,10 @@
     justify-content: center;
     align-items: center;
     height: 24%;
-    width: 80%;
+    width: 90%;
     cursor: pointer;
     border-radius: 10px;
-    margin-top: 32%;
+    margin-top: 46%;
     background-color: #7925c0;
     color: white;
     font-weight: bold;

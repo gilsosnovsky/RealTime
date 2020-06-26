@@ -1,7 +1,7 @@
 /* For Mobile: */
 @media only screen and (max-width: 480px) {
   #job_item_business_container {
-    width: 95%;
+    width: 99%;
     margin: 5px;
     border: 2.5px solid #7925c0;
     border-radius: 10px;
@@ -10,7 +10,7 @@
     font-size: 15px;
     margin-bottom: 20px;
     padding-bottom: 10px;
-    min-height: 300px;
+    min-height: 400px;
   }
 
   #job_item_business {
@@ -51,8 +51,8 @@
     height: 100%;
     width: 100%;
     align-items: center;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
   }
 
   #job_item_buttons_show_candi {
@@ -60,15 +60,17 @@
     justify-content: center;
     align-items: center;
     height: 50px;
-    width: 120px;
+    width: 130px;
     cursor: pointer;
     border-radius: 10px;
     background-color: #7925c0;
     color: white;
     font-weight: bold;
     float: right;
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
   }
 
   #job_item_buttons_delete_job {
@@ -76,15 +78,38 @@
     justify-content: center;
     align-items: center;
     height: 50px;
-    width: 120px;
+    width: 130px;
     cursor: pointer;
     border-radius: 10px;
     background-color: #7925c0;
     color: white;
     font-weight: bold;
     float: left;
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  #statusAndFire {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 10px;
+    width: 100%;
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-top: 2px dotted #7925c0;
+    border-bottom: 2px dotted #7925c0;
+  }
+  #job_status {
+    float: right;
+    position: relative;
+  }
+
+  #is_fire_image {
+    width: 10%;
+    float: left;
+    position: relative;
   }
 }
 
@@ -175,15 +200,33 @@
     font-weight: bold;
   }
 
-  #job_status{
+  #job_item_buttons_delete_job:hover {
+    opacity: 0.7;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+
+  #job_item_buttons_show_candi:hover {
+    opacity: 0.7;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+
+  #job_status {
     width: 70%;
     margin: 7%;
     float: right;
   }
 
-  #is_fire_image{
+  #is_fire_image {
     margin-top: 7%;
     width: 10%;
     float: right;
+  }
+
+  #is_fire_image:hover {
+    width: 11%;
+    transition: 0.2s;
+    cursor: pointer;
   }
 }

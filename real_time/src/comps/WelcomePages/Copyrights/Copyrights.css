@@ -1,64 +1,137 @@
-#copyrightsPage {
-  padding-top: 120px;
-  min-height: 600px;
-  width: 1200px;
-  margin: 0 auto;
-  background-color: white;
-  direction: rtl;
-  font-size: 18px;
-  text-align: center;
-  color: #7925c0;
+/* For Mobile: */
+@media only screen and (max-width: 480px) {
+  #copyrightsPage {
+    padding-top: 20px;
+    min-height: 600px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: white;
+    direction: rtl;
+    font-size: 18px;
+    text-align: center;
+    color: #7925c0;
+  }
+
+  .memberPic {
+    border-radius: 50%;
+    margin-bottom: 15px;
+    width: 120px;
+    height: 120px;
+    margin-bottom: 10px;
+    border: 10px solid white;
+    transition: 0.3s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .memberPic:hover {
+    border-color: #7925c0;
+    opacity: 0.7;
+    transition: 0.3s;
+  }
+
+  h1 {
+    margin-bottom: 40px;
+    font-size: 30px;
+  }
+
+  .names {
+    text-align: center;
+    margin: 0 auto;
+    color: #7925c0;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    font-size: 16px;
+    margin-left: 75px;
+  }
+
+  #firstLine {
+    margin: 0 auto;
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  #secondLine {
+    margin: 0 auto;
+    display: inline-block;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+  }
+
+  .teamMember {
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 20px;
+    align-items: center;
+    align-content: center;
+  }
 }
 
-.memberPic {
-  border-radius: 50%;
-  margin-bottom: 15px;
-  width: 150px;
-  height: 150px;
-  margin-bottom: 10px;
-  border: 10px solid white;
-  transition: 0.3s;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
+/* For desktop: */
+@media only screen and (min-width: 480px) {
+  #copyrightsPage {
+    padding-top: 120px;
+    min-height: 600px;
+    width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    direction: rtl;
+    font-size: 18px;
+    text-align: center;
+    color: #7925c0;
+  }
 
-.memberPic:hover {
-  border-color: #7925c0;
-  opacity: 0.7;
-  transition: 0.3s;
-}
+  .memberPic {
+    border-radius: 50%;
+    margin-bottom: 15px;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+    border: 10px solid white;
+    transition: 0.3s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
 
-h1 {
-  margin-bottom: 40px;
-  font-size: 30px;
-}
+  .memberPic:hover {
+    border-color: #7925c0;
+    opacity: 0.7;
+    transition: 0.3s;
+  }
 
-.names {
-  text-align: center;
-  margin: 0 auto;
-  color: #7925c0;
-  padding-top: 10px;
-  padding-bottom: 30px;
-  font-size: 20px;
-}
+  h1 {
+    margin-bottom: 40px;
+    font-size: 30px;
+  }
 
-#firstLine {
-  margin: 0 auto;
-  display: inline-block;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-bottom: 40px;
-}
+  .names {
+    text-align: center;
+    margin: 0 auto;
+    color: #7925c0;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    font-size: 20px;
+  }
 
-#secondLine {
-  margin: 0 auto;
-  display: inline-block;
-  margin-left: 40px;
-  margin-right: 40px;
-  margin-bottom: 40px;
-}
+  #firstLine {
+    margin: 0 auto;
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 40px;
+  }
 
-.teamMember {
-  display: inline-block;
-  margin-left: 20px;
-  margin-right: 20px;
+  #secondLine {
+    margin: 0 auto;
+    display: inline-block;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+  }
+
+  .teamMember {
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }
