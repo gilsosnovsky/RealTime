@@ -28,7 +28,7 @@ class AdminMessages extends React.Component {
         if (messages_list.length === 0)
           this.setState({ msg_contact: "אין הודעות מצור קשר כרגע" });
       });
-      this.setState({ messages: messages_list, loading: "hidden" });
+      this.setState({ messages: messages_list.reverse(), loading: "hidden" });
     });
     db.ref("/messages/messages_toBusiness/").on("value", (snapshot) => {
       messages_list = [];
@@ -37,7 +37,7 @@ class AdminMessages extends React.Component {
         if (messages_list.length === 0)
           this.setState({ msg_buisness: "אין הודעות מעסקים כרגע" });
       });
-      this.setState({ buisness_messages: messages_list});
+      this.setState({ buisness_messages: messages_list.reverse()});
     });
   }
 
