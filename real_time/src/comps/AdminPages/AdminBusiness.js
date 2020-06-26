@@ -190,7 +190,8 @@ class AdminBusiness extends React.Component {
               <ul>
                 {this.state.business_jobs.map((job, index) => {
                   return (
-                   <SingleJobItemBusiness 
+                   <SingleJobItemBusiness
+                   business_name={job.val().business_name} 
                     type={job.val().type}
                     hours={job.val().hours}
                     date={job.val().date}
