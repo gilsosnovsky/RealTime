@@ -1,7 +1,6 @@
 import React from "react";
 import "./AdminEmployees.css"
 import EmployeeDeatils from "./employee_deatils";
-// import EmployeeSettings from "../EmployeePages/EmployeeSettings/EmployeeSettings";
 import fire from "../../firebaseConfig.js";
 import user_pic from "../EmployeePages/EmployeeSettings/person.png";
 

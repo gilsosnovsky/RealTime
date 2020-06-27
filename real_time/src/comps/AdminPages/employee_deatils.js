@@ -30,18 +30,6 @@ class EmployeeDeatils extends React.Component {
     });
   }
 
-  make_admin = (e) => {
-    e.preventDefault();
-    var new_admin_deatils = {
-      email: this.state.email,
-      first_name: this.state.first_name,
-      last_name: this.state.last_name,
-    };
-    console.log(new_admin_deatils);
-    // const db = fire.database();
-    // db.ref("/admins/admins_list").push(new_admin_deatils);  //add to the admin list
-  };
-
   render() {
     return (
       <div id="employee_deatils_container">
