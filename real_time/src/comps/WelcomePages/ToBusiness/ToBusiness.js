@@ -19,6 +19,7 @@ class ToBusiness extends Component {
       business_name: "",
       message: "",
       offer_jobs: "",
+      status: "unread",
     };
   }
 

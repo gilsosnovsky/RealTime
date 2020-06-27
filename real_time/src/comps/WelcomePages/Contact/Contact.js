@@ -11,6 +11,7 @@ class Contact extends Component {
       email: "",
       phone_number: "",
       message: "",
+      status: "unread"
     };
   }
 
