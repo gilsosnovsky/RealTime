@@ -104,7 +104,8 @@ const pageBody = (props) => {
       />
     );
   } else if ( props.pageBodyState === "admin_interface" || props.pageBodyState === "admin_messages") {
-    return <AdminMessages />;
+    return <AdminMessages
+      clickAdminEmployees={props.clickAdminEmployees}/>;
   } else if (props.pageBodyState === "forgot_password") {
     return <ForgotPassword passwordChange={props.passwordChange} />;
   } else if (props.pageBodyState === "PasswordChange") {

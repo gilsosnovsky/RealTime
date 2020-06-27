@@ -61,7 +61,7 @@ class AdminMessages extends React.Component {
     else
       path = "/messages/messages_toBusiness/" + message_index;
     db.ref(path).update({status: "read"}).then(this.forceUpdate());
-    this.props.clickAdminMessages();
+    this.props.clickAdminEmployees();
   }
 
   render() {
