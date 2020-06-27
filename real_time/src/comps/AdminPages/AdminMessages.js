@@ -2,59 +2,66 @@ import React from "react";
 import "./AdminMessages.css";
 import fire from "../../firebaseConfig";
 import MessageContactDeatils from "./message_contact_deatils";
-import MessageBuisnessDeatils from "./message_business_deatils";
+import MessagebusinessDeatils from "./message_business_deatils";
 
 class AdminMessages extends React.Component {
   constructor(props) {
     super(props);
-    this.onClickDeleteMessage = this.onClickDeleteMessage.bind(this);
+    this.onClickMarkAsRead = this.onClickMarkAsRead.bind(this);
   }
   state = {
     bodyType: "contact_messages",
-    messages: [],
-    buisness_messages: [],
+    messages_unread: [],
+    messages_read: [],
+    business_messages_unread: [],
+    business_messages_read: [],
     loading: "visible",
-    index: this.props.index,
     msg_contact: "",
-    msg_buisness: ""
+    msg_business: "",
+    status: ""
   };
 
   componentDidMount() {
     const db = fire.database();
-    let messages_list = [];
+    let messages_list_unread = [];
+    let messages_list_read = [];
+
     db.ref("/messages/messages_contact/").on("value", (snapshot) => {
       snapshot.forEach((snap) => {
-        messages_list.push(snap.val());
-        if (messages_list.length === 0)
-          this.setState({ msg_contact: "אין הודעות מצור קשר כרגע" });
+        if (snap.val().status === "unread")
+          messages_list_unread.push(snap);
+        else 
+          messages_list_read.push(snap);
       });
-      this.setState({ messages: messages_list.reverse(), loading: "hidden" });
+      this.setState({ messages_unread: messages_list_unread.reverse(), messages_read: messages_list_read.reverse(), loading: "hidden" });
+      if (messages_list_read.length === 0 && messages_list_unread.length === 0)
+        this.setState({ msg_contact: "אין הודעות מצור קשר כרגע" });
     });
+
+    let bMessages_list_unread = [];
+    let bMessages_list_read = [];
     db.ref("/messages/messages_toBusiness/").on("value", (snapshot) => {
-      messages_list = [];
       snapshot.forEach((snap) => {
-        messages_list.push(snap.val());
-        if (messages_list.length === 0)
-          this.setState({ msg_buisness: "אין הודעות מעסקים כרגע" });
+        if (snap.val().status === "unread")
+          bMessages_list_unread.push(snap);
+        else 
+          bMessages_list_read.push(snap);
+        if (bMessages_list_read.length === 0 && bMessages_list_unread.length === 0)
+          this.setState({ msg_business: "אין הודעות מעסקים כרגע" });
       });
-      this.setState({ buisness_messages: messages_list.reverse()});
+      this.setState({ business_messages_unread: bMessages_list_unread.reverse(), business_messages_read: bMessages_list_read.reverse()});
     });
   }
 
-  onClickDeleteMessage(message_index){
-    if (window.confirm("האם אתה בטוח שאתה רוצה למחוק את ההודעה ?")){
-      const db = fire.database();
-      let path = "";
-      if (this.state.bodyType === "contact_messages")
-        path = "/messages/messages_contact/" + message_index;
-      else
-        path = "/messages/messages_toBusiness/" + message_index;
-      db.ref(path).remove(() =>{
-        // this.forceUpdate();
-        // this.props.clickAdminMessages();
-        alert("ההודעה נמחקה");
-      });
-    }
+  onClickMarkAsRead(message_index){
+    const db = fire.database();
+    let path = "";
+    if (this.state.bodyType === "contact_messages")
+      path = "/messages/messages_contact/" + message_index;
+    else
+      path = "/messages/messages_toBusiness/" + message_index;
+    db.ref(path).update({status: "read"}).then(this.forceUpdate());
+    this.props.clickAdminMessages();
   }
 
   render() {
@@ -66,7 +73,7 @@ class AdminMessages extends React.Component {
           <div
             id="switch_message_type_button"
             onClick={() => {
-              this.setState ({bodyType: "buisness_messages"});
+              this.setState ({bodyType: "business_messages"});
             }}
           >
             עבור להודעות מעסקים
@@ -87,15 +94,33 @@ class AdminMessages extends React.Component {
             </div>
           </div>
           <ul>
-            {this.state.messages.map((message, index) => {
+            {this.state.messages_unread.map((message, index) => {
               return (
                 <MessageContactDeatils
-                  index={index}
-                  full_name={message.full_name}
-                  email={message.email}
-                  phone_number={message.phone_number}
-                  message={message.message}
-                  onClickDeleteMessage={this.onClickDeleteMessage}
+                  index={message.ref.key}
+                  full_name={message.val().full_name}
+                  email={message.val().email}
+                  phone_number={message.val().phone_number}
+                  message={message.val().message}
+                  status={message.val().status}
+                  onClickMarkAsRead={this.onClickMarkAsRead}
+                />
+
+              );
+            })}
+          </ul>
+          <div id="messages"> הודעות שנקראו </div>
+          <ul>
+            {this.state.messages_read.map((message, index) => {
+              return (
+                <MessageContactDeatils
+                  index={message.ref.key}
+                  full_name={message.val().full_name}
+                  email={message.val().email}
+                  phone_number={message.val().phone_number}
+                  message={message.val().message}
+                  status={message.val().status}
+                  onClickMarkAsRead={this.onClickMarkAsRead}
                 />
               );
             })}
@@ -132,23 +157,43 @@ class AdminMessages extends React.Component {
             </div>
           </div>
           <ul>
-            {this.state.buisness_messages.map((message, index) => {
+            {this.state.business_messages_unread.map((message, index) => {
               return (
-                <MessageBuisnessDeatils
-                  index={index}
-                  business_name={message.business_name}
-                  email={message.email}
-                  full_name={message.full_name}
-                  how_got_us={message.how_got_us}
-                  message={message.message}
-                  offer_jobs={message.offer_jobs}
-                  phone_number={message.phone_number}
-                  onClickDeleteMessage={this.onClickDeleteMessage}
+                <MessagebusinessDeatils
+                  index={message.ref.key}
+                  status={message.val().status}
+                  business_name={message.val().business_name}
+                  email={message.val().email}
+                  full_name={message.val().full_name}
+                  how_got_us={message.val().how_got_us}
+                  message={message.val().message}
+                  offer_jobs={message.val().offer_jobs}
+                  phone_number={message.val().phone_number}
+                  onClickMarkAsRead={this.onClickMarkAsRead}
                 />
               );
             })}
           </ul>
-          <div id="msg">{this.state.msg_buisness}</div>
+          <div id="messages"> הודעות שנקראו </div>
+          <ul>
+            {this.state.business_messages_read.map((message, index) => {
+              return (
+                <MessagebusinessDeatils
+                  index={message.ref.key}
+                  status={message.val().status}
+                  business_name={message.val().business_name}
+                  email={message.val().email}
+                  full_name={message.val().full_name}
+                  how_got_us={message.val().how_got_us}
+                  message={message.val().message}
+                  offer_jobs={message.val().offer_jobs}
+                  phone_number={message.val().phone_number}
+                  onClickMarkAsRead={this.onClickMarkAsRead}
+                />
+              );
+            })}
+          </ul>
+          <div id="msg">{this.state.msg_business}</div>
         </div>
       );  
 
