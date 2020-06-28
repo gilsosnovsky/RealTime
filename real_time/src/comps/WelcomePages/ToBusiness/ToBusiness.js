@@ -25,6 +25,7 @@ class ToBusiness extends Component {
 
   onClickBusinessContact = (e) => {
     e.preventDefault();
+    alert("ההודעה נשלחה בהצלחה!");
     this.setState(
       {
         full_name: this.full_name.value,

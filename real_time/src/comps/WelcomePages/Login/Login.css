@@ -126,6 +126,7 @@
   .loginWithButton {
     height: 50px;
     margin: 20px;
+    visibility: hidden;
   }
 
   .loginWithButton:hover {
@@ -133,7 +134,7 @@
     transition: 0.3s;
   }
 
-  #loginMsg{
+  #loginMsg {
     font-size: 17px;
     color: red;
   }
@@ -141,7 +142,7 @@
   #SignUponLogin {
     cursor: pointer;
   }
-  #forgotPassword{
+  #forgotPassword {
     cursor: pointer;
   }
 }
