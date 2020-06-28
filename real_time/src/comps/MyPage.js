@@ -36,7 +36,6 @@ class MyPage extends Component {
       this.state.PageBodyState === "employee_interface"
     ) {
       this.setState({
-        NavBarState: "homePage",
         PageBodyState: "employee_job_offers",
       });
     } else {
