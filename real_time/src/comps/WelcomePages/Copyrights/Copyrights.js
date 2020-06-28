@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import orel from "./orel.jpg";
 import michael from "./michael.png";
 import roy from "./roy.png";
-import gil from "./gil.png";
+import gil from "./gil.jfif";
 import sahar from "./sahar.png";
 
 const Copyrights = (props) => {
