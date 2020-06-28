@@ -30,8 +30,8 @@ class AdminEmployees extends React.Component {
           employees_list_blocked.push(snap);
       });
     });
-    this.setState({ employees_approved: employees_list_approved,
-                    employees_blocked: employees_list_blocked,
+    this.setState({ employees_approved: employees_list_approved.reverse(),
+                    employees_blocked: employees_list_blocked.reverse(),
                      loading: "hidden" });
 
     if (employees_list_approved.length === 0)

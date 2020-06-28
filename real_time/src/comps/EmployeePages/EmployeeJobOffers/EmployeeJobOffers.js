@@ -19,7 +19,7 @@ class EmployeeJobOffers extends React.Component {
         if(snap1.val().status==="רלוונטי")
             allJobs.push(snap1);
       });
-      this.setState({ jobs_list: allJobs, loading: "hidden" });
+      this.setState({ jobs_list: allJobs.reverse(), loading: "hidden" });
     });
   }
 

@@ -24,7 +24,7 @@ class EmployeeMyJobs extends React.Component {
           });
         }
       });
-      this.setState({ jobs_list: allJobs, loading: "hidden" });
+      this.setState({ jobs_list: allJobs.reverse(), loading: "hidden" });
     })
     if (allJobs.length === 0)
       this.setState({ msg_jobs: "עדיין לא נרשמת לעבודה" });

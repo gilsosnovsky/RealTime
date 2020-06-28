@@ -31,7 +31,7 @@ class BusinessMyCadidates extends React.Component {
       snapshot.forEach((snap) => {
         if (snap.val().employer_index === this.state.index) allJobs.push(snap);
       });
-      this.setState({ jobs_list: allJobs, loading: "hidden" });
+      this.setState({ jobs_list: allJobs.reverse(), loading: "hidden" });
     });
   }
 

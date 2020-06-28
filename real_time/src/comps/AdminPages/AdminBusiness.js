@@ -37,9 +37,9 @@ class AdminBusiness extends React.Component {
                 else
                     business_list_approved.push(snap);
             });
-            this.setState({ business_approved: business_list_approved, 
-                            business_waiting: business_list_wating,
-                            business_blocked: business_list_blocked,  
+            this.setState({ business_approved: business_list_approved.reverse(), 
+                            business_waiting: business_list_wating.reverse(),
+                            business_blocked: business_list_blocked.reverse(),  
                             loading: "hidden" });
         });
       }

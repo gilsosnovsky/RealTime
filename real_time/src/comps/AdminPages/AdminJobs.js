@@ -21,7 +21,7 @@ class AdminJobs extends React.Component {
       snapshot.forEach((snap) => {
         allJobs.push(snap);
       });
-      this.setState({ jobs_list: allJobs, loading: "hidden" });
+      this.setState({ jobs_list: allJobs.reverse(), loading: "hidden" });
     });
   }
 

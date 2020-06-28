@@ -15,12 +15,14 @@ class MyPage extends Component {
 
   onClickToEmployees = () => {
     this.setState({
+      NavBarState: "homePage",
       PageBodyState: "toEmployees",
     });
   };
 
   onClickToBusiness = () => {
     this.setState({
+      NavBarState: "homePage",
       PageBodyState: "toBusiness",
     });
   };
@@ -34,16 +36,19 @@ class MyPage extends Component {
       this.state.PageBodyState === "employee_interface"
     ) {
       this.setState({
+        NavBarState: "homePage",
         PageBodyState: "employee_job_offers",
       });
     } else {
       this.setState({
+        NavBarState: "homePage",
         PageBodyState: "homePage",
       });
     }
   };
   onClickLoginEmployee = () => {
     this.setState({
+      NavBarState: "homePage",
       PageBodyState: "EmloyeeLogin",
     });
   };
@@ -67,19 +72,22 @@ class MyPage extends Component {
 
   onClickJobOffersEmployee = () => {
     this.setState({
-      PageBodyState: "employee_job_offers",
+      NavBarState: "employee_interface",
+      PageBodyState: "employee_job_offers"
     });
   };
 
   onClickMyJobsEmployee = () => {
     this.setState({
-      PageBodyState: "employee_my_jobs",
+      NavBarState: "employee_interface",
+      PageBodyState: "employee_my_jobs"
     });
   };
 
   onClickSettingsEmployee = () => {
     this.setState({
-      PageBodyState: "employee_settings",
+      NavBarState: "employee_interface",
+      PageBodyState: "employee_settings"
     });
   };
 
@@ -89,19 +97,21 @@ class MyPage extends Component {
       user: user,
       index: index,
       NavBarState: "business_interface",
-      PageBodyState: "business_interface",
+      PageBodyState: "business_interface"
     });
   };
 
   onClickPostJobBusiness = () => {
     this.setState({
-      PageBodyState: "business_post_job",
+      NavBarState: "business_interface",
+      PageBodyState: "business_post_job"
     });
   };
 
   onClickWatchCandidates = () => {
     this.setState({
-      PageBodyState: "business_watch_candidates",
+      NavBarState: "business_interface",
+      PageBodyState: "business_watch_candidates"
     });
   };
 
@@ -116,7 +126,8 @@ class MyPage extends Component {
 
   onClickAdminJobs = () => {
     this.setState({
-      PageBodyState: "admin_jobs",
+      NavBarState: "admin_interface",
+      PageBodyState: "admin_jobs"
     });
   };
 
@@ -130,13 +141,13 @@ class MyPage extends Component {
   onClickAdminBusiness = () => {
     this.setState({
       NavBarState: "admin_interface",
-      PageBodyState: "admin_business",
+      PageBodyState: "admin_business"
     });
   };
   onClickAdminMessages = () => {
     this.setState({
       NavBarState: "admin_interface",
-      PageBodyState: "admin_messages",
+      PageBodyState: "admin_messages"
     });
   };
 
